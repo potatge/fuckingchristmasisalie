@@ -5,35 +5,70 @@ var right = keyboard_check_direct(vk_right)
 var up = keyboard_check_direct(vk_up)
 var down = keyboard_check_direct(vk_down)
 
+// Get player position and speed
+var player_x = x; // Replace with your actual player x-coordinate
+var player_y = y; // Replace with your actual player y-coordinate
+var hspd = 0 // Replace with your actual horizontal speed variable
+var vspd = 0; // Replace with your actual vertical speed variable
+
+
 if (left){
-	x -= spd;
+	hspd -= spd;
 	image_xscale = 1;
 }
 
 if (right){
-	x += spd;
+	hspd += spd;
 	image_xscale = -1;
 }
 
 if (up){
-	y -= spd;
+	vspd -= spd;
 }
 
 if (down){
-	y += spd;
+	vspd  += spd;
 }
 
 //collisions
-var t_ = layer_tilemap_get_id("walls")
-var tiles = tilemap_get_at_pixel(t_,x,y)
-//var meet_right = tilemap_get_at_pixel(t_,bbox_right+1,y)
-//var meet_left = tilemap_get_at_pixel(t_,bbox_left-1,y)
-//var meet_up = tilemap
-if (tiles){
-	show_debug_message("meet tiles")
-}else{
-	show_debug_message("NO tile meet")
+
+
+// Assuming you're using view 0
+var cam_id = view_camera[0];
+
+// Get player position
+var player_x = x; // Replace with your actual player x-coordinate
+var player_y = y; // Replace with your actual player y-coordinate
+
+// Function to check tile collisions
+function check_tile_collision(x, y) {
+    var t_ = layer_tilemap_get_id("walls");
+    var tiles = tilemap_get_at_pixel(t_, x, y);
+
+    return tiles; // Adjust this based on your collision logic with tiles
+} // Adjust this based on your collision logic with tiles
+
+// Assuming you're using view 0
+var cam_id = view_camera[0];
+
+// Check for tile collisions at the player's potential next position
+var collision_at_next_position = check_tile_collision(player_x + hspd, player_y + vspd);
+
+// Handle collisions based on your game logic
+if (collision_at_next_position) {
+    // There is a collision at the next position, handle it accordingly
+    // For example, stop the player's movement or perform another action
+    hspd = 0;
+    vspd = 0;
+	
+} else {
+    // Move the player if there is no collision
+    x += hspd;
+    y += vspd;
 }
+
+
+
 
 
 //dialogue system
