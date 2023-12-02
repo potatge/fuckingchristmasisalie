@@ -21,9 +21,9 @@ global.interactables = [
 	{
 	name_: "moving boxes",
 	canGrab: false,
-	myText: ["We haven't finished unpacking everything."],
+	myText: ["We haven't finished unpacking everything.","It's not like I wanted to live in this dump, but...we needed to relocate for the job."],
 	sprite: s_item_box,
-	maxText: 0
+	maxText: 1
 	},
 	
 	{
@@ -63,13 +63,29 @@ global.interactables = [
 	maxText: 5,
 	sprite: s_chara_boy_collapsed
 	},
+	
 	{
 	name_: "city poster",
 	canGrab: false,
 	myText:["It's a poster from my favorite game."],
 	maxText: 0
 	},
+	{
+	name_: "bed",
+	canGrab: false,
+	myText: ["It's way too early to sleep."],
+	sprite: s_bg_bed,
+	maxText: 0
+	},
+	{
+	name_: "table",
+	canGrab: false,
+	myText: ["Looking a bit barren...","Better cook something before the rellies get here."],
+	sprite: s_bg_table,
+	maxText: 1
+	},
 	
 ]
 
 curText = 0;
+moreTextAvailible = true;

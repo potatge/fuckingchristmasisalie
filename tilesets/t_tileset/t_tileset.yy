@@ -212,7 +212,7 @@
       91,
       109,
       92,
-      92,
+      110,
       93,
       93,
       94,
@@ -248,7 +248,7 @@
       109,
       91,
       110,
-      110,
+      92,
       111,
       111,
       112,
@@ -686,6 +686,10 @@
     {"resourceType":"GMTileAnimation","resourceVersion":"1.0","name":"anim_lights2","frames":[
         91,
         109,
+      ],},
+    {"resourceType":"GMTileAnimation","resourceVersion":"1.0","name":"anim_lights3","frames":[
+        92,
+        110,
       ],},
   ],
   "tileAnimationSpeed": 5.0,

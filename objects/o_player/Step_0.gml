@@ -77,8 +77,9 @@ var interact = instance_place(x, y, o_interactable)
 
 if (interact) {
   var objectName = ""
-  
   if (keyboard_check_pressed(vk_space)){
+	   o_ctrl.moreTextAvailible = true;
+
     for (var i = 0; i < array_length(global.interactables); i++) {
       
         if (global.interactables[i].name_ == interact.name_) {
@@ -88,7 +89,7 @@ if (interact) {
 		  o_ctrl.myText = object.myText[o_ctrl.curText];
 		  
           if ((o_ctrl.curText == object.maxText)) {
-			  
+			  o_ctrl.moreTextAvailible = false;
             return;
 			
           }else{

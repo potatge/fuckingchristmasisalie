@@ -24,6 +24,12 @@ switch (room){
 		draw_set_alpha(1);
 		draw_text_ext(xx+pad,yy+pad,myText,sep,width-pad);
 		draw_set_alpha(1);
+		
+		if (o_ctrl.moreTextAvailible) {
+			draw_sprite(s_arrow_right,0,xx+pad+width-10,yy+pad+height-10)
+		}
+			
+			
 	}
 	break;
 }
