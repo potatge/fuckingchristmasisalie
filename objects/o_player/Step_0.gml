@@ -33,26 +33,24 @@ if (down) {
 }
 
 // revert back to idle
-if( keyboard_check_released(vk_left) || keyboard_check_released(vk_right)){
-    sprite_index = s_chara_girl_idle;
-  }
+if (keyboard_check_released(vk_left) || keyboard_check_released(vk_right)) {
+  sprite_index = s_chara_girl_idle;
+}
 
 if (keyboard_check_released(vk_down)) {
-	 sprite_index = s_chara_girl_up_idle;
+  sprite_index = s_chara_girl_up_idle;
 }
-  
+
 // keep in room? not working best. 
 clamp(x, 0, room_width);
 clamp(y, 0, room_height);
 
 //dialogue system
 var interact = instance_place(x, y, o_interactable)
-
 if (interact) {
   var objectName = ""
+ // o_ctrl.moreTextAvailible = true;
   if (keyboard_check_pressed(vk_space)){
-	   o_ctrl.moreTextAvailible = true;
-
     for (var i = 0; i < array_length(global.interactables); i++) {
       
         if (global.interactables[i].name_ == interact.name_) {
@@ -61,35 +59,25 @@ if (interact) {
 		 
 		  o_ctrl.myText = object.myText[o_ctrl.curText];
 		  
-          if (o_ctrl.curText == object.maxText) {
-				o_ctrl.moreTextAvailible = false;
+          if ((o_ctrl.curText == object.maxText)) {
+			  o_ctrl.moreTextAvailible = false;
             return;
-		  }
-		  
-		   show_debug_message("object " + string(object.myText[o_ctrl.curText]))
-		   //increment text
+			
+          }else{
 			  o_ctrl.curText++
-			   
-			  
-			  if (object.canGrab == true){
-			  // destroy object if you can grab.
-		      instance_destroy(object)
-  }
 		  }
          
-         
+          show_debug_message("object " + string(object.myText[o_ctrl.curText]))
         }
 	 o_ctrl.nearItem = true
   }
-  
-  
+  }
   } else {
 	  //not near item, set current text back to zero.
     o_ctrl.nearItem = false;
 	o_ctrl.curText = 0;
   }
-  
-  // Collisions
+// Collisions
 var cam_id = view_camera[0];
 
 // Get player position
@@ -104,7 +92,6 @@ function check_tile_collision(x, y) {
 
   return tiles;
 }
-
 
 //collisions 
 

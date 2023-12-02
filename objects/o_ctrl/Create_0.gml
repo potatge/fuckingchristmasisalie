@@ -39,21 +39,25 @@ global.interactables = [
 	canGrab: false,
 	myText: [
 		"Urgh...Claire, is that you. ",
-		"W-what happened? Are you ok? Why are you on the gro-",
-		"Jingle bells...jingle bells.",
+		"W-what happened? Are you ok? Why are you on the grou-",
+		"Jingle bells...jingle bells...",
 		"You aren't making any sense! Damien, snap out of it!",
-		"He appeared out of nowhere with this...and he..."
+		"He appeared out of nowhere with this...and he...",
+		"Who did?",
+		"*Damien collapses weakly to the floor again*"
 	],
-	maxText: 4,
+	maxText: 6,
 	sprite: s_chara_boy_collapsed
 	},
 	
 	{
 	name_: "city poster",
 	canGrab: false,
-	myText:["It's just a poster from my favorite game."],
-	maxText: 0
+	myText: ["It's a poster from my favorite game."],
+	maxText: 0,
+	sprite: s_bg_cityposter
 	},
+	
 	{
 	name_: "bed",
 	canGrab: false,
@@ -61,6 +65,7 @@ global.interactables = [
 	sprite: s_bg_bed,
 	maxText: 0
 	},
+	
 	{
 	name_: "table",
 	canGrab: false,
@@ -68,6 +73,7 @@ global.interactables = [
 	sprite: s_bg_table,
 	maxText: 1
 	},
+	
 	{
 	name_: "present3",
 	canGrab: false,
@@ -76,14 +82,15 @@ global.interactables = [
 	maxText: 2
 	},
 	
+	
 	{
 	name_: "present1",
 	canGrab: true,
 	myText:["Yoinks. One present for me."],
 	sprite: s_item_present2,
 	maxText: 0
-	
 	},
+	
 	{
 	name_: "present for damien",
 	canGrab: false,
@@ -93,11 +100,11 @@ global.interactables = [
 	},
 	
 	{
-		name_: "moving boxes2",
-		canGrab: false,
-		myText:["Yeahhh, we need to get through these boxes."],
-		sprite: s_item_box,
-		maxText:0
+	name_: "moving boxes2",
+	canGrab: false,
+	myText:["Yeahhh, we need to get through these boxes."],
+	sprite: s_item_box,
+	maxText: 0
 		
 		
 	}
