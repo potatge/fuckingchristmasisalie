@@ -25,12 +25,14 @@ global.interactables = [
 	name_: "present1",
 	canGrab: true,
 	myText:"Yoinks. One present for me."
+	sprite: s_item_present2
 	
 	},
 	{
 	name_: "present for damien",
 	canGrab: false,
 	myText:"I should leave that there. It's for Damien."
+	sprite: s_item_present1
 		
 		
 	}
