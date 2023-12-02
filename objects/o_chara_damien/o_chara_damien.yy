@@ -25,7 +25,10 @@
   "physicsStartAwake": true,
   "properties": [],
   "solid": false,
-  "spriteId": null,
+  "spriteId": {
+    "name": "s_chara_boy_collapsed",
+    "path": "sprites/s_chara_boy_collapsed/s_chara_boy_collapsed.yy",
+  },
   "spriteMaskId": null,
   "visible": true,
 }
