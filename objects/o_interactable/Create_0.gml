@@ -1,1 +1,2 @@
-myText = "placeholder"
+myText = "placeholder";
+name_ = "placeholder";

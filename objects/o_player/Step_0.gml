@@ -71,11 +71,19 @@ if (collision_at_next_position) {
 
 //dialogue system
 var interact = instance_place(x,y,o_interactable)
+
 if (interact){
-	if (keyboard_check_pressed(vk_space)){
-		o_ctrl.myText = interact.myText; 
+	var objectName = ""
+for (var i = 0; i < array_length(global.interactables); i++){
+	if (global.interactables[i].name_ == interact.name_ && keyboard_check_pressed(vk_space)){
+		var object = global.interactables[i].myText;
+		
+		o_ctrl.myText = object
+		show_debug_message("object "+string(object))
 		o_ctrl.nearItem = true
 	}
-}else{
+	}
+}
+else{
 	o_ctrl.nearItem = false;
 }
