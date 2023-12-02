@@ -61,7 +61,11 @@ if (interact) {
 		  o_ctrl.myText = object.myText[o_ctrl.curText];
 		  
           if ((o_ctrl.curText == object.maxText)) {
-			  o_ctrl.moreTextAvailible = false;
+			  //on end of text do stuff 
+			   o_ctrl.moreTextAvailible = false;
+			   if (object.canGrab = true){
+					instance_destroy(interact);
+				}
             return;
 			
           }else{
@@ -69,11 +73,15 @@ if (interact) {
 		  }
          
           show_debug_message("object " + string(object.myText[o_ctrl.curText]))
-        }
+       
+	  
+		}
 	 o_ctrl.nearItem = true
+	 
+	 
   }
-  }
-  } else {
+  // if you can grab, destroy
+  }} else {
 	  //not near item, set current text back to zero.
     o_ctrl.nearItem = false;
 	o_ctrl.curText = 0;

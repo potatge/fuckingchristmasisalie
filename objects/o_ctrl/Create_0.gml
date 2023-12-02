@@ -76,11 +76,11 @@ global.interactables = [
 	
 	{
 	name_: "present3",
-	canGrab: false,
+	canGrab: true,
 	myText: ["What the, another present...?","It says 'For Claire' on the tag.","...but me and Damien said we'd only get each other one gift."],
 	sprite: s_bg_table,
 	maxText: 2,
-	grabAction: false
+	grabAction: true,
 	},
 	
 	
