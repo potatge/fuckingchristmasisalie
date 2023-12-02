@@ -25,6 +25,13 @@ global.interactables = [
 	},
 	
 	{
+	name_: "moving boxes",
+	canGrab: false,
+	myText: "We haven't finished unpacking everything.",
+	sprite: s_item_box
+	},
+	
+	{
 	name_: "xmas tree",
 	canGrab: false,
 	myText: "It's a lovely tree, but I can't help but feel sad this time of year."

@@ -55,11 +55,10 @@ function check_tile_collision(x, y) {
     return tiles; 
 	}
 
-
 // Check for tile collisions at the player's potential next position
 var collision_at_next_position = check_tile_collision(player_x + hspd, player_y + vspd);
 
-// Handle collisions based on your game logic
+// check if by tilemap or interactable ( boxes etc.)
 if (collision_at_next_position) {
     // There is a collision at the next position, handle it accordingly
     // For example, stop the player's movement or perform another action
