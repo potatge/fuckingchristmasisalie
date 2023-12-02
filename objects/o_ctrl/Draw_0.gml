@@ -27,9 +27,7 @@ switch (room){
 		
 		if (o_ctrl.moreTextAvailible) {
 			draw_sprite(s_arrow_right,0,xx+pad+width-10,yy+pad+height-10)
-		}
-			
-			
+		}				
 	}
 	break;
 }
