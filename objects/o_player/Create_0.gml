@@ -1,2 +1,2 @@
-depth = -8000;
+depth = global.charDepth
 spd = 4;

@@ -32,43 +32,16 @@ if (down) {
   sprite_index = s_chara_girl_down;
 }
 
-if keyboard_check_released(vk_left) || keyboard_check_released(vk_right) ||
-  keyboard_check_pressed(vk_up) || keyboard_check_released(vk_down) {
+// revert back to idle
+if( keyboard_check_released(vk_left) || keyboard_check_released(vk_right)){
     sprite_index = s_chara_girl_idle;
   }
-//collisions
-var cam_id = view_camera[0];
 
-// Get player position
-var player_x = x;
-var player_y = y;
-
-// Function to check tile collisions
-function check_tile_collision(x, y) {
-  var t_ = layer_tilemap_get_id("walls");
-  //TODO find a way to do multiple tilesets 
-  var tiles = tilemap_get_at_pixel(t_, x, y);
-
-  return tiles;
+if (keyboard_check_released(vk_down)) {
+	 sprite_index = s_chara_girl_up_idle;
 }
-
-// Check for tile collisions at the player's potential next position
-var collision_at_next_position = check_tile_collision(player_x + hspd, player_y + vspd);
-
-// check if by tilemap or interactable ( boxes etc.)
-if (collision_at_next_position) {
-  // There is a collision at the next position, handle it accordingly
-  // For example, stop the player's movement or perform another action
-  hspd = 0;
-  vspd = 0;
-
-} else {
-  // Move the player if there is no collision
-  x += hspd;
-  y += vspd;
-}
-
-// keep in room?
+  
+// keep in room? not working best. 
 clamp(x, 0, room_width);
 clamp(y, 0, room_height);
 
@@ -88,21 +61,69 @@ if (interact) {
 		 
 		  o_ctrl.myText = object.myText[o_ctrl.curText];
 		  
-          if ((o_ctrl.curText == object.maxText)) {
-			  o_ctrl.moreTextAvailible = false;
+          if (o_ctrl.curText == object.maxText) {
+				o_ctrl.moreTextAvailible = false;
             return;
-			
-          }else{
+		  }
+		  
+		   show_debug_message("object " + string(object.myText[o_ctrl.curText]))
+		   //increment text
 			  o_ctrl.curText++
+			   
+			  
+			  if (object.canGrab == true){
+			  // destroy object if you can grab.
+		      instance_destroy(object)
+  }
 		  }
          
-          show_debug_message("object " + string(object.myText[o_ctrl.curText]))
+         
         }
 	 o_ctrl.nearItem = true
   }
-  }
+  
+  
   } else {
 	  //not near item, set current text back to zero.
     o_ctrl.nearItem = false;
 	o_ctrl.curText = 0;
   }
+  
+  // Collisions
+var cam_id = view_camera[0];
+
+// Get player position
+var player_x = x;
+var player_y = y;
+
+// Function to check tile collisions
+function check_tile_collision(x, y) {
+  var t_ = layer_tilemap_get_id("walls");
+  // TODO: Find a way to handle multiple tilesets
+  var tiles = tilemap_get_at_pixel(t_, x, y);
+
+  return tiles;
+}
+
+
+//collisions 
+
+// Check for tile collisions at the player's potential next position
+var collision_at_next_position = check_tile_collision(player_x + hspd, player_y + vspd);
+
+// Check if there's an obstacle (interactable) at the player's next position
+var obstacle_at_next_position = instance_place(player_x + hspd, player_y + vspd, interact);
+
+// Check if there's a collision with tilemap or interactable (boxes, etc.)
+if (collision_at_next_position || obstacle_at_next_position) {
+  // There is a collision at the next position, handle it accordingly
+  // For example, stop the player's movement or perform another action
+  hspd = 0;
+  vspd = 0;
+
+  // Handle interaction with the obstacle (e.g., stop movement, trigger some action)
+} else {
+  // Move the player if there is no collision
+  x += hspd;
+  y += vspd;
+}

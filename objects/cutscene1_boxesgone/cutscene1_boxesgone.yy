@@ -1,7 +1,7 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "cutscene1_meetdamien",
+  "name": "cutscene1_boxesgone",
   "eventList": [],
   "managed": true,
   "overriddenProperties": [],
