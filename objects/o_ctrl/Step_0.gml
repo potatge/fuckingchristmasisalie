@@ -11,3 +11,18 @@ if keyboard_check_pressed(ord("F"))
     }
 }
 
+
+switch (room){
+	
+	case rm_title:
+		if keyboard_check_pressed(vk_space){
+			room_goto(rm1)
+		}
+	break;
+	
+	case rm1:
+	// do nothing
+	break;
+	
+	
+}

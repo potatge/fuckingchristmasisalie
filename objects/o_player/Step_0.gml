@@ -15,21 +15,28 @@ var vspd = 0; // Replace with your actual vertical speed variable
 if (left){
 	hspd -= spd;
 	image_xscale = 1;
+	sprite_index = s_chara_girl_left;
 }
 
 if (right){
 	hspd += spd;
 	image_xscale = -1;
+	sprite_index = s_chara_girl_left;
 }
 
 if (up){
 	vspd -= spd;
+	sprite_index = s_chara_girl_up;
 }
 
 if (down){
 	vspd  += spd;
+	sprite_index = s_chara_girl_down;
 }
 
+if (!left || !down || !up || !down){
+	sprite_index = s_chara_girl_idle;
+}
 //collisions
 
 

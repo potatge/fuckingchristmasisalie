@@ -5,6 +5,16 @@ myText = "oochie woochie bah bah xmas game gonna be fun."
 
 nearItem = false;
 
+
+//cutscene 
+cutscene1Text = [
+"Urgh...Claire, is that you. ",
+"W-what happened? Are you ok? Why are you on the gro-",
+"Jingle bells...jingle bells.",
+"You aren't making any sense! Damien, snap out of it!",
+"He appeared out of nowhere with this...and he..."
+]
+
 global.interactables = [
 
 {
@@ -24,19 +34,26 @@ global.interactables = [
 	{
 	name_: "present1",
 	canGrab: true,
-	myText:"Yoinks. One present for me."
+	myText:"Yoinks. One present for me.",
 	sprite: s_item_present2
 	
 	},
 	{
 	name_: "present for damien",
 	canGrab: false,
-	myText:"I should leave that there. It's for Damien."
+	myText:"I should leave that there. It's for Damien.",
 	sprite: s_item_present1
 		
-		
+	},
+	{
+		name_: "damien",
+	canGrab: false,
+	myText: cutscene1Text[3],
+	sprite: s_chara_boy_collapsed
 	}
+		
 	
 	
 	
 ]
+
