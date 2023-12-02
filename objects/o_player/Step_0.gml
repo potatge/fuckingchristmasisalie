@@ -51,6 +51,7 @@ if (interact) {
   var objectName = ""
  // o_ctrl.moreTextAvailible = true;
   if (keyboard_check_pressed(vk_space)){
+	  o_ctrl.moreTextAvailible = true;
     for (var i = 0; i < array_length(global.interactables); i++) {
       
         if (global.interactables[i].name_ == interact.name_) {
