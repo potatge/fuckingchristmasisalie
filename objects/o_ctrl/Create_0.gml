@@ -80,7 +80,6 @@ global.interactables = [
 	myText: ["What the, another present...?","It says 'For Claire' on the tag.","...but me and Damien said we'd only get each other one gift."],
 	sprite: s_bg_table,
 	maxText: 2,
-	grabAction: true,
 	},
 	
 	
