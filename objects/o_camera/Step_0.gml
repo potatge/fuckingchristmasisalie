@@ -7,7 +7,7 @@ cam_id = view_camera[0];
 current_x = camera_get_view_x(cam_id);
 current_y = camera_get_view_y(cam_id);
 
-var snapdist = camera_get_view_height(view_camera[0]) *3 //700;
+var snapdist = camera_get_view_height(view_camera[0]) *4 //700;
 var smoothing = 0.2; // Adjust this value to control the smoothness of the transition
 
 // Initialize target position

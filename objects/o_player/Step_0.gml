@@ -34,3 +34,15 @@ if (tiles){
 }else{
 	show_debug_message("NO tile meet")
 }
+
+
+//dialogue system
+var interact = place_meeting(x,y,o_interactable)
+if (interact){
+	if (keyboard_check_pressed(vk_space)){
+		o_ctrl.myText = interact.myText; 
+		o_ctrl.nearItem = !o_ctrl.nearItem
+	}
+}else{
+	o_ctrl.nearItem = false;
+}
