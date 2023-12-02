@@ -1,0 +1,1 @@
+myText = "Yoinks. One present for me."

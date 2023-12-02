@@ -43,6 +43,8 @@ var player_y = y; // Replace with your actual player y-coordinate
 // Function to check tile collisions
 function check_tile_collision(x, y) {
     var t_ = layer_tilemap_get_id("walls");
+	//TODO find a way to do multiple tilesets 
+	//var t2_ =layer_tilemap_get_id("walls2")
     var tiles = tilemap_get_at_pixel(t_, x, y);
 
     return tiles; // Adjust this based on your collision logic with tiles
@@ -67,16 +69,12 @@ if (collision_at_next_position) {
     y += vspd;
 }
 
-
-
-
-
 //dialogue system
 var interact = place_meeting(x,y,o_interactable)
 if (interact){
 	if (keyboard_check_pressed(vk_space)){
 		o_ctrl.myText = interact.myText; 
-		o_ctrl.nearItem = !o_ctrl.nearItem
+		o_ctrl.nearItem = true
 	}
 }else{
 	o_ctrl.nearItem = false;
