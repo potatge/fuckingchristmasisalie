@@ -48,7 +48,7 @@ global.interactables = [
 	{
 		name_: "damien",
 	canGrab: false,
-	myText: cutscene1Text[3],
+	myText: cutscene1Text[2],
 	sprite: s_chara_boy_collapsed
 	}
 		
