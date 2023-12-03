@@ -1,6 +1,16 @@
 global.drawDepth = -9000
 global.charDepth = -5000;
 global.cutscene = 0;
+enum gamestates{
+	
+	boxesExist,
+	boxesGone,
+	bloodSplodge
+	
+};
+global.state =  gamestates.boxesExist;
+
+show_debug_message("CUTSCENE START:"+string(global.cutscene))
 depth = global.drawDepth
 myText = "oochie woochie bah bah (test) xmas game gonna be fun."
 

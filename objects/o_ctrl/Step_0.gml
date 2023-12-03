@@ -26,3 +26,21 @@ switch (room){
 	
 	
 }
+
+switch global.state{
+	
+case gamestates.boxesExist:
+	show_debug_message("boxes exist state")
+	break;
+	
+case gamestates.boxesGone:
+	
+	show_debug_message("boxes GONE state")
+	break;
+	
+	
+case gamestates.bloodSplodge:
+		show_debug_message("bloodsplodge state")
+	break;
+	
+}

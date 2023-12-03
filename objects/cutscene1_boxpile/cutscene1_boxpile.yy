@@ -1,11 +1,12 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "cutscene1_removeboxes",
+  "name": "cutscene1_boxpile",
   "eventList": [
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,},
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":2,"isDnD":false,},
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,},
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,},
   ],
   "managed": true,
   "overriddenProperties": [],
@@ -33,8 +34,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "s_cutscene_area2",
-    "path": "sprites/s_cutscene_area2/s_cutscene_area2.yy",
+    "name": "s_cutscene_area",
+    "path": "sprites/s_cutscene_area/s_cutscene_area.yy",
   },
   "spriteMaskId": null,
   "visible": true,

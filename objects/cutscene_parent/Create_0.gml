@@ -1,2 +1,2 @@
 cutsceneHappening = false;
-name_ = "cutscene_parent;
+name_ = "cutscene_parent";

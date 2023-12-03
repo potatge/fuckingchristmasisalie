@@ -52,7 +52,7 @@ clamp(y, 0, room_height);
 //dialogue system
 //dialogue system
 
-var interact = instance_place(x, y, [o_interactable, cutscene0_boxpile])
+var interact = instance_place(x, y, [o_interactable, cutscene1_boxpile])
 if (interact) {
   var object = ""
 
