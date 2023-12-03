@@ -87,9 +87,9 @@ global.interactables = [
 	{
 	name_: "present2",
 	canGrab: true,
-	myText: ["What the, another present...?","It says 'For Claire' on the tag.","...but me and Damien said we'd only get each other one gift."],
+	myText: ["What the, another present...?","It says 'For Claire' on the tag, but me and Damien said we'd only get each other one gift."],
 	sprite: s_bg_table,
-	maxText: 2,
+	maxText: 1,
 	},
 	
 	
@@ -131,25 +131,21 @@ global.interactables = [
 	canGrab: false,
 	myText:["W-what the...","This can't be happening...","Oh...where are you?"],
 	sprite: s_sfx_blood,
-	maxText: 2
-	}
-	
-]
-
-global.cutsceneInfo = [
+	maxText: 2,
+	collide: false
+	},
 	{
 		
-	name_: "cutscene2",
+	name_: "cutscene1",
 	canGrab: false,
 	myText:["...is someone messing with me? I know this wasn't there before."],
 	sprite: noone,
-	maxText: 0	
+	maxText: 0,
+	collide: false
 	
-	},
-	
-	
-	
+	},	
 ]
+
 
 curText = 0;
 moreTextAvailible = true;

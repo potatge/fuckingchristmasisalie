@@ -63,16 +63,24 @@ if (interact) {
 		 var object = global.interactables[i];
 		  o_ctrl.myText = object.myText[o_ctrl.curText];
 		  
+		  
+			  
           if ((o_ctrl.curText == object.maxText)) {
 			  o_ctrl.moreTextAvailible = false;
+			    
+		  
+		   if (object.name_ == "present2") {
+			 instance_destroy(interact);
+			 show_debug_message("causing breakage with present delete")
+			 }
+			 
 			  //TODO will cause glitches but get present interaction working for cutscenes.
-			  if (object.canGrab == true){
-				  instance_destroy(interact);
-				  o_ctrl.curText = 0;
-			  }
+			 
             return;
           }else{
 			  o_ctrl.curText++
+			  //messing it up below
+			  
 			  
 		  }
           show_debug_message("object " + string(object.myText[o_ctrl.curText]))
