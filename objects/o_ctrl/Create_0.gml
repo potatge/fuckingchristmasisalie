@@ -86,7 +86,7 @@ global.interactables = [
 	{
 	name_: "present3",
 	canGrab: true,
-	myText:["Another one?","'You've been very naughty this year...'??","W-Who did this? Creepy af."],
+	myText:["Another one?","The tag reads...'You've been very naughty this year...'??","W-Who did this? Creepy."],
 	sprite: s_item_present3,
 	maxText: 2
 	},

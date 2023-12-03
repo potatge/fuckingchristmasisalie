@@ -51,42 +51,36 @@ clamp(x, 0, room_width);
 clamp(y, 0, room_height);
 
 //dialogue system
+//dialogue system
 var interact = instance_place(x, y, o_interactable)
 if (interact) {
   var objectName = ""
- // o_ctrl.moreTextAvailible = true;
+  o_ctrl.moreTextAvailible = true;
   if (keyboard_check_pressed(vk_space)){
-	  o_ctrl.moreTextAvailible = true;
     for (var i = 0; i < array_length(global.interactables); i++) {
       
         if (global.interactables[i].name_ == interact.name_) {
-          var object = global.interactables[i]
-          // get individual 
-		 
+		 var object = global.interactables[i];
 		  o_ctrl.myText = object.myText[o_ctrl.curText];
 		  
           if ((o_ctrl.curText == object.maxText)) {
-			  //on end of text do stuff 
-			   o_ctrl.moreTextAvailible = false;
-			   if (object.canGrab = true){
-					instance_destroy(interact);
-			   }
-			 return;
-          }
-		  else{
+			  o_ctrl.moreTextAvailible = false;
+            return;
+			
+          }else{
 			  o_ctrl.curText++
 		  }
          
           show_debug_message("object " + string(object.myText[o_ctrl.curText]))
-		}
-	 o_ctrl.showText = true
-	 
-  } }} else {
-	//not near item, set current text back to zero.
+        }
+	 o_ctrl.showText = true;
+  }
+  }
+  } else {
+	  //not near item, set current text back to zero.
     o_ctrl.showText = false;
 	o_ctrl.curText = 0;
   }
-  
   
 // Collisions
 var cam_id = view_camera[0];
