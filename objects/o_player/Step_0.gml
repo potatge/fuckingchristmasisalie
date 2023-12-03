@@ -1,3 +1,4 @@
+
 //movement
 var left = keyboard_check_direct(vk_left)
 var right = keyboard_check_direct(vk_right)
@@ -10,34 +11,41 @@ var player_y = y; // Replace with your actual player y-coordinate
 var hspd = 0 // Replace with your actual horizontal speed variable
 var vspd = 0; // Replace with your actual vertical speed variable
 
-if (left) {
-  hspd -= spd;
-  image_xscale = 1;
-  sprite_index = s_chara_girl_left;
+if (!global.playerCanMove){
+	show_debug_message("can't move")
 }
+//only move player if allowed.
+if (global.playerCanMove){
 
-if (right) {
-  hspd += spd;
-  image_xscale = -1;
-  sprite_index = s_chara_girl_left;
+	if (left) {
+	  hspd -= spd;
+	  image_xscale = 1;
+	  sprite_index = s_chara_girl_left;
+	}
+
+	if (right) {
+	  hspd += spd;
+	  image_xscale = -1;
+	  sprite_index = s_chara_girl_left;
+	}
+
+	if (up) {
+	  vspd -= spd;
+	  sprite_index = s_chara_girl_up;
+	}
+
+	if (down) {
+	  vspd += spd;
+	  sprite_index = s_chara_girl_down;
+	}
+
 }
-
-if (up) {
-  vspd -= spd;
-  sprite_index = s_chara_girl_up;
-}
-
-if (down) {
-  vspd += spd;
-  sprite_index = s_chara_girl_down;
-}
-
 // revert back to idle
 if (keyboard_check_released(vk_left) || keyboard_check_released(vk_right)) {
   sprite_index = s_chara_girl_idle;
 }
 
-if (keyboard_check_released(vk_down)) {
+if (keyboard_check_released(vk_down || keyboard_check_released(vk_up))) {
   sprite_index = s_chara_girl_up_idle;
 }
 
@@ -76,16 +84,18 @@ if (interact) {
        
 	  
 		}
-	 o_ctrl.nearItem = true
+	 o_ctrl.showText = true
 	 
 	 
   }
   // if you can grab, destroy
   }} else {
 	  //not near item, set current text back to zero.
-    o_ctrl.nearItem = false;
+    o_ctrl.showText = false;
 	o_ctrl.curText = 0;
   }
+  
+  
 // Collisions
 var cam_id = view_camera[0];
 

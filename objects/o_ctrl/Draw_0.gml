@@ -19,7 +19,7 @@ switch (room){
 	
 	case rm1:
 
-	if (nearItem){
+	if (showText){
 		draw_sprite_stretched_ext(s_textbox_black,0,xx,yy,width,height,c_,0.7);
 		draw_set_alpha(1);
 		draw_text_ext(xx+pad,yy+pad,myText,sep,width-pad);

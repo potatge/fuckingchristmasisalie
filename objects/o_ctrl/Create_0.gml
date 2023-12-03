@@ -4,7 +4,7 @@ depth = global.drawDepth
 myText = "oochie woochie bah bah xmas game gonna be fun."
 
 
-nearItem = false;
+showText = false;
 
 
 //cutscene 
