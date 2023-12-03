@@ -55,26 +55,27 @@ clamp(y, 0, room_height);
 
 var interact = instance_place(x,y,[o_interactable,cutscene])
 if (interact) {
-  var objectName = ""
-  o_ctrl.moreTextAvailible = true;
+  var object = ""
+ 
   if (keyboard_check_pressed(vk_space)){
+	   o_ctrl.moreTextAvailible = true;
     for (var i = 0; i < array_length(global.interactables); i++) {
       
         if (global.interactables[i].name_ == interact.name_) {
 		 var object = global.interactables[i];
 		  o_ctrl.myText = object.myText[o_ctrl.curText];
 		  
-		  
-			  
+		 
+			  //if at max text, key pres
           if ((o_ctrl.curText == object.maxText)) {
 			  o_ctrl.moreTextAvailible = false;
 			    
-		  
-		   if (object.name_ == "present2") {
-			 instance_destroy(interact);
-			 show_debug_message("causing breakage with present delete")
-			 }
-			 
+				
+				
+			   //if (object.name_ == "present2" || object.name_ == "present3" ){
+			// instance_destroy(interact);
+			 o_ctrl.curText = 0;
+			// }
 			  //TODO will cause glitches but get present interaction working for cutscenes.
 			 
             return;
@@ -82,10 +83,17 @@ if (interact) {
 			  o_ctrl.curText++
 			  //messing it up below
 		  }
+		  
+		 
+		   
           show_debug_message("object " + string(object.myText[o_ctrl.curText]))
         }
 	 o_ctrl.showText = true;
+	 //gonna break
+	 
+		  
   }
+  
   }
   } else {
 	  //not near item, set current text back to zero.

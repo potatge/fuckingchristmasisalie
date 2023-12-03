@@ -129,7 +129,7 @@ global.interactables = [
 	{
 	name_: "blood",
 	canGrab: false,
-	myText:["W-what the...","This can't be happening...","Oh...where are you?"],
+	myText:["W-what the...!","This can't be happening...","Oh...where are you?!"],
 	sprite: s_sfx_blood,
 	maxText: 2,
 	collide: false
@@ -138,7 +138,7 @@ global.interactables = [
 		
 	name_: "cutscene1",
 	canGrab: false,
-	myText:["...is someone messing with me? I know there were boxes here before."],
+	myText:["...I know there were boxes here before."],
 	sprite: noone,
 	maxText: 0,
 	collide: false

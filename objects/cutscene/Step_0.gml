@@ -1,5 +1,5 @@
 
-var area = collision_rectangle(x, y, 45, 45, o_player, false, false);
+var area = collision_rectangle(x, y,x + 100, y + 100, cutscene, false, false);
 var boxes = instance_place(x, y, o_item_box);
 
 
@@ -9,30 +9,31 @@ var touchplayer = instance_place(x, y, o_player)
 
 switch (global.cutscene) {
 case 1:
-
-  var cutscenename = "cutscene1"
   instance_destroy(boxes);
   //cutsceneHappening = true;
 
   if (area) {
-	show_debug_message("in area1");
+	o_ctrl.showText = true;
   }
   break;
 
 case 2:
-  var cutscenename = "cutscene2"
+
   //replace Damien obj with puddle of blood.
   with(o_chara_damien) {
     instance_change(o_sfx_blood, true)
   }
+  
+  if (touchplayer){
+	   	o_ctrl.showText = true;
+  }
   break;
 
 case 3:
-
   o_ctrl.lightsOut = true
-  
   if (touchplayer) {
-	  show_debug_message("in area2")
+	  o_ctrl.showText = true;
+	  
   
   }
   break;
