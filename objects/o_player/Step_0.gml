@@ -46,7 +46,7 @@ if (keyboard_check_released(vk_left) || keyboard_check_released(vk_right)) {
 }
 
 if (keyboard_check_released(vk_down || keyboard_check_released(vk_up))) {
-  sprite_index = s_chara_girl_up_idle;
+  sprite_index = s_chara_girl_idle;
 }
 
 // keep in room? not working best. 
@@ -90,6 +90,7 @@ if (interact) {
   }
   // if you can grab, destroy
   }} else {
+	  show_debug_message("no text set!")
 	  //not near item, set current text back to zero.
     o_ctrl.showText = false;
 	o_ctrl.curText = 0;
