@@ -1,5 +1,3 @@
-scene1 = false;
-scene2 = false;
-scene3 = false;
+scene = 0;
 cutsceneHappening = false;
 name_ = "cutscene"

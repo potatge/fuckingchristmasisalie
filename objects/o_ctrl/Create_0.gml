@@ -111,7 +111,7 @@ global.interactables = [
 	{
 	name_: "cutscene",
 	canGrab: false,
-	myText:["Weren't there a bunch of boxes here before?"],
+	myText:["Wait, weren't there a bunch of boxes here before??"],
 	sprite: noone,
 	maxText: 0
 		
