@@ -1,5 +1,5 @@
 
-var area = collision_rectangle(x, y, 100, 100, o_player, false, false);
+var area = collision_rectangle(x, y, 45, 45, o_player, false, false);
 var boxes = instance_place(x, y, o_item_box);
 
 
@@ -11,18 +11,11 @@ switch (global.cutscene) {
 case 1:
 
   var cutscenename = "cutscene1"
-  o_ctrl.myText = "cutscene 1";
   instance_destroy(boxes);
   //cutsceneHappening = true;
 
   if (area) {
-    o_ctrl.showText = true;
-	o_ctrl.myText = "cutscene 2";
-	show_debug_message("in area");
-    //global.playerCanMove = false;
-    //if (alarm[0] <= 0) {
-    //  alarm[0] = 50;
-    //}
+	show_debug_message("in area1");
   }
   break;
 
@@ -37,12 +30,10 @@ case 2:
 case 3:
 
   o_ctrl.lightsOut = true
+  
   if (touchplayer) {
-	  o_ctrl.showText = true;
-    o_ctrl.myText = "A blackout? I better use my phone's light."
-    if (alarm[0] <= 0) {
-      alarm[0] = 50;
-    }
+	  show_debug_message("in area2")
+  
   }
   break;
 }

@@ -52,7 +52,8 @@ clamp(y, 0, room_height);
 
 //dialogue system
 //dialogue system
-var interact = instance_place(x, y, o_interactable)
+
+var interact = instance_place(x,y,[o_interactable,cutscene])
 if (interact) {
   var objectName = ""
   o_ctrl.moreTextAvailible = true;
@@ -80,8 +81,6 @@ if (interact) {
           }else{
 			  o_ctrl.curText++
 			  //messing it up below
-			  
-			  
 		  }
           show_debug_message("object " + string(object.myText[o_ctrl.curText]))
         }
@@ -111,12 +110,12 @@ function check_tile_collision(x, y) {
 }
 
 //collisions 
-
+var collisions = instance_place(x, y,o_interactable)
 // Check for tile collisions at the player's potential next position
 var collision_at_next_position = check_tile_collision(player_x + hspd, player_y + vspd);
 
 // Check if there's an obstacle (interactable) at the player's next position
-var obstacle_at_next_position = instance_place(player_x + hspd, player_y + vspd, interact);
+var obstacle_at_next_position = instance_place(player_x + hspd, player_y + vspd, collisions);
 
 // Check if there's a collision with tilemap or interactable (boxes, etc.)
 if (collision_at_next_position || obstacle_at_next_position) {

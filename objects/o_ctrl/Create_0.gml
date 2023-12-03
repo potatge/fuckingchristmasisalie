@@ -138,12 +138,21 @@ global.interactables = [
 		
 	name_: "cutscene1",
 	canGrab: false,
-	myText:["...is someone messing with me? I know this wasn't there before."],
+	myText:["...is someone messing with me? I know there were boxes here before."],
 	sprite: noone,
 	maxText: 0,
 	collide: false
-	
+
 	},	
+	
+	{
+	name_: "cutscene2",
+	canGrab: false,
+	myText:["...I better use my phone's light!"],
+	sprite: noone,
+	maxText: 0,
+	collide: false
+	}
 ]
 
 
