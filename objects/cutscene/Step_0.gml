@@ -12,7 +12,6 @@ var area2 = instance_place(x,y,o_player)
 
 if (area2 && cutsceneHappening){
 	o_ctrl.showText = true;
-	//temporary stop player move
 	global.playerCanMove = false;
 	if (alarm[0]<= 0){
 		alarm[0] = 50;

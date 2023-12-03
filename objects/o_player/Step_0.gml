@@ -11,9 +11,6 @@ var player_y = y; // Replace with your actual player y-coordinate
 var hspd = 0 // Replace with your actual horizontal speed variable
 var vspd = 0; // Replace with your actual vertical speed variable
 
-if (!global.playerCanMove){
-	show_debug_message("can't move")
-}
 //only move player if allowed.
 if (global.playerCanMove){
 
@@ -73,23 +70,18 @@ if (interact) {
 			   o_ctrl.moreTextAvailible = false;
 			   if (object.canGrab = true){
 					instance_destroy(interact);
-				}
-            return;
-			
-          }else{
+			   }
+			 return;
+          }
+		  else{
 			  o_ctrl.curText++
 		  }
          
           show_debug_message("object " + string(object.myText[o_ctrl.curText]))
-       
-	  
 		}
 	 o_ctrl.showText = true
 	 
-	 
-  }
-  // if you can grab, destroy
-  }} else {
+  } }} else {
 	//not near item, set current text back to zero.
     o_ctrl.showText = false;
 	o_ctrl.curText = 0;

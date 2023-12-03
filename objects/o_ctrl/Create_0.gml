@@ -75,7 +75,7 @@ global.interactables = [
 	},
 	
 	{
-	name_: "present3",
+	name_: "present2",
 	canGrab: true,
 	myText: ["What the, another present...?","It says 'For Claire' on the tag.","...but me and Damien said we'd only get each other one gift."],
 	sprite: s_bg_table,
@@ -84,11 +84,11 @@ global.interactables = [
 	
 	
 	{
-	name_: "present1",
+	name_: "present3",
 	canGrab: true,
-	myText:["Yoinks. One present for me."],
-	sprite: s_item_present2,
-	maxText: 0
+	myText:["Another one?","'You've been very naughty this year...'??","W-Who did this? Creepy af."],
+	sprite: s_item_present3,
+	maxText: 2
 	},
 	
 	{
