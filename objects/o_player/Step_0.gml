@@ -66,11 +66,10 @@ if (interact) {
           if ((o_ctrl.curText == object.maxText)) {
 			  o_ctrl.moreTextAvailible = false;
             return;
-			
           }else{
 			  o_ctrl.curText++
+			  
 		  }
-         
           show_debug_message("object " + string(object.myText[o_ctrl.curText]))
         }
 	 o_ctrl.showText = true;

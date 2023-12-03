@@ -1,0 +1,1 @@
+myText = "yeah, I ain't getting through this way."

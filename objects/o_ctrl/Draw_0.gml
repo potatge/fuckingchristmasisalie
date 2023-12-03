@@ -14,7 +14,7 @@ switch (room){
 	
 	case rm_title:
 		draw_sprite_stretched_ext(s_splashscreen,0,0,0,camera_get_view_width(view_camera[0]),camera_get_view_height(view_camera[0]),c_,1);
-		draw_text(xx,yy,"Arrows to move.\nSpace to interact.\nF to fullscreen.")
+		draw_text(xx/2,yy/2,"Arrows to move. Space to interact. F to fullscreen.")
 	break;
 	
 	case rm1:
