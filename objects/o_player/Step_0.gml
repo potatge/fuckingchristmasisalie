@@ -65,6 +65,11 @@ if (interact) {
 		  
           if ((o_ctrl.curText == object.maxText)) {
 			  o_ctrl.moreTextAvailible = false;
+			  //TODO will cause glitches but get present interaction working for cutscenes.
+			  if (object.canGrab == true){
+				  instance_destroy(interact);
+				  o_ctrl.curText = 0;
+			  }
             return;
           }else{
 			  o_ctrl.curText++

@@ -1,5 +1,6 @@
 global.drawDepth = -9000
 global.charDepth = -5000;
+global.cutscene = 0;
 depth = global.drawDepth
 myText = "oochie woochie bah bah xmas game gonna be fun."
 
@@ -111,7 +112,7 @@ global.interactables = [
 	{
 	name_: "cutscene2",
 	canGrab: false,
-	myText:["Ok, someone is really messing with me now."],
+	myText:["...is someone messing with me? I know this wasn't there before."],
 	sprite: noone,
 	maxText: 0
 		
