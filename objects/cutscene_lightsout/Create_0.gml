@@ -1,3 +1,3 @@
 cutsceneHappening = false;
-name_ = "cutscene3_lightsout";
+name_ = "cutscene_lightsout";
 instance_deactivate_object(self);

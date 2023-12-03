@@ -1,11 +1,11 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "cutscene3_lightsout",
+  "name": "cutscene_lightsout",
   "eventList": [
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,},
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":2,"isDnD":false,},
-    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,},
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":{"name":"o_player","path":"objects/o_player/o_player.yy",},"eventNum":0,"eventType":4,"isDnD":false,},
   ],
   "managed": true,
   "overriddenProperties": [],
@@ -14,8 +14,8 @@
     "path": "folders/Objects/cutscenes.yy",
   },
   "parentObjectId": {
-    "name": "cutscene_parent",
-    "path": "objects/cutscene_parent/cutscene_parent.yy",
+    "name": "cutscene",
+    "path": "objects/cutscene/cutscene.yy",
   },
   "persistent": false,
   "physicsAngularDamping": 0.1,

@@ -30,17 +30,21 @@ switch (room){
 switch global.state{
 	
 case gamestates.boxesExist:
-	show_debug_message("boxes exist state")
 	break;
 	
 case gamestates.boxesGone:
-	
-	show_debug_message("boxes GONE state")
+	cutscene_boxpile.name_  = "cutscene_boxesgone"
 	break;
-	
-	
+
 case gamestates.bloodSplodge:
-		show_debug_message("bloodsplodge state")
+		with(o_chara_damien) {
+			instance_change(o_sfx_blood, true)
+		}
+		instance_activate_object(cutscene_lightsout);
+		instance_deactivate_object(cutscene_boxpile);
 	break;
 	
+case gamestates.lightsOut:
+	o_ctrl.lightsOut = true;
+	break;
 }

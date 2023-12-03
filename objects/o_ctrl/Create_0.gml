@@ -5,7 +5,8 @@ enum gamestates{
 	
 	boxesExist,
 	boxesGone,
-	bloodSplodge
+	bloodSplodge,
+	lightsOut
 	
 };
 global.state =  gamestates.boxesExist;
@@ -95,20 +96,20 @@ global.interactables = [
 	},
 	
 	{
-	name_: "present2",
+	name_: "present1",
 	canGrab: true,
-	myText: ["What the, another present...?","It says 'For Claire' on the tag, but me and Damien said we'd only get each other one gift."],
+	myText: ["What the, a present?","It says 'For Claire' on the tag, but me and Damien said we'd only get each other one gift."],
 	sprite: s_bg_table,
 	maxText: 1,
 	},
 	
 	
 	{
-	name_: "present3",
+	name_: "present2",
 	canGrab: true,
-	myText:["Another one?","The tag reads...'You've been very naughty this year...'??","W-Who did this? Creepy."],
+	myText:["Another one?","The tag reads...","'You've been very naughty this year...'??","W-Who did this? Creepy."],
 	sprite: s_item_present3,
-	maxText: 2
+	maxText: 3
 	},
 	
 	{
@@ -139,14 +140,14 @@ global.interactables = [
 	{
 	name_: "blood",
 	canGrab: false,
-	myText:["W-what the...!","This can't be happening...","Oh...where are you?!"],
+	myText:["This can't be happening...","Oh...where are you?!"],
 	sprite: s_sfx_blood,
-	maxText: 2,
+	maxText: 1,
 	collide: false
 	},
 	{
 		
-	name_: "cutscene0_boxpile",
+	name_: "cutscene_boxpile",
 	canGrab: false,
 	myText:["...did I put all these boxes here?"],
 	sprite: noone,
@@ -156,16 +157,16 @@ global.interactables = [
 	},	
 	{
 		
-	name_: "cutscene1_removeboxes",
+	name_: "cutscene_boxesgone",
 	canGrab: false,
-	myText:["Wait, there were boxes here before."],
+	myText:["Wait, weren't there boxes here before?"],
 	sprite: noone,
 	maxText: 0,
 	collide: false
 
 	},	
 	{
-	name_: "cutscene2_damienblood",
+	name_: "cutscene_damienblood",
 	canGrab: false,
 	myText:["AAAAAA!!!"],
 	sprite: noone,
@@ -173,11 +174,11 @@ global.interactables = [
 	collide: false
 	},
 	{
-	name_: "cutscene3_lightsout",
+	name_: "cutscene_lightsout",
 	canGrab: false,
-	myText:["...I better use my phone's light!"],
+	myText:["W-what the...!","...I better use my phone's light!"],
 	sprite: noone,
-	maxText: 0,
+	maxText: 1,
 	collide: false
 	}
 ]
