@@ -1,0 +1,1 @@
+o_ctrl.lightsOut = true

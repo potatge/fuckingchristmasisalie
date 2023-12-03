@@ -2,7 +2,7 @@ global.drawDepth = -9000
 global.charDepth = -5000;
 global.cutscene = 0;
 depth = global.drawDepth
-myText = "oochie woochie bah bah xmas game gonna be fun."
+myText = "oochie woochie bah bah (test) xmas game gonna be fun."
 
 
 showText = false;
@@ -136,17 +136,34 @@ global.interactables = [
 	},
 	{
 		
-	name_: "cutscene1",
+	name_: "cutscene0_boxpile",
 	canGrab: false,
-	myText:["...I know there were boxes here before."],
+	myText:["...did I put all these boxes here?"],
 	sprite: noone,
 	maxText: 0,
 	collide: false
 
 	},	
-	
 	{
-	name_: "cutscene2",
+		
+	name_: "cutscene1_removeboxes",
+	canGrab: false,
+	myText:["Wait, there were boxes here before."],
+	sprite: noone,
+	maxText: 0,
+	collide: false
+
+	},	
+	{
+	name_: "cutscene2_damienblood",
+	canGrab: false,
+	myText:["AAAAAA!!!"],
+	sprite: noone,
+	maxText: 0,
+	collide: false
+	},
+	{
+	name_: "cutscene3_lightsout",
 	canGrab: false,
 	myText:["...I better use my phone's light!"],
 	sprite: noone,
