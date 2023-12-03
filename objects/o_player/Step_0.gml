@@ -1,4 +1,3 @@
-
 //movement
 var left = keyboard_check_direct(vk_left)
 var right = keyboard_check_direct(vk_right)
@@ -12,29 +11,29 @@ var hspd = 0 // Replace with your actual horizontal speed variable
 var vspd = 0; // Replace with your actual vertical speed variable
 
 //only move player if allowed.
-if (global.playerCanMove){
+if (global.playerCanMove) {
 
-	if (left) {
-	  hspd -= spd;
-	  image_xscale = 1;
-	  sprite_index = s_chara_girl_left;
-	}
+  if (left) {
+    hspd -= spd;
+    image_xscale = 1;
+    sprite_index = s_chara_girl_left;
+  }
 
-	if (right) {
-	  hspd += spd;
-	  image_xscale = -1;
-	  sprite_index = s_chara_girl_left;
-	}
+  if (right) {
+    hspd += spd;
+    image_xscale = -1;
+    sprite_index = s_chara_girl_left;
+  }
 
-	if (up) {
-	  vspd -= spd;
-	  sprite_index = s_chara_girl_up;
-	}
+  if (up) {
+    vspd -= spd;
+    sprite_index = s_chara_girl_up;
+  }
 
-	if (down) {
-	  vspd += spd;
-	  sprite_index = s_chara_girl_down;
-	}
+  if (down) {
+    vspd += spd;
+    sprite_index = s_chara_girl_down;
+  }
 
 }
 // revert back to idle
@@ -53,54 +52,38 @@ clamp(y, 0, room_height);
 //dialogue system
 //dialogue system
 
-var interact = instance_place(x,y,[o_interactable,cutscene])
+var interact = instance_place(x, y, [o_interactable, cutscene])
 if (interact) {
   var object = ""
- 
-  if (keyboard_check_pressed(vk_space)){
-	   o_ctrl.moreTextAvailible = true;
+
+  if (keyboard_check_pressed(vk_space)) {
+    o_ctrl.moreTextAvailible = true;
     for (var i = 0; i < array_length(global.interactables); i++) {
-      
-        if (global.interactables[i].name_ == interact.name_) {
-		 var object = global.interactables[i];
-		  o_ctrl.myText = object.myText[o_ctrl.curText];
-		  
-		 
-			  //if at max text, key pres
-          if ((o_ctrl.curText == object.maxText)) {
-			  o_ctrl.moreTextAvailible = false;
-			    
-				
-				
-			   //if (object.name_ == "present2" || object.name_ == "present3" ){
-			// instance_destroy(interact);
-			 o_ctrl.curText = 0;
-			// }
-			  //TODO will cause glitches but get present interaction working for cutscenes.
-			 
-            return;
-          }else{
-			  o_ctrl.curText++
-			  //messing it up below
-		  }
-		  
-		 
-		   
-          show_debug_message("object " + string(object.myText[o_ctrl.curText]))
+
+      if (global.interactables[i].name_ == interact.name_) {
+        var object = global.interactables[i];
+        o_ctrl.myText = object.myText[o_ctrl.curText];
+
+        //if at max text, key pres
+        if ((o_ctrl.curText == object.maxText)) {
+          o_ctrl.moreTextAvailible = false;
+          o_ctrl.curText = 0;
+          return;
+        } else {
+          o_ctrl.curText++
+          //messing it up below
         }
-	 o_ctrl.showText = true;
-	 //gonna break
-	 
-		  
+        show_debug_message("object " + string(object.myText[o_ctrl.curText]))
+      }
+      o_ctrl.showText = true;
+    }
   }
-  
-  }
-  } else {
-	  //not near item, set current text back to zero.
-    o_ctrl.showText = false;
-	o_ctrl.curText = 0;
-  }
-  
+} else {
+  //not near item, set current text back to zero.
+  o_ctrl.showText = false;
+  o_ctrl.curText = 0;
+}
+
 // Collisions
 var cam_id = view_camera[0];
 
@@ -118,7 +101,7 @@ function check_tile_collision(x, y) {
 }
 
 //collisions 
-var collisions = instance_place(x, y,o_interactable)
+var collisions = instance_place(x, y, o_interactable)
 // Check for tile collisions at the player's potential next position
 var collision_at_next_position = check_tile_collision(player_x + hspd, player_y + vspd);
 
