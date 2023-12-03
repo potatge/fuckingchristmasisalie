@@ -5,18 +5,19 @@ var boxes = instance_place(x,y,o_item_box);
 if (scene1){
 	instance_destroy(boxes);
 	//instance_destroy();
-	cutsceneOver = true;
+	cutsceneHappening = true;
 	
 }
 
+var area2 = instance_place(x,y,o_player)
 
-if (area && cutsceneOver){
+if (area2 && cutsceneHappening){
 	o_ctrl.showText = true;
-	o_ctrl.myText = "Weren't there a bunch of boxes here before?"
-	show_debug_message("within area")
-	cutsceneOver = false;
-	//global.playerCanMove = false;
-	//alarm[0] = 60;
-	
-	
+	show_debug_message("within area. can't move.");
+	//temporary stop player move
+	global.playerCanMove = false;
+	if (alarm[0]<= 0){
+		alarm[0] = 60;
+		show_debug_message(alarm[0]);
+	}
 }

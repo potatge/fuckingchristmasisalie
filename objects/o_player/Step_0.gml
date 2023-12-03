@@ -90,8 +90,7 @@ if (interact) {
   }
   // if you can grab, destroy
   }} else {
-	  show_debug_message("no text set!")
-	  //not near item, set current text back to zero.
+	//not near item, set current text back to zero.
     o_ctrl.showText = false;
 	o_ctrl.curText = 0;
   }

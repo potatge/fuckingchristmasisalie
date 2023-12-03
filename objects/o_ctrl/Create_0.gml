@@ -104,6 +104,15 @@ global.interactables = [
 	canGrab: false,
 	myText:["Yeahhh, we need to get through these boxes."],
 	sprite: s_item_box,
+	maxText: 0	
+		
+	},
+	
+	{
+	name_: "cutscene",
+	canGrab: false,
+	myText:["Weren't there a bunch of boxes here before?"],
+	sprite: noone,
 	maxText: 0
 		
 		
