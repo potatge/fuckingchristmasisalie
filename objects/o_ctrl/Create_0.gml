@@ -45,9 +45,10 @@ global.interactables = [
 		"You aren't making any sense! Damien, snap out of it!",
 		"He appeared out of nowhere with this...and he...",
 		"Who did?",
-		"*Damien collapses weakly to the floor again*"
+		"*Damien collapses weakly to the floor again*",
+		"Stay right there!"
 	],
-	maxText: 6,
+	maxText: 7,
 	sprite: s_chara_boy_collapsed
 	},
 	
@@ -55,6 +56,14 @@ global.interactables = [
 	name_: "city poster",
 	canGrab: false,
 	myText: ["It's a poster from my favorite game."],
+	maxText: 0,
+	sprite: s_bg_cityposter
+	},
+	
+	{
+	name_: "candycane poster",
+	canGrab: false,
+	myText: ["It's a festive poster. Duh."],
 	maxText: 0,
 	sprite: s_bg_cityposter
 	},
@@ -99,27 +108,49 @@ global.interactables = [
 	sprite: s_item_present1,
 	maxText: 0
 	},
+	{
+	name_: "present for claire",
+	canGrab: false,
+	myText: ["This one is for me~ I can't wait. "],
+	sprite: s_item_present2,
+	maxText: 0
+	},
 	
 	{
 	name_: "moving boxes2",
 	canGrab: false,
-	myText:["Yeahhh, we need to get through these boxes."],
+	myText:["I don't feel like dealing with these boxes right now."],
 	sprite: s_item_box,
 	maxText: 0	
 		
 	},
 	
+	
 	{
+	name_: "blood",
+	canGrab: false,
+	myText:["W-what the...","This can't be happening...","Oh...where are you?"],
+	sprite: s_sfx_blood,
+	maxText: 2
+	}
+	
+]
+
+global.cutsceneInfo = [
+	{
+		
 	name_: "cutscene2",
 	canGrab: false,
 	myText:["...is someone messing with me? I know this wasn't there before."],
 	sprite: noone,
-	maxText: 0
-		
-		
-	}
+	maxText: 0	
+	
+	},
+	
+	
 	
 ]
 
 curText = 0;
 moreTextAvailible = true;
+lightsOut = false;

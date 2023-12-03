@@ -1,3 +1,3 @@
 global.playerCanMove = true;
 cutsceneHappening = false;
-instance_destroy();
+//instance_destroy();

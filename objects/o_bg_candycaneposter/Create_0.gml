@@ -1,1 +1,1 @@
-name_ = "city poster"
+name_ = "candycane poster"
