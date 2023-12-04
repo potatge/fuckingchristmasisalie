@@ -60,6 +60,13 @@ global.interactables = [
 	
 	},
 	{
+	name_: "stewpot",
+	canGrab: false,
+	myText: ["It's a beef stew in progress."],
+	maxText: 0,
+	portrait: noone
+	},
+	{
 	name_: "xmas tree",
 	canGrab: false,
 	myText: ["It's a lovely tree, but I can't help but feel sad this time of year."],
