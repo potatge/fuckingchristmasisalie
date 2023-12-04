@@ -50,12 +50,10 @@ clamp(x, 0, room_width);
 clamp(y, 0, room_height);
 
 //dialogue system
-//dialogue system
-
-var interact = instance_place(x, y, [o_interactable,cutscene])
+var interact = instance_place(x, y,[o_interactable,cutscene])
 if (interact) {
   var object = ""; 
-  if (keyboard_check_pressed(vk_space) || instance_place(x,y,cutscene)) {
+  if (keyboard_check_pressed(vk_space)) {
     o_ctrl.moreTextAvailible = true;
     for (var i = 0; i < array_length(global.interactables); i++) {
 
