@@ -4,9 +4,14 @@ global.cutscene = 0;
 enum gamestates{
 	
 	everythingsFine,
+	goToFridge,
+	checkOnDamien,
+	firstPresent,
 	damienDisappears,
-	boxesExist,
+	//boxesExist,
 	boxesGone,
+	talkToDamien,
+	secondPresentAppears,
 	bloodSplodge,
 	lightsOut
 	
@@ -16,7 +21,7 @@ global.state =  gamestates.everythingsFine;
 sfxPlay = false;
 musicPlay = true;
 //scr_changeSounds();
-audio_play_sound(music_holidays, 1, true);
+
 
 depth = global.drawDepth
 myText = "Xmas game gonna be fun."
@@ -194,7 +199,14 @@ global.interactables = [
 	myText:["This can't be happening...","Oh...where are you?!"],
 	sprite: s_sfx_blood,
 	maxText: 1,
-	collide: false,
+	portrait: noone
+	},
+	{
+	name_: "cutscene_checkondamien",
+	canGrab: false,
+	myText:["Huh, weren't we about to have dinner?"],
+	sprite: noone,
+	maxText: 0,
 	portrait: noone
 	},
 	{
@@ -204,7 +216,6 @@ global.interactables = [
 	myText:["...did I put all these boxes here?"],
 	sprite: noone,
 	maxText: 0,
-	collide: false,
 	portrait: noone
 
 	},	
@@ -215,7 +226,6 @@ global.interactables = [
 	myText:["Wait, weren't there boxes here before?"],
 	sprite: noone,
 	maxText: 0,
-	collide: false,
 	portrait: noone
 
 	},	
@@ -225,7 +235,6 @@ global.interactables = [
 	myText:["W-what the...!","...I better use my phone's light!"],
 	sprite: noone,
 	maxText: 1,
-	collide: false,
 	portrait: noone
 	},
 	{
@@ -234,7 +243,6 @@ global.interactables = [
 	myText:["Hey, it's the holidays."],
 	sprite: noone,
 	maxText: 0,
-	collide: false,
 	portrait: noone
 	},
 	{
@@ -243,7 +251,6 @@ global.interactables = [
 	myText:["Someone's a boozer."],
 	sprite: noone,
 	maxText: 0,
-	collide: false,
 	portrait: noone
 	,
 	},
@@ -253,7 +260,6 @@ global.interactables = [
 	myText:["Time for a refil?"],
 	sprite: noone,
 	maxText: 0,
-	collide: false,
 	portrait: noone
 	},
 	{
@@ -262,11 +268,36 @@ global.interactables = [
 	myText:["Yes, we're even doing the stockings thing. What age are we, 6?"],
 	sprite: noone,
 	maxText: 0,
-	collide: false,
+	portrait: noone
+	},
+		{
+	name_: "nightstand",
+	canGrab: false,
+	myText:["It's where I put my keys."],
+	sprite: s_bg_nightstand,
+	maxText: 0,
+	portrait: noone
+	},
+	{
+	name_: "fridge",
+	canGrab: false,
+	myText:["At least our fridge is full."],
+	sprite: s_bg_nightstand,
+	maxText: 0,
 	portrait: noone
 	}
 ]
 
+switch (room){
+	
+	case rm_title:
+	//nothing 
+	break;
+	case rm1:
+	audio_play_sound(music_holidays, 1, true);
+	break;
+	
+}
 
 
 curText = 0;

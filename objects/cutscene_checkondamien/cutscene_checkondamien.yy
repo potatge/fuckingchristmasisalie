@@ -1,20 +1,20 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "o_bg_fridge",
+  "name": "cutscene_checkondamien",
   "eventList": [
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,},
-    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,},
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":2,"isDnD":false,},
   ],
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "bg",
-    "path": "folders/Objects/bg.yy",
+    "name": "cutscenes",
+    "path": "folders/Objects/cutscenes.yy",
   },
   "parentObjectId": {
-    "name": "o_interactable",
-    "path": "objects/o_interactable/o_interactable.yy",
+    "name": "cutscene",
+    "path": "objects/cutscene/cutscene.yy",
   },
   "persistent": false,
   "physicsAngularDamping": 0.1,
@@ -32,8 +32,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "s_bg_fridge_closed",
-    "path": "sprites/s_bg_fridge_closed/s_bg_fridge_closed.yy",
+    "name": "s_cutscene_area",
+    "path": "sprites/s_cutscene_area/s_cutscene_area.yy",
   },
   "spriteMaskId": null,
   "visible": true,

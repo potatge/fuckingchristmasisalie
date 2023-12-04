@@ -1,10 +1,9 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "o_bg_fridge",
+  "name": "o_bg_nightstand",
   "eventList": [
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,},
-    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,},
   ],
   "managed": true,
   "overriddenProperties": [],
@@ -32,8 +31,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "s_bg_fridge_closed",
-    "path": "sprites/s_bg_fridge_closed/s_bg_fridge_closed.yy",
+    "name": "s_bg_nightstand",
+    "path": "sprites/s_bg_nightstand/s_bg_nightstand.yy",
   },
   "spriteMaskId": null,
   "visible": true,
