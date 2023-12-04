@@ -11,10 +11,56 @@ if keyboard_check_pressed(vk_enter) {
   room_restart();
 }
 
+
+switch (global.gameMode){
+	
+	case mode.playing:
+	global.playerCanMove = true;
+	break;
+	
+	case mode.options:
+	global.playerCanMove = false;
+	//if in MODE OPTIONS and press down
+	if keyboard_check_pressed(vk_down){
+		curOption++
+	}
+	
+	if keyboard_check_pressed(vk_up){
+		curOption--
+	}
+	if (curOption > maxOption){
+		curOption = 0
+	}
+	
+	
+	// selecting on vk enter.
+	if keyboard_check_pressed(vk_space){
+		
+		switch (curOption){
+			
+			case 0://milk and cookies
+			show_debug_message("COOOKIES")
+			break;
+			
+			case 1:
+			//white wine
+			show_debug_message("white wine")
+			break;
+			
+		}
+		global.gameMode = mode.playing;
+	}
+
+	break;
+}
+
+
+
 switch (room) {
 
 case rm_title:
-  if keyboard_check_pressed(vk_space) {
+// only do this if not in option mode. TODO make nice menu.
+  if global.gameMode != mode.options && keyboard_check_pressed(vk_space) {
     room_goto(rm1)
   }
   break;
@@ -29,6 +75,8 @@ case rm1:
 	  audio_resume_sound(music_holidays);
 	  o_ctrl.musicPlay = true;
 	}
+
+  
   
   break;
 
@@ -93,21 +141,4 @@ case gamestates.lightsOut:
   //does this automatically so no
   //instance_deactivate_object(cutscene_lightsout);
   break;
-}
-
-switch (gameMode){
-	
-	case mode.playing:
-	break;
-	
-	case mode.options:
-	//if in MODE OPTIONS and press down
-	if keyboard_check_pressed(vk_down){
-		curOption++
-		show_debug_message(curOption)
-	}
-	if (curOption > maxOption){
-		curOption = 0
-	}
-	break;
 }

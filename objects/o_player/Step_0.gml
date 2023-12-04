@@ -64,6 +64,7 @@ if (interact) {
 	global.currentSpeakerArt = object.portrait;
         //if at max text, key pres
         if ((o_ctrl.curText == object.maxText)) {
+		
           o_ctrl.moreTextAvailible = false;
           o_ctrl.curText = 0;
 		  

@@ -10,9 +10,11 @@ enum mode{
 	options
 	
 }
-gameMode = mode.options;
+global.gameMode = mode.playing;
+
 maxOption = 1;
 curOption = 0;
+fridgeOpt = ["MILK n COOKIES","WHITE WINE"]
 
 enum gamestates{
 	
@@ -304,7 +306,8 @@ global.interactables = [
 	myText:["You have an option here...","Choose: MILK AND COOKIES (M) or CHILLED WHITE WINE (W)"],
 	sprite: s_bg_nightstand,
 	maxText: 1,
-	portrait: noone
+	portrait: noone,
+	hasOption: true,
 	}
 ]
 

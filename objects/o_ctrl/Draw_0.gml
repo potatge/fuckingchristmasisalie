@@ -66,16 +66,18 @@ break;
 }
 
 // only if in option selecting mode
-if (gameMode == mode.options){
-	var txt = "CHOOSE: WINE\nCOOKIES";
-	var wdth = string_width(txt);
+if (global.gameMode == mode.options){
+
+	var txt = "CHOOSE:\n"+string(fridgeOpt[0])+"\n"+string(fridgeOpt[1])
+	var wdth = string_width(txt)+ 20;
 	//var option = 16;
 	draw_sprite_stretched_ext(s_textbox_black, 0, xx, yy - 50, wdth + pad, 45, c_, 0.7);
     draw_set_alpha(1);
 	draw_set_color(c_white)
+	
     draw_text_ext(xx + pad , yy - 50 + pad, txt, sep, wdth - pad);
 	for (var i = 0; i< maxOption; i++){
-		draw_sprite_ext(s_arrow_right,0,xx + wdth - 8, yy  - 30 + i + 16 * curOption ,1,1,1,c_white,1)
+		draw_sprite_ext(s_arrow_right,0,xx + wdth - 8, yy  - 30 + i + 12 * curOption ,1,1,1,c_white,1)
 	}
 	
 }
