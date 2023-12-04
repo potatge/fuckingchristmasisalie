@@ -16,16 +16,14 @@ musicPlay = true;
 //scr_changeSounds();
 audio_play_sound(music_holidays, 1, true);
 
-
-show_debug_message("CUTSCENE START:"+string(global.cutscene))
 depth = global.drawDepth
-myText = "oochie woochie bah bah (test) xmas game gonna be fun."
+myText = "Xmas game gonna be fun."
 
 showText = false;
 
+o_chara_damien.myText = ["*drinks wine*"]
 
-//cutscene 
-
+//all interactables.
 
 global.interactables = [
 
@@ -55,24 +53,14 @@ global.interactables = [
 	
 	},
 	{
-		name_: "damien",
+	name_: "damien",
 	canGrab: false,
-	myText: [
-		"Urgh...Claire, is that you. ",
-		"W-what happened? Are you ok? Why are you on the grou-",
-		"Jingle bells...jingle bells...",
-		"You aren't making any sense! Damien, snap out of it!",
-		"He appeared out of nowhere with this...and he...",
-		"Who did?",
-		"*Damien collapses weakly to the floor again*",
-		"Stay right there!"
-	],
-	maxText: 7,
+	myText: o_chara_damien.myText,
+	maxText: 0,
 	sprite: s_chara_damien_collapsed,
 	isSpeaker: true,
-	portrait: s_char_portraits_damien_worried
+	portrait: s_char_portraits_damien_happy
 	},
-	
 	{
 
 		name_: "claire",
@@ -202,15 +190,6 @@ global.interactables = [
 
 	},	
 	{
-	name_: "cutscene_damienblood",
-	canGrab: false,
-	myText:["AAAAAA!!!"],
-	sprite: noone,
-	maxText: 0,
-	collide: false,
-	portrait: noone
-	},
-	{
 	name_: "cutscene_lightsout",
 	canGrab: false,
 	myText:["W-what the...!","...I better use my phone's light!"],
@@ -250,13 +229,14 @@ global.interactables = [
 	{
 	name_: "fireplace",
 	canGrab: false,
-	myText:["...there's something in there."],
+	myText:["Yes, we're even doing the stockings thing. What age are we, 6?"],
 	sprite: noone,
-	maxText: 1,
+	maxText: 0,
 	collide: false,
 	portrait: noone
 	}
 ]
+
 
 
 curText = 0;

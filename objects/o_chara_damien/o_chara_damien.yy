@@ -33,8 +33,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "s_chara_damien_collapsed",
-    "path": "sprites/s_chara_damien_collapsed/s_chara_damien_collapsed.yy",
+    "name": "s_char_damien_idle",
+    "path": "sprites/s_char_damien_idle/s_char_damien_idle.yy",
   },
   "spriteMaskId": null,
   "visible": true,
