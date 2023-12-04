@@ -1,0 +1,4 @@
+
+depth = global.drawDepth;
+
+

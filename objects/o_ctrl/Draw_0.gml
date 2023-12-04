@@ -31,7 +31,8 @@ case rm1:
     gpu_set_blendmode(bm_add);
     draw_set_alpha(1);
     draw_set_alpha(0.3);
-    draw_sprite(s_sfx_lightsource, 0, o_player.x, o_player.y)
+	var light = instance_create_layer(o_player.x, o_player.y,"sfx",o_sfx_light)
+   // draw_sprite(s_sfx_lightsource, 0, )
     gpu_set_blendmode(bm_normal);
     draw_set_alpha(1);
 
