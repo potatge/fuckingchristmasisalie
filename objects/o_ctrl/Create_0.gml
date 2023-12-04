@@ -11,6 +11,7 @@ enum gamestates{
 };
 global.state =  gamestates.boxesExist;
 
+musicPlay = false;
 show_debug_message("CUTSCENE START:"+string(global.cutscene))
 depth = global.drawDepth
 myText = "oochie woochie bah bah (test) xmas game gonna be fun."

@@ -21,6 +21,10 @@ switch (room){
 	break;
 	
 	case rm1:
+	if (!musicPlay){
+		audio_play_sound(music_holidays,1,1)
+		musicPlay = true;
+	}
 	// do nothing
 	break;
 	
