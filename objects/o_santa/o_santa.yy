@@ -25,7 +25,10 @@
   "physicsStartAwake": true,
   "properties": [],
   "solid": false,
-  "spriteId": null,
+  "spriteId": {
+    "name": "s_santa_up",
+    "path": "sprites/s_santa_up/s_santa_up.yy",
+  },
   "spriteMaskId": null,
   "visible": true,
 }

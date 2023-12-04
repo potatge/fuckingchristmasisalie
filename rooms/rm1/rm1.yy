@@ -76,6 +76,7 @@
     {"name":"inst_3655D291","path":"rooms/rm1/rm1.yy",},
     {"name":"inst_F83D28E","path":"rooms/rm1/rm1.yy",},
     {"name":"inst_7F2E55CF","path":"rooms/rm1/rm1.yy",},
+    {"name":"inst_463B8AF1","path":"rooms/rm1/rm1.yy",},
   ],
   "isDnd": false,
   "layers": [
@@ -155,6 +156,7 @@
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_68C3F25F","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"o_bg_fridge","path":"objects/o_bg_fridge/o_bg_fridge.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":97.0,"y":448.0,},
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_5EE621E8","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"o_bg_nightstand","path":"objects/o_bg_nightstand/o_bg_nightstand.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":624.0,"y":79.0,},
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_E6D27F4","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"o_bg_nightstand","path":"objects/o_bg_nightstand/o_bg_nightstand.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":537.0,"y":787.0,},
+        {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_463B8AF1","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"o_santa","path":"objects/o_santa/o_santa.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":96.0,"y":960.0,},
       ],"layers":[],"properties":[],"userdefinedDepth":false,"visible":true,},
     {"resourceType":"GMRTileLayer","resourceVersion":"1.1","name":"decor_anim","depth":500,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"properties":[],"tiles":{"SerialiseHeight":32,"SerialiseWidth":32,"TileCompressedData":[
 -32,-2147483648,12,90,91,90,91,90,91,90,91,90,91,90,91,-6,-2147483648,14,78,90,91,90,91,90,91,90,91,90,91,90,91,90,
