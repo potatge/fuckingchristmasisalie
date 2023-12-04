@@ -2,7 +2,6 @@ if (global.state == gamestates.damienDisappears){
 	damienStates = states.hurt;
 	if (instance_place(x,y,o_player)){
 		global.state = gamestates.boxesGone;
-		scr_stingerSound()
 	}
 }
 
