@@ -31,17 +31,28 @@ switch (room){
 	
 }
 
+if (o_ctrl.musicPlay){
+		audio_pause_sound(music_holidays);
+		audio_play_sound(snd_stinger01,1,0);
+		o_ctrl.musicPlay = false;
+		if (!audio_is_playing(snd_stinger01)){
+			audio_resume_sound(music_holidays)
+		}
+	}
+	
 switch global.state{
 	
 case gamestates.boxesExist:
+
 	break;
 	
 case gamestates.boxesGone:
-	
+	musicPlay = true;
 	cutscene_boxpile.name_  = "cutscene_boxesgone"
 	break;
 
 case gamestates.bloodSplodge:
+	musicPlay = true;
 		with(o_chara_damien) {
 			instance_change(o_sfx_blood, true)
 		}
@@ -50,6 +61,7 @@ case gamestates.bloodSplodge:
 	break;
 	
 case gamestates.lightsOut:
+	musicPlay = true;
 	o_ctrl.lightsOut = true;
 	//does this automatically so no
 	//instance_deactivate_object(cutscene_lightsout);
