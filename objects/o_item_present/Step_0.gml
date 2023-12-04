@@ -3,8 +3,8 @@
 if (place_meeting(x,y,o_player)){
 	if (name_ == "present2"){ 
 		global.state = gamestates.bloodSplodge;
-		scr_changeSounds();
+		scr_stingerSound()
 	}
-	instance_destroy();
+	
 }
 

@@ -32,7 +32,6 @@ switch (room){
 	
 }
 
-
 if (musicPlay && !audio_is_playing(music_holidays)) {
 	show_debug_message("play music")
       audio_play_sound(music_holidays, 1, true)
