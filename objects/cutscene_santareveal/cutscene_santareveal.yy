@@ -1,17 +1,18 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "o_player",
+  "name": "cutscene_santareveal",
   "eventList": [
-    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,},
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,},
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,},
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":2,"isDnD":false,},
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,},
   ],
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "Objects",
-    "path": "folders/Objects.yy",
+    "name": "cutscenes",
+    "path": "folders/Objects/cutscenes.yy",
   },
   "parentObjectId": null,
   "persistent": false,
@@ -30,12 +31,9 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "s_chara_girl_temp",
-    "path": "sprites/s_chara_girl_temp/s_chara_girl_temp.yy",
+    "name": "s_cutscene_area2",
+    "path": "sprites/s_cutscene_area2/s_cutscene_area2.yy",
   },
-  "spriteMaskId": {
-    "name": "s_collision",
-    "path": "sprites/s_collision/s_collision.yy",
-  },
+  "spriteMaskId": null,
   "visible": true,
 }

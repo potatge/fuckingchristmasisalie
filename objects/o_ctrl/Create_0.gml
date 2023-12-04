@@ -185,6 +185,14 @@ global.interactables = [
 	sprite: noone,
 	maxText: 1,
 	collide: false
+	},
+	{
+	name_: "fireplace",
+	canGrab: false,
+	myText:["...there's something in there."],
+	sprite: noone,
+	maxText: 1,
+	collide: false
 	}
 ]
 

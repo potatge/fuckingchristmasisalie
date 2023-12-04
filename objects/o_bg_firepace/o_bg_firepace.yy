@@ -1,19 +1,20 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "o_player",
+  "name": "o_bg_firepace",
   "eventList": [
-    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,},
-    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,},
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,},
   ],
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "Objects",
-    "path": "folders/Objects.yy",
+    "name": "bg",
+    "path": "folders/Objects/bg.yy",
   },
-  "parentObjectId": null,
+  "parentObjectId": {
+    "name": "o_interactable",
+    "path": "objects/o_interactable/o_interactable.yy",
+  },
   "persistent": false,
   "physicsAngularDamping": 0.1,
   "physicsDensity": 0.5,
@@ -30,12 +31,9 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "s_chara_girl_temp",
-    "path": "sprites/s_chara_girl_temp/s_chara_girl_temp.yy",
+    "name": "s_bg_fireplace",
+    "path": "sprites/s_bg_fireplace/s_bg_fireplace.yy",
   },
-  "spriteMaskId": {
-    "name": "s_collision",
-    "path": "sprites/s_collision/s_collision.yy",
-  },
+  "spriteMaskId": null,
   "visible": true,
 }

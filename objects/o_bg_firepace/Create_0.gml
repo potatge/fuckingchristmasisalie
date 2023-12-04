@@ -1,0 +1,3 @@
+
+name_ = "fireplace";
+

@@ -54,8 +54,7 @@ clamp(y, 0, room_height);
 
 var interact = instance_place(x, y, [o_interactable,cutscene])
 if (interact) {
-  var object = ""
-
+  var object = ""; 
   if (keyboard_check_pressed(vk_space)) {
     o_ctrl.moreTextAvailible = true;
     for (var i = 0; i < array_length(global.interactables); i++) {
@@ -81,6 +80,7 @@ if (interact) {
 } else {
   //not near item, set current text back to zero.
   o_ctrl.showText = false;
+  // sets back to nothing?
   o_ctrl.curText = 0;
 }
 
@@ -121,3 +121,5 @@ if (collision_at_next_position || obstacle_at_next_position) {
   x += hspd;
   y += vspd;
 }
+
+sprite_index = s_chara_girl_temp
