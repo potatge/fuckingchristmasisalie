@@ -65,10 +65,8 @@ if (interact) {
 
 
 //if speaker and has portrait, show them here.
-if (object.isSpeaker){
 	o_ctrl.portraitDraw = true;
 	global.currentSpeakerArt = object.portrait;
-}
 
         //if at max text, key pres
         if ((o_ctrl.curText == object.maxText)) {
