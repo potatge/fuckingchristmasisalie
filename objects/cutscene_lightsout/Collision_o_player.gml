@@ -1,3 +1,0 @@
-
-
-global.state = gamestates.lightsOut;
