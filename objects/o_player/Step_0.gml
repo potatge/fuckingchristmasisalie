@@ -63,10 +63,18 @@ if (interact) {
         var object = global.interactables[i];
         o_ctrl.myText = object.myText[o_ctrl.curText];
 
+
+//if speaker and has portrait, show them here.
+if (object.isSpeaker){
+	o_ctrl.portraitDraw = true;
+	global.currentSpeakerArt = object.portrait;
+}
+
         //if at max text, key pres
         if ((o_ctrl.curText == object.maxText)) {
           o_ctrl.moreTextAvailible = false;
           o_ctrl.curText = 0;
+		  
           return;
         } else {
           o_ctrl.curText++
@@ -79,9 +87,12 @@ if (interact) {
   }
 } else {
   //not near item, set current text back to zero.
-  o_ctrl.showText = false;
-  // sets back to nothing?
-  o_ctrl.curText = 0;
+  with (o_ctrl){
+	  showText = false;
+	  portraitDraw = false;
+	  // sets back to nothing?
+	  curText = 0;
+  }
 }
 
 // Collisions

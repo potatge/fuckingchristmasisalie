@@ -65,7 +65,17 @@ global.interactables = [
 		"Stay right there!"
 	],
 	maxText: 7,
-	sprite: s_chara_boy_collapsed
+	sprite: s_chara_boy_collapsed,
+	isSpeaker: true,
+	portrait: s_char_portraits_damien_worried
+	},
+	
+	{
+
+		name_: "claire",
+		portrait: s_char_portraits_damien_worried,
+		isSpeaker: true
+		
 	},
 	
 	{
@@ -206,3 +216,6 @@ curText = 0;
 moreTextAvailible = true;
 lightsOut = false;
 
+
+portraitArt = noone;
+portraitDraw = false;

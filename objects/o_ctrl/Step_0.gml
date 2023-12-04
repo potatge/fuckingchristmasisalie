@@ -22,11 +22,6 @@ switch (room){
 	
 	case rm1:
 
-
-		
-		
-		
-
 	// do nothing
 	break;
 	
