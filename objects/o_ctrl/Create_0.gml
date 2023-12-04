@@ -94,6 +94,13 @@ global.interactables = [
 	sprite: s_bg_table,
 	maxText: 1
 	},
+	{
+	name_: "chair",
+	canGrab: false,
+	myText: ["I shouldn't rest right now. I have a lot to do."],
+	sprite: s_bg_chair,
+	maxText: 0
+	},
 	
 	{
 	name_: "present1",
@@ -130,13 +137,11 @@ global.interactables = [
 	{
 	name_: "moving boxes2",
 	canGrab: false,
-	myText:["I don't feel like dealing with these boxes right now."],
+	myText:["These boxes must be multiplying."],
 	sprite: s_item_box,
 	maxText: 0	
 		
 	},
-	
-	
 	{
 	name_: "blood",
 	canGrab: false,

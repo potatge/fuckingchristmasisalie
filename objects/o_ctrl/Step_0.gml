@@ -46,5 +46,7 @@ case gamestates.bloodSplodge:
 	
 case gamestates.lightsOut:
 	o_ctrl.lightsOut = true;
+	//does this automatically so no
+	//instance_deactivate_object(cutscene_lightsout);
 	break;
 }

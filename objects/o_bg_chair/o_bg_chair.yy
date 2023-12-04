@@ -1,7 +1,7 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "o_bg_bed",
+  "name": "o_bg_chair",
   "eventList": [
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,},
   ],
@@ -31,8 +31,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "s_bg_bed",
-    "path": "sprites/s_bg_bed/s_bg_bed.yy",
+    "name": "s_bg_chair_small",
+    "path": "sprites/s_bg_chair_small/s_bg_chair_small.yy",
   },
   "spriteMaskId": null,
   "visible": true,

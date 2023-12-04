@@ -30,8 +30,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "s_chara_girl_idle",
-    "path": "sprites/s_chara_girl_idle/s_chara_girl_idle.yy",
+    "name": "s_chara_girl_down",
+    "path": "sprites/s_chara_girl_down/s_chara_girl_down.yy",
   },
   "spriteMaskId": null,
   "visible": true,

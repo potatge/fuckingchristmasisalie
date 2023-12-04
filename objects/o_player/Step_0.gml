@@ -38,11 +38,11 @@ if (global.playerCanMove) {
 }
 // revert back to idle
 if (keyboard_check_released(vk_left) || keyboard_check_released(vk_right)) {
-  sprite_index = s_chara_girl_idle;
+  sprite_index = s_chara_girl_down_idle;
 }
 
 if (keyboard_check_released(vk_down || keyboard_check_released(vk_up))) {
-  sprite_index = s_chara_girl_idle;
+  sprite_index = s_chara_girl_down_idle;
 }
 
 // keep in room? not working best. 

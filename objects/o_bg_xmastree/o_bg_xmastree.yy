@@ -8,8 +8,8 @@
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "Objects",
-    "path": "folders/Objects.yy",
+    "name": "bg",
+    "path": "folders/Objects/bg.yy",
   },
   "parentObjectId": {
     "name": "o_interactable",
