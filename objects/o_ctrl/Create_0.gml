@@ -3,13 +3,15 @@ global.charDepth = -5000;
 global.cutscene = 0;
 enum gamestates{
 	
+	everythingsFine,
+	damienDisappears,
 	boxesExist,
 	boxesGone,
 	bloodSplodge,
 	lightsOut
 	
 };
-global.state =  gamestates.boxesExist;
+global.state =  gamestates.everythingsFine;
 
 sfxPlay = false;
 musicPlay = true;
@@ -21,7 +23,8 @@ myText = "Xmas game gonna be fun."
 
 showText = false;
 
-o_chara_damien.myText = ["*drinks wine*"]
+o_chara_damien.myText = ["I'll go an get another bottle."];
+o_chara_damien.maxText = 0;
 
 //all interactables.
 
@@ -56,11 +59,31 @@ global.interactables = [
 	name_: "damien",
 	canGrab: false,
 	myText: o_chara_damien.myText,
-	maxText: 0,
+	maxText: o_chara_damien.maxText,
 	sprite: s_chara_damien_collapsed,
 	isSpeaker: true,
 	portrait: s_char_portraits_damien_happy
 	},
+	{
+	name_: "damien2",
+	canGrab: false,
+	myText: [
+			"Urgh...Claire, is that you. ",
+			"W-what happened? Are you ok? Why are you on the grou-",
+			"Jingle bells...jingle bells...",
+			"You aren't making any sense! Damien, snap out of it!",
+			"He appeared out of nowhere with this...and he...",
+			"Who did?",
+			"*Damien collapses weakly to the floor again*",
+			"Stay right there!"
+		],
+	maxText: 7,
+	sprite: s_chara_damien_collapsed,
+	isSpeaker: true,
+	portrait: s_char_portraits_damien_worried
+	},
+	
+	
 	{
 
 		name_: "claire",

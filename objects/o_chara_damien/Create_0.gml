@@ -13,9 +13,10 @@ enum states{
 	
 
 damienStates = states.normal
-
+/*
 switch (damienStates){
 	case states.normal:
+		maxText = 0;
 		myText = ["I'll go get a new bottle!"]
 		break;
 		
@@ -30,6 +31,7 @@ switch (damienStates){
 			"*Damien collapses weakly to the floor again*",
 			"Stay right there!"
 		]
+		maxText = 7;
 		break;
 }
 
