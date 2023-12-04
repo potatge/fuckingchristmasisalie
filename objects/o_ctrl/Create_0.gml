@@ -94,7 +94,7 @@ global.interactables = [
 	{
 
 		name_: "claire",
-		portrait: s_char_portraits_damien_worried,
+		portrait: s_char_portraits_claire_happy,
 		isSpeaker: true,
 		
 	},
