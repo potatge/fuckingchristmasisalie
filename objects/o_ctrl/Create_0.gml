@@ -13,10 +13,13 @@ global.state =  gamestates.boxesExist;
 
 sfxPlay = false;
 musicPlay = true;
+//scr_changeSounds();
+audio_play_sound(music_holidays, 1, true);
+
+
 show_debug_message("CUTSCENE START:"+string(global.cutscene))
 depth = global.drawDepth
 myText = "oochie woochie bah bah (test) xmas game gonna be fun."
-
 
 showText = false;
 
@@ -202,3 +205,4 @@ global.interactables = [
 curText = 0;
 moreTextAvailible = true;
 lightsOut = false;
+

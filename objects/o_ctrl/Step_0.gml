@@ -22,7 +22,7 @@ switch (room){
 	
 	case rm1:
 
-	}
+
 		
 		
 		
@@ -30,18 +30,22 @@ switch (room){
 	// do nothing
 	break;
 	
-
-}
-// sounds and music.
-switch (sounds){
-	
-	
-
-
 }
 
+
+if (musicPlay && !audio_is_playing(music_holidays)) {
+	show_debug_message("play music")
+      audio_play_sound(music_holidays, 1, true)
+    }
 	
-switch global.state{
+	if (!audio_is_playing(snd_stinger01)) {
+      show_debug_message("resume music");
+		audio_resume_sound(music_holidays);
+		o_ctrl.musicPlay = true;
+    }
+	
+	
+switch (global.state){
 	
 case gamestates.boxesExist:
 
@@ -49,6 +53,7 @@ case gamestates.boxesExist:
 	
 case gamestates.boxesGone:
 	cutscene_boxpile.name_  = "cutscene_boxesgone"
+  
 	break;
 
 case gamestates.bloodSplodge:
