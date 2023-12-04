@@ -46,7 +46,14 @@ global.interactables = [
 	maxText: 1,
 	portrait: noone
 	},
+	{
+	name_: "sink",
+	canGrab: false,
+	myText: ["Yuck. This stove needs a clean."],
+	maxText: 0,
+	portrait: noone
 	
+	},
 	{
 	name_: "xmas tree",
 	canGrab: false,
@@ -104,7 +111,7 @@ global.interactables = [
 	{
 	name_: "candycane poster",
 	canGrab: false,
-	myText: ["It's a festive poster. Duh."],
+	myText: ["It really give the place some 'festive cheer'."],
 	maxText: 0,
 	sprite: s_bg_cityposter,
 	portrait: noone

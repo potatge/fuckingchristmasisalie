@@ -1,0 +1,1 @@
+sprite_index = s_bg_table_decorated;

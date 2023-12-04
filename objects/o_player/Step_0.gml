@@ -55,7 +55,7 @@ clamp(y, 0, room_height);
 var interact = instance_place(x, y, [o_interactable,cutscene])
 if (interact) {
   var object = ""; 
-  if (keyboard_check_pressed(vk_space)) {
+  if (keyboard_check_pressed(vk_space) || instance_place(x,y,cutscene)) {
     o_ctrl.moreTextAvailible = true;
     for (var i = 0; i < array_length(global.interactables); i++) {
 
@@ -78,7 +78,6 @@ if (interact) {
           o_ctrl.curText++
           //messing it up below
         }
-        show_debug_message("object " + string(object.myText[o_ctrl.curText]))
       }
       o_ctrl.showText = true;
     }
