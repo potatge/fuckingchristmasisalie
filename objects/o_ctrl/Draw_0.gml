@@ -30,11 +30,7 @@ case rm1:
     draw_rectangle_color(00, 00, xx_, yy_, c, c, c, c, false);
     gpu_set_blendmode(bm_add);
     draw_set_alpha(1);
-    draw_set_alpha(0.3);
-	var light = instance_create_layer(o_player.x, o_player.y,"sfx",o_sfx_light)
-   // draw_sprite(s_sfx_lightsource, 0, )
-    gpu_set_blendmode(bm_normal);
-    draw_set_alpha(1);
+	gpu_set_blendmode(bm_normal);
 
   }
 

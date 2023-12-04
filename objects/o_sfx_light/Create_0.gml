@@ -1,4 +1,2 @@
-
-depth = global.drawDepth;
-
+depth = global.charDepth + 10;
 
