@@ -1,16 +1,16 @@
 //get fullscreen
-if keyboard_check_pressed(ord("F"))
-{
-    if window_get_fullscreen()
-    {
+if keyboard_check_pressed(ord("F")){
+    if window_get_fullscreen(){
         window_set_fullscreen(false);
-    }
-    else
-    {
+    }else {
         window_set_fullscreen(true);
-    }
+   }
 }
 
+
+if keyboard_check_pressed(vk_enter){
+	room_restart();
+}
 
 switch (room){
 	
