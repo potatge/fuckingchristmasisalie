@@ -94,3 +94,20 @@ case gamestates.lightsOut:
   //instance_deactivate_object(cutscene_lightsout);
   break;
 }
+
+switch (gameMode){
+	
+	case mode.playing:
+	break;
+	
+	case mode.options:
+	//if in MODE OPTIONS and press down
+	if keyboard_check_pressed(vk_down){
+		curOption++
+		show_debug_message(curOption)
+	}
+	if (curOption > maxOption){
+		curOption = 0
+	}
+	break;
+}

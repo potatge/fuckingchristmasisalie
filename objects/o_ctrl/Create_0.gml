@@ -1,6 +1,19 @@
 global.drawDepth = -9000
 global.charDepth = -5000;
 global.cutscene = 0;
+global.goodEnd = false;
+
+// for differentiating between normal play and options 
+enum mode{
+	playing,
+	dialogue,
+	options
+	
+}
+gameMode = mode.options;
+maxOption = 1;
+curOption = 0;
+
 enum gamestates{
 	
 	everythingsFine,
@@ -288,9 +301,9 @@ global.interactables = [
 	{
 	name_: "fridge",
 	canGrab: false,
-	myText:["At least our fridge is full."],
+	myText:["You have an option here...","Choose: MILK AND COOKIES (M) or CHILLED WHITE WINE (W)"],
 	sprite: s_bg_nightstand,
-	maxText: 0,
+	maxText: 1,
 	portrait: noone
 	}
 ]

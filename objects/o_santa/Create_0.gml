@@ -1,13 +1,14 @@
 /// @description Insert description here
 // You can write your code in this editor
-name_ = "fridge"
 
-toggleSprite = false;
+enum santa {
+	
+	idle,
+	attacking,
+	
+}
 
-
-myTextExtra = "nothing to see here"
-
-
+santaStates = santa.idle
 
 
 
