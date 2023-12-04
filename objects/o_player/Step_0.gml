@@ -56,16 +56,12 @@ if (interact) {
   if (keyboard_check_pressed(vk_space)) {
     o_ctrl.moreTextAvailible = true;
     for (var i = 0; i < array_length(global.interactables); i++) {
-
       if (global.interactables[i].name_ == interact.name_) {
         var object = global.interactables[i];
         o_ctrl.myText = object.myText[o_ctrl.curText];
-
-
 //if speaker and has portrait, show them here.
 	o_ctrl.portraitDraw = true;
 	global.currentSpeakerArt = object.portrait;
-
         //if at max text, key pres
         if ((o_ctrl.curText == object.maxText)) {
           o_ctrl.moreTextAvailible = false;
