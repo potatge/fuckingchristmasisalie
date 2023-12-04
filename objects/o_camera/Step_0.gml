@@ -33,6 +33,7 @@ if (o_player.bbox_right > current_x + camera_get_view_width(view_camera[0])) {
 // Move camera left by snapdist units when player is to the left of the view
 if (o_player.bbox_left < current_x) {
     target_x = o_player.bbox_left - snapdist_hor;
+	
 }
 
 // Smoothly interpolate towards the target position

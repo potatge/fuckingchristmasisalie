@@ -33,6 +33,7 @@ case gamestates.boxesExist:
 	break;
 	
 case gamestates.boxesGone:
+	
 	cutscene_boxpile.name_  = "cutscene_boxesgone"
 	break;
 
