@@ -1,8 +1,10 @@
 if (global.state == gamestates.boxesGone){
 	damienStates = states.hurt;
 	if (instance_place(x,y,o_player)){
-		global.state = gamestates.secondPresentAppears
-		scr_stingerSound();
+		if (alarm[0] <= 0){
+			alarm[0] = 10;
+		}
+		
 	}
 }
 

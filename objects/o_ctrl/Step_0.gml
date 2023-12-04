@@ -20,21 +20,21 @@ case rm_title:
   break;
 
 case rm1:
+   //music and sfx playing 
+	if (musicPlay && !audio_is_playing(music_holidays)) {
+	  audio_play_sound(music_holidays, 1, true)
+	}
+	if (!audio_is_playing(snd_stinger01)) {
 
-  // do nothing
+	  audio_resume_sound(music_holidays);
+	  o_ctrl.musicPlay = true;
+	}
+  
   break;
 
 }
 
-//music and sfx playing 
-if (musicPlay && !audio_is_playing(music_holidays)) {
-  audio_play_sound(music_holidays, 1, true)
-}
-if (!audio_is_playing(snd_stinger01)) {
 
-  audio_resume_sound(music_holidays);
-  o_ctrl.musicPlay = true;
-}
 
 switch (global.state) {
 
@@ -63,8 +63,7 @@ case gamestates.firstPresent:
   break;
   
 case gamestates.boxesGone:
- // cutscene_boxpile.name_ = "cutscene_boxesgone"
-  show_debug_message("boxes gone")
+ cutscene_boxpile.myText = "Wait, weren't there boxes here before?"
   //global.state = gamestates.talkToDamien;
 
   break;
@@ -74,29 +73,23 @@ case gamestates.talkToDamien:
   break;
 
 case gamestates.secondPresentAppears:
-  show_debug_message("second present")
+instance_activate_object(cutscene_secondpresent);
   with(o_item_present) {
     if (name_ == "present2") {
       x = 970;
       y = 136;
     }
   }
-  show_debug_message("new present there!")
   break;
 
 case gamestates.bloodSplodge:
-  with(o_chara_damien) {
-    instance_change(o_sfx_blood, true)
-  }
-  instance_activate_object(cutscene_lightsout);
-  instance_deactivate_object(cutscene_boxpile);
+ 
   break;
 
   // do stuff. 
   break;
 
 case gamestates.lightsOut:
-  o_ctrl.lightsOut = true;
   //does this automatically so no
   //instance_deactivate_object(cutscene_lightsout);
   break;

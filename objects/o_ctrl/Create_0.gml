@@ -19,7 +19,7 @@ enum gamestates{
 global.state =  gamestates.everythingsFine;
 
 sfxPlay = false;
-musicPlay = true;
+musicPlay = false;
 //scr_changeSounds();
 
 
@@ -294,18 +294,6 @@ global.interactables = [
 	portrait: noone
 	}
 ]
-
-switch (room){
-	
-	case rm_title:
-	//nothing 
-	break;
-	case rm1:
-	audio_play_sound(music_holidays, 1, true);
-	break;
-	
-}
-
 
 curText = 0;
 moreTextAvailible = true;
