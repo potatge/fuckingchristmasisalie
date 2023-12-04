@@ -280,9 +280,9 @@
       125,
       125,
       126,
+      127,
+      127,
       126,
-      127,
-      127,
       128,
       128,
       129,
@@ -690,6 +690,10 @@
     {"resourceType":"GMTileAnimation","resourceVersion":"1.0","name":"anim_lights3","frames":[
         92,
         110,
+      ],},
+    {"resourceType":"GMTileAnimation","resourceVersion":"1.0","name":"anim_lights4","frames":[
+        126,
+        127,
       ],},
   ],
   "tileAnimationSpeed": 5.0,

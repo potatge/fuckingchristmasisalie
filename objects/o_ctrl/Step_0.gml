@@ -36,7 +36,6 @@ if (musicPlay && !audio_is_playing(music_holidays)) {
 	show_debug_message("play music")
       audio_play_sound(music_holidays, 1, true)
     }
-	
 	if (!audio_is_playing(snd_stinger01)) {
       show_debug_message("resume music");
 		audio_resume_sound(music_holidays);

@@ -121,5 +121,3 @@ if (collision_at_next_position || obstacle_at_next_position) {
   x += hspd;
   y += vspd;
 }
-
-sprite_index = s_chara_girl_temp
