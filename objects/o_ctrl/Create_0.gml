@@ -34,10 +34,11 @@ enum gamestates{
 	secondPresentAppears,
 	bloodSplodge,
 	lightsOut,
+	santaThere,
 	santaActivated
 	
 };
-global.state =  gamestates.everythingsFine;
+global.state = gamestates.everythingsFine;
 
 sfxPlay = false;
 musicPlay = false;

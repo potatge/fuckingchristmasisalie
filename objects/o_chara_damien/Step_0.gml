@@ -1,4 +1,4 @@
-if (global.state == gamestates.boxesGone){
+if (global.state == gamestates.talkToDamien){
 	if (instance_place(x,y,o_player)){
 		if (alarm[0] <= 0){
 			alarm[0] = 10;

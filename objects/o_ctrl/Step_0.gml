@@ -112,7 +112,6 @@ case gamestates.firstPresent:
       y = 454;
     }
   }
-
   break;
   
 case gamestates.boxesGone:
@@ -136,19 +135,18 @@ instance_activate_object(cutscene_secondpresent);
   break;
 
 case gamestates.bloodSplodge:
- 
-  break;
 
-  // do stuff. 
-  break;
+     break;
 
 case gamestates.lightsOut:
-global.state = gamestates.santaActivated;
-  //does this automatically so no
-  //instance_deactivate_object(cutscene_lightsout);
+	global.state = gamestates.santaThere;
+  break;
+  
+  case gamestates.santaThere:
+	instance_activate_object(o_santa);
   break;
   
   case gamestates.santaActivated:
-	instance_activate_object(o_santa);
+  o_santa.santaStates = santa.pathstart;
   break;
 }
