@@ -54,34 +54,28 @@ var interact = instance_place(x, y, [o_interactable, cutscene])
 if (interact) {
   var object = "";
   if (keyboard_check_pressed(vk_space)) {
-    o_ctrl.moreTextAvailible = true;
-    for (var i = 0; i < array_length(global.interactables); i++) {
-      if (global.interactables[i].name_ == interact.name_) {
-        var object = global.interactables[i];
-		
-		with (o_ctrl){
-		
-		
-        o_ctrl.myText = object.myText[o_ctrl.curText];
-        //if speaker and has portrait, show them here.
-        o_ctrl.portraitDraw = true;
-        global.currentSpeakerArt = object.portrait;
-        //if at max text, key pres
-        if ((o_ctrl.curText == object.maxText)) {
-	//fuck it up?
-          if (object.hasOption) {
-            global.gameMode = mode.options;
+    with(o_ctrl) {
+      moreTextAvailible = true;
+      for (var i = 0; i < array_length(global.interactables); i++) {
+        if (global.interactables[i].name_ == interact.name_) {
+          var object = global.interactables[i];
+          myText = object.myText[curText];
+          portraitDraw = true;
+          global.currentSpeakerArt = object.portrait;
+          if (curText == object.maxText) {
+            if (object.hasOption) {
+              global.gameMode = mode.options;
+            }
+            moreTextAvailible = false;
+            curText = 0;
+            return;
+          } else {
+            curText++
+            //messing it up below
           }
-          o_ctrl.moreTextAvailible = false;
-          o_ctrl.curText = 0;
-
-          return;
-        } else {
-          o_ctrl.curText++
-          //messing it up below
         }
+        showText = true;
       }
-      o_ctrl.showText = true;
     }
   }
 } else {
