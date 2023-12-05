@@ -142,6 +142,9 @@ case gamestates.santaThere:
 	break;
 
 case gamestates.santaActivated:
+
+o_chara_damien.damienStates = states.hidden2;
+
 instance_deactivate_object(cutscene_boxpile2);
 instance_deactivate_object(cutscene_santareveal);
   o_santa.santaStates = santa.pathstart;

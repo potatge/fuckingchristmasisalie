@@ -8,7 +8,9 @@ enum states{
 	
 	normal,
 	hidden,
-	hurt
+	hurt,
+	hidden2,
+	follow
 	
 }
 	

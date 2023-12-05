@@ -51,8 +51,6 @@ myText = "Xmas game gonna be fun."
 
 showText = false;
 
-o_chara_damien.myText = ["I'll go an get another bottle."];
-o_chara_damien.maxText = 0;
 
 //all interactables.
 
@@ -101,8 +99,8 @@ global.interactables = [
 	{
 	name_: "damien",
 	canGrab: false,
-	myText: o_chara_damien.myText,
-	maxText: o_chara_damien.maxText,
+	myText: ["I'll go and get another bottle."],
+	maxText: 0,
 	sprite: s_chara_damien_collapsed,
 	isSpeaker: true,
 	hasOption: false,
@@ -123,6 +121,31 @@ global.interactables = [
 			"Stay right there!"
 		],
 	maxText: 7,
+	sprite: s_chara_damien_collapsed,
+	isSpeaker: true,
+	hasOption: false,
+	portrait: s_char_portraits_damien_worried
+	},
+	{
+	name_: "damien3",
+	canGrab: false,
+	//TODO maybe trigger him yellow in distance.
+	myText: [
+	    "Claire! You found me!",
+		"Stand up and stop bawling, there's someone in the house!"
+		],
+	maxText: 1,
+	sprite: s_chara_damien_collapsed,
+	isSpeaker: true,
+	hasOption: false,
+	portrait: s_char_portraits_damien_worried
+	},
+	{
+	name_: "damien4",
+	canGrab: false,
+	//TODO maybe trigger him yellow in distance.
+	myText: ["*Damien looks too shaken to speak*"],
+	maxText: 0,
 	sprite: s_chara_damien_collapsed,
 	isSpeaker: true,
 	hasOption: false,
