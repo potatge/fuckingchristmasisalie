@@ -29,6 +29,7 @@ if (global.gameMode == mode.options && decisionLVL == 0){
 
 
 switch (room) {
+	
 
 case rm_title:
   draw_sprite_stretched_ext(s_splashscreen, 0, 0, 0, camera_get_view_width(view_camera[0]), camera_get_view_height(view_camera[0]), c_, 1);
@@ -76,5 +77,9 @@ case rm1:
 		  instance_destroy(o_char_portraits);
 	  }
   }break;
+  
+  case rm_gameover:
+  draw_text(xx,yy,"GAME OVER. Press space to try again TODO.")
+  break;
 
 }
