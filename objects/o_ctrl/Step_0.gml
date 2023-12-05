@@ -132,26 +132,19 @@ case gamestates.bloodSplodge:
   break;
 
 case gamestates.lightsOut:
-with (cutscene_boxpile2){
-		var area = collision_rectangle(x,y,x + 100,y + 100, cutscene_boxpile2, false, false);
-		if (area){
-			var boxes = instance_place(x,y, o_item_box);
-			instance_destroy(boxes);
-			show_debug_message("destroy boxes2")
-		}
-		//instance_destroy(cutscene_boxpile2)
-		
-}
+	instance_activate_object(cutscene_boxpile2)
+	show_debug_message("delete boxes and santa there")
 	global.state = gamestates.santaThere;
   break;
 
 case gamestates.santaThere:
-show_debug_message("santa there!")
-  instance_activate_object(o_santa);
-  break;
+	  instance_activate_object(o_santa);
+	break;
 
 case gamestates.santaActivated:
 show_debug_message("santa activated")
+instance_deactivate_object(cutscene_boxpile2);
+instance_deactivate_object(cutscene_santareveal);
   o_santa.santaStates = santa.pathstart;
   break;
 }
