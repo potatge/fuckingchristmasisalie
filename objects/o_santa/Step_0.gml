@@ -11,15 +11,16 @@ switch (santaStates){
 	break;
 	
 	case santa.awakened:
+		
 		image_speed = 1;
 		//flip to right
 		sprite_index = s_santa_left 
 		image_index = -1;
-		path_start(p_santa,spd,path_action_reverse,true);
-		show_debug_message("awakened2")
-		santaStates = santa.pathstarted;
-		
-		
+		if (alarm[0] <=0){
+			alarm[0] = 100;
+			show_debug_message("alarm for 100")
+		}
+
 		break;
 	
 	case santa.pathstarted:
