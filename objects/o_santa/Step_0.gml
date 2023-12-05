@@ -16,8 +16,9 @@ switch (santaStates){
 		sprite_index = s_santa_left 
 		image_index = -1;
 		path_start(p_santa,spd,path_action_reverse,true);
-		santaStates = santa.pathstarted;
 		show_debug_message("awakened2")
+		santaStates = santa.pathstarted;
+		
 		
 		break;
 	
