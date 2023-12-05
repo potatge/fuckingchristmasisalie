@@ -16,6 +16,7 @@ maxOption = 1;
 curOption = 0;
 fridgeOpt = ["MILK n COOKIES","WHITE WINE"]
 
+decisionLVL = 0;
 enum gamestates{
 	
 	everythingsFine,

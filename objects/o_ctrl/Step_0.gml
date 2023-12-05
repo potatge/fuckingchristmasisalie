@@ -15,6 +15,8 @@ switch (global.gameMode){
 	break;
 	
 	case mode.options:
+	//only if current decision level etx. TODO 
+	if (decisionLVL == 0){
 	global.playerCanMove = false;
 	//if in MODE OPTIONS and press down
 	if keyboard_check_pressed(vk_down){
@@ -30,29 +32,34 @@ switch (global.gameMode){
 	
 	
 	// selecting on vk enter.
+	//TODO GENERALISING FOR MANY OPTIONs
 	if keyboard_check_pressed(vk_enter){
 		
 		switch (curOption){
 			
 			case 0://milk and cookies
-			show_debug_message("COOOKIES")
+			show_debug_message("COOKIES and delete?")
 			global.goodEnd = true;
+			//array_delete(fridgeOpt,0,1);
 			break;
 			
 			case 1:
 			//white wine
 			show_debug_message("white wine")
 			global.goodEnd = false;
+			//array_delete(fridgeOpt,1,1);
 			break;
 			
 		}
 		
 		global.gameMode = mode.playing;
+		decisionLVL += 1;
 	}
 
 	break;
 }
 
+}
 
 
 switch (room) {

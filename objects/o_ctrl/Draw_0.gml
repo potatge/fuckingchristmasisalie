@@ -14,7 +14,7 @@ var yy = y1 + camera_get_view_height(cam) / 2 + height;
 var c_ = c_white;
 
 
-if (global.gameMode == mode.options){
+if (global.gameMode == mode.options && decisionLVL == 0){
 	var txt = "CHOOSE:\n"+string(fridgeOpt[0])+"\n"+string(fridgeOpt[1])
 	var wdth = string_width(txt)+ 20;
 	//var option = 16;

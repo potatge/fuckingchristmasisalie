@@ -1,8 +1,6 @@
-if (instance_place(x,y,o_player)){
+if (instance_place(x,y,o_player) && global.state == gamestates.everythingsFine){
 	sprite_index= s_bg_fridge_open_full;
-	if  (global.state == gamestates.everythingsFine){
-		global.state = gamestates.goToFridge;
-		}
+	global.state = gamestates.goToFridge;
 		
 }
 	

@@ -69,6 +69,7 @@ if (interact) {
 			
 			global.gameMode = mode.options;
 			
+			
 		}
           o_ctrl.moreTextAvailible = false;
           o_ctrl.curText = 0;
