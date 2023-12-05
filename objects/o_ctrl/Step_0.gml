@@ -106,7 +106,6 @@ case gamestates.damienDisappears:
   break;
 
 case gamestates.firstPresent:
- //instance_deactivate_object(cutscene_checkondamien)
   with(o_item_present) {
     if (name_ == "present1") {
       x = 64;
