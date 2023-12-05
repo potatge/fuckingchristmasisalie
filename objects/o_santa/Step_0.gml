@@ -1,48 +1,52 @@
+switch (santaStates) {
 
-switch (santaStates){
-	
-	case santa.idle:
-		sprite_index = s_santa_left;
-		image_speed = 1;
-		if (global.state == gamestates.santaActivated){
-			santaStates = santa.awakened;
-		}
-		
-	break;
-	
-	case santa.awakened:
-		
-		image_speed = 1;
-		//flip to right
-		sprite_index = s_santa_left 
-		image_index = -1;
-		if (alarm[0] <=0){
-			alarm[0] = 100;
-			show_debug_message("alarm for 100")
-		}
+case santa.idle:
+  sprite_index = s_santa_up;
+  if (global.state == gamestates.santaActivated) {
+    santaStates = santa.awakened;
+  }
 
-		break;
-	
-	case santa.pathstarted:
-		sprite_index = s_santa_up;
-		image_index = 1;
-		show_debug_message("path started")
-		santaStates = santa.onpath;
-		break;
-		
-	case santa.onpath:
-		break;
-	
-	case santa.attacking:
-		break;
-	
-	
+  break;
+
+case santa.awakened:
+  //play anim
+  image_speed = 1;
+  sprite_index = s_santa_left
+  image_index = -1
+ 
+  if (alarm[0] <= 0) {
+    alarm[0] = 100;
+    show_debug_message("play anim & alarm for 100")
+  }
+  break;
+
+case santa.pathstarted:
+  sprite_index = s_santa_up;
+  image_index = 1;
+  show_debug_message("path started")
+  santaStates = santa.onpath;
+  break;
+
+case santa.onpath:
+  var left = 0;
+  var right = 180;
+  var up = 90;
+  var down = 270;
+
+  if (direction >= right) {
+    image_xscale = -1;
+  }
+
+  if (direction >= left) {
+    image_xscale = 1;
+  }
+  break;
+
+case santa.attacking:
+  break;
+
 }
-
-var left = 0;
-var right =180;
-var up = 90;
-var down = 270;
+// attempting to give direction sprites.
 
 /*
 if (direction < left  && direction >= down){
