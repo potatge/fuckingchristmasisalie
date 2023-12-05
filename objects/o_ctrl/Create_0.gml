@@ -50,6 +50,8 @@ myText = "Xmas game gonna be fun."
 
 showText = false;
 
+
+
 //all interactables.
 
 global.interactables = [

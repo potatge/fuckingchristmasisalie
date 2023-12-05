@@ -153,9 +153,8 @@ case gamestates.santaThere:
 	break;
 
 case gamestates.santaActivated:
- //o_santa.santaStates = santa.pathstarted;
  global.state = gamestates.chaseBegins;
-  show_debug_message("santa activated. chase begins. DUH")
+  show_debug_message("santa activated. chase begins. DUH.")
   
   break;
   
