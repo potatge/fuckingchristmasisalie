@@ -74,13 +74,14 @@ if (interact) {
           o_ctrl.moreTextAvailible = false;
           o_ctrl.curText = 0;
 		  
+	
           return;
         } else {
           o_ctrl.curText++
           //messing it up below
         }
       }
-      o_ctrl.showText = true;
+     o_ctrl.showText = true;
     }
   }
 } else {

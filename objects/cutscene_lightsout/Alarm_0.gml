@@ -6,5 +6,4 @@ o_ctrl.curSong = music_suspense;
 show_debug_message("lights out");
 
 //instance_create_layer(o_player.x,o_player.y,"sfx",o_sfx_light)
-instance_activate_object(cutscene_santareveal);
 //instance_destroy();
