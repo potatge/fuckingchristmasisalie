@@ -7,6 +7,7 @@ metDamien = false;
 enum states{
 	
 	normal,
+	hidden,
 	hurt
 	
 }

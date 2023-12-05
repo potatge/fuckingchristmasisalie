@@ -102,7 +102,7 @@ case gamestates.goToFridge:
   break;
 
 case gamestates.damienDisappears:
-  o_chara_damien.damienStates = states.hurt;
+  o_chara_damien.damienStates = states.hidden;
   break;
 
 case gamestates.firstPresent:
@@ -118,7 +118,7 @@ case gamestates.firstPresent:
   
 case gamestates.boxesGone:
 cutscene_boxpile.name_ = "cutscene_boxesgone";
-  //global.state = gamestates.talkToDamien;
+o_chara_damien.damienStates = states.hurt;
 
   break;
 
@@ -144,7 +144,12 @@ case gamestates.bloodSplodge:
   break;
 
 case gamestates.lightsOut:
+global.state = gamestates.santaActivated;
   //does this automatically so no
   //instance_deactivate_object(cutscene_lightsout);
+  break;
+  
+  case gamestates.santaActivated:
+	instance_activate_object(o_santa);
   break;
 }

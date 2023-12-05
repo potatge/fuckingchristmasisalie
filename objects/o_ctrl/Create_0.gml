@@ -33,7 +33,8 @@ enum gamestates{
 	talkToDamien,
 	secondPresentAppears,
 	bloodSplodge,
-	lightsOut
+	lightsOut,
+	santaActivated
 	
 };
 global.state =  gamestates.everythingsFine;
@@ -320,7 +321,7 @@ global.interactables = [
 	},
 	{
 	name_: "kitchenarea",
-	myText:["I was trying to make a vegetarian curry"],
+	myText:["I was trying to make a vegetarian curry, note the 'trying' part."],
 	sprite: s_bg_kitchenarea,
 	maxText: 0,
 	portrait: noone,

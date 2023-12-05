@@ -1,5 +1,4 @@
 if (global.state == gamestates.boxesGone){
-	damienStates = states.hurt;
 	if (instance_place(x,y,o_player)){
 		if (alarm[0] <= 0){
 			alarm[0] = 10;
@@ -15,6 +14,12 @@ switch (damienStates){
 	maxText = 0;
 		myText = ["I'll go get a new bottle!"]
 	break;
+	
+	case states.hidden:
+	x = 1032;
+	y = 1032;
+	break;
+	
 	
 	case states.hurt:
 	sprite_index = s_chara_damien_collapsed;
