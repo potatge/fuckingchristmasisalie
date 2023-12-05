@@ -316,7 +316,23 @@ global.interactables = [
 	sprite: s_bg_nightstand,
 	maxText: 0,
 	portrait: noone,
-	hasOption: true,
+	hasOption: true
+	},
+	{
+	name_: "kitchenarea",
+	myText:["I was trying to make a vegetarian curry"],
+	sprite: s_bg_kitchenarea,
+	maxText: 0,
+	portrait: noone,
+	hasOption: false
+	},
+	{
+	name_: "knife",
+	myText:["Pointy."],
+	sprite: s_bg_knife,
+	maxText: 0,
+	portrait: noone,
+	hasOption: false
 	}
 ]
 
