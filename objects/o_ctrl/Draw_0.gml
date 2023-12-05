@@ -78,8 +78,5 @@ case rm1:
 	  }
   }break;
   
-  case rm_gameover:
-  draw_text(xx,yy,"GAME OVER. Press space to try again TODO.")
-  break;
 
 }

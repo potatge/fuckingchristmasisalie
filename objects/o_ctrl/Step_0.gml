@@ -82,10 +82,6 @@ case rm1:
 
   break;
   
-  case rm_gameover:
-  //do stuff in game over room.
-	//room_goto(rm_gameover);
-  break;
 
 }
 

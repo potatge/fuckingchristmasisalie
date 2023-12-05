@@ -50,8 +50,7 @@ myText = "Xmas game gonna be fun."
 
 showText = false;
 
-o_chara_damien.myText = ["I'll go an get another bottle."];
-o_chara_damien.maxText = 0;
+
 
 //all interactables.
 
@@ -100,8 +99,8 @@ global.interactables = [
 	{
 	name_: "damien",
 	canGrab: false,
-	myText: o_chara_damien.myText,
-	maxText: o_chara_damien.maxText,
+	myText: ["I'll go an get another bottle."],
+	maxText: 0,
 	sprite: s_chara_damien_collapsed,
 	isSpeaker: true,
 	hasOption: false,
@@ -119,7 +118,7 @@ global.interactables = [
 			"He appeared out of nowhere with this...and he...",
 			"Who did?",
 			"*Damien collapses weakly to the floor again*",
-			"Stay right there!"
+			"I think you've had enough to drink. Stay right there!"
 		],
 	maxText: 7,
 	sprite: s_chara_damien_collapsed,
