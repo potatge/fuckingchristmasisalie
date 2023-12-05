@@ -147,6 +147,9 @@ case gamestates.lightsOut:
 
 case gamestates.santaThere:
 	  instance_activate_object(o_santa);
+	  instance_activate_object(cutscene_santareveal)
+	  instance_deactivate_object(cutscene_lightsout);
+
 	break;
 
 case gamestates.santaActivated:

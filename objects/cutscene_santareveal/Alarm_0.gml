@@ -1,5 +1,4 @@
-instance_deactivate_object(cutscene_lightsout);
-
 if (global.state = gamestates.santaThere){
-		global.state = gamestates.santaActivated;
+		//instance_activate_object(cutscene_santareveal);
+	global.state = gamestates.santaActivated;
 }
