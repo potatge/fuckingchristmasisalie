@@ -100,7 +100,7 @@ global.interactables = [
 	{
 	name_: "damien",
 	canGrab: false,
-	myText: ["I'll go an get another bottle."],
+	myText: ["I'll go and get another bottle."],
 	maxText: 0,
 	sprite: s_chara_damien_collapsed,
 	isSpeaker: true,
