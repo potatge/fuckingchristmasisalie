@@ -132,21 +132,24 @@ case gamestates.bloodSplodge:
   break;
 
 case gamestates.lightsOut:
-	instance_activate_object(cutscene_boxpile2)
-	show_debug_message("delete boxes and santa there")
+    instance_activate_object(cutscene_boxpile2);
+	var damien = instance_create_layer(73,974,"Instances",o_chara_damien)
+	with (damien) {
+		damienStates = states.hidden2;
+	}
 	global.state = gamestates.santaThere;
+	show_debug_message("delete boxes, create damien and hide him. santa there.")
   break;
 
 case gamestates.santaThere:
-	  instance_activate_object(o_santa);
+	instance_activate_object(o_santa);
 	break;
 
 case gamestates.santaActivated:
-
 o_chara_damien.damienStates = states.hidden2;
-
 instance_deactivate_object(cutscene_boxpile2);
 instance_deactivate_object(cutscene_santareveal);
-  o_santa.santaStates = santa.pathstart;
+o_santa.santaStates = santa.pathstarted;
+
   break;
 }

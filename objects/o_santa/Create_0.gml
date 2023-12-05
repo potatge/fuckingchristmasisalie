@@ -3,14 +3,14 @@ instance_deactivate_object(o_santa);
 spd = 2;
 enum santa {
 	
-	idle,
+	still,
 	awakened,
-	pathstart,
+	pathstarted,
 	onpath,
 	attacking,
 }
 
-santaStates = santa.awakened;
+santaStates = santa.idle;
 
 
 
