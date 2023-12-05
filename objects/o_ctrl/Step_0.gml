@@ -7,10 +7,6 @@ if keyboard_check_pressed(ord("F")) {
   }
 }
 
-if keyboard_check_pressed(vk_enter) {
-  room_restart();
-}
-
 
 switch (global.gameMode){
 	
@@ -34,20 +30,23 @@ switch (global.gameMode){
 	
 	
 	// selecting on vk enter.
-	if keyboard_check_pressed(vk_space){
+	if keyboard_check_pressed(vk_enter){
 		
 		switch (curOption){
 			
 			case 0://milk and cookies
 			show_debug_message("COOOKIES")
+			global.goodEnd = true;
 			break;
 			
 			case 1:
 			//white wine
 			show_debug_message("white wine")
+			global.goodEnd = false;
 			break;
 			
 		}
+		
 		global.gameMode = mode.playing;
 	}
 

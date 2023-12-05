@@ -65,6 +65,11 @@ if (interact) {
         //if at max text, key pres
         if ((o_ctrl.curText == object.maxText)) {
 		
+		if (object.hasOption){
+			
+			global.gameMode = mode.options;
+			
+		}
           o_ctrl.moreTextAvailible = false;
           o_ctrl.curText = 0;
 		  
