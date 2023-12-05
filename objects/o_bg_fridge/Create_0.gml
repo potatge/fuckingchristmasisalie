@@ -5,8 +5,6 @@ name_ = "fridge"
 toggleSprite = false;
 
 
-myTextExtra = "nothing to see here"
-
 
 
 

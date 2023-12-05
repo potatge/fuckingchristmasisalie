@@ -14,7 +14,11 @@ global.gameMode = mode.playing;
 
 maxOption = 1;
 curOption = 0;
+
 fridgeOpt = ["MILK n COOKIES","WHITE WINE"]
+grabOpt = ["GRAB", "DON'T"]
+gameOptions = [fridgeOpt, grabOpt]
+
 
 decisionLVL = 0;
 enum gamestates{
@@ -104,9 +108,10 @@ global.interactables = [
 	{
 	name_: "damien2",
 	canGrab: false,
+	//TODO maybe trigger him yellow in distance.
 	myText: [
 			"Urgh...Claire, is that you. ",
-			"W-what happened? Are you ok? Why are you on the grou-",
+			"W-what happened? Are you ok? Why are you on the floor of the bathr-",
 			"Jingle bells...jingle bells...",
 			"You aren't making any sense! Damien, snap out of it!",
 			"He appeared out of nowhere with this...and he...",
@@ -181,7 +186,7 @@ global.interactables = [
 	sprite: s_bg_table,
 	maxText: 1,
 	portrait: noone,
-	hasOption: false,
+	hasOption: false
 	},
 	
 	

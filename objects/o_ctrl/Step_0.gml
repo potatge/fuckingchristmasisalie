@@ -106,7 +106,7 @@ case gamestates.damienDisappears:
   break;
 
 case gamestates.firstPresent:
-  instance_deactivate_object(cutscene_checkondamien)
+ //instance_deactivate_object(cutscene_checkondamien)
   with(o_item_present) {
     if (name_ == "present1") {
       x = 64;
@@ -117,7 +117,7 @@ case gamestates.firstPresent:
   break;
   
 case gamestates.boxesGone:
- cutscene_boxpile.myText = "Wait, weren't there boxes here before?"
+cutscene_boxpile.name_ = "cutscene_boxesgone";
   //global.state = gamestates.talkToDamien;
 
   break;
