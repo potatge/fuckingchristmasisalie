@@ -5,12 +5,12 @@ enum santa {
 	
 	idle,
 	awakened,
-	pathstart,
+	pathstarted,
 	onpath,
 	attacking,
 }
 
-santaStates = santa.idle
+santaStates = santa.awakened;
 
 
 

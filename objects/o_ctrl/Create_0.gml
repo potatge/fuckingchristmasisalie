@@ -35,7 +35,8 @@ enum gamestates{
 	bloodSplodge,
 	lightsOut,
 	santaThere,
-	santaActivated
+	santaActivated,
+	chaseBegins
 	
 };
 global.state = gamestates.everythingsFine;

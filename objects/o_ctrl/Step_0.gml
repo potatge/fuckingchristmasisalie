@@ -143,9 +143,14 @@ case gamestates.santaThere:
 	break;
 
 case gamestates.santaActivated:
-show_debug_message("santa activated")
 instance_deactivate_object(cutscene_boxpile2);
 instance_deactivate_object(cutscene_santareveal);
-  o_santa.santaStates = santa.pathstart;
+ o_santa.santaStates = santa.pathstarted;
+ global.state = gamestates.chaseBegins;
+  show_debug_message("santa activated. chase begins. DUH")
+  
+  break;
+  
+  case gamestates.chaseBegins:
   break;
 }
