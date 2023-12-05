@@ -1,5 +1,5 @@
-//instance_deactivate_object(o_santa);
-instance_activate_object(o_santa);
+instance_deactivate_object(o_santa);
+//instance_activate_object(o_santa);
 spd = 2;
 enum santa {
 	
@@ -10,7 +10,7 @@ enum santa {
 	attacking,
 }
 
-santaStates = santa.pathstart
+santaStates = santa.idle
 
 
 

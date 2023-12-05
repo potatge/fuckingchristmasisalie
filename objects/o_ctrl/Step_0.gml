@@ -7,88 +7,82 @@ if keyboard_check_pressed(ord("F")) {
   }
 }
 
+switch (global.gameMode) {
 
-switch (global.gameMode){
-	
-	case mode.playing:
-	global.playerCanMove = true;
-	break;
-	
-	case mode.options:
-	//only if current decision level etx. TODO 
-	if (decisionLVL == 0){
-	global.playerCanMove = false;
-	//if in MODE OPTIONS and press down
-	if keyboard_check_pressed(vk_down){
-		curOption++
-	}
-	
-	if keyboard_check_pressed(vk_up){
-		curOption--
-	}
-	if (curOption > maxOption){
-		curOption = 0
-	}
-	
-	
-	// selecting on vk enter.
-	//TODO GENERALISING FOR MANY OPTIONs
-	if keyboard_check_pressed(vk_enter){
-		
-		switch (curOption){
-			
-			case 0://milk and cookies
-			show_debug_message("COOKIES and delete?")
-			global.goodEnd = true;
-			//array_delete(fridgeOpt,0,1);
-			break;
-			
-			case 1:
-			//white wine
-			show_debug_message("white wine")
-			global.goodEnd = false;
-			//array_delete(fridgeOpt,1,1);
-			break;
-			
-		}
-		
-		global.gameMode = mode.playing;
-		decisionLVL += 1;
-	}
+case mode.playing:
+  global.playerCanMove = true;
+  break;
 
-	break;
-}
+case mode.options:
+  //only if current decision level etx. TODO 
+  if (decisionLVL == 0) {
+    global.playerCanMove = false;
+    //if in MODE OPTIONS and press down
+    if keyboard_check_pressed(vk_down) {
+      curOption++
+    }
+
+    if keyboard_check_pressed(vk_up) {
+      curOption--
+    }
+    if (curOption > maxOption) {
+      curOption = 0
+    }
+
+    // selecting on vk enter.
+    //TODO GENERALISING FOR MANY OPTIONs
+    if keyboard_check_pressed(vk_enter) {
+
+      switch (curOption) {
+
+      case 0: //milk and cookies
+        show_debug_message("COOKIES and delete?")
+        global.goodEnd = true;
+        //array_delete(fridgeOpt,0,1);
+        break;
+
+      case 1:
+        //white wine
+        show_debug_message("white wine")
+        global.goodEnd = false;
+        //array_delete(fridgeOpt,1,1);
+        break;
+
+      }
+
+      global.gameMode = mode.playing;
+      decisionLVL += 1;
+    }
+
+    break;
+  }
 
 }
-
 
 switch (room) {
 
 case rm_title:
-// only do this if not in option mode. TODO make nice menu.
+  // only do this if not in option mode. TODO make nice menu.
   if global.gameMode != mode.options && keyboard_check_pressed(vk_space) {
     room_goto(rm1)
   }
   break;
 
 case rm1:
-   //music and sfx playing 
-	if (musicPlay && !audio_is_playing(music_holidays)) {
-	  audio_play_sound(music_holidays, 1, true)
-	}
-	if (!audio_is_playing(snd_stinger01)) {
+  //music and sfx playing 
 
-	  audio_resume_sound(music_holidays);
-	  o_ctrl.musicPlay = true;
-	}
+  if (musicPlay && !audio_is_playing(curSong)) {
+    audio_play_sound(curSong, 1, true)
+  }
+  if (!audio_is_playing(snd_stinger01)) {
 
-  
-  
+    audio_resume_sound(curSong);
+    o_ctrl.musicPlay = true;
+  }
+
   break;
 
 }
-
-
 
 switch (global.state) {
 
@@ -113,10 +107,10 @@ case gamestates.firstPresent:
     }
   }
   break;
-  
+
 case gamestates.boxesGone:
-cutscene_boxpile.name_ = "cutscene_boxesgone";
-o_chara_damien.damienStates = states.hurt;
+  cutscene_boxpile.name_ = "cutscene_boxesgone";
+  o_chara_damien.damienStates = states.hurt;
 
   break;
 
@@ -125,7 +119,7 @@ case gamestates.talkToDamien:
   break;
 
 case gamestates.secondPresentAppears:
-instance_activate_object(cutscene_secondpresent);
+  instance_activate_object(cutscene_secondpresent);
   with(o_item_present) {
     if (name_ == "present2") {
       x = 970;
@@ -135,18 +129,29 @@ instance_activate_object(cutscene_secondpresent);
   break;
 
 case gamestates.bloodSplodge:
-
-     break;
+  break;
 
 case gamestates.lightsOut:
+with (cutscene_boxpile2){
+		var area = collision_rectangle(x,y,x + 100,y + 100, cutscene_boxpile2, false, false);
+		if (area){
+			var boxes = instance_place(x,y, o_item_box);
+			instance_destroy(boxes);
+			show_debug_message("destroy boxes2")
+		}
+		//instance_destroy(cutscene_boxpile2)
+		
+}
 	global.state = gamestates.santaThere;
   break;
-  
-  case gamestates.santaThere:
-	instance_activate_object(o_santa);
+
+case gamestates.santaThere:
+show_debug_message("santa there!")
+  instance_activate_object(o_santa);
   break;
-  
-  case gamestates.santaActivated:
+
+case gamestates.santaActivated:
+show_debug_message("santa activated")
   o_santa.santaStates = santa.pathstart;
   break;
 }

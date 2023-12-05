@@ -1,2 +1,1 @@
-cutsceneHappening = false;
 name_ = "cutscene_boxpile2";
