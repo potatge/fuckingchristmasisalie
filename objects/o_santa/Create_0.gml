@@ -10,7 +10,7 @@ enum santa {
 	attacking,
 }
 
-santaStates = santa.awakened;
+santaStates = santa.idle;
 
 
 
