@@ -127,6 +127,32 @@ global.interactables = [
 	hasOption: false,
 	portrait: s_char_portraits_damien_worried
 	},
+	{
+	name_: "damien3",
+	canGrab: false,
+	//TODO maybe trigger him yellow in distance.
+	myText: [
+		"H-help...",
+		"C'mon, stand up! We gotta get out of here."
+	],
+	maxText: 1,
+	sprite: s_chara_damien_collapsed,
+	isSpeaker: true,
+	hasOption: false,
+	portrait: s_char_portraits_damien_worried
+	},
+	{
+	name_: "damien4",
+	canGrab: false,
+	//TODO maybe trigger him yellow in distance.
+	myText: ["*He appears too shaken to say anything*"],
+	maxText: 0,
+	sprite: s_chara_damien_collapsed,
+	isSpeaker: true,
+	hasOption: false,
+	portrait: s_char_portraits_damien_worried
+	},
+	
 	
 	
 	{

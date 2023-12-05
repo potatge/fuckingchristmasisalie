@@ -134,8 +134,15 @@ case gamestates.bloodSplodge:
 
 case gamestates.lightsOut:
 	instance_activate_object(cutscene_boxpile2)
-	show_debug_message("delete boxes and santa there")
+	// make one damien and hide him
+	var damien = instance_create_layer(73,974,"Instances",o_chara_damien)
+	with (damien) {
+		name_ = "damien3";
+		damienStates = states.hidden2;
+	}
 	global.state = gamestates.santaThere;
+	show_debug_message("delete boxesm make damien and santa appears")
+	
   break;
 
 case gamestates.santaThere:
