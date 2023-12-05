@@ -7,7 +7,8 @@ global.goodEnd = false;
 enum mode{
 	playing,
 	dialogue,
-	options
+	options,
+	gameover
 	
 }
 global.gameMode = mode.playing;

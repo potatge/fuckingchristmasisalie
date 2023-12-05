@@ -4,8 +4,9 @@ switch (santaStates){
 	case santa.idle:
 		sprite_index = s_santa_up;
 		image_speed = 0
-		if (global.state == gamestates.santaActivated){
+		if global.state = gamestates.santaActivated{
 			santaStates = santa.awakened;
+		show_debug_message("awakened santa")
 		}
 		
 	break;
@@ -15,7 +16,8 @@ switch (santaStates){
 		sprite_index = s_santa_left 
 		image_index = -1;
 		if (alarm[0] <= 0){
-			alarm[0] = 100;
+			show_debug_message("part should start")
+			alarm[0] = 500;
 		}
 		
 		break;
@@ -24,6 +26,7 @@ switch (santaStates){
 		sprite_index = s_santa_up;
 		image_index = 1;
 		path_start(p_santa,spd,path_action_reverse,true);
+		show_debug_message("path start")
 		santaStates = santa.onpath;
 		break;
 		
@@ -33,8 +36,7 @@ switch (santaStates){
 	case santa.attacking:
 		break;
 	
-	
-}
+	}
 
 var left = 0;
 var right =180;

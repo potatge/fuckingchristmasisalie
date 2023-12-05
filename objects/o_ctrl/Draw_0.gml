@@ -78,3 +78,13 @@ case rm1:
   }break;
 
 }
+
+switch (global.gameMode){
+	case mode.gameover:
+		with (o_player){
+			sprite_index = s_chara_girl_dead;
+		}
+			draw_text(xx,yy,+"Game Over!")
+	break;
+	
+}

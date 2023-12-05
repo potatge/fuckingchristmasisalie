@@ -3,8 +3,8 @@
 var touchplayer = instance_place(x, y, o_player)
 
 
-if (touchplayer){
-		   	o_ctrl.showText = true;	
+if (touchplayer && global.state = gamestates.santaThere){
+		   	//o_ctrl.showText = true;	
 			//global.playerCanMove = false;
 			//freeze for awhile and do action
 			if (alarm[0] <= 0){
