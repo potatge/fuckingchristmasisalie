@@ -90,24 +90,13 @@ if (collision_at_next_position || obstacle_at_next_position) {
 //cutscene 
 var cut = instance_place(x, y, cutscene)
 
-if (cut != noone){
-	o_ctrl.myText = cut.myText;
-	o_ctrl.showText = true;
-	o_ctrl.moreTextAvailible = true;
-	show_debug_message("cut text?");
-}else{
-	show_debug_message("no cut")
-}
-
 //dialogue system. needs to be at bottom rn.
 var item = findInteractable(x, y,o_interactable)
-
 if (item == noone && cut == noone) {
-  show_debug_message("resets text")
   resetTextToNone();
   return;
 }
-if keyboard_check_pressed(vk_space) {
+if (keyboard_check_pressed(vk_space) && item != noone) {
 
 if (item.hasOption) {
         global.gameMode = mode.options;
@@ -125,4 +114,12 @@ if (item.hasOption) {
   o_ctrl.portraitDraw = true;
   global.currentSpeakerArt = item.portrait;
   o_ctrl.curText++
+}
+
+// cutscene 
+if (cut != noone){
+	o_ctrl.myText = cut.myText;
+	o_ctrl.showText = true;
+	o_ctrl.moreTextAvailible = true;
+}else{
 }

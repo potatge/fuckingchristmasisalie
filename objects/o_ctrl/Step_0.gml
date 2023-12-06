@@ -113,13 +113,12 @@ case gamestates.firstPresent:
   break;
 
 case gamestates.boxesGone:
-  cutscene_boxpile.name_ = "cutscene_boxesgone";
+ // cutscene_boxpile.name_ = "cutscene_boxesgone";
   o_chara_damien.damienStates = states.hurt;
 
   break;
 
 case gamestates.talkToDamien:
-  show_debug_message("talk to dam")
   break;
 
 case gamestates.secondPresentAppears:
@@ -144,13 +143,14 @@ case gamestates.lightsOut:
     damienStates = states.hidden2;
   }
   global.state = gamestates.santaThere;
-  show_debug_message("delete boxesm make damien and santa appears")
+  show_debug_message("delete boxes an make damien and santa appears")
 
   break;
 
 case gamestates.santaThere:
   instance_activate_object(o_santa);
   instance_activate_object(cutscene_santareveal)
+  
   instance_deactivate_object(cutscene_lightsout);
 
   break;

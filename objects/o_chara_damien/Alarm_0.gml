@@ -1,3 +1,3 @@
- global.state = gamestates.secondPresentAppears
-	scr_stingerSound();
-   show_debug_message("second present")
+scr_stingerSound();
+global.state = gamestates.secondPresentAppears
+show_debug_message("second present. talked to dam")

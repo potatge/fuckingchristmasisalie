@@ -1,3 +1,9 @@
+var boxes = instance_place(x,y, o_item_box);
+instance_destroy(boxes);
+show_debug_message("destroy boxes once in step")
+global.state = gamestates.talkToDamien;
+
+/*
 var touch = instance_place(x,y,o_player){
 if (touch && !cutsceneHappening){
 	if alarm[0]<= 0{
@@ -6,3 +12,5 @@ if (touch && !cutsceneHappening){
 	}	
 	cutsceneHappening = true;
 }}
+
+//instance_destroy();

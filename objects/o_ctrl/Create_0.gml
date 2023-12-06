@@ -274,6 +274,14 @@ global.interactables = [
     hasOption: false
   },
   {
+    name_: "cutscene_boxpile2_gone",
+    myText: ["Huh, there we're boxes here before."],
+    sprite: noone,
+    maxText: 0,
+    portrait: noone,
+    hasOption: false
+  }, 
+  {
 
     name_: "cutscene_boxpile",
     myText: ["...did I put all these boxes here?"],
