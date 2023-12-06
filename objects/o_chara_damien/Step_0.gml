@@ -1,9 +1,9 @@
-if (global.state == gamestates.talkToDamien){
-	if (instance_place(x,y,o_player)){
+//should only do this once.
+if (global.state == gamestates.talkToDamien && instance_place(x,y,o_player) && !metDamien){
 		if (alarm[0] <= 0){
 			alarm[0] = 10;
+			metDamien = true;
 		}
-	}
 }
 
 switch (damienStates){
@@ -11,14 +11,13 @@ switch (damienStates){
 	case states.normal:
 		sprite_index = s_char_damien_idle
 		maxText = 0;
-			myText = ["I'll go get a new bottle!"]
+		myText = ["I'll go get a new bottle!"]
 		break;
 	
 	case states.hidden:
 		x = 1032;
 		y = 1032;
 		break;
-	
 	
 	case states.hurt:
 		sprite_index = s_chara_damien_collapsed;
