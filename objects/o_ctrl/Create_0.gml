@@ -16,9 +16,8 @@ global.gameMode = mode.playing;
 maxOption = 1;
 curOption = 0;
 
+
 fridgeOpt = ["MILK n COOKIES", "WHITE WINE"]
-grabOpt = ["GRAB", "DON'T"]
-gameOptions = [fridgeOpt, grabOpt]
 
 decisionLVL = 0;
 enum gamestates {

@@ -14,8 +14,8 @@ var yy = y1 + camera_get_view_height(cam) / 2 + height;
 var c_ = c_white;
 
 
-if (global.gameMode == mode.options && decisionLVL == 0){
-	var txt = "CHOOSE:\n"+string(fridgeOpt[0])+"\n"+string(fridgeOpt[1])
+if (global.gameMode == mode.options){
+	var txt = "CHOOSE:\n"+string(Opt[0])+"\n"+string(Opt[1])
 	var wdth = string_width(txt)+ 20;
 	//var option = 16;
 	draw_sprite_stretched_ext(s_textbox_black, 0, xx, yy - 50, wdth + pad, 45, c_, 0.7);
