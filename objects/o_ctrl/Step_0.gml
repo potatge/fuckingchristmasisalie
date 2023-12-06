@@ -50,12 +50,18 @@ case mode.options:
 
       }
 
-      global.gameMode = mode.playing;
+      global.gameMode = mode.optionsSelected;
       decisionLVL += 1;
+
     }
 
-    break;
   }
+  break;
+
+case mode.optionsSelected:
+  show_debug_message("back to playing")
+  global.gameMode = mode.playing;
+  break;
 
 }
 
@@ -81,7 +87,6 @@ case rm1:
   }
 
   break;
-  
 
 }
 
@@ -133,32 +138,32 @@ case gamestates.bloodSplodge:
   break;
 
 case gamestates.lightsOut:
-	instance_activate_object(cutscene_boxpile2)
-	// make one damien and hide him
-	var damien = instance_create_layer(73,974,"Instances",o_chara_damien)
-	with (damien) {
-		name_ = "damien3";
-		damienStates = states.hidden2;
-	}
-	global.state = gamestates.santaThere;
-	show_debug_message("delete boxesm make damien and santa appears")
-	
+  instance_activate_object(cutscene_boxpile2)
+  // make one damien and hide him
+  var damien = instance_create_layer(73, 974, "Instances", o_chara_damien)
+  with(damien) {
+    name_ = "damien3";
+    damienStates = states.hidden2;
+  }
+  global.state = gamestates.santaThere;
+  show_debug_message("delete boxesm make damien and santa appears")
+
   break;
 
 case gamestates.santaThere:
-	  instance_activate_object(o_santa);
-	  instance_activate_object(cutscene_santareveal)
-	  instance_deactivate_object(cutscene_lightsout);
+  instance_activate_object(o_santa);
+  instance_activate_object(cutscene_santareveal)
+  instance_deactivate_object(cutscene_lightsout);
 
-	break;
+  break;
 
 case gamestates.santaActivated:
- global.state = gamestates.chaseBegins;
+  global.state = gamestates.chaseBegins;
   show_debug_message("santa activated. chase begins. DUH.")
-  
+
   break;
-  
-  case gamestates.chaseBegins:
+
+case gamestates.chaseBegins:
   instance_deactivate_object(cutscene_boxpile2)
   instance_deactivate_object(cutscene_santareveal);
   break;

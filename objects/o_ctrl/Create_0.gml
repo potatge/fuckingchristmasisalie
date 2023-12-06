@@ -7,7 +7,8 @@ global.goodEnd = false;
 enum mode {
   playing,
   dialogue,
-  options
+  options,
+  optionsSelected
 
 }
 global.gameMode = mode.playing;
@@ -75,6 +76,14 @@ global.interactables = [
   {
     name_: "sink",
     myText: ["Yuck. This stove needs a clean."],
+    maxText: 0,
+    hasOption: false,
+    portrait: noone
+
+  },
+   {
+    name_: "bin",
+    myText: ["Smelly."],
     maxText: 0,
     hasOption: false,
     portrait: noone

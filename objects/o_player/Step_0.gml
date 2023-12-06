@@ -49,12 +49,6 @@ if (keyboard_check_released(vk_down || keyboard_check_released(vk_up))) {
 clamp(x, 0, room_width);
 clamp(y, 0, room_height);
 
-/* optionas later 
-			 if (obj.hasOption) {
-              global.gameMode = mode.options;
-            }
-			*/
-
 // Collisions
 var cam_id = view_camera[0];
 
@@ -102,12 +96,16 @@ if (obj == noone) {
 
 if keyboard_check_pressed(vk_space) {
 
+if (obj.hasOption) {
+		show_debug_message("has options")
+        global.gameMode = mode.options;
+}
+
   if (o_ctrl.curText > obj.maxText) {
-    show_debug_message("hit max")
-    resetTextToNone();
+        resetTextToNone();
     return;
   }
-  //AFTER checked for hit max. LOGICAL. IMPORTANT
+  //AFTER checked for hit max. LOGICAL!! IMPORTANT
   o_ctrl.showText = true; 
   o_ctrl.moreTextAvailible = true;
   o_ctrl.myText = obj.myText[o_ctrl.curText];
