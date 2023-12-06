@@ -1,11 +1,9 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "o_chara_damien",
+  "name": "o_chara",
   "eventList": [
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,},
-    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,},
-    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":2,"isDnD":false,},
   ],
   "managed": true,
   "overriddenProperties": [],
@@ -13,10 +11,7 @@
     "name": "chara",
     "path": "folders/Objects/chara.yy",
   },
-  "parentObjectId": {
-    "name": "o_chara",
-    "path": "objects/o_chara/o_chara.yy",
-  },
+  "parentObjectId": null,
   "persistent": false,
   "physicsAngularDamping": 0.1,
   "physicsDensity": 0.5,
@@ -32,10 +27,7 @@
   "physicsStartAwake": true,
   "properties": [],
   "solid": false,
-  "spriteId": {
-    "name": "s_char_damien_idle",
-    "path": "sprites/s_char_damien_idle/s_char_damien_idle.yy",
-  },
+  "spriteId": null,
   "spriteMaskId": null,
   "visible": true,
 }

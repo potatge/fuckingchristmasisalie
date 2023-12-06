@@ -72,8 +72,8 @@ case rm1:
     var yy = yy_ + camera_get_view_height(cam)
 	var por_right = instance_create_layer(xx - wdth, yy - hght, "portraits", o_char_portraits)
 	var por_left = instance_create_layer(xx - width - wdth * 2, yy - hght,"portraits",o_char_portraits)
-	 por_right.sprite_index = global.currentSpeakerArt;
-	 por_left.sprite_index = global.currentSpeakerArt;
+	 por_right.sprite_index = global.curSpeakerRight;
+	 por_left.sprite_index = global.curSpeakerLeft;
   }else{
 	  if (object_exists(o_char_portraits)){
 		  instance_destroy(o_char_portraits);

@@ -3,6 +3,8 @@ global.charDepth = -5000;
 global.cutscene = 0;
 global.goodEnd = false;
 
+global.curSpeakerLeft = noone
+global.curSpeakerRight = noone
 // for differentiating between normal play and options 
 enum mode {
   playing,

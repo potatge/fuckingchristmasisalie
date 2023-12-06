@@ -91,7 +91,7 @@ if (collision_at_next_position || obstacle_at_next_position) {
 var cut = instance_place(x, y, cutscene)
 
 //dialogue system. needs to be at bottom rn.
-var item = findInteractable(x, y,o_interactable)
+var item = findInteractable(x, y,[o_interactable,o_chara])
 if (item == noone && cut == noone) {
   resetTextToNone();
   return;
@@ -111,8 +111,11 @@ if (item.hasOption) {
   o_ctrl.showText = true; 
   o_ctrl.moreTextAvailible = true;
   o_ctrl.myText = item.myText[o_ctrl.curText];
+  
+  //showing portraits if talking to character.
   o_ctrl.portraitDraw = true;
-  global.currentSpeakerArt = item.portrait;
+  global.curSpeakerRight= item.portrait;
+  global.curSpeakerLeft = s_char_portraits_claire_happy;
   o_ctrl.curText++
 }
 
