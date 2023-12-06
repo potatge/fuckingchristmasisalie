@@ -28,6 +28,14 @@ var c_ = c_white;
 			draw_sprite_ext(s_arrow_right,0,xx + wdth - 8, yy  - 30 + i + 12 * curOption ,1,1,1,c_white,1)
 		}
 		break;
+		
+		case mode.gameOver:
+		var b  = c_black
+		draw_set_alpha(0.4);
+		draw_rectangle_color(0,0,xx_,yy_,b,b,b,b,false)
+		draw_set_alpha(1);
+		draw_text(xx,yy,"GAME OVER! Press space to try again.")
+		break;
 	}
 
 

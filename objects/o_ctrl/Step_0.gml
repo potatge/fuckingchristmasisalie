@@ -71,6 +71,19 @@ case mode.optionsSelected:
   global.gameMode = mode.playing;
   break;
 
+
+case mode.gameOver:
+global.playerCanMove = false;
+if keyboard_check_pressed(vk_space){
+	room_restart();
+	global.state = gamestates.everythingsFine;
+	global.gameMode = mode.playing;
+	lightsOut = false;
+	show_debug_message("space restarts game???")
+	
+	
+}
+break;
 }
 
 switch (room) {

@@ -10,7 +10,8 @@ enum mode {
   playing,
   dialogue,
   options,
-  optionsSelected
+  optionsSelected,
+  gameOver
 
 }
 global.gameMode = mode.playing;

@@ -1,0 +1,1 @@
+global.gameMode = mode.gameOver;
