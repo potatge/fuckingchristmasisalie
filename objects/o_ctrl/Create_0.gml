@@ -216,11 +216,11 @@ global.interactables = [
 
   {
     name_: "present1",
-    myText: ["What the, a present?", "It says 'For Claire' on the tag, but me and Damien said we'd only get each other one gift."],
+    myText: ["A present?", "It says 'For Claire' on the tag, but me and Damien said we'd only get each other one gift."],
     sprite: s_bg_table,
     maxText: 1,
     portrait: noone,
-    hasOption: false
+    hasOption: true
   },
 
   {
@@ -229,7 +229,7 @@ global.interactables = [
     sprite: s_item_present3,
     maxText: 3,
     portrait: noone,
-    hasOption: false
+    hasOption: true
   },
 
   {

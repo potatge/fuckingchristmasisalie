@@ -97,11 +97,17 @@ if (obj == noone) {
 if keyboard_check_pressed(vk_space) {
 
 if (obj.hasOption) {
-		show_debug_message("has options")
         global.gameMode = mode.options;
+		
+		if (obj.name_ == "present1" || obj.name_ == "present2"){
+			instance_destroy(obj);
+			show_debug_message("destroys obj")
+			//return;
+		}
 }
 
   if (o_ctrl.curText > obj.maxText) {
+
         resetTextToNone();
     return;
   }
