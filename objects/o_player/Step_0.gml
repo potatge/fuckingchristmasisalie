@@ -50,43 +50,40 @@ clamp(x, 0, room_width);
 clamp(y, 0, room_height);
 
 //dialogue system
-var interact = instance_place(x, y, [o_interactable, cutscene])
-if (interact) {
-  var object = "";
-  if (keyboard_check_pressed(vk_space)) {
-    with(o_ctrl) {
-      moreTextAvailible = true;
-      for (var i = 0; i < array_length(global.interactables); i++) {
-        if (global.interactables[i].name_ == interact.name_) {
-          var object = global.interactables[i];
-          myText = object.myText[curText];
-          portraitDraw = true;
-          global.currentSpeakerArt = object.portrait;
-          if (curText == object.maxText) {
-            if (object.hasOption) {
+
+
+
+var obj = findInteractable(x, y)
+if (obj != noone){
+	
+if keyboard_check_pressed(vk_space){
+
+o_ctrl.showText = true;
+o_ctrl.moreTextAvailible = true;
+o_ctrl.myText = obj.myText[o_ctrl.curText];
+o_ctrl.portraitDraw = true;
+global.currentSpeakerArt = obj.portrait;
+
+if(o_ctrl.curText > obj.maxText)  {
+	  resetTextToNone();
+	  return;
+    } 
+
+if (o_ctrl.curText < obj.maxText){
+		// only increment now	
+
+show_debug_message("increment text now")
+		o_ctrl.curText++
+}
+}}else{
+	resetTextToNone();
+}
+
+/* optionas later 
+			 if (obj.hasOption) {
               global.gameMode = mode.options;
             }
-            moreTextAvailible = false;
-            curText = 0;
-            return;
-          } else {
-            curText++
-            //messing it up below
-          }
-        }
-        showText = true;
-      }
-    }
-  }
-} else {
-  //not near item, set current text back to zero.
-  with(o_ctrl) {
-    showText = false;
-    portraitDraw = false;
-    // sets back to nothing?
-    curText = 0;
-  }
-}
+			*/
 
 // Collisions
 var cam_id = view_camera[0];
