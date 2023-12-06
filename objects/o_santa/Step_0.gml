@@ -11,9 +11,8 @@ case santa.idle:
 case santa.awakened:
   //play anim
   image_speed = 1;
-  sprite_index = s_santa_left
   image_index = -1
- 
+  sprite_index = s_santa_left
   if (alarm[0] <= 0) {
     alarm[0] = 100;
     show_debug_message("play anim & alarm for 100")
