@@ -180,7 +180,7 @@ global.interactables = [
 
   {
     name_: "candycane poster",
-    myText: ["It really give the place some 'festive cheer'."],
+    myText: ["It really gives the place some 'festive cheer'."],
     maxText: 0,
     sprite: s_bg_cityposter,
     portrait: noone,

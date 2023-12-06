@@ -87,23 +87,19 @@ if (collision_at_next_position || obstacle_at_next_position) {
   y += vspd;
 }
 
+
+
 //dialogue system. needs to be at bottom rn.
 var item = findInteractable(x, y,o_interactable)
 if (item == noone) {
   resetTextToNone();
   return;
 }
-
 if keyboard_check_pressed(vk_space) {
 
 if (item.hasOption) {
         global.gameMode = mode.options;
 		
-		if (item.name_ == "present1"){
-			instance_destroy(obj);
-			show_debug_message("destroys obj")
-			//return;
-		}
 }
 
   if (o_ctrl.curText > item.maxText) {
@@ -117,6 +113,5 @@ if (item.hasOption) {
   o_ctrl.myText = item.myText[o_ctrl.curText];
   o_ctrl.portraitDraw = true;
   global.currentSpeakerArt = item.portrait;
-
   o_ctrl.curText++
 }
