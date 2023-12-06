@@ -1,6 +1,6 @@
 function findInteractable(myX, myY,object) {
 
-  var interact = instance_place(myX, myY,object)
+  var interact = instance_place(myX, myY, object)
   if (interact) {
     for (var i = 0; i < array_length(global.interactables); i++) {
       if (global.interactables[i].name_ == interact.name_) {

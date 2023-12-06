@@ -66,12 +66,16 @@ function check_tile_collision(x, y) {
 }
 
 //collisions 
-var collisions = instance_place(x, y, o_interactable)
+var collisions = instance_place(x, y, [o_interactable,o_chara])
+//var characollisions = instance_place(x, y, o_chara)
 // Check for tile collisions at the player's potential next position
 var collision_at_next_position = check_tile_collision(player_x + hspd, player_y + vspd);
 
 // Check if there's an obstacle (interactable) at the player's next position
 var obstacle_at_next_position = instance_place(player_x + hspd, player_y + vspd, collisions);
+
+// Check if there's an obstacle (interactable) at the player's next position
+//var characollisions_at_next_position = instance_place(player_x + hspd, player_y + vspd, characollisions);
 
 // Check if there's a collision with tilemap or interactable (boxes, etc.)
 if (collision_at_next_position || obstacle_at_next_position) {
@@ -87,17 +91,23 @@ if (collision_at_next_position || obstacle_at_next_position) {
   y += vspd;
 }
 
+//dialogue system. needs to be at bottom rn.
 //cutscene 
 var cut = instance_place(x, y, cutscene)
 
-//dialogue system. needs to be at bottom rn.
-var item = findInteractable(x, y,[o_interactable,o_chara])
+var item = findInteractable(x, y,[o_interactable,o_chara]);
+
 if (item == noone && cut == noone) {
   resetTextToNone();
   return;
 }
-if (keyboard_check_pressed(vk_space) && item != noone) {
 
+if (keyboard_check_pressed(vk_space) && item != noone){
+	
+	o_ctrl.portraitDraw = true;
+	global.curSpeakerRight= item.portrait;
+	global.curSpeakerLeft = s_char_portraits_claire_happy;	
+		
 if (item.hasOption) {
         global.gameMode = mode.options;
 		
@@ -112,14 +122,14 @@ if (item.hasOption) {
   o_ctrl.moreTextAvailible = true;
   o_ctrl.myText = item.myText[o_ctrl.curText];
   
+
   //showing portraits if talking to character.
-  o_ctrl.portraitDraw = true;
-  global.curSpeakerRight= item.portrait;
-  global.curSpeakerLeft = s_char_portraits_claire_happy;
+
   o_ctrl.curText++
+ 
 }
 
-// cutscene 
+// cutscene activated 
 if (cut != noone){
 	o_ctrl.myText = cut.myText;
 	o_ctrl.showText = true;

@@ -14,10 +14,7 @@
     "name": "chara",
     "path": "folders/Objects/chara.yy",
   },
-  "parentObjectId": {
-    "name": "o_chara",
-    "path": "objects/o_chara/o_chara.yy",
-  },
+  "parentObjectId": null,
   "persistent": false,
   "physicsAngularDamping": 0.1,
   "physicsDensity": 0.5,
