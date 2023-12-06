@@ -35,7 +35,7 @@ case santa.onpath:
 
   if (direction >= left && direction < up) {
 	  show_debug_message("up left")
-	 image_xscale = 1;
+	 image_xscale = -1;
     sprite_index = s_santa_left_move;
   }
 
@@ -48,13 +48,13 @@ case santa.onpath:
    if (direction >= right && direction < down){
 	 show_debug_message("down right")
 	 sprite_index = s_santa_down;
-    image_xscale = -1;
+    image_xscale = 1;
   }
   
   if (direction >= down && direction < left){
 	 show_debug_message("down left")
 	 sprite_index = s_santa_down;
-    image_xscale = 1;
+    image_xscale = -1;
   }
   
   
