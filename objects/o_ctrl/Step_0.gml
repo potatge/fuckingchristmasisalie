@@ -7,20 +7,6 @@ if keyboard_check_pressed(ord("F")) {
   }
 }
 
-switch (decisionLVL){
-	
-	case 0:
-		Opt[0] = "MILK n COOKIES";
-		Opt[1] =  "WHITE WINE"
-		break
-	
-	case 1:
-		Opt[0] = "GRAB";
-		Opt[1] = "DON'T GRAB";
-		break;
-
-}
-
 switch (global.gameMode) {
 
 case mode.playing:
@@ -28,26 +14,45 @@ case mode.playing:
   break;
 
 case mode.options:
-    global.playerCanMove = false;
-    if keyboard_check_pressed(vk_down) {
-      curOption++
-    }
-    if keyboard_check_pressed(vk_up) {
-      curOption--
-    }
-	
-    if (curOption > maxOption) {
-      curOption = 0
-    }
+  global.playerCanMove = false;
+  if keyboard_check_pressed(vk_down) {
+    curOption++
+  }
+  if keyboard_check_pressed(vk_up) {
+    curOption--
+  }
 
+  if (curOption > maxOption) {
+    curOption = 0
+  }
 
-    //TODO GENERALISING FOR MANY OPTIONs
-    if keyboard_check_pressed(vk_enter) {
+  //switch within OPTIONS WOAH
+  switch (decisionLVL) {
 
-	  decisionLVL += 1;
-      global.gameMode = mode.playing;
-  
-    }
+  case 0:
+    Opt[0] = "MILK n COOKIES";
+    Opt[1] = "WHITE WINE"
+
+    break
+
+  case 1:
+    Opt[0] = "PUT UNDER TREE";
+    Opt[1] = "DON'T";
+
+    break;
+
+  case 2:
+    Opt[0] = "PUT UNDER TREE";
+    Opt[1] = "DON'T";
+    break;
+  }
+
+  //TODO GENERALISING FOR MANY OPTIONs
+  if keyboard_check_pressed(vk_enter) {
+    decisionLVL += 1;
+    global.gameMode = mode.playing;
+
+  }
 
   break;
 
