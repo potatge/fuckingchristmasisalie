@@ -87,11 +87,23 @@ if (collision_at_next_position || obstacle_at_next_position) {
   y += vspd;
 }
 
+//cutscene 
+var cut = instance_place(x, y, cutscene)
 
+if (cut != noone){
+	o_ctrl.myText = cut.myText;
+	o_ctrl.showText = true;
+	o_ctrl.moreTextAvailible = true;
+	show_debug_message("cut text?");
+}else{
+	show_debug_message("no cut")
+}
 
 //dialogue system. needs to be at bottom rn.
 var item = findInteractable(x, y,o_interactable)
-if (item == noone) {
+
+if (item == noone && cut == noone) {
+  show_debug_message("resets text")
   resetTextToNone();
   return;
 }
@@ -103,7 +115,6 @@ if (item.hasOption) {
 }
 
   if (o_ctrl.curText > item.maxText) {
-
         resetTextToNone();
     return;
   }
