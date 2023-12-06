@@ -103,10 +103,9 @@ if (item == noone && cut == noone) {
 }
 
 if (keyboard_check_pressed(vk_space) && item != noone){
-	
 	o_ctrl.portraitDraw = true;
 	global.curSpeakerRight= item.portrait;
-	global.curSpeakerLeft = s_char_portraits_claire_happy;	
+	//global.curSpeakerLeft = s_char_portraits_claire_happy;	
 		
 if (item.hasOption) {
         global.gameMode = mode.options;

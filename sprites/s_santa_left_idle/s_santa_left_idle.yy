@@ -1,7 +1,7 @@
 {
   "resourceType": "GMSprite",
   "resourceVersion": "1.0",
-  "name": "s_santa_left",
+  "name": "s_santa_left_idle",
   "bbox_bottom": 63,
   "bbox_left": 6,
   "bbox_right": 58,
@@ -36,7 +36,7 @@
   "sequence": {
     "resourceType": "GMSequence",
     "resourceVersion": "1.4",
-    "name": "s_santa_left",
+    "name": "s_santa_left_idle",
     "autoRecord": true,
     "backdropHeight": 768,
     "backdropImageOpacity": 0.5,
@@ -58,11 +58,11 @@
     "timeUnits": 1,
     "tracks": [
       {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"1.0","Keyframes":[
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"e8a310ef-9a1f-440f-a275-8dfdadb81283","path":"sprites/s_santa_left/s_santa_left.yy",},},},"Disabled":false,"id":"d8f73459-5809-4743-9c8e-7ac2463ada1b","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"a8555bbf-ceb6-4438-916f-a713695dbac6","path":"sprites/s_santa_left/s_santa_left.yy",},},},"Disabled":false,"id":"777a4207-c447-49bf-91f6-178e01a3b81c","IsCreationKey":false,"Key":1.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"bce5d778-2155-42fc-a896-4f032f8ac12d","path":"sprites/s_santa_left/s_santa_left.yy",},},},"Disabled":false,"id":"5bb7d7bb-9561-4b13-bfe5-429271319652","IsCreationKey":false,"Key":2.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"a5b0e7ce-272d-4dce-92f5-073b5579c5e9","path":"sprites/s_santa_left/s_santa_left.yy",},},},"Disabled":false,"id":"11bb1ef7-19cf-46fd-b373-ce7b5ffd3a91","IsCreationKey":false,"Key":3.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"4f3e974f-7c6a-4702-a81e-ceec3ca3849d","path":"sprites/s_santa_left/s_santa_left.yy",},},},"Disabled":false,"id":"1e46358a-c22d-483c-b98f-23e86b3514b5","IsCreationKey":false,"Key":4.0,"Length":1.0,"Stretch":false,},
+            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"e8a310ef-9a1f-440f-a275-8dfdadb81283","path":"sprites/s_santa_left_idle/s_santa_left_idle.yy",},},},"Disabled":false,"id":"d8f73459-5809-4743-9c8e-7ac2463ada1b","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
+            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"a8555bbf-ceb6-4438-916f-a713695dbac6","path":"sprites/s_santa_left_idle/s_santa_left_idle.yy",},},},"Disabled":false,"id":"777a4207-c447-49bf-91f6-178e01a3b81c","IsCreationKey":false,"Key":1.0,"Length":1.0,"Stretch":false,},
+            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"bce5d778-2155-42fc-a896-4f032f8ac12d","path":"sprites/s_santa_left_idle/s_santa_left_idle.yy",},},},"Disabled":false,"id":"5bb7d7bb-9561-4b13-bfe5-429271319652","IsCreationKey":false,"Key":2.0,"Length":1.0,"Stretch":false,},
+            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"a5b0e7ce-272d-4dce-92f5-073b5579c5e9","path":"sprites/s_santa_left_idle/s_santa_left_idle.yy",},},},"Disabled":false,"id":"11bb1ef7-19cf-46fd-b373-ce7b5ffd3a91","IsCreationKey":false,"Key":3.0,"Length":1.0,"Stretch":false,},
+            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"4f3e974f-7c6a-4702-a81e-ceec3ca3849d","path":"sprites/s_santa_left_idle/s_santa_left_idle.yy",},},},"Disabled":false,"id":"1e46358a-c22d-483c-b98f-23e86b3514b5","IsCreationKey":false,"Key":4.0,"Length":1.0,"Stretch":false,},
           ],},"modifiers":[],"spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange": null,
