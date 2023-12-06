@@ -219,7 +219,7 @@ global.interactables = [
     sprite: s_bg_table,
     maxText: 1,
     portrait: noone,
-    hasOption: true
+    hasOption: false
   },
 
   {
@@ -228,7 +228,7 @@ global.interactables = [
     sprite: s_item_present3,
     maxText: 3,
     portrait: noone,
-    hasOption: true
+    hasOption: false
   },
 
   {
@@ -237,7 +237,7 @@ global.interactables = [
     sprite: s_item_present1,
     maxText: 0,
     portrait: noone,
-    hasOption: false,
+    hasOption: false
   },
   {
     name_: "present for claire",

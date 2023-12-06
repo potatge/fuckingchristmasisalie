@@ -5,4 +5,5 @@ if (touch && !cutsceneHappening){
 		show_debug_message("setalarm for cutscene ")
 	}	
 	cutsceneHappening = true;
-}}
+}
+}
