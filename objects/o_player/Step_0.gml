@@ -88,25 +88,25 @@ if (collision_at_next_position || obstacle_at_next_position) {
 }
 
 //dialogue system. needs to be at bottom rn.
-var obj = findInteractable(x, y)
-if (obj == noone) {
+var item = findInteractable(x, y,o_interactable)
+if (item == noone) {
   resetTextToNone();
   return;
 }
 
 if keyboard_check_pressed(vk_space) {
 
-if (obj.hasOption) {
+if (item.hasOption) {
         global.gameMode = mode.options;
 		
-		if (obj.name_ == "present1" || obj.name_ == "present2"){
+		if (item.name_ == "present1"){
 			instance_destroy(obj);
 			show_debug_message("destroys obj")
 			//return;
 		}
 }
 
-  if (o_ctrl.curText > obj.maxText) {
+  if (o_ctrl.curText > item.maxText) {
 
         resetTextToNone();
     return;
@@ -114,9 +114,9 @@ if (obj.hasOption) {
   //AFTER checked for hit max. LOGICAL!! IMPORTANT
   o_ctrl.showText = true; 
   o_ctrl.moreTextAvailible = true;
-  o_ctrl.myText = obj.myText[o_ctrl.curText];
+  o_ctrl.myText = item.myText[o_ctrl.curText];
   o_ctrl.portraitDraw = true;
-  global.currentSpeakerArt = obj.portrait;
+  global.currentSpeakerArt = item.portrait;
 
   o_ctrl.curText++
 }
