@@ -16,8 +16,11 @@ function findInteractable(myX, myY) {
   
   function resetTextToNone(){
 	  show_debug_message("reset text to noone")
-	  o_ctrl.showText = false;
-		o_ctrl.moreTextAvailible = false;
-	    o_ctrl.curText = 0;
+	  with (o_ctrl){
+	    showText = false;
+	    moreTextAvailible = false;
+	    curText = 0;
+		portraitDraw = false;
+	  }
 	  
   }

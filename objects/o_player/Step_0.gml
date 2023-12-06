@@ -49,36 +49,6 @@ if (keyboard_check_released(vk_down || keyboard_check_released(vk_up))) {
 clamp(x, 0, room_width);
 clamp(y, 0, room_height);
 
-//dialogue system
-
-
-
-var obj = findInteractable(x, y)
-if (obj != noone){
-	
-if keyboard_check_pressed(vk_space){
-
-o_ctrl.showText = true;
-o_ctrl.moreTextAvailible = true;
-o_ctrl.myText = obj.myText[o_ctrl.curText];
-o_ctrl.portraitDraw = true;
-global.currentSpeakerArt = obj.portrait;
-
-if(o_ctrl.curText > obj.maxText)  {
-	  resetTextToNone();
-	  return;
-    } 
-
-if (o_ctrl.curText < obj.maxText){
-		// only increment now	
-
-show_debug_message("increment text now")
-		o_ctrl.curText++
-}
-}}else{
-	resetTextToNone();
-}
-
 /* optionas later 
 			 if (obj.hasOption) {
               global.gameMode = mode.options;
@@ -121,4 +91,28 @@ if (collision_at_next_position || obstacle_at_next_position) {
   // Move the player if there is no collision
   x += hspd;
   y += vspd;
+}
+
+//dialogue system. needs to be at bottom rn.
+var obj = findInteractable(x, y)
+if (obj == noone) {
+  resetTextToNone();
+  return;
+}
+
+if keyboard_check_pressed(vk_space) {
+
+  if (o_ctrl.curText > obj.maxText) {
+    show_debug_message("hit max")
+    resetTextToNone();
+    return;
+  }
+  //AFTER checked for hit max. LOGICAL. IMPORTANT
+  o_ctrl.showText = true; 
+  o_ctrl.moreTextAvailible = true;
+  o_ctrl.myText = obj.myText[o_ctrl.curText];
+  o_ctrl.portraitDraw = true;
+  global.currentSpeakerArt = obj.portrait;
+
+  o_ctrl.curText++
 }
