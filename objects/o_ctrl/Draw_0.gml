@@ -14,18 +14,21 @@ var yy = y1 + camera_get_view_height(cam) / 2 + height;
 var c_ = c_white;
 
 
-if (global.gameMode == mode.options){
-	var txt = "CHOOSE:\n"+string(Opt[0])+"\n"+string(Opt[1])
-	var wdth = string_width(txt)+ 20;
-	//var option = 16;
-	draw_sprite_stretched_ext(s_textbox_black, 0, xx, yy - 50, wdth + pad, 45, c_, 0.7);
-    draw_set_alpha(1);
-	draw_set_color(c_white)
-    draw_text_ext(xx + pad , yy - 50 + pad, txt, sep, wdth - pad);
-	for (var i = 0; i< maxOption; i++){
-		draw_sprite_ext(s_arrow_right,0,xx + wdth - 8, yy  - 30 + i + 12 * curOption ,1,1,1,c_white,1)
+	switch (global.gameMode){
+		
+	case mode.options:
+		var txt = "CHOOSE:\n"+string(Opt[0])+"\n"+string(Opt[1])
+		var wdth = string_width(txt)+ 20;
+		//var option = 16;
+		draw_sprite_stretched_ext(s_textbox_black, 0, xx, yy - 50, wdth + pad, 45, c_, 0.7);
+	    draw_set_alpha(1);
+		draw_set_color(c_white)
+	    draw_text_ext(xx + pad , yy - 50 + pad, txt, sep, wdth - pad);
+		for (var i = 0; i< maxOption; i++){
+			draw_sprite_ext(s_arrow_right,0,xx + wdth - 8, yy  - 30 + i + 12 * curOption ,1,1,1,c_white,1)
+		}
+		break;
 	}
-}
 
 
 switch (room) {
