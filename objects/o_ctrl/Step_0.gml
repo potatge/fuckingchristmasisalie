@@ -50,7 +50,7 @@ case mode.options:
   //TODO GENERALISING FOR MANY OPTIONs
   if keyboard_check_pressed(vk_enter) {
 	  //TODO make this SWITCH
-	  if (curOption == 0 ){
+	  if (curOption == 0){
 		  show_debug_message("choose milk?")
 		  global.goodEnd = true;
 	  }
@@ -59,8 +59,7 @@ case mode.options:
 		  show_debug_message("choose WINE")
 		  global.goodEnd = false;
 	  }
-    //decisionLVL += 1;
-	//TODO below shouldn't be doing this
+	decisionLVL += 1;
     global.gameMode = mode.playing;
 
   }
