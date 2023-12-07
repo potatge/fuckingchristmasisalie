@@ -12,12 +12,13 @@ case santa.awakened:
   //play anim
   show_debug_message("play anim. freeze chara! & alarm for 100")
   sprite_index = s_santa_left_idle
-  global.playerCanMove = false
+ 
   
   if (alarm[0] <= 0) {
    image_speed = 1;
     image_index = -1
     alarm[0] = 100;
+	global.playerCanMove = false
 	
     
   }

@@ -10,6 +10,7 @@ var player_y = y; // Replace with your actual player y-coordinate
 var hspd = 0 // Replace with your actual horizontal speed variable
 var vspd = 0; // Replace with your actual vertical speed variable
 
+//sprites
 var up_idle = s_chara_girl_up_idle
 var up_mov = s_chara_girl_up
 var down_mov = s_chara_girl_down
@@ -24,15 +25,18 @@ switch (playerState){
 	
 	case player.dead:
 	sprite_index = s_chara_girl_faint;
-	global.playerCanMove = false;
+	//global.playerCanMove = false;
 	
 	break;
 }
 
+//only move player isn't dead.
+if (playerState == player.dead){
+	show_debug_message("if not alive, do this.")
+	sprite_index = s_chara_girl_faint;
+}
 
-//only move player if allowed.
-if (global.playerCanMove) {
-
+//else, be alive and move.
   if (left) {
     hspd -= spd;
     image_xscale = 1;
@@ -55,7 +59,7 @@ if (global.playerCanMove) {
     sprite_index = down_mov
   }
 
-}
+
 // revert back to idle
 if (keyboard_check_released(vk_left) || keyboard_check_released(vk_right)) {
   sprite_index = down_idle
@@ -64,6 +68,8 @@ if (keyboard_check_released(vk_left) || keyboard_check_released(vk_right)) {
 if (keyboard_check_released(vk_down || keyboard_check_released(vk_up))) {
   sprite_index = down_idle
 }
+
+
 
 // keep in room? not working best. 
 clamp(x, 0, room_width);
@@ -133,27 +139,24 @@ if (item.hasOption && o_ctrl.decisionLVL == 0) {
 }
   if (o_ctrl.curText > item.maxText) {
 	  if (item.endAction){
-		  
+		  // add extra thing.
        switch (item.name_){
 		  case "fridge":
-			if (!global.goodEnd){
-				item.myText[0] ="Cracking open another chilled wine? Well, it IS the holidays."
+			if (global.goodEnd){
+				o_ctrl.myText = item.endText[0];
 			}else{
-				item.myText[0] = "An unassuming plate of milk and cookies? Can't help to be superstitious.";
+				o_ctrl.myText = item.endText[1];
 			}
-			   item.myText[1] = "I don't need anything else from the fridge."
 				//o_ctrl.curText++
 			break;
 
 		  case "present1":
 		  case "present2":
 			    instance_destroy(o_item_present);
-				show_debug_message("destroy present");
 				return;
 			    break;
 		  
 		  case "damien3":
-		    show_debug_message("change damien")
 			o_chara_damien.damienStates = states.followher;
 		    break
 	
@@ -164,7 +167,7 @@ if (item.hasOption && o_ctrl.decisionLVL == 0) {
   //AFTER checked for hit max. LOGICAL!! IMPORTANT
   o_ctrl.showText = true; 
   o_ctrl.moreTextAvailible = true;
-  o_ctrl.myText = item.myText[o_ctrl.curText];
+ o_ctrl.myText = item.myText[o_ctrl.curText];
   
 
   //showing portraits if talking to character.

@@ -324,9 +324,10 @@ global.interactables = [
   },
   {
     name_: "fridge",
-    myText: ["What should I get from the fridge?",""],
+    myText: ["What should I get from the fridge?"],
+    endText: ["An unassuming plate of milk and cookies? Can't help to be superstitious.","More wine!"],
     sprite: s_bg_nightstand,
-    maxText: 1,
+    maxText: 2,
     portrait: noone,
     hasOption: true,
 	endAction: true
