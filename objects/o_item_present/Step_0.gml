@@ -8,7 +8,6 @@ if (place_meeting(x,y,o_player)){
 		with cutscene_boxpile{
 			instance_change(cutscene_boxpile1gone,true)
 		}
-		//scr_stingerSound()
 	}
 	
 }

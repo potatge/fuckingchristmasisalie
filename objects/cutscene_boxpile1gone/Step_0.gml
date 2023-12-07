@@ -1,7 +1,7 @@
 var boxes = instance_place(x,y, o_item_box);
 instance_destroy(boxes);
-show_debug_message("destroy boxes once in step")
 global.state = gamestates.talkToDamien;
+//TODO sort out why this boxes is going non stop.
 
 /*
 var touch = instance_place(x,y,o_player){

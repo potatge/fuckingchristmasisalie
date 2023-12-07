@@ -108,9 +108,7 @@ if (keyboard_check_pressed(vk_space) && item != noone){
 		
 if (item.hasOption) {
         global.gameMode = mode.options;	
-		
 }
-
 
   if (o_ctrl.curText > item.maxText) {
 	  if (item.endAction){
@@ -119,8 +117,8 @@ if (item.hasOption) {
 		  
 		  case "present1":
 		  case "present2":
-			    instance_destroy(item);
-				show_debug_message("destroy present")
+			    instance_destroy(o_item_present);
+				show_debug_message("destroy present");
 				return;
 			    break;
 		  

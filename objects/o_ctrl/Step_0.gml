@@ -60,6 +60,7 @@ case mode.options:
 		  global.goodEnd = false;
 	  }
     //decisionLVL += 1;
+	//TODO below shouldn't be doing this
     global.gameMode = mode.playing;
 
   }
@@ -127,13 +128,12 @@ case gamestates.damienDisappears:
   break;
 
 case gamestates.firstPresent:
-  with(o_item_present) {
-    if (name_ == "present1") {
-      x = 64;
-      y = 454;
-    }
-  }
-  break;
+     var present1 = instance_create_layer(64,454,"Instances",o_item_present)
+	 with (present1) {
+		 name_ = "present1";
+	 }
+	 show_debug_message("make present1")
+     break;
 
 case gamestates.boxesGone:
  // cutscene_boxpile.name_ = "cutscene_boxesgone";
@@ -145,14 +145,13 @@ case gamestates.talkToDamien:
   break;
 
 case gamestates.secondPresentAppears:
-  instance_activate_object(cutscene_secondpresent);
-  with(o_item_present) {
-    if (name_ == "present2") {
-      x = 970;
-      y = 136;
-    }
-  }
-  break;
+	 instance_activate_object(cutscene_secondpresent);
+	 var present2 = instance_create_layer(970,136,"Instances",o_item_present)
+	 with (present2) {
+		 name_ = "present2";
+	 }
+	 show_debug_message("present2 appears")
+	 break;
 
 case gamestates.bloodSplodge:
   break;
