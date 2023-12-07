@@ -17,5 +17,7 @@ function resetTextToNone(){
 	    moreTextAvailible = false;
 	    curText = 0;
 		portraitDraw = false;
+		//TODO make options go away if you cycle through text.
+		global.gameMode = mode.playing;
 	  }
   }

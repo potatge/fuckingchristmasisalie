@@ -59,7 +59,6 @@ var player_y = y;
 // Function to check tile collisions
 function check_tile_collision(x, y) {
   var t_ = layer_tilemap_get_id("walls");
-  // TODO: Find a way to handle multiple tilesets
   var tiles = tilemap_get_at_pixel(t_, x, y);
 
   return tiles;
@@ -108,12 +107,30 @@ if (keyboard_check_pressed(vk_space) && item != noone){
 	//global.curSpeakerLeft = s_char_portraits_claire_happy;	
 		
 if (item.hasOption) {
-        global.gameMode = mode.options;
+        global.gameMode = mode.options;	
 		
 }
 
+
   if (o_ctrl.curText > item.maxText) {
-        resetTextToNone();
+	  if (item.endAction){
+		  
+		  switch (item.name_){
+		  
+		  case "present1":
+		  case "present2":
+			    instance_destroy(item);
+				show_debug_message("destroy present")
+				return;
+			    break;
+		  
+		  case "damien3":
+		    show_debug_message("change damien")
+			o_chara_damien.damienStates = states.followher;
+		    break
+	
+      }}
+    resetTextToNone();
     return;
   }
   //AFTER checked for hit max. LOGICAL!! IMPORTANT

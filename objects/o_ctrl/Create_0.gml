@@ -63,7 +63,8 @@ global.interactables = [
     myText: ["This is temporary boring dialogue...eck. What a waste of pixels.", "Vela really doesn't know how to code."],
     maxText: 0,
     hasOption: false,
-    portrait: noone
+    portrait: noone,
+	endAction: false
   },
 
   {
@@ -72,14 +73,16 @@ global.interactables = [
     sprite: s_item_box,
     maxText: 1,
     hasOption: false,
-    portrait: noone
+    portrait: noone,
+	endAction: false
   },
   {
     name_: "sink",
     myText: ["Yuck. This stove needs a clean."],
     maxText: 0,
     hasOption: false,
-    portrait: noone
+    portrait: noone,
+	endAction: false
 
   },
    {
@@ -87,7 +90,8 @@ global.interactables = [
     myText: ["Smelly."],
     maxText: 0,
     hasOption: false,
-    portrait: noone
+    portrait: noone,
+	endAction: false
 
   },
   {
@@ -95,7 +99,8 @@ global.interactables = [
     myText: ["It's a beef stew in progress."],
     maxText: 0,
     hasOption: false,
-    portrait: noone
+    portrait: noone,
+	endAction: false
   },
   {
     name_: "xmas tree",
@@ -103,7 +108,8 @@ global.interactables = [
     myText: ["It's a lovely tree, but I can't help but feel sad this time of year."],
     maxText: 0,
     hasOption: false,
-    portrait: noone
+    portrait: noone,
+	endAction: false
 
   },
 
@@ -114,6 +120,7 @@ global.interactables = [
     sprite: s_bg_cityposter,
     portrait: noone,
     hasOption: false,
+	endAction: false
   },
 
   {
@@ -123,6 +130,7 @@ global.interactables = [
     sprite: s_bg_cityposter,
     portrait: noone,
     hasOption: false,
+	endAction: false
   },
 
   {
@@ -132,6 +140,7 @@ global.interactables = [
     maxText: 0,
     portrait: noone,
     hasOption: false,
+	endAction: false
   },
 
   {
@@ -141,6 +150,7 @@ global.interactables = [
     maxText: 1,
     portrait: noone,
     hasOption: false,
+	endAction: false
   },
   {
     name_: "chair",
@@ -149,6 +159,7 @@ global.interactables = [
     maxText: 0,
     portrait: noone,
     hasOption: false,
+	endAction: false
   },
 
   {
@@ -157,7 +168,8 @@ global.interactables = [
     sprite: s_bg_table,
     maxText: 1,
     portrait: noone,
-    hasOption: false
+    hasOption: false,
+	endAction: true,
   },
 
   {
@@ -166,7 +178,8 @@ global.interactables = [
     sprite: s_item_present3,
     maxText: 3,
     portrait: noone,
-    hasOption: false
+    hasOption: false,
+	endAction: true
   },
 
   {
@@ -175,7 +188,8 @@ global.interactables = [
     sprite: s_item_present1,
     maxText: 0,
     portrait: noone,
-    hasOption: false
+    hasOption: false,
+	endAction: false
   },
   {
     name_: "present for claire",
@@ -184,6 +198,7 @@ global.interactables = [
     maxText: 0,
     portrait: noone,
     hasOption: false,
+	endAction: false
   },
 
   {
@@ -193,6 +208,7 @@ global.interactables = [
     maxText: 0,
     portrait: noone,
     hasOption: false,
+	endAction: false
 
   },
   {
@@ -202,6 +218,7 @@ global.interactables = [
     maxText: 1,
     portrait: noone,
     hasOption: false,
+	endAction: false
   },
   {
     name_: "cutscene_checkondamien",
@@ -209,7 +226,8 @@ global.interactables = [
     sprite: noone,
     maxText: 0,
     portrait: noone,
-    hasOption: false
+    hasOption: false,
+	endAction: false
   },
   {
     name_: "cutscene_boxpile2_gone",
@@ -217,7 +235,8 @@ global.interactables = [
     sprite: noone,
     maxText: 0,
     portrait: noone,
-    hasOption: false
+    hasOption: false,
+	endAction: false
   }, 
   {
 
@@ -226,7 +245,8 @@ global.interactables = [
     sprite: noone,
     maxText: 0,
     portrait: noone,
-    hasOption: false
+    hasOption: false,
+	endAction: false
 
   },
   {
@@ -236,7 +256,8 @@ global.interactables = [
     sprite: noone,
     maxText: 0,
     portrait: noone,
-    hasOption: false
+    hasOption: false,
+	endAction: false
 
   },
   {
@@ -245,15 +266,17 @@ global.interactables = [
     sprite: noone,
     maxText: 1,
     portrait: noone,
-    hasOption: false
+    hasOption: false,
+	endAction: false
   },
   {
     name_: "cutscene_santareveal",
-    myText: ["--!!"],
+    myText: ["---!!"],
     sprite: noone,
     maxText: 0,
     portrait: noone,
-    hasOption: false
+    hasOption: false,
+	endAction: false
   },
   {
     name_: "wine bottle",
@@ -261,7 +284,8 @@ global.interactables = [
     sprite: noone,
     maxText: 0,
     portrait: noone,
-    hasOption: false
+    hasOption: false,
+	endAction: false
   },
   {
     name_: "wine empty",
@@ -270,6 +294,7 @@ global.interactables = [
     maxText: 0,
     portrait: noone,
     hasOption: false,
+	endAction: false
   },
   {
     name_: "wine empty",
@@ -285,7 +310,8 @@ global.interactables = [
     myText: ["Yes, we're even doing the stockings thing. What age are we, 6?"],
     sprite: noone,
     maxText: 0,
-    portrait: noone
+    portrait: noone,
+	endAction: false
   },
   {
     name_: "nightstand",
@@ -293,7 +319,8 @@ global.interactables = [
     myText: ["It's where I put my keys."],
     sprite: s_bg_nightstand,
     maxText: 0,
-    portrait: noone
+    portrait: noone,
+	endAction: false
   },
   {
     name_: "fridge",
@@ -301,7 +328,8 @@ global.interactables = [
     sprite: s_bg_nightstand,
     maxText: 0,
     portrait: noone,
-    hasOption: true
+    hasOption: true,
+	endAction: false
   },
   {
     name_: "kitchenarea",
@@ -309,7 +337,8 @@ global.interactables = [
     sprite: s_bg_kitchenarea,
     maxText: 0,
     portrait: noone,
-    hasOption: false
+    hasOption: false,
+	endAction: false
   },
   {
     name_: "knife",
@@ -317,7 +346,8 @@ global.interactables = [
     sprite: s_bg_knife,
     maxText: 0,
     portrait: noone,
-    hasOption: false
+    hasOption: false,
+	endAction: false
   },
   
 	{
@@ -328,7 +358,9 @@ global.interactables = [
     sprite: s_chara_damien_collapsed,
     isSpeaker: true,
     hasOption: false,
-    portrait: s_char_portraits_damien_happy
+	endAction: true,
+    portrait: s_char_portraits_damien_happy,
+	endAction: false
   },
   {
     name_: "damien2",
@@ -348,13 +380,13 @@ global.interactables = [
     sprite: s_chara_damien_collapsed,
     isSpeaker: true,
     hasOption: false,
-    portrait: s_char_portraits_damien_worried
+    portrait: s_char_portraits_damien_worried,
+	endAction: false
   },
 	 
 	 {
     name_: "damien3",
     canGrab: false,
-    //TODO maybe trigger him yellow in distance.
     myText: [
       "H-help...",
       "C'mon, stand up! We gotta get out of here."
@@ -363,7 +395,9 @@ global.interactables = [
     sprite: s_chara_damien_collapsed,
     isSpeaker: true,
     hasOption: false,
-    portrait: s_char_portraits_damien_worried
+	endAction: true,
+    portrait: s_char_portraits_damien_worried,
+	endAction: true
   },
   {
     name_: "damien4",
@@ -374,7 +408,8 @@ global.interactables = [
     sprite: s_chara_damien_collapsed,
     isSpeaker: true,
     hasOption: false,
-    portrait: s_char_portraits_damien_worried
+    portrait: s_char_portraits_damien_worried,
+	endAction: false
   }
 
 
