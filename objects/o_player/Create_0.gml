@@ -1,5 +1,5 @@
 depth = global.charDepth
-spd = 4;
+spd = 3;
 global.playerCanMove = true;
 enum player{
 	

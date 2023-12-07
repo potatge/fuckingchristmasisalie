@@ -10,6 +10,25 @@ var player_y = y; // Replace with your actual player y-coordinate
 var hspd = 0 // Replace with your actual horizontal speed variable
 var vspd = 0; // Replace with your actual vertical speed variable
 
+var up_idle = s_chara_girl_up_idle
+var up_mov = s_chara_girl_up
+var down_mov = s_chara_girl_down
+var down_idle = s_chara_girl_down_idle
+var left_ = s_chara_girl_left
+
+switch (playerState){
+	
+	case player.alive:
+	
+	break;
+	
+	case player.dead:
+	sprite_index = s_chara_girl_faint;
+	global.playerCanMove = false;
+	
+	break;
+}
+
 
 //only move player if allowed.
 if (global.playerCanMove) {
@@ -17,33 +36,33 @@ if (global.playerCanMove) {
   if (left) {
     hspd -= spd;
     image_xscale = 1;
-    sprite_index = s_chara_girl_left;
+    sprite_index = left_
   }
 
   if (right) {
     hspd += spd;
     image_xscale = -1;
-    sprite_index = s_chara_girl_left;
+    sprite_index = left_
   }
 
   if (up) {
     vspd -= spd;
-    sprite_index = s_chara_girl_up;
+    sprite_index = up_mov
   }
 
   if (down) {
     vspd += spd;
-    sprite_index = s_chara_girl_down;
+    sprite_index = down_mov
   }
 
 }
 // revert back to idle
 if (keyboard_check_released(vk_left) || keyboard_check_released(vk_right)) {
-  sprite_index = s_chara_girl_down_idle;
+  sprite_index = down_idle
 }
 
 if (keyboard_check_released(vk_down || keyboard_check_released(vk_up))) {
-  sprite_index = s_chara_girl_down_idle;
+  sprite_index = down_idle
 }
 
 // keep in room? not working best. 
