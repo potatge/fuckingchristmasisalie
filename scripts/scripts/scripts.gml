@@ -30,33 +30,28 @@ function resetTextToNone() {
 }
 
 
-function fridgeEndAction() {
+function fridgeEndAction(fridge) {
 	show_debug_message("fridge endaction");
-	
-var fridge  = findItem("fridge");
 
   if (global.goodEnd) {
     o_ctrl.myText = fridge.endText[0];
   } else {
     o_ctrl.myText = fridge.endText[1];
   }
+  o_ctrl.moreTextAvailible = true;
+  o_ctrl.showText = true;
 
 }
 
-function present1EndAction() {
+function present1EndAction(present1) {
 show_debug_message("present1 endaction");
-	
-var present  = findItem("present1");
-instance_destroy();
-
+instance_destroy(present1);
 }
 
 
-function present2EndAction() {
+function present2EndAction(present2) {
 show_debug_message("present2 endaction");
-	
-var present  = findItem("present2");
-instance_destroy();
+instance_destroy(present2);
 
 }
 
