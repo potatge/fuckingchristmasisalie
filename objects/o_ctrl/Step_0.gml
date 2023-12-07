@@ -80,6 +80,7 @@ if keyboard_check_pressed(vk_space){
 	global.state = gamestates.everythingsFine;
 	global.gameMode = mode.playing;
 	lightsOut = false;
+	audio_stop_sound(music_suspense);
 	curSong = music_holidays;
 	show_debug_message("space resets music too?")
 	
@@ -158,7 +159,6 @@ case gamestates.bloodSplodge:
   break;
 
 case gamestates.lightsOut:
-  instance_activate_object(cutscene_boxpile2)
   // make one damien and hide him
   var damien = instance_create_layer(73, 974, "Instances", o_chara_damien)
   with(damien) {

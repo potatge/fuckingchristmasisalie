@@ -42,6 +42,7 @@ enum gamestates {
 
 };
 global.state = gamestates.everythingsFine;
+global.debugMode = false;
 sfxPlay = false;
 musicPlay = false;
 //scr_changeSounds();
