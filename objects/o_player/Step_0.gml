@@ -138,22 +138,19 @@ if (keyboard_check_pressed(vk_space) && item != noone) {
 
     o_ctrl.curText++
 
-
-
   } else {
     // No more text.
     resetTextToNone();
-	  
-	    if (item.hasOption && o_ctrl.decisionLVL == 0) {
+
+    if (item.hasOption && o_ctrl.decisionLVL == 0) {
       global.gameMode = mode.options;
     }
-	
-	  if (item.endAction) {
+
+    if (item.endAction) {
+		item.endAction();
       //handle end action
 
     }
-	
-	
 
   }
 } // cutscene activated 

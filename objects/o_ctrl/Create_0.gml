@@ -157,7 +157,7 @@ global.interactables = [
     sprite: s_bg_table,
     portrait: noone,
     hasOption: false,
-	endAction: true,
+	endAction: present1EndAction,
   },
 
   {
@@ -166,7 +166,7 @@ global.interactables = [
     sprite: s_item_present3,
     portrait: noone,
     hasOption: false,
-	endAction: true
+	endAction: present2EndAction,
   },
 
   {
@@ -301,7 +301,7 @@ global.interactables = [
     sprite: s_bg_nightstand,
     portrait: noone,
     hasOption: true,
-	endAction: true
+	endAction: fridgeEndAction,
   },
   {
     name_: "kitchenarea",
