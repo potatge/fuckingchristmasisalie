@@ -105,16 +105,25 @@ if (keyboard_check_pressed(vk_space) && item != noone){
 	o_ctrl.portraitDraw = true;
 	global.curSpeakerRight= item.portrait;
 	//global.curSpeakerLeft = s_char_portraits_claire_happy;	
-		
-if (item.hasOption) {
+		//TODO limit decisions right now
+if (item.hasOption && o_ctrl.decisionLVL == 0) {
         global.gameMode = mode.options;	
+	
 }
-
   if (o_ctrl.curText > item.maxText) {
 	  if (item.endAction){
 		  
-		  switch (item.name_){
-		  
+       switch (item.name_){
+		  case "fridge":
+			if (!global.goodEnd){
+				item.myText[0] ="Cracking open another chilled wine? Well, it IS the holidays."
+			}else{
+				item.myText[0] = "An unassuming plate of milk and cookies? Can't help to be superstitious.";
+			}
+			   item.myText[1] = "I don't need anything else from the fridge."
+				//o_ctrl.curText++
+			break;
+
 		  case "present1":
 		  case "present2":
 			    instance_destroy(o_item_present);

@@ -59,6 +59,7 @@ case mode.options:
 		  show_debug_message("choose WINE")
 		  global.goodEnd = false;
 	  }
+	o_ctrl.curText++
 	decisionLVL += 1;
     global.gameMode = mode.playing;
 

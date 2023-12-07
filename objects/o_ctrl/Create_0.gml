@@ -19,7 +19,6 @@ global.gameMode = mode.playing;
 maxOption = 1;
 curOption = 0;
 
-
 fridgeOpt = ["MILK n COOKIES", "WHITE WINE"]
 
 decisionLVL = 0;
@@ -325,12 +324,12 @@ global.interactables = [
   },
   {
     name_: "fridge",
-    myText: ["What should I get from the fridge?"],
+    myText: ["What should I get from the fridge?",""],
     sprite: s_bg_nightstand,
-    maxText: 0,
+    maxText: 1,
     portrait: noone,
     hasOption: true,
-	endAction: false
+	endAction: true
   },
   {
     name_: "kitchenarea",
