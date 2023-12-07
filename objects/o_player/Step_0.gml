@@ -17,48 +17,47 @@ var down_mov = s_chara_girl_down
 var down_idle = s_chara_girl_down_idle
 var left_ = s_chara_girl_left
 
-switch (playerState){
-	
-	case player.alive:
-	
-	break;
-	
-	case player.dead:
-	sprite_index = s_chara_girl_faint;
-	//global.playerCanMove = false;
-	
-	break;
+switch (playerState) {
+
+case player.alive:
+
+  break;
+
+case player.dead:
+  sprite_index = s_chara_girl_faint;
+  //global.playerCanMove = false;
+
+  break;
 }
 
 //only move player isn't dead.
-if (playerState == player.dead){
-	show_debug_message("if not alive, do this.")
-	sprite_index = s_chara_girl_faint;
+if (playerState == player.dead) {
+  show_debug_message("if not alive, do this.")
+  sprite_index = s_chara_girl_faint;
 }
 
 //else, be alive and move.
-  if (left) {
-    hspd -= spd;
-    image_xscale = 1;
-    sprite_index = left_
-  }
+if (left) {
+  hspd -= spd;
+  image_xscale = 1;
+  sprite_index = left_
+}
 
-  if (right) {
-    hspd += spd;
-    image_xscale = -1;
-    sprite_index = left_
-  }
+if (right) {
+  hspd += spd;
+  image_xscale = -1;
+  sprite_index = left_
+}
 
-  if (up) {
-    vspd -= spd;
-    sprite_index = up_mov
-  }
+if (up) {
+  vspd -= spd;
+  sprite_index = up_mov
+}
 
-  if (down) {
-    vspd += spd;
-    sprite_index = down_mov
-  }
-
+if (down) {
+  vspd += spd;
+  sprite_index = down_mov
+}
 
 // revert back to idle
 if (keyboard_check_released(vk_left) || keyboard_check_released(vk_right)) {
@@ -68,8 +67,6 @@ if (keyboard_check_released(vk_left) || keyboard_check_released(vk_right)) {
 if (keyboard_check_released(vk_down || keyboard_check_released(vk_up))) {
   sprite_index = down_idle
 }
-
-
 
 // keep in room? not working best. 
 clamp(x, 0, room_width);
@@ -91,7 +88,7 @@ function check_tile_collision(x, y) {
 }
 
 //collisions 
-var collisions = instance_place(x, y, [o_interactable,o_chara])
+var collisions = instance_place(x, y, [o_interactable, o_chara])
 //var characollisions = instance_place(x, y, o_chara)
 // Check for tile collisions at the player's potential next position
 var collision_at_next_position = check_tile_collision(player_x + hspd, player_y + vspd);
@@ -120,7 +117,7 @@ if (collision_at_next_position || obstacle_at_next_position) {
 //cutscene 
 var cut = instance_place(x, y, cutscene)
 
-var item = findInteractable(x, y,[o_interactable,o_chara]);
+var item = findInteractable(x, y, [o_interactable, o_chara]);
 
 if (item == noone && cut == noone) {
   resetTextToNone();
@@ -129,54 +126,36 @@ if (item == noone && cut == noone) {
 
 //if in playing mode. Not selecting.
 
-if (keyboard_check_pressed(vk_space) && item != noone){
-	o_ctrl.portraitDraw = true;
-	global.curSpeakerRight= item.portrait;
-	//global.curSpeakerLeft = s_char_portraits_claire_happy;	
-		//TODO limit decisions right now
-if (item.hasOption && o_ctrl.decisionLVL == 0) {
-        global.gameMode = mode.options;	
-}
-  if (o_ctrl.curText > item.maxText) {
-	  if (item.endAction){
-		  // add extra thing.
-       switch (item.name_){
-		  case "fridge":
-			if (global.goodEnd){
-				o_ctrl.myText = item.endText[0];
-			}else{
-				o_ctrl.myText = item.endText[1];
-			}
-				//o_ctrl.curText++
-			break;
+if (keyboard_check_pressed(vk_space) && item != noone) {
+  o_ctrl.portraitDraw = true;
+  global.curSpeakerRight = item.portrait;
 
-		  case "present1":
-		  case "present2":
-			    instance_destroy(o_item_present);
-				return;
-			    break;
-		  
-		  case "damien3":
-			o_chara_damien.damienStates = states.followher;
-		    break
-	
-      }}
+  if (o_ctrl.curText < array_length(item.myText)) {
+    show_debug_message("get text")
+    o_ctrl.showText = true;
+    o_ctrl.moreTextAvailible = true;
+    o_ctrl.myText = item.myText[o_ctrl.curText];
+
+    o_ctrl.curText++
+
+    if (item.endAction) {
+      //handle end action
+
+    }
+
+    //global.curSpeakerLeft = s_char_portraits_claire_happy;	
+    //TODO limit decisions right now
+    if (item.hasOption && o_ctrl.decisionLVL == 0) {
+      global.gameMode = mode.options;
+    }
+
+  } else {
+    // No more text.
     resetTextToNone();
-    return;
+
   }
-  //AFTER checked for hit max. LOGICAL!! IMPORTANT
-  o_ctrl.showText = true; 
-  o_ctrl.moreTextAvailible = true;
- o_ctrl.myText = item.myText[o_ctrl.curText];
-  
-
-  //showing portraits if talking to character.
-
-  o_ctrl.curText++
- 
-}
-
-// cutscene activated 
+} // cutscene activated 
+/*
 if (cut != noone){
 	o_ctrl.myText = cut.myText;
 	o_ctrl.showText = true;
