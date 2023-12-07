@@ -8,7 +8,8 @@ enum states{
 	hidden,
 	hurt,
 	hidden2,
-	followher
+	followher,
+	dead
 	
 }
 	

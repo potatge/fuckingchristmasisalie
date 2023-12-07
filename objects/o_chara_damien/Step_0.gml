@@ -39,5 +39,9 @@ switch (damienStates){
 		x = o_player.x-32-3;
 		y = o_player.y
 		break;
+		
+		case states.dead:
+		sprite_index = s_chara_damien_collapsed;
 
+		break;
 }
