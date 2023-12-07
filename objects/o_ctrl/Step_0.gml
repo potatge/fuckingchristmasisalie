@@ -80,7 +80,8 @@ if keyboard_check_pressed(vk_space){
 	global.state = gamestates.everythingsFine;
 	global.gameMode = mode.playing;
 	lightsOut = false;
-	show_debug_message("space restarts game???")
+	curSong = music_holidays;
+	show_debug_message("space resets music too?")
 	
 	
 }
