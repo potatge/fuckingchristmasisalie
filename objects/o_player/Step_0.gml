@@ -121,6 +121,8 @@ if (item == noone && cut == noone) {
   return;
 }
 
+//if in playing mode. Not selecting.
+
 if (keyboard_check_pressed(vk_space) && item != noone){
 	o_ctrl.portraitDraw = true;
 	global.curSpeakerRight= item.portrait;
@@ -128,7 +130,6 @@ if (keyboard_check_pressed(vk_space) && item != noone){
 		//TODO limit decisions right now
 if (item.hasOption && o_ctrl.decisionLVL == 0) {
         global.gameMode = mode.options;	
-	
 }
   if (o_ctrl.curText > item.maxText) {
 	  if (item.endAction){
