@@ -10,6 +10,7 @@ var player_y = y; // Replace with your actual player y-coordinate
 var hspd = 0 // Replace with your actual horizontal speed variable
 var vspd = 0; // Replace with your actual vertical speed variable
 
+
 //only move player if allowed.
 if (global.playerCanMove) {
 
