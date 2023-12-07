@@ -138,20 +138,22 @@ if (keyboard_check_pressed(vk_space) && item != noone) {
 
     o_ctrl.curText++
 
-    if (item.endAction) {
-      //handle end action
 
-    }
-
-    //global.curSpeakerLeft = s_char_portraits_claire_happy;	
-    //TODO limit decisions right now
-    if (item.hasOption && o_ctrl.decisionLVL == 0) {
-      global.gameMode = mode.options;
-    }
 
   } else {
     // No more text.
     resetTextToNone();
+	  
+	    if (item.hasOption && o_ctrl.decisionLVL == 0) {
+      global.gameMode = mode.options;
+    }
+	
+	  if (item.endAction) {
+      //handle end action
+
+    }
+	
+	
 
   }
 } // cutscene activated 

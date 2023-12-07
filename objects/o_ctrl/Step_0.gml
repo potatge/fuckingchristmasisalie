@@ -48,7 +48,7 @@ case mode.options:
   }
 
   //TODO GENERALISING FOR MANY OPTIONs
-  if keyboard_check_pressed(vk_space) {
+  if keyboard_check_pressed(vk_enter) {
 	  //TODO make this SWITCH
 	  if (curOption == 0){
 		  show_debug_message("choose milk?")
