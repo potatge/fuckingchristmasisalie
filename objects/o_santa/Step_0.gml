@@ -10,19 +10,17 @@ case santa.idle:
 
 case santa.awakened:
   //play anim
-  image_speed = 1;
-  image_index = -1
   show_debug_message("play anim & alarm for 100")
   sprite_index = s_santa_left_idle
   if (alarm[0] <= 0) {
+   image_speed = 1;
+    image_index = -1
     alarm[0] = 100;
     
   }
   break;
 
 case santa.pathstarted:
-  sprite_index = s_santa_up;
-  image_index = 1;
   show_debug_message("path started")
   santaStates = santa.onpath;
   break;
