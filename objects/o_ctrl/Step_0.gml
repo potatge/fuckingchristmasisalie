@@ -59,7 +59,7 @@ case mode.options:
       show_debug_message("choose WINE")
       global.goodEnd = false;
     }
-    //decisionLVL += 1;
+    decisionLVL += 1;
     global.gameMode = mode.playing;
     setState(gamestates.doneWithFridge)
 
@@ -198,9 +198,10 @@ case gamestates.chaseBegins:
   
   case gamestates.endRunAwayFaceDoor1:
       //sort out key presisng doubling up.
-	  //global.gameMode = mode.options;
-	  //o_ctrl.Opt[0] = "STAY";
-	  //o_ctrl.Opt[1] = "RUN"
+	  
+	  o_ctrl.Opt[0] = "STAY";
+	  o_ctrl.Opt[1] = "RUN"
+	  global.gameMode = mode.options;
 	  setState(gamestates.endRunAwayFaceDoor2)
 	  break;
 

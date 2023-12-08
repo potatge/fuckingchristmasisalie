@@ -72,7 +72,7 @@ gamestatesStrings = [
 
 ]
 global.state = gamestates.everythingsFine;
-global.debugMode = false;
+global.debugMode = true;
 sfxPlay = false;
 musicPlay = false;
 //scr_changeSounds();
@@ -352,10 +352,10 @@ global.interactables = [
   },
    {
     name_: "door",
-    myText: [],
+    myText: ["Are you sure you wanna run away?"],
     sprite: s_bg_door,
     portrait: noone,
-    hasOption: false,
+    hasOption: true,
 	endAction: doorEndaction,
   },
   

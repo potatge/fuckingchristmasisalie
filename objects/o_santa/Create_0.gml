@@ -8,6 +8,7 @@ enum santa {
 	awakened,
 	pathstarted,
 	onpath,
+	stopandturn,
 	attacking,
 }
 

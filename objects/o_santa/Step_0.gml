@@ -30,6 +30,7 @@ case santa.pathstarted:
   break;
 
 case santa.onpath:
+  path_speed = spd;
   var left = 0;
   var right = 180;
   var up = 90;
@@ -59,9 +60,36 @@ case santa.onpath:
     image_xscale = -1;
   }
 
+  var pad = 5
+  var meetplayer = collision_rectangle(bbox_left - pad, bbox_top - pad, bbox_right + pad, bbox_bottom + pad, o_player, false, false)
+  if (meetplayer) {
+    santaStates = santa.attacking;
+    path_speed = 0
+
+    global.gameMode = mode.gameOver;
+    playerState = player.dead;
+  }
+  //randomly stops and turns 
+  if (alarm[2] <= 0) {
+    alarm[2] = irandom_range(150, 550)
+  }
+  break;
+
+case santa.stopandturn:
+  path_speed = 0;
+  sprite_index = s_santa_left_idle;
+  if (alarm[1] <= 0) {
+    alarm[1] = irandom_range(80, 200)
+  }
   break;
 
 case santa.attacking:
+  sprite_index = s_santa_sackbash;
+  if (alarm[1] <= 0) {
+    show_debug_message("santa attacking alarm")
+    alarm[1] = 200;
+
+  }
   break;
 
 }
