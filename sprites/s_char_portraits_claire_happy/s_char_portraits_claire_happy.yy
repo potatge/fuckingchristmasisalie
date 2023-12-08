@@ -3,9 +3,9 @@
   "resourceVersion": "1.0",
   "name": "s_char_portraits_claire_happy",
   "bbox_bottom": 299,
-  "bbox_left": 15,
-  "bbox_right": 175,
-  "bbox_top": 0,
+  "bbox_left": 5,
+  "bbox_right": 165,
+  "bbox_top": 4,
   "bboxMode": 0,
   "collisionKind": 1,
   "collisionTolerance": 0,
@@ -13,14 +13,14 @@
   "edgeFiltering": false,
   "For3D": false,
   "frames": [
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"33cf582a-21e4-4190-b6e3-77231d076dc6",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"54f7a8f6-d4a0-49a2-9509-7acc8bac1323",},
   ],
   "gridX": 0,
   "gridY": 0,
   "height": 300,
   "HTile": false,
   "layers": [
-    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"9c265b50-d303-4b59-9f03-cc114bad5a12","blendMode":0,"displayName":"default","isLocked":false,"opacity":100.0,"visible":true,},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"9191200f-f2f0-445e-ad72-3af64ed6582d","blendMode":0,"displayName":"default","isLocked":false,"opacity":100.0,"visible":true,},
   ],
   "nineSlice": null,
   "origin": 4,
@@ -54,7 +54,7 @@
     "timeUnits": 1,
     "tracks": [
       {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"1.0","Keyframes":[
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"33cf582a-21e4-4190-b6e3-77231d076dc6","path":"sprites/s_char_portraits_claire_happy/s_char_portraits_claire_happy.yy",},},},"Disabled":false,"id":"4f64e069-50d5-4f32-a3d4-46118d62cd06","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
+            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"54f7a8f6-d4a0-49a2-9509-7acc8bac1323","path":"sprites/s_char_portraits_claire_happy/s_char_portraits_claire_happy.yy",},},},"Disabled":false,"id":"e758cf20-537c-49be-9380-27a34ef380e7","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
           ],},"modifiers":[],"spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange": null,
