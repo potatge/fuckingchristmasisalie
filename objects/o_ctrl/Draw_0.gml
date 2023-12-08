@@ -42,13 +42,22 @@ var c_ = c_white;
 
 switch (room) {
 	
+case rm_end:
+	draw_sprite_stretched_ext(s_splashscreen_title, 0, 0, 0, camera_get_view_width(view_camera[0]), camera_get_view_height(view_camera[0]), c_, 1);
+	draw_text(xx , yy / 2, "Art, programming + design: Vela Noble @velanoble\nMusic by Peritune.")
+
+	break;
 
 case rm_title:
-  draw_sprite_stretched_ext(s_splashscreen, 0, 0, 0, camera_get_view_width(view_camera[0]), camera_get_view_height(view_camera[0]), c_, 1);
-  draw_text(xx / 2, yy / 2, "Arrows to move. Space to interact. Enter to Select. F to fullscreen.\nArt, programming + design: Vela Noble @velanoble\nMusic by Peritune.")
+  draw_set_font(fnt2)
+  draw_sprite_stretched_ext(s_splashscreen_title, 0, 0, 0, camera_get_view_width(view_camera[0]), camera_get_view_height(view_camera[0]), c_, 1);
+  var txt = "Arrows to move.\nEnter to Select.\nSpace to interact.\nF to fullscreen."
+  draw_text(xx_ - string_width(txt), yy_ - 80, txt)
   break;
 
 case rm1:
+
+draw_set_font(fnt1)
 
   if (lightsOut) {
 
