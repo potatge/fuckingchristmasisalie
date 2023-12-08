@@ -8,7 +8,7 @@ if keyboard_check_pressed(ord("F")) {
 }
 
 if (global.debugMode){
-	if keyboard_check_pressed(vk_enter){
+	if keyboard_check_pressed(vk_end){
 		room_restart()
 	}
 }

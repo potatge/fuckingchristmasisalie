@@ -71,7 +71,7 @@ gamestatesStrings = [
   "chaseBegins"
 
 ]
-global.state = gamestates.lightsOut;
+global.state = gamestates.everythingsFine;
 global.debugMode = true;
 sfxPlay = false;
 musicPlay = false;

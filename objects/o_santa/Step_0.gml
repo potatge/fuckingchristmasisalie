@@ -75,6 +75,7 @@ case santa.onpath:
   }
   
   if (path_position == 1){
+	// start at end of path and reverse. LEARN FROM THIS.
 	var here = path_position;
 	path_reverse(p_santa1);
 	path_start(p_santa1, spd, path_action_reverse, 1);
