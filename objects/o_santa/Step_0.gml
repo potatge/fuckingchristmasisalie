@@ -79,7 +79,7 @@ case santa.stopandturn:
   path_speed = 0;
   sprite_index = s_santa_left_idle;
   if (alarm[1] <= 0) {
-    alarm[1] = irandom_range(80, 200)
+    alarm[1] = irandom_range(110, 350)
   }
   break;
 
