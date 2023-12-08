@@ -331,7 +331,8 @@ global.interactables = [
     endText: ["An unassuming plate of milk and cookies? Can't help to be superstitious.","More wine!"],
     sprite: s_bg_nightstand,
     portrait: noone,
-    hasOption: true
+    hasOption: true,
+	endAction: fridgeEndAction,
   },
   {
     name_: "kitchenarea",

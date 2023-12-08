@@ -114,30 +114,21 @@ case gamestates.goToFridge:
 
 case gamestates.fridgeSelection:
   global.gameMode = mode.options;
+  setState(gamestates.fridgeSelected);
 
   break;
 
 case gamestates.fridgeSelected:
-global.playerCanMove = false;
-  var fridge = findItem("fridge")
-  if (global.goodEnd) {
-    o_ctrl.myText = fridge.endText[0];
-  } else {
-    o_ctrl.myText = fridge.endText[1];
-  }
-  fridge.myText[0] = "I'm all done with the fridge.";
-  o_ctrl.moreTextAvailible = true;
-  o_ctrl.showText = true;
+
   show_debug_message("show fridge end text?")
-  setState(gamestates.doneWithFridge);
+  global.playerCanMove = false;
   break;
 
 case gamestates.doneWithFridge:
 global.playerCanMove = true;
-  
   instance_activate_object(cutscene_checkondamien);
   setState(gamestates.damienDisappears);
-  show_debug_message("show text for fridge!check on damien, he's gone.");
+  show_debug_message("show text for fridge! check on damien, he's gone.");
   break;
 
 case gamestates.damienDisappears:
@@ -206,11 +197,10 @@ case gamestates.chaseBegins:
   break;
   
   case gamestates.endRunAwayFaceDoor1:
-  
-      //sort out key presisng doubling up :(
-	  global.gameMode = mode.options;
-	  o_ctrl.Opt[0] = "STAY";
-	  o_ctrl.Opt[1] = "RUN"
+      //sort out key presisng doubling up.
+	  //global.gameMode = mode.options;
+	  //o_ctrl.Opt[0] = "STAY";
+	  //o_ctrl.Opt[1] = "RUN"
 	  setState(gamestates.endRunAwayFaceDoor2)
 	  break;
 

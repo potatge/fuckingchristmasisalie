@@ -1,5 +1,7 @@
-if (place_meeting(o_player.x,o_player.y,o_bg_door) && global.states = gamestates.chaseBegins){
+if (place_meeting(o_player.x,o_player.y,o_bg_door) && global.state == gamestates.chaseBegins){
 	sprite_index = s_bg_door_open;
+	//setState(gamestates.endRunAwayFaceDoor1);
+	show_debug_message("engaging with door");
 	}else{
 	sprite_index = s_bg_door;
 }
