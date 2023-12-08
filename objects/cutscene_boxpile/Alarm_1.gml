@@ -1,0 +1,4 @@
+
+frozePlayerForCutscene = true;
+
+

@@ -146,10 +146,13 @@ if (keyboard_check_pressed(vk_space) && item != noone) {
 	}
   }
 } // cutscene activated 
-/*
-if (cut != noone){
-	o_ctrl.myText = cut.myText;
-	o_ctrl.showText = true;
-	o_ctrl.moreTextAvailible = true;
-}else{
+
+if (cut != noone && !cut.frozePlayerForCutscene && cut.freezePlayer){
+	if (cut.alarm[1] <= 0){
+		cut.alarm[1] = 100;
+		global.playerCanMove = false;
+		o_ctrl.myText = cut.myText;
+		o_ctrl.showText = true;
+		o_ctrl.moreTextAvailible = true;
+	}
 }

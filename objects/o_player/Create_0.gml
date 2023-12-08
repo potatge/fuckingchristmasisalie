@@ -6,4 +6,5 @@ enum player{
 	dead
 }
 
+
 playerState = player.alive;

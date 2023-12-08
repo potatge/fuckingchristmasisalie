@@ -43,9 +43,9 @@ function fridgeEndAction(fridge) {
 
 function present1EndAction(present1) {
   show_debug_message("present1 endaction");
-  with o_item_present{
+  with (o_item_present){
 	if (name_ == "present1"){
-		instance_destroy()
+		instance_destroy();
 	}
     }
  
@@ -53,9 +53,9 @@ function present1EndAction(present1) {
 
 function present2EndAction(present2) {
   show_debug_message("present2 endaction");
-  with o_item_present{
+  with (o_item_present){
 	if (name_ == "present2"){
-		instance_destroy()
+		instance_destroy();
 	}
    }
 }
