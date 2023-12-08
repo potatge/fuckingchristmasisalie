@@ -136,6 +136,7 @@ if (keyboard_check_pressed(vk_space) && item != noone) {
 
   } else {
     
+	o_ctrl.moreTextAvailible = false;
     //if (item.hasOption) {
     //  global.gameMode = mode.options;
    // }

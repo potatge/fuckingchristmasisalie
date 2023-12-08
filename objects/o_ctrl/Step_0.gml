@@ -196,7 +196,7 @@ case gamestates.santaActivated:
 
 case gamestates.chaseBegins:
   instance_deactivate_object(cutscene_boxpile2)
-  instance_deactivate_object(cutscene_santareveal);
+  //instance_deactivate_object(cutscene_santareveal);
   break;
   
   case gamestates.endRunAwayFaceDoor1:
