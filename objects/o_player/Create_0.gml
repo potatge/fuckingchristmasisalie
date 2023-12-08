@@ -3,7 +3,8 @@ spd = 3;
 global.playerCanMove = true;
 enum player{
 	alive,
-	dead
+	dead,
+	dead2
 }
 
 

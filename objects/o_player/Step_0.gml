@@ -24,6 +24,11 @@ case player.alive:
 
 case player.dead:
 	sprite_index = s_chara_girl_faint;
+	screenshake(30, 5, 0.2);
+	playerState = player.dead2;
+	break;
+	
+case player.dead2:
 	global.playerCanMove = false;
 	break;
 }
@@ -125,8 +130,7 @@ if (item == noone && cut == noone) {
 //if in playing mode. Not selecting.
 
 if (keyboard_check_pressed(vk_space) && item != noone) {
-  o_ctrl.portraitDraw = true;
-  global.curSpeakerRight = item.portrait;
+
 
   if (o_ctrl.curText < array_length(item.myText)) {
     o_ctrl.showText = true;
@@ -134,9 +138,20 @@ if (keyboard_check_pressed(vk_space) && item != noone) {
     o_ctrl.myText = item.myText[o_ctrl.curText];
     o_ctrl.curText++
 
+  //if no speaker, no portraits.
+  if (!item.isSpeaker){
+	  return;
+  }else{
+	o_ctrl.portraitDraw = true;
+	global.curSpeakerLeft = s_char_portraits_claire_happy;
+    global.curSpeakerRight = item.portrait;
+  }
+
+
   } else {
-    
-	o_ctrl.moreTextAvailible = false;
+	  
+	  
+   
     //if (item.hasOption) {
     //  global.gameMode = mode.options;
    // }
