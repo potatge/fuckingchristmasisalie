@@ -1,7 +1,7 @@
 {
   "resourceType": "GMPath",
   "resourceVersion": "1.0",
-  "name": "p_santa1",
+  "name": "p_santa1_hallway",
   "closed": false,
   "kind": 0,
   "parent": {

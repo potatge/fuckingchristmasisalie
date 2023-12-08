@@ -5,7 +5,6 @@ case santa.idle:
   if (global.state == gamestates.santaActivated) {
     santaStates = santa.awakened;
   }
-
   break;
 
 case santa.awakened:
@@ -74,13 +73,20 @@ case santa.onpath:
     alarm[2] = irandom_range(150, 550)
   }
   
+  
+  
   if (path_position == 1){
 	// start at end of path and reverse. LEARN FROM THIS.
 	var here = path_position;
-	path_reverse(p_santa1);
-	path_start(p_santa1, spd, path_action_reverse, 1);
+	if path_index == p_santa2_livingroom{
+		show_debug_message("reverse livingroom path")
+		path_reverse(p_santa2_livingroom);
+		path_start(p_santa2_livingroom, spd, path_action_reverse, 1);
+	}
 	path_position = 1 - here;
   }
+  
+  
 show_debug_message(path_position)
   break;
 
