@@ -5,8 +5,8 @@
   "closed": false,
   "kind": 0,
   "parent": {
-    "name": "secretsantajam2023",
-    "path": "secretsantajam2023.yyp",
+    "name": "Paths",
+    "path": "folders/Paths.yy",
   },
   "points": [
     {"speed":100.0,"x":672.0,"y":704.0,},
