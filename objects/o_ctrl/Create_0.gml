@@ -391,6 +391,17 @@ global.interactables = [
 	endAction: doorEndaction,
 	isSpeaker: false,
   },
+  {
+    name_: "mouse",
+    canGrab: false,
+    myText: ["squeeeek! (lemme alone!)"],
+    sprite: s_mouse_idle,
+    isSpeaker: false,
+    hasOption: false,
+	endAction: false,
+    portrait: s_char_portraits_damien_happy,
+	endAction: false,
+  },
   
 	{
     name_: "damien",
