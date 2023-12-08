@@ -61,6 +61,10 @@ if (global.playerCanMove){
 	  sprite_index = down_idle
 	}
 
+}else{
+	if (playerState != player.dead){
+		sprite_index = s_chara_girl_thinking;
+	}
 }
 // keep in room? not working best. 
 clamp(x, 0, room_width);
