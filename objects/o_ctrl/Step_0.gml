@@ -7,6 +7,12 @@ if keyboard_check_pressed(ord("F")) {
   }
 }
 
+if (global.debugMode){
+	if keyboard_check_pressed(vk_enter){
+		room_restart()
+	}
+}
+
 switch (global.gameMode) {
 
 case mode.playing:

@@ -31,7 +31,7 @@ case santa.pathstarted:
 
 case santa.onpath:
   path_speed = spd;
-  path_endaction = path_action_reverse;
+  //path_endaction = path_action_reverse;
   var left = 0;
   var right = 180;
   var up = 90;
@@ -74,18 +74,24 @@ case santa.onpath:
     alarm[2] = irandom_range(150, 550)
   }
   
- 
-  
+  if (path_position == 1){
+	var here = path_position;
+	path_reverse(p_santa1);
+	path_start(p_santa1, spd, path_action_reverse, 1);
+	path_position = 1 - here;
+  }
+show_debug_message(path_position)
   break;
 
 case santa.stopandturn:
   path_speed = 0;
-  path_endaction = path_action_reverse;
+  //path_endaction = path_action_reverse;
   sprite_index = s_santa_left_idle;
   if (alarm[1] <= 0) {
     alarm[1] = irandom_range(110, 350)
   }
   break;
+  
 
 case santa.attacking:
   sprite_index = s_santa_sackbash;
@@ -97,3 +103,5 @@ case santa.attacking:
   break;
 
 }
+
+

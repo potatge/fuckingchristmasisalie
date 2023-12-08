@@ -1,7 +1,7 @@
 {
   "resourceType": "GMPath",
   "resourceVersion": "1.0",
-  "name": "p_santa",
+  "name": "p_santa1",
   "closed": false,
   "kind": 0,
   "parent": {
