@@ -29,6 +29,7 @@ case player.dead:
 	break;
 	
 case player.dead2:
+    sprite_index = s_chara_girl_faint;
 	global.playerCanMove = false;
 	break;
 }
