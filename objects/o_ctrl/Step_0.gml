@@ -73,18 +73,9 @@ case mode.optionsSelected:
   break;
 
 case mode.gameOver:
-  global.playerCanMove = false;
-  if keyboard_check_pressed(vk_space) {
-    room_restart();
-    setState(gamestates.everythingsFine);
-    global.gameMode = mode.playing;
-    lightsOut = false;
-    audio_stop_sound(music_suspense);
-    curSong = music_holidays;
-    show_debug_message("space resets music too?")
-
-  }
+  resetGameOnKeyPress();
   break;
+ 
 }
 
 switch (room) {
@@ -134,7 +125,7 @@ global.playerCanMove = false;
   } else {
     o_ctrl.myText = fridge.endText[1];
   }
-  fridge.myText[0] = "I'm all done with the fridge."
+  fridge.myText[0] = "I'm all done with the fridge.";
   o_ctrl.moreTextAvailible = true;
   o_ctrl.showText = true;
   show_debug_message("show fridge end text?")
@@ -213,5 +204,25 @@ case gamestates.chaseBegins:
   instance_deactivate_object(cutscene_boxpile2)
   instance_deactivate_object(cutscene_santareveal);
   break;
+  
+  case gamestates.endRunAwayFaceDoor1:
+  
+      //sort out key presisng doubling up :(
+	  global.gameMode = mode.options;
+	  o_ctrl.Opt[0] = "STAY";
+	  o_ctrl.Opt[1] = "RUN"
+	  setState(gamestates.endRunAwayFaceDoor2)
+	  break;
+
+	   case gamestates.endRunAwayFaceDoor2:
+	   if keyboard_check_pressed(vk_space){
+		setState(gamestates.endRunAwayCompleted);
+		global.gameMode = mode.optionsSelected
+	  }
+	  
+	  break;
+	case gamestates.endRunAwayCompleted:
+	   resetGameOnKeyPress()
+	   break;
 
 }

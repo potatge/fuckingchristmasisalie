@@ -42,7 +42,10 @@ enum gamestates {
   lightsOut,
   santaThere,
   santaActivated,
-  chaseBegins
+  chaseBegins,
+  endRunAwayFaceDoor1,
+  endRunAwayFaceDoor2,
+  endRunAwayCompleted
 
 };
 //keep this in sync with above
@@ -328,8 +331,7 @@ global.interactables = [
     endText: ["An unassuming plate of milk and cookies? Can't help to be superstitious.","More wine!"],
     sprite: s_bg_nightstand,
     portrait: noone,
-    hasOption: true,
-	endAction: fridgeEndAction,
+    hasOption: true
   },
   {
     name_: "kitchenarea",
@@ -346,6 +348,14 @@ global.interactables = [
     portrait: noone,
     hasOption: false,
 	endAction: false
+  },
+   {
+    name_: "door",
+    myText: [],
+    sprite: s_bg_door,
+    portrait: noone,
+    hasOption: false,
+	endAction: doorEndaction,
   },
   
 	{

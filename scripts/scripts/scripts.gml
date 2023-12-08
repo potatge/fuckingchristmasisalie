@@ -63,3 +63,20 @@ function damienRescueEndAction(damien3) {
   show_debug_message("rescue damnien endaction");
   o_chara_damien.damienStates = states.followher;
 }
+
+
+function doorEndaction(door){
+	
+}
+	
+function resetGameOnKeyPress(){
+	global.playerCanMove = false;
+  if keyboard_check_pressed(vk_space) {
+    room_restart();
+    setState(gamestates.everythingsFine);
+    global.gameMode = mode.playing;
+    lightsOut = false;
+    audio_stop_sound(music_suspense);
+    curSong = music_holidays;
+  }	
+}

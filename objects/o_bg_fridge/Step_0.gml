@@ -1,3 +1,5 @@
+
+
 if (!instance_place(x,y,o_player)){
 	 sprite_index = s_bg_fridge_closed;
 }else{ 

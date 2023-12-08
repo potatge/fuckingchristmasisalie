@@ -36,6 +36,7 @@ var c_ = c_white;
 		draw_set_alpha(1);
 		draw_text(xx,yy,"GAME OVER! Press space to try again.")
 		break;
+	
 	}
 
 
@@ -90,6 +91,16 @@ case rm1:
 		  instance_destroy(o_char_portraits);
 	  }
   }break;
-  
-
 }
+
+switch (global.state){
+	
+		case gamestates.endRunAwayCompleted:
+			var b  = c_black
+			draw_set_alpha(0.4);
+			draw_rectangle_color(0,0,xx_,yy_,b,b,b,b,false)
+			draw_set_alpha(1);
+			draw_text(xx,yy,"Booooo. Bad End #1. Press space to try again.")
+			break;
+}
+
