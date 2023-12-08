@@ -42,12 +42,18 @@ function fridgeEndAction(fridge) {
 }
 
 function present1EndAction(present1) {
-  show_debug_message("present1 endaction");
   with (o_item_present){
 	if (name_ == "present1"){
+		instance_deactivate_object(cutscene_checkondamien);
+		instance_activate_object(cutscene_screamindistance);
+		setState(gamestates.screamInDistance); 
+		with (cutscene_boxpile){
+			instance_change(cutscene_boxpile1gone,true)
+		}
+		setState(gamestates.boxesGone)
 		instance_destroy();
 	}
-    }
+  }
  
 }
 
@@ -62,13 +68,14 @@ function present2EndAction(present2) {
 
 function setState(state) {
   global.state = state;
-  //show_debug_message("setting games state to:" + string(state))
+  show_debug_message("setting games state to:" + string(o_ctrl.gamestatesStrings[state]))
   //show_debug_message(gameStateString[])
 }
 
 function damienRescueEndAction(damien3) {
   //show_debug_message("rescue damnien endaction");
   o_chara_damien.damienStates = states.followher;
+  global.goodEnd = true; 
 }
 
 

@@ -7,10 +7,10 @@ if keyboard_check_pressed(ord("F")) {
   }
 }
 
-if (global.debugMode){
-	if keyboard_check_pressed(vk_end){
-		room_restart()
-	}
+if (global.debugMode) {
+  if keyboard_check_pressed(vk_end) {
+    room_restart()
+  }
 }
 
 switch (global.gameMode) {
@@ -66,7 +66,7 @@ case mode.options:
       global.goodEnd = false;
     }
     decisionLVL += 1;
-	audio_play_sound(snd_blip01,1,0)
+    audio_play_sound(snd_blip01, 1, 0)
     global.gameMode = mode.playing;
     setState(gamestates.doneWithFridge)
 
@@ -82,7 +82,7 @@ case mode.optionsSelected:
 case mode.gameOver:
   resetGameOnKeyPress();
   break;
- 
+
 }
 
 switch (room) {
@@ -132,7 +132,7 @@ case gamestates.fridgeSelected:
   break;
 
 case gamestates.doneWithFridge:
-global.playerCanMove = true;
+  global.playerCanMove = true;
   instance_activate_object(cutscene_checkondamien);
   setState(gamestates.damienDisappears);
   show_debug_message("show text for fridge! check on damien, he's gone.");
@@ -144,29 +144,29 @@ case gamestates.damienDisappears:
 
 case gamestates.firstPresent:
 
+  break;
+
+case gamestates.screamInDistance:
 
   break;
-  
- case gamestates.screamInDistance:
- 
- break;
 
 case gamestates.boxesGone:
   // cutscene_boxpile.name_ = "cutscene_boxesgone";
   o_chara_damien.damienStates = states.hurt;
-
   break;
 
 case gamestates.talkToDamien:
+
+//setState(gamestates.secondPresentAppears);
   break;
 
 case gamestates.secondPresentAppears:
+instance_deactivate_object(cutscene_screamindistance);
   instance_activate_object(cutscene_secondpresent);
   var present2 = instance_create_layer(970, 136, "Instances", o_item_present)
   with(present2) {
     name_ = "present2";
   }
-  show_debug_message("present2 appears")
   break;
 
 case gamestates.bloodSplodge:
@@ -200,28 +200,13 @@ case gamestates.santaActivated:
   break;
 
 case gamestates.chaseBegins:
+  instance_activate_object(cutscene_door1)
   instance_deactivate_object(cutscene_boxpile2)
   //instance_deactivate_object(cutscene_santareveal);
   break;
-  
-  case gamestates.endRunAwayFaceDoor1:
-      //sort out key presisng doubling up.
-	  
-	  o_ctrl.Opt[0] = "STAY";
-	  o_ctrl.Opt[1] = "RUN"
-	  global.gameMode = mode.options;
-	  setState(gamestates.endRunAwayFaceDoor2)
-	  break;
 
-	   case gamestates.endRunAwayFaceDoor2:
-	   if keyboard_check_pressed(vk_space){
-		setState(gamestates.endRunAwayCompleted);
-		global.gameMode = mode.optionsSelected
-	  }
-	  
-	  break;
-	case gamestates.endRunAwayCompleted:
-	   resetGameOnKeyPress()
-	   break;
+case gamestates.endDoor1:
+  resetGameOnKeyPress()
+  break;
 
 }

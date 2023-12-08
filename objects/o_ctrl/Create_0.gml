@@ -44,9 +44,7 @@ enum gamestates {
   santaThere,
   santaActivated,
   chaseBegins,
-  endRunAwayFaceDoor1,
-  endRunAwayFaceDoor2,
-  endRunAwayCompleted
+  endDoor1
 
 };
 //keep this in sync with above
@@ -68,10 +66,12 @@ gamestatesStrings = [
   "lightsOut",
   "santaThere",
   "santaActivated",
-  "chaseBegins"
+  "chaseBegins",
+  "endDoor1"
+  
 
 ]
-global.state = gamestates.everythingsFine;
+global.state = gamestates.everythingsFine;//gamestates.lightsOut//
 global.debugMode = true;
 sfxPlay = false;
 musicPlay = false;

@@ -1,19 +1,21 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "o_item_present",
+  "name": "cutscene_door1",
   "eventList": [
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,},
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,},
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":2,"isDnD":false,},
   ],
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "Objects",
-    "path": "folders/Objects.yy",
+    "name": "cutscenes",
+    "path": "folders/Objects/cutscenes.yy",
   },
   "parentObjectId": {
-    "name": "o_interactable",
-    "path": "objects/o_interactable/o_interactable.yy",
+    "name": "cutscene",
+    "path": "objects/cutscene/cutscene.yy",
   },
   "persistent": false,
   "physicsAngularDamping": 0.1,
@@ -31,8 +33,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "s_item_present1",
-    "path": "sprites/s_item_present1/s_item_present1.yy",
+    "name": "s_cutscene_area2",
+    "path": "sprites/s_cutscene_area2/s_cutscene_area2.yy",
   },
   "spriteMaskId": null,
   "visible": true,
