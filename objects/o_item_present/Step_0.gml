@@ -3,7 +3,7 @@
 if (place_meeting(x,y,o_player)){
 	if (name_ == "present1"){ 
 		instance_deactivate_object(cutscene_checkondamien);
-		global.state = gamestates.boxesGone; 
+		setState(gamestates.boxesGone); 
 		//replace boxpile
 		with cutscene_boxpile{
 			instance_change(cutscene_boxpile1gone,true)

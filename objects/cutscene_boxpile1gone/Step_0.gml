@@ -1,6 +1,6 @@
 var boxes = instance_place(x,y, o_item_box);
 instance_destroy(boxes);
-global.state = gamestates.talkToDamien;
+setState(gamestates.talkToDamien);
 //TODO sort out why this boxes is going non stop.
 
 /*

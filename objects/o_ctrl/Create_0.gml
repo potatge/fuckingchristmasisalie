@@ -15,7 +15,8 @@ enum mode {
 
 }
 global.gameMode = mode.playing;
-
+Opt[0]  = "temp0"
+Opt[1]  = "temp1"
 maxOption = 1;
 curOption = 0;
 
@@ -25,11 +26,15 @@ decisionLVL = 0;
 enum gamestates {
 
   everythingsFine,
+  
   goToFridge,
+  fridgeSelection,
+  fridgeSelected,
+  doneWithFridge,
+  
   checkOnDamien,
   firstPresent,
   damienDisappears,
-  //boxesExist,
   boxesGone,
   talkToDamien,
   secondPresentAppears,
@@ -40,6 +45,29 @@ enum gamestates {
   chaseBegins
 
 };
+//keep this in sync with above
+gamestatesStrings = [
+
+  "everythingsFine",
+  
+  "goToFridge",
+  "fridgeSelection",
+  "fridgeSelected",
+  "doneWithFridge",
+  
+  "checkOnDamien",
+  "firstPresent",
+  "damienDisappears",
+  "boxesGone",
+  "talkToDamien",
+  "secondPresentAppears",
+  "bloodSplodge",
+  "lightsOut",
+  "santaThere",
+  "santaActivated",
+  "chaseBegins"
+
+]
 global.state = gamestates.everythingsFine;
 global.debugMode = false;
 sfxPlay = false;

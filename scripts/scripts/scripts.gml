@@ -43,6 +43,7 @@ function fridgeEndAction(fridge) {
 
 }
 
+
 function present1EndAction(present1) {
 show_debug_message("present1 endaction");
 instance_destroy(present1);
@@ -55,3 +56,9 @@ instance_destroy(present2);
 
 }
 
+function setState(state){
+	
+	global.state = state;
+	show_debug_message("setting games state to:"+string(state))
+	//show_debug_message(gameStateString[])
+}

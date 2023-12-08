@@ -10,7 +10,7 @@ if keyboard_check_pressed(ord("F")) {
 switch (global.gameMode) {
 
 case mode.playing:
-  global.playerCanMove = true;
+  //global.playerCanMove = true;
   break;
 
 case mode.options:
@@ -49,18 +49,19 @@ case mode.options:
 
   //TODO GENERALISING FOR MANY OPTIONs
   if keyboard_check_pressed(vk_enter) {
-	  //TODO make this SWITCH
-	  if (curOption == 0){
-		  show_debug_message("choose milk?")
-		  global.goodEnd = true;
-	  }
-	  
-	  if (curOption == 1){
-		  show_debug_message("choose WINE")
-		  global.goodEnd = false;
-	  }
-	decisionLVL += 1;
+    //TODO make this SWITCH
+    if (curOption == 0) {
+      show_debug_message("choose milk?")
+      global.goodEnd = true;
+    }
+
+    if (curOption == 1) {
+      show_debug_message("choose WINE")
+      global.goodEnd = false;
+    }
+    //decisionLVL += 1;
     global.gameMode = mode.playing;
+    setState(gamestates.doneWithFridge)
 
   }
 
@@ -71,21 +72,19 @@ case mode.optionsSelected:
   global.gameMode = mode.playing;
   break;
 
-
 case mode.gameOver:
-global.playerCanMove = false;
-if keyboard_check_pressed(vk_space){
-	room_restart();
-	global.state = gamestates.everythingsFine;
-	global.gameMode = mode.playing;
-	lightsOut = false;
-	audio_stop_sound(music_suspense);
-	curSong = music_holidays;
-	show_debug_message("space resets music too?")
-	
-	
-}
-break;
+  global.playerCanMove = false;
+  if keyboard_check_pressed(vk_space) {
+    room_restart();
+    setState(gamestates.everythingsFine);
+    global.gameMode = mode.playing;
+    lightsOut = false;
+    audio_stop_sound(music_suspense);
+    curSong = music_holidays;
+    show_debug_message("space resets music too?")
+
+  }
+  break;
 }
 
 switch (room) {
@@ -119,9 +118,34 @@ case gamestates.everythingsFine:
   break;
 
 case gamestates.goToFridge:
+
+  break;
+
+case gamestates.fridgeSelection:
+  global.gameMode = mode.options;
+
+  break;
+
+case gamestates.fridgeSelected:
+global.playerCanMove = false;
+  var fridge = findItem("fridge")
+  if (global.goodEnd) {
+    o_ctrl.myText = fridge.endText[0];
+  } else {
+    o_ctrl.myText = fridge.endText[1];
+  }
+
+  show_debug_message("show fridge end text?")
+  setState(gamestates.doneWithFridge);
+  break;
+
+case gamestates.doneWithFridge:
+global.playerCanMove = true;
+  o_ctrl.moreTextAvailible = true;
+  o_ctrl.showText = true;
   instance_activate_object(cutscene_checkondamien);
-  global.state = gamestates.damienDisappears;
-  show_debug_message("check on damien, he's gone.");
+  setState(gamestates.damienDisappears);
+  show_debug_message("show text for fridge!check on damien, he's gone.");
   break;
 
 case gamestates.damienDisappears:
@@ -129,15 +153,15 @@ case gamestates.damienDisappears:
   break;
 
 case gamestates.firstPresent:
-     var present1 = instance_create_layer(64,454,"Instances",o_item_present)
-	 with (present1) {
-		 name_ = "present1";
-	 }
-	 show_debug_message("make present1")
-     break;
+  var present1 = instance_create_layer(64, 454, "Instances", o_item_present)
+  with(present1) {
+    name_ = "present1";
+  }
+  show_debug_message("make present1")
+  break;
 
 case gamestates.boxesGone:
- // cutscene_boxpile.name_ = "cutscene_boxesgone";
+  // cutscene_boxpile.name_ = "cutscene_boxesgone";
   o_chara_damien.damienStates = states.hurt;
 
   break;
@@ -146,13 +170,13 @@ case gamestates.talkToDamien:
   break;
 
 case gamestates.secondPresentAppears:
-	 instance_activate_object(cutscene_secondpresent);
-	 var present2 = instance_create_layer(970,136,"Instances",o_item_present)
-	 with (present2) {
-		 name_ = "present2";
-	 }
-	 show_debug_message("present2 appears")
-	 break;
+  instance_activate_object(cutscene_secondpresent);
+  var present2 = instance_create_layer(970, 136, "Instances", o_item_present)
+  with(present2) {
+    name_ = "present2";
+  }
+  show_debug_message("present2 appears")
+  break;
 
 case gamestates.bloodSplodge:
   break;
@@ -164,7 +188,7 @@ case gamestates.lightsOut:
     name_ = "damien3";
     damienStates = states.hidden2;
   }
-  global.state = gamestates.santaThere;
+  setState(gamestates.santaThere);
   show_debug_message("delete boxes an make damien and santa appears")
 
   break;
@@ -173,13 +197,13 @@ case gamestates.santaThere:
   instance_activate_object(cutscene_boxpile2);
   instance_activate_object(o_santa);
   instance_activate_object(cutscene_santareveal)
-  
+
   instance_deactivate_object(cutscene_lightsout);
 
   break;
 
 case gamestates.santaActivated:
-  global.state = gamestates.chaseBegins;
+  setState(gamestates.chaseBegins);
   show_debug_message("santa activated. chase begins. DUH.")
 
   break;
@@ -188,4 +212,5 @@ case gamestates.chaseBegins:
   instance_deactivate_object(cutscene_boxpile2)
   instance_deactivate_object(cutscene_santareveal);
   break;
+
 }

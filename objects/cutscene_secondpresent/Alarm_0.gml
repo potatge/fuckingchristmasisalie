@@ -1,4 +1,4 @@
-global.state = gamestates.bloodSplodge
+setState(gamestates.bloodSplodge);
 
  with(o_chara_damien) {
     instance_change(o_sfx_blood, true)

@@ -20,54 +20,49 @@ var left_ = s_chara_girl_left
 switch (playerState) {
 
 case player.alive:
-
-  break;
+    break;
 
 case player.dead:
-  sprite_index = s_chara_girl_faint;
-  //global.playerCanMove = false;
-
-  break;
+	show_debug_message("if not alive, do this.")
+	sprite_index = s_chara_girl_faint;
+	  //global.playerCanMove = false;
+	break;
 }
 
-//only move player isn't dead.
-if (playerState == player.dead) {
-  show_debug_message("if not alive, do this.")
-  sprite_index = s_chara_girl_faint;
-}
+if (global.playerCanMove){
+	//else, be alive and move.
+	if (left) {
+	  hspd -= spd;
+	  image_xscale = 1;
+	  sprite_index = left_
+	}
 
-//else, be alive and move.
-if (left) {
-  hspd -= spd;
-  image_xscale = 1;
-  sprite_index = left_
-}
+	if (right) {
+	  hspd += spd;
+	  image_xscale = -1;
+	  sprite_index = left_
+	}
 
-if (right) {
-  hspd += spd;
-  image_xscale = -1;
-  sprite_index = left_
-}
+	if (up) {
+	  vspd -= spd;
+	  sprite_index = up_mov
+	}
 
-if (up) {
-  vspd -= spd;
-  sprite_index = up_mov
-}
+	if (down) {
+	  vspd += spd;
+	  sprite_index = down_mov
+	}
 
-if (down) {
-  vspd += spd;
-  sprite_index = down_mov
-}
+	// revert back to idle
+	if (keyboard_check_released(vk_left) || keyboard_check_released(vk_right)) {
+	  sprite_index = down_idle
+	}
 
-// revert back to idle
-if (keyboard_check_released(vk_left) || keyboard_check_released(vk_right)) {
-  sprite_index = down_idle
-}
+	if (keyboard_check_released(vk_down || keyboard_check_released(vk_up))) {
+	  sprite_index = down_idle
+	}
 
-if (keyboard_check_released(vk_down || keyboard_check_released(vk_up))) {
-  sprite_index = down_idle
 }
-
 // keep in room? not working best. 
 clamp(x, 0, room_width);
 clamp(y, 0, room_height);
@@ -139,11 +134,11 @@ if (keyboard_check_pressed(vk_space) && item != noone) {
 
   } else {
     
-    if (item.hasOption && o_ctrl.decisionLVL == 0) {
-      global.gameMode = mode.options;
-    }
+    //if (item.hasOption) {
+    //  global.gameMode = mode.options;
+   // }
 
-    if (item.endAction && o_ctrl.decisionLVL == 1) {
+    if (item.endAction) {
 		item.endAction(item);
       //handle end action
 
