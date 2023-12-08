@@ -188,7 +188,7 @@ global.interactables = [
     sprite: s_bg_table,
     portrait: noone,
     hasOption: false,
-	endAction: present1EndAction,
+	endAction: present1EndAction
   },
 
   {
@@ -197,7 +197,7 @@ global.interactables = [
     sprite: s_item_present3,
     portrait: noone,
     hasOption: false,
-	endAction: present2EndAction,
+	endAction: present2EndAction
   },
 
   {
@@ -328,7 +328,7 @@ global.interactables = [
   {
     name_: "fridge",
     myText: ["What should I get from the fridge?"],
-    endText: ["An unassuming plate of milk and cookies? Can't help to be superstitious.","More wine!"],
+    endText: ["An unassuming plate of milk and cookies? Can't help to be superstitious.","Hey, it's the holidays."],
     sprite: s_bg_nightstand,
     portrait: noone,
     hasOption: true,

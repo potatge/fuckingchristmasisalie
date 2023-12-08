@@ -142,11 +142,8 @@ case gamestates.damienDisappears:
   break;
 
 case gamestates.firstPresent:
-  var present1 = instance_create_layer(64, 454, "Instances", o_item_present)
-  with(present1) {
-    name_ = "present1";
-  }
-  show_debug_message("make present1")
+  
+  
   break;
 
 case gamestates.boxesGone:

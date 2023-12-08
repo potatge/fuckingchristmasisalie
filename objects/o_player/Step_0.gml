@@ -125,7 +125,6 @@ if (keyboard_check_pressed(vk_space) && item != noone) {
   global.curSpeakerRight = item.portrait;
 
   if (o_ctrl.curText < array_length(item.myText)) {
-    show_debug_message("get text")
     o_ctrl.showText = true;
     o_ctrl.moreTextAvailible = true;
     o_ctrl.myText = item.myText[o_ctrl.curText];
@@ -138,6 +137,7 @@ if (keyboard_check_pressed(vk_space) && item != noone) {
    // }
 
     if (item.endAction) {
+		show_debug_message("end action?")
 		item.endAction(item);
       //handle end action
 
