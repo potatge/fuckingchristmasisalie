@@ -23,9 +23,8 @@ case player.alive:
     break;
 
 case player.dead:
-	show_debug_message("if not alive, do this.")
 	sprite_index = s_chara_girl_faint;
-	  //global.playerCanMove = false;
+	global.playerCanMove = false;
 	break;
 }
 
