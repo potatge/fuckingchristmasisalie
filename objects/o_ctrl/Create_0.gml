@@ -52,12 +52,10 @@ enum gamestates {
 gamestatesStrings = [
 
   "everythingsFine",
-  
   "goToFridge",
   "fridgeSelection",
   "fridgeSelected",
   "doneWithFridge",
-  
   "checkOnDamien",
   "firstPresent",
   "damienDisappears",
@@ -71,7 +69,7 @@ gamestatesStrings = [
   "chaseBegins"
 
 ]
-global.state = gamestates.lightsOut//gamestates.everythingsFine;
+global.state = gamestates.everythingsFine;
 global.debugMode = true;
 sfxPlay = false;
 musicPlay = false;
