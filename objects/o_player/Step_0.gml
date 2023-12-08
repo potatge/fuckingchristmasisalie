@@ -68,7 +68,7 @@ if (global.playerCanMove){
 	}
 
 }else{
-	if (playerState != player.dead){
+	if (playerState != player.dead2){
 		sprite_index = s_chara_girl_thinking;
 	}
 }

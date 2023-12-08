@@ -63,7 +63,7 @@ case santa.onpath:
 
   var pad = 5
   var meetplayer = collision_rectangle(bbox_left - pad, bbox_top - pad, bbox_right + pad, bbox_bottom + pad, o_player, false, false)
-  if (meetplayer && o_player.playerState != player.dead) {
+  if (meetplayer && o_player.playerState != player.dead2) {
     santaStates = santa.attacking;
     path_speed = 0
     o_player.playerState = player.dead;
