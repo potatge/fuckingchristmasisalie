@@ -392,7 +392,7 @@ global.interactables = [
     hasOption: false,
 	endAction: true,
     portrait: s_char_portraits_damien_worried,
-	endAction: true
+	endAction: damienRescueEndAction,
   },
   {
     name_: "damien4",

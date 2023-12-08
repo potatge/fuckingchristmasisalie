@@ -29,9 +29,8 @@ function resetTextToNone() {
   }
 }
 
-
 function fridgeEndAction(fridge) {
-	show_debug_message("fridge endaction");
+  show_debug_message("fridge endaction");
 
   if (global.goodEnd) {
     o_ctrl.myText = fridge.endText[0];
@@ -43,22 +42,24 @@ function fridgeEndAction(fridge) {
 
 }
 
-
 function present1EndAction(present1) {
-show_debug_message("present1 endaction");
-instance_destroy(present1);
+  show_debug_message("present1 endaction");
+  instance_destroy(present1);
 }
-
 
 function present2EndAction(present2) {
-show_debug_message("present2 endaction");
-instance_destroy(present2);
+  show_debug_message("present2 endaction");
+  instance_destroy(present2);
 
 }
 
-function setState(state){
-	
-	global.state = state;
-	show_debug_message("setting games state to:"+string(state))
-	//show_debug_message(gameStateString[])
+function setState(state) {
+  global.state = state;
+  show_debug_message("setting games state to:" + string(state))
+  //show_debug_message(gameStateString[])
+}
+
+function damienRescueEndAction(damien3) {
+  show_debug_message("rescue damnien endaction");
+  o_chara_damien.damienStates = states.followher;
 }

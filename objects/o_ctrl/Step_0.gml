@@ -134,15 +134,16 @@ global.playerCanMove = false;
   } else {
     o_ctrl.myText = fridge.endText[1];
   }
-
+  fridge.myText[0] = "I'm all done with the fridge."
+  o_ctrl.moreTextAvailible = true;
+  o_ctrl.showText = true;
   show_debug_message("show fridge end text?")
   setState(gamestates.doneWithFridge);
   break;
 
 case gamestates.doneWithFridge:
 global.playerCanMove = true;
-  o_ctrl.moreTextAvailible = true;
-  o_ctrl.showText = true;
+  
   instance_activate_object(cutscene_checkondamien);
   setState(gamestates.damienDisappears);
   show_debug_message("show text for fridge!check on damien, he's gone.");
