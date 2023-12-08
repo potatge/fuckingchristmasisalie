@@ -3,12 +3,14 @@
 if (place_meeting(x,y,o_player)){
 	if (name_ == "present1"){ 
 		instance_deactivate_object(cutscene_checkondamien);
-		setState(gamestates.boxesGone); 
+		instance_activate_object(cutscene_screamindistance);
+		setState(gamestates.screamInDistance); 
 		//replace boxpile
+		
 		with cutscene_boxpile{
 			instance_change(cutscene_boxpile1gone,true)
 		}
-	}
+	}setState(gamestates.boxesGone);
 	
 }
 

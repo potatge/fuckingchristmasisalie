@@ -1,0 +1,1 @@
+screenshake(30,3,0.3)

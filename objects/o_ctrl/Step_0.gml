@@ -66,6 +66,7 @@ case mode.options:
       global.goodEnd = false;
     }
     decisionLVL += 1;
+	audio_play_sound(snd_blip01,1,0)
     global.gameMode = mode.playing;
     setState(gamestates.doneWithFridge)
 
@@ -142,9 +143,13 @@ case gamestates.damienDisappears:
   break;
 
 case gamestates.firstPresent:
-  
-  
+
+
   break;
+  
+ case gamestates.screamInDistance:
+ 
+ break;
 
 case gamestates.boxesGone:
   // cutscene_boxpile.name_ = "cutscene_boxesgone";
