@@ -109,26 +109,35 @@ switch (santaPath) {
 	break;
 
   case path.livingroomonpath:
-    if (path_position == 1 && !finishedPath) {
+  //at end of path
+    if (path_position >= 1) {
       var here = path_position;
       show_debug_message("reverse livingroom path")
       path_reverse(p_santa2_livingroom);
       path_start(p_santa2_livingroom, spd, path_action_reverse, 1);
       path_position = 1 - here;
-      finishedPath = true;
+      santaPath = path.livingroomturnaround;
     }
+	break;
 	
-
-   if (path_position == 0 && finishedPath) {
-	show_debug_message("restart up and down hallway")
-      path_start(p_santa1_hallway, spd, path_action_reverse, 1);
-      santaPath = path.upanddownhallway;
-   }
-
-    break;
+	case path.livingroomturnaround:
+	
+	if (path_position >= 1){
+		  show_debug_message("restart up and down hallway")
+	      path_start(p_santa1_hallway, spd, path_action_reverse, 1);
+	      santaPath = path.upanddownhallway;
+	}
+	  break;
 
   case path.upanddownhallway:
-   break;
+	  if  (path_position >= 1){
+		  var here = path_position
+		  path_reverse(p_santa1_hallway)
+		  path_start(p_santa1_hallway, spd, path_action_reverse, 1);
+		  path_position = 1- here
+		 
+	  }
+	 break;
 
   
   break;

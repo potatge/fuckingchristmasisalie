@@ -23,6 +23,7 @@ enum path{
 	notstarted,
 	livingroomstart,
 	livingroomonpath,
+	livingroomturnaround,
 	turnback,
 	upanddownhallway
 	
