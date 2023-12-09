@@ -9,3 +9,6 @@ enum player{
 
 
 playerState = player.alive;
+
+global.xcoord = x;
+global.ycoord = y;

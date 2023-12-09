@@ -1,3 +1,14 @@
+//one off creation.
+switch (room){
+	
+	case rm1:
+		//make player
+		//instance_create_layer(257,126,"Instances",o_player)
+		break;
+	
+	
+}
+
 global.drawDepth = -9000
 global.charDepth = -5000;
 global.cutscene = 0;
@@ -481,3 +492,4 @@ lightsOut = false;
 
 portraitArt = noone;
 portraitDraw = false;
+
