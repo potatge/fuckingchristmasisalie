@@ -5,7 +5,7 @@ var nearplayer = collision_rectangle(bbox_left - pad, bbox_top - pad, bbox_right
 	
 if (nearplayer && !animPlayed){
 		if (alarm[0] <= 0){
-			alarm[0] = 50;
+			alarm[0] = 1;
 			animPlayed = true;
      	}
 }

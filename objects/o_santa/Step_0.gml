@@ -110,7 +110,7 @@ switch (santaPath) {
 
   case path.livingroomonpath:
   //at end of path
-    if (path_position >= 1) {
+    if (path_position = 1) {
       var here = path_position;
       show_debug_message("reverse livingroom path")
       path_reverse(p_santa2_livingroom);

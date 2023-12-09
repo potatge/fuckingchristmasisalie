@@ -132,10 +132,16 @@ if (item == noone && cut == noone) {
 
 if (keyboard_check_pressed(vk_space) && item != noone) {
 
-
-  if (o_ctrl.curText < array_length(item.myText)) {
+var cur = o_ctrl.curText
+var textall = array_length(item.myText)
+  if (cur < textall) {
+	  
     o_ctrl.showText = true;
-    o_ctrl.moreTextAvailible = true;
+	if (cur == textall - 1){
+	o_ctrl.moreTextAvailible = false;
+   }else{
+	   o_ctrl.moreTextAvailible = true;
+   }
     o_ctrl.myText = item.myText[o_ctrl.curText];
     o_ctrl.curText++
 
@@ -151,8 +157,6 @@ if (keyboard_check_pressed(vk_space) && item != noone) {
 
   } else {
 	  
-	  
-   
     //if (item.hasOption) {
     //  global.gameMode = mode.options;
    // }
