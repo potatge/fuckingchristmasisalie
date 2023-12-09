@@ -12,13 +12,12 @@ case santa.awakened:
   //play anim
   show_debug_message("play anim. freeze chara! & alarm for 100")
   image_xscale = -1;
-  sprite_index = s_santa_left_idle
+  sprite_index = s_santa_left_idle;
 
   if (alarm[0] <= 0) {
     image_speed = 1;
     alarm[0] = 100;
     global.playerCanMove = false
-
   }
   break;
 
@@ -99,11 +98,26 @@ switch (santaPath) {
 
   case path.notstarted:
     break;
+	
+case path.cellarstart:
+	path_start(p_santa0_cellar,spd,path_action_stop,true)
+	show_debug_message("santa leaves cellar")
+	santaPath = path.cellaronpath;
+	break;
+	
+case path.cellaronpath:
+	santaStates = santa.onpath;
+	global.playerCanMove = true;
+	if (path_position == 1){
+		goToRoom(rm1,422,756)
+		santaPath = path.livingroomstart;
+	}
+	break;
 
   case path.livingroomstart:
     path_start(p_santa2_livingroom, spd, path_action_reverse, true)
-    //path_start(p_santa1,spd,path_action_reverse,true);
-    show_debug_message("heads for living room.")
+	path_position = 0
+    show_debug_message("now going for living room.")
     santaStates = santa.pathstarted;
 	santaPath = path.livingroomonpath;
 	break;

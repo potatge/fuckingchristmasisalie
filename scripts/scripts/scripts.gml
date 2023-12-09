@@ -85,7 +85,9 @@ function doorEndaction(door){
 	
 function resetGameOnKeyPress(){
 	global.playerCanMove = false;
-  if keyboard_check_pressed(vk_space) {
+    if keyboard_check_pressed(vk_space) {
+	global.playerCanMove = true;
+	goToRoom(rm1,259,127)
     room_restart();
     setState(gamestates.everythingsFine);
     global.gameMode = mode.playing;

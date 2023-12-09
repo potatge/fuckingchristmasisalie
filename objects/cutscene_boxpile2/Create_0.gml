@@ -1,6 +1,6 @@
 name_ = "cutscene_boxpile2";
-freezePlayer = true;
+freezePlayer = false;
 frozePlayerForCutscene = false;
 cutsceneHappening = false;
-myText = "That's the cellar down there. I haven't been there before."
+myText = "I have a bad feeling about this."
 instance_deactivate_object(cutscene_boxpile2)

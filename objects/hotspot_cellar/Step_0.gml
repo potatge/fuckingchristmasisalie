@@ -8,7 +8,7 @@ if (touch && !transported){
 			break;
 	
 		case rm_cellar:
-			goToRoom(rm1,422,756)
+			goToRoom(rm1,422,760)
 			transported = true;
 			break;
 	}
