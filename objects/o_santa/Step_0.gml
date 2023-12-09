@@ -1,3 +1,4 @@
+//SANTA STATES
 switch (santaStates) {
 
 case santa.idle:
@@ -15,7 +16,6 @@ case santa.awakened:
 
   if (alarm[0] <= 0) {
     image_speed = 1;
-
     alarm[0] = 100;
     global.playerCanMove = false
 
@@ -67,27 +67,12 @@ case santa.onpath:
     path_speed = 0
     o_player.playerState = player.dead;
   }
-  
+
   //randomly stops an turns 
   if (alarm[2] <= 0) {
     alarm[2] = irandom_range(150, 550)
   }
-  
-  
-  
-  if (path_position == 1){
-	// start at end of path and reverse. LEARN FROM THIS.
-	var here = path_position;
-	if path_index == p_santa2_livingroom{
-		show_debug_message("reverse livingroom path")
-		path_reverse(p_santa2_livingroom);
-		path_start(p_santa2_livingroom, spd, path_action_reverse, 1);
-	}
-	path_position = 1 - here;
-  }
-  
-  
-show_debug_message(path_position)
+
   break;
 
 case santa.stopandturn:
@@ -98,17 +83,57 @@ case santa.stopandturn:
     alarm[1] = irandom_range(110, 350)
   }
   break;
-  
 
 case santa.attacking:
   sprite_index = s_santa_sackbash;
   if (alarm[1] <= 0) {
     show_debug_message("santa attacking alarm")
     alarm[1] = 200;
-
   }
   break;
 
 }
 
+//// SANTA PATH 
+switch (santaPath) {
 
+  case path.notstarted:
+    break;
+
+  case path.livingroomstart:
+    path_start(p_santa2_livingroom, spd, path_action_reverse, true)
+    //path_start(p_santa1,spd,path_action_reverse,true);
+    show_debug_message("heads for living room.")
+    santaStates = santa.pathstarted;
+	santaPath = path.livingroomonpath;
+	break;
+
+  case path.livingroomonpath:
+    if (path_position == 1 && !finishedPath) {
+      var here = path_position;
+      show_debug_message("reverse livingroom path")
+      path_reverse(p_santa2_livingroom);
+      path_start(p_santa2_livingroom, spd, path_action_reverse, 1);
+      path_position = 1 - here;
+      finishedPath = true;
+    }
+	
+
+   if (path_position == 0 && finishedPath) {
+	show_debug_message("restart up and down hallway")
+      path_start(p_santa1_hallway, spd, path_action_reverse, 1);
+      santaPath = path.upanddownhallway;
+   }
+
+    break;
+
+  case path.upanddownhallway:
+   break;
+
+  
+  break;
+
+ 
+  }
+  
+  show_debug_message(path_position)

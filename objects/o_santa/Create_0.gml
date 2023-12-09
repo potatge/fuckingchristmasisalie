@@ -14,6 +14,19 @@ enum santa {
 }
 
 santaStates = santa.idle;
+finishedPath = false;
 
 
+
+enum path{
+	
+	notstarted,
+	livingroomstart,
+	livingroomonpath,
+	turnback,
+	upanddownhallway
+	
+}
+
+santaPath = path.notstarted
 
