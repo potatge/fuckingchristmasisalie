@@ -403,6 +403,18 @@ global.interactables = [
 	endAction: false,
   },
   
+   {
+    name_: "dog",
+    canGrab: false,
+    myText: ["BARK! (hey there's an intruder in that house!)"],
+    sprite: s_dog_idle,
+    isSpeaker: false,
+    hasOption: false,
+	endAction: false,
+    portrait: s_char_portraits_damien_happy,
+	endAction: false,
+  },
+  
 	{
     name_: "damien",
     canGrab: false,

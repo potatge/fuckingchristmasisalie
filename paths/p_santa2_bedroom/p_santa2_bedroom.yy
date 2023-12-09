@@ -3,7 +3,7 @@
   "resourceVersion": "1.0",
   "name": "p_santa2_bedroom",
   "closed": false,
-  "kind": 0,
+  "kind": 1,
   "parent": {
     "name": "Paths",
     "path": "folders/Paths.yy",
