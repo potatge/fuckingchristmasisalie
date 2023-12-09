@@ -134,6 +134,7 @@ if (keyboard_check_pressed(vk_space) && item != noone) {
 
 var cur = o_ctrl.curText
 var textall = array_length(item.myText)
+
   if (cur < textall) {
 	  
     o_ctrl.showText = true;
