@@ -42,6 +42,16 @@ var c_ = c_white;
 
 switch (room) {
 	
+	case rm_cellar:
+		var c = make_colour_rgb(56, 56, 71);
+	    draw_set_alpha(0.8);
+	    gpu_set_blendmode(bm_subtract);
+	    draw_rectangle_color(00, 00, xx_, yy_, c, c, c, c, false);
+	    gpu_set_blendmode(bm_add);
+	    draw_set_alpha(1);
+		gpu_set_blendmode(bm_normal);
+		break;
+	
 case rm_end:
 	draw_sprite_stretched_ext(s_splashscreen_title, 0, 0, 0, camera_get_view_width(view_camera[0]), camera_get_view_height(view_camera[0]), c_, 1);
 	draw_text(xx , yy / 2, "Art, programming + design: Vela Noble @velanoble\nMusic by Peritune.")

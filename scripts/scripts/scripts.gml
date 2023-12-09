@@ -105,3 +105,11 @@ function screenshake(_time, _magnitude, _fade){
       shake_fade = _fade;
    }
 }
+
+function goToRoom(rooom,xx,yy){
+	
+	global.xcoord = xx;
+	global.ycoord = yy;
+	room_goto(rooom);
+	
+}
