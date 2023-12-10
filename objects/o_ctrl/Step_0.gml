@@ -214,11 +214,12 @@ case gamestates.chaseBegins:
 	  // the mysterious final present...
 	  sprite_index = s_item_present3;
   }
-  instance_deactivate_object(cutscene_door1);
   
   break;
   
 case gamestates.keyObtained:
+	instance_deactivate_object(cutscene_door1);
+	instance_activate_object(cutscene_door2true);
 	break;
 
 case gamestates.endGood:

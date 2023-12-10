@@ -71,7 +71,6 @@ function present2EndAction(present2) {
 	instance_create_layer(o_sfx_blood.x - 32,o_sfx_blood.y,"Instances",o_item_letter)
 	instance_deactivate_object(cutscene_boxpile1gone);
 	//instance_deactivate_object(cutscene_boxpile);
-	scr_stingerSound();
 	instance_destroy();
  
     }
@@ -84,7 +83,7 @@ function present3EndAction(present3) {
       instance_destroy();
     }
 	setState(gamestates.keyObtained)
-	instance_activate_object(cutscene_door2true)
+	
 	show_debug_message("present3 endaction. activate door2");
 	
   }
@@ -108,8 +107,8 @@ function doorEndaction(door) {
 }
 
 function letterEndaction(letter){
-	
 	instance_activate_object(cutscene_lightsout);
+	instance_destroy();
 }
 function resetGameOnKeyPress() {
   global.playerCanMove = false;

@@ -38,23 +38,28 @@ if (global.playerCanMove){
 	//else, be alive and move.
 	if (left) {
 	  hspd -= spd;
+	  facing = 1
 	  image_xscale = 1;
 	  sprite_index = left_
 	}
+	
+	if (up) {
+      facing = 2;
+	  vspd -= spd;
+	  sprite_index = up_mov
+	}
 
 	if (right) {
+	  facing = 3;
 	  hspd += spd;
 	  image_xscale = -1;
 	  sprite_index = left_
 	}
 
-	if (up) {
-	  vspd -= spd;
-	  sprite_index = up_mov
-	}
 
 	if (down) {
-	  vspd += spd;
+	 facing = 4
+	 vspd += spd;
 	  sprite_index = down_mov
 	}
 
