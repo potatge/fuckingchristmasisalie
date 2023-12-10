@@ -88,7 +88,7 @@ gamestatesStrings = [
   
 
 ]
-global.state = gamestates.everythingsFine;
+global.state = gamestates.lightsOut//gamestates.everythingsFine;
 //gamestates.lightsOut; 
 global.debugMode = false;
 sfxPlay = false;

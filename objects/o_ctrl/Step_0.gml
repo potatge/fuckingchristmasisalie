@@ -201,6 +201,7 @@ case gamestates.santaActivated:
   break;
 
 case gamestates.chaseBegins:
+  instance_deactivate_object(cutscene_santareveal)
   instance_activate_object(cutscene_door1)
   instance_deactivate_object(cutscene_boxpile2)
   setState(gamestates.thirdPresentAppears)

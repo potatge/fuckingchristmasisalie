@@ -16,9 +16,6 @@ enum santa {
 santaStates = santa.idle;
 finishedPath = false;
 
-global.santaXcoord = x;
-global.santaYcoord = y;
-
 enum path{
 	
 	notstarted,

@@ -31,14 +31,15 @@ case states2.follow:
 	
 	
 	if (x != o.x && y != o.y) {
+	//if not meeting right on top of player...move towards her.
+
     if (distance_to_point(o.x, o.y) < 6) { 
 		spd = 1;
 	}
 		move_towards_point(o.x -sign(4) , o.y - sign(4), spd);
 	}
 	
-	//if not meeting right on top of player...move towards her.
-
+	
 
 	// add colision code.
 	break;
