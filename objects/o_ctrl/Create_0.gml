@@ -57,7 +57,8 @@ enum gamestates {
   chaseBegins,
   thirdPresentAppears,
   keyObtained,
-  endDoor1
+  endGood,
+  endBad
 
 };
 //keep this in sync with above
@@ -82,7 +83,8 @@ gamestatesStrings = [
   "chaseBegins",
   "thirdPresentAppears",
   "keyObtained",
-  "endDoor1"
+  "endGood",
+  "endBad",
   
 
 ]

@@ -114,17 +114,23 @@ draw_set_font(fnt1)
 
 switch (global.state){
 	
-		case gamestates.endDoor1:
+		case gamestates.endBad:
 			var b  = c_black
 			draw_set_alpha(0.4);
 			draw_rectangle_color(0,0,xx_,yy_,b,b,b,b,false)
 			draw_set_alpha(1);
-			if (global.goodEnd){
-				draw_text(xx,yy,"You both make it to safety. End #1.")
-			} else {
-				draw_text(xx,yy,"Uh did you forget your injured partner on purpose? End #2.")
-			}
+
+			draw_text(xx,yy,"Uh did you forget your injured partner on purpose? End #2.")
 			draw_text(xx,yy+32,"Press space to play again.")
 			break;
+			
+			case gamestates.endGood:
+				var b  = c_black
+				draw_set_alpha(0.4);
+				draw_rectangle_color(0,0,xx_,yy_,b,b,b,b,false)
+				draw_set_alpha(1);
+				draw_text(xx,yy,"You both make it to safety. Good end!")
+				draw_text(xx,yy+32,"Press space to play again.")
+				break;
 }
 

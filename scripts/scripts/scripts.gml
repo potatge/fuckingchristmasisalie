@@ -67,12 +67,14 @@ function present2EndAction(present2) {
 }
 
 function present3EndAction(present3) {
-  show_debug_message("present3 endaction");
   with(o_item_present) {
     if (name_ == "present3") {
       instance_destroy();
     }
 	setState(gamestates.keyObtained)
+	instance_activate_object(cutscene_door2true)
+	show_debug_message("present3 endaction. activate door2");
+	
   }
 }
 

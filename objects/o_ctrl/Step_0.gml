@@ -203,22 +203,27 @@ case gamestates.santaActivated:
 case gamestates.chaseBegins:
   instance_activate_object(cutscene_door1)
   instance_deactivate_object(cutscene_boxpile2)
-  //instance_deactivate_object(cutscene_santareveal);
+  setState(gamestates.thirdPresentAppears)
   break;
   
   case gamestates.thirdPresentAppears:
-  var present3 = instance_create_layer(545,798,"Instances",o_item_present)
+  var present3 = instance_create_layer(702,792,"Instances",o_item_present)
   with (present3){
 	  name_ = "present3";
-	  // the black present...
+	  // the mysterious final present...
 	  sprite_index = s_item_present3;
   }
   
   break;
 case gamestates.keyObtained:
 
-break;
-case gamestates.endDoor1:
+	break;
+
+case gamestates.endGood:
+	resetGameOnKeyPress();
+	break;
+	
+case gamestates.endBad:
   resetGameOnKeyPress()
   break;
 
