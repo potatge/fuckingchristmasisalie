@@ -9,7 +9,7 @@ if (touch && !transported){
 			break;
 	
 		case rm_cellar:
-			playerGoToRoom(o_player,rm1,422,760)
+			playerGoToRoom(rm1,422,760)
 			transported = true;
 			break;
 	}

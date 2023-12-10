@@ -1,1 +1,1 @@
-santaPath  = path.cellarstart;
+santaPath  = path.livingroomstart

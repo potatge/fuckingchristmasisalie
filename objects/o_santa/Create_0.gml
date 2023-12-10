@@ -16,14 +16,15 @@ enum santa {
 santaStates = santa.idle;
 finishedPath = false;
 
-global.santaXcoord = x
-global.santaXcoord = y
+global.santaXcoord = x;
+global.santaYcoord = y;
 
 enum path{
 	
 	notstarted,
 	cellarstart,
 	cellaronpath,
+	cellarend,
 	livingroomstart,
 	livingroomonpath,
 	livingroomturnaround,

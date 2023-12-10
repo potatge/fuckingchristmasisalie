@@ -98,25 +98,11 @@ switch (santaPath) {
 
   case path.notstarted:
     break;
-	
-case path.cellarstart:
-	path_start(p_santa0_cellar,spd,path_action_stop,true)
-	show_debug_message("santa leaves cellar")
-	santaPath = path.cellaronpath;
-	break;
-	
-case path.cellaronpath:
-	santaStates = santa.onpath;
-	global.playerCanMove = true;
-	if (path_position == 1){
-			santaGoToRoom(rm1,422,756)
-			santaPath = path.livingroomstart;
-	}
-	break;
+
 
   case path.livingroomstart:
     path_start(p_santa2_livingroom, spd, path_action_reverse, true)
-	path_position = 0
+	path_position = 0;
     show_debug_message("now going for living room.")
     santaStates = santa.pathstarted;
 	santaPath = path.livingroomonpath;

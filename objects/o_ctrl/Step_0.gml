@@ -177,7 +177,7 @@ case gamestates.lightsOut:
   var damien = instance_create_layer(73, 974, "Instances", o_chara_damien)
   with(damien) {
     name_ = "damien3";
-    damienStates = states.hidden2;
+    damienStates = states.cellar;
   }
   setState(gamestates.santaThere);
   show_debug_message("delete boxes an make damien and santa appears")

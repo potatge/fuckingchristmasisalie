@@ -7,7 +7,7 @@ enum states{
 	normal,
 	hidden,
 	hurt,
-	hidden2,
+	cellar,
 	followher,
 	dead
 	

@@ -42,28 +42,28 @@ function fridgeEndAction(fridge) {
 }
 
 function present1EndAction(present1) {
-  with (o_item_present){
-	if (name_ == "present1"){
-		instance_deactivate_object(cutscene_checkondamien);
-		instance_activate_object(cutscene_screamindistance);
-		setState(gamestates.screamInDistance); 
-		with (cutscene_boxpile){
-			instance_change(cutscene_boxpile1gone,true)
-		}
-		setState(gamestates.boxesGone)
-		instance_destroy();
-	}
+  with(o_item_present) {
+    if (name_ == "present1") {
+      instance_deactivate_object(cutscene_checkondamien);
+      instance_activate_object(cutscene_screamindistance);
+      setState(gamestates.screamInDistance);
+      with(cutscene_boxpile) {
+        instance_change(cutscene_boxpile1gone, true)
+      }
+      setState(gamestates.boxesGone)
+      instance_destroy();
+    }
   }
- 
+
 }
 
 function present2EndAction(present2) {
   show_debug_message("present2 endaction");
-  with (o_item_present){
-	if (name_ == "present2"){
-		instance_destroy();
-	}
-   }
+  with(o_item_present) {
+    if (name_ == "present2") {
+      instance_destroy();
+    }
+  }
 }
 
 function setState(state) {
@@ -75,66 +75,55 @@ function setState(state) {
 function damienRescueEndAction(damien3) {
   //show_debug_message("rescue damnien endaction");
   o_chara_damien.damienStates = states.followher;
-  global.goodEnd = true; 
+  global.goodEnd = true;
 }
 
+function doorEndaction(door) {
 
-function doorEndaction(door){
-	
 }
-	
-function resetGameOnKeyPress(){
-	global.playerCanMove = false;
-    if keyboard_check_pressed(vk_space) {
-		//santa room set,
-	goToRoom(o_santa,rm_cellar,160,224)
-	santaStates = santa.idle;
-	santaPath = path.notstarted;
-	
-	global.playerCanMove = true;
-	goToRoom(o_player,rm1,259,127)
+
+function resetGameOnKeyPress() {
+  global.playerCanMove = false;
+  if keyboard_check_pressed(vk_space) {
+	  
+    //santa room set,
+    santaGoToRoom(rm_cellar, 160, 224);
+    santaStates = santa.idle;
+    santaPath = path.notstarted;
+    //player room set
+    
+    playerGoToRoom(rm1, 259, 127);
+    damienGoToRoom(rm1, 160, 232);
     room_restart();
     setState(gamestates.everythingsFine);
+	audio_stop_sound(music_suspense);
+	
     global.gameMode = mode.playing;
+	global.playerCanMove = true;
+	o_player.playerState = player.alive;
+	o_chara_damien.damienStates = states.normal;
+	
     lightsOut = false;
-    audio_stop_sound(music_suspense);
-    curSong = music_holidays;
-  }	
+	curSong = music_holidays;
+
+    
+  }
 }
 
-
-function screenshake(_time, _magnitude, _fade){
-   with (o_sfx_screenshake)
-   {
-      shake = true;
-      shake_time = _time;
-      shake_magnitude = _magnitude;
-      shake_fade = _fade;
-   }
+function screenshake(_time, _magnitude, _fade) {
+  with(o_sfx_screenshake) {
+    shake = true;
+    shake_time = _time;
+    shake_magnitude = _magnitude;
+    shake_fade = _fade;
+  }
 }
 
-function playerGoToRoom(rooom,xx,yy){
-	with (o_player){
-		global.playerXcoord = xx;
-		global.playerYcoord = yy;
-	}
-		room_goto(rooom);	
-}
-
-function santaGoToRoom(rooom,xx,yy){
-	
-	with (o_santa){
-		global.santaXcoord = xx;
-		global.santaYcoord = yy;
-	}
-		room_goto(rooom);
-}
-
-function damienGoToRoom(rooom,xx,yy){
-	
-	with (o_damien){
-		global.damienXcoord = xx;
-		global.damienYcoord = yy;
-	}
-		room_goto(rooom);
+function playerGoToRoom(rooom, xx, yy) {
+  with(o_player) {
+    global.playerXcoord = xx;
+    global.playerYcoord = yy;
+	room_goto(rooom);
+  }
+ 
 }

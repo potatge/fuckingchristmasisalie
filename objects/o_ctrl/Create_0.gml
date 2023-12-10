@@ -82,8 +82,8 @@ gamestatesStrings = [
   
 
 ]
-global.state = gamestates.lightsOut//gamestates.everythingsFine;
-global.debugMode = true;
+global.state = gamestates.lightsOut; //gamestates.everythingsFine;
+global.debugMode = false;
 sfxPlay = false;
 musicPlay = false;
 //scr_changeSounds();
