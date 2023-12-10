@@ -16,7 +16,8 @@ enum santa {
 santaStates = santa.idle;
 finishedPath = false;
 
-
+global.santaXcoord = x
+global.santaXcoord = y
 
 enum path{
 	

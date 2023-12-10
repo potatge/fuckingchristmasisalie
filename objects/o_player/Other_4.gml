@@ -1,4 +1,4 @@
-if (global.xcoord !="" and global.ycoord !=""){
-	x= global.xcoord;
-	y= global.ycoord;
+if (global.playerXcoord !="" and global.playerYcoord !=""){
+	x= global.playerXcoord;
+	y= global.playerYcoord;
 }

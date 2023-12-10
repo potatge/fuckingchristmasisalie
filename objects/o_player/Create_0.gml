@@ -10,5 +10,5 @@ enum player{
 
 playerState = player.alive;
 
-global.xcoord = x;
-global.ycoord = y;
+global.playerXcoord = x;
+global.playerYcoord = y;

@@ -109,8 +109,8 @@ case path.cellaronpath:
 	santaStates = santa.onpath;
 	global.playerCanMove = true;
 	if (path_position == 1){
-		goToRoom(rm1,422,756)
-		santaPath = path.livingroomstart;
+			santaGoToRoom(rm1,422,756)
+			santaPath = path.livingroomstart;
 	}
 	break;
 

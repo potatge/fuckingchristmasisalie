@@ -22,14 +22,13 @@ switch (damienStates){
 	case states.hurt:
 		sprite_index = s_chara_damien_collapsed;
 		name_ = "damien2"
-		x = 797;
-		y = 537;
+		damienGoToRoom(rm_cellar,160,224);
 		break;
 	
 	case states.hidden2:
 		sprite_index  = s_chara_damien_collapsed;
 		name_ = "damien3"
-		x = 73 ;
+		x = 73;
 		y = 974;
 		break;
 	

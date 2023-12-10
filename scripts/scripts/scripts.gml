@@ -86,8 +86,13 @@ function doorEndaction(door){
 function resetGameOnKeyPress(){
 	global.playerCanMove = false;
     if keyboard_check_pressed(vk_space) {
+		//santa room set,
+	goToRoom(o_santa,rm_cellar,160,224)
+	santaStates = santa.idle;
+	santaPath = path.notstarted;
+	
 	global.playerCanMove = true;
-	goToRoom(rm1,259,127)
+	goToRoom(o_player,rm1,259,127)
     room_restart();
     setState(gamestates.everythingsFine);
     global.gameMode = mode.playing;
@@ -108,10 +113,28 @@ function screenshake(_time, _magnitude, _fade){
    }
 }
 
-function goToRoom(rooom,xx,yy){
+function playerGoToRoom(rooom,xx,yy){
+	with (o_player){
+		global.playerXcoord = xx;
+		global.playerYcoord = yy;
+	}
+		room_goto(rooom);	
+}
+
+function santaGoToRoom(rooom,xx,yy){
 	
-	global.xcoord = xx;
-	global.ycoord = yy;
-	room_goto(rooom);
+	with (o_santa){
+		global.santaXcoord = xx;
+		global.santaYcoord = yy;
+	}
+		room_goto(rooom);
+}
+
+function damienGoToRoom(rooom,xx,yy){
 	
+	with (o_damien){
+		global.damienXcoord = xx;
+		global.damienYcoord = yy;
+	}
+		room_goto(rooom);
 }
