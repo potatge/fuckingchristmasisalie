@@ -87,8 +87,8 @@ function resetGameOnKeyPress() {
   if keyboard_check_pressed(vk_space) {
 	  
     //santa room set,
-    santaStates = santa.idle;
-    santaPath = path.notstarted;
+    o_santa.santaStates = santa.idle;
+    o_santa.santaPath = path.notstarted;
     //player room set
     
     playerGoToRoom(rm1, 259, 127);

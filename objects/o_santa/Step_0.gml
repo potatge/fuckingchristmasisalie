@@ -2,6 +2,8 @@
 switch (santaStates) {
 
 case santa.idle:
+  x = 97;
+  y = 1026;
   sprite_index = s_santa_up;
   if (global.state == gamestates.santaActivated) {
     santaStates = santa.awakened;
