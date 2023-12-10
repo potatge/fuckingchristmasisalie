@@ -99,8 +99,7 @@ case santa.attacking:
 switch (santaPath) {
 
   case path.notstarted:
-  
-    break;
+     break;
 
 
   case path.livingroomstart:

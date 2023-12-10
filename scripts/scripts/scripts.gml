@@ -61,7 +61,19 @@ function present2EndAction(present2) {
   show_debug_message("present2 endaction");
   with(o_item_present) {
     if (name_ == "present2") {
-      instance_destroy();
+		
+			setState(gamestates.bloodSplodge);
+
+	 with(o_chara_damien) {
+	    instance_change(o_sfx_blood, true)
+
+	}
+	instance_create_layer(o_sfx_blood.x - 32,o_sfx_blood.y,"Instances",o_item_letter)
+	instance_deactivate_object(cutscene_boxpile1gone);
+	//instance_deactivate_object(cutscene_boxpile);
+	scr_stingerSound();
+	instance_destroy();
+ 
     }
   }
 }
@@ -99,11 +111,7 @@ function resetGameOnKeyPress() {
   global.playerCanMove = false;
   if keyboard_check_pressed(vk_space) {
 	  
-    //santa room set,
-    o_santa.santaStates = santa.idle;
-    o_santa.santaPath = path.notstarted;
-    //player room set
-    
+  
     playerGoToRoom(rm1, 259, 127);
     room_restart();
     setState(gamestates.everythingsFine);
@@ -112,6 +120,12 @@ function resetGameOnKeyPress() {
     global.gameMode = mode.playing;
 	global.playerCanMove = true;
 	o_player.playerState = player.alive;
+	
+	  //santa room set,
+    o_santa.santaStates = santa.idle;
+    o_santa.santaPath = path.notstarted;
+    //player room set
+    
 	
 	var damien2 = o_chara_damien_follow;
 	if instance_exists(damien2){

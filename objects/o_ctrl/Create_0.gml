@@ -225,7 +225,7 @@ global.interactables = [
   
    {
     name_: "present3",
-    myText: [ "Open it?","My keys are inside it!"],
+    myText: ["Oh no, it's another present...","Open it?","My keys are inside!"],
     sprite: s_item_present3,
     portrait: noone,
     hasOption: true,
@@ -235,7 +235,7 @@ global.interactables = [
   
     {
     name_: "keys",
-    myText: [ "They are the keys to the house. Nuff said."],
+    myText: [ "They're the keys to the house. Nuff said."],
     sprite: s_item_keys,
     portrait: noone,
     hasOption: false,
@@ -244,8 +244,8 @@ global.interactables = [
   },
      {
     name_: "letter",
-    myText: [ "It's a letter. It reads...","HO-HO-HO-W about playing a game with me?"],
-    sprite: s_item_letter
+    myText: [ "It's a letter. It reads...","'HO-HO-HO-W about playing a game with me?'"],
+    sprite: s_item_letter,
     portrait: noone,
     hasOption: false,
 	endAction: false,
@@ -404,7 +404,7 @@ global.interactables = [
   {
     name_: "fridge",
     myText: ["What should I get from the fridge?"],
-    endText: ["An unassuming plate of milk and cookies? Can't help to be superstitious.","Hey, it's the holidays."],
+    endText: ["An unassuming plate of milk and cookies? Can't help to be superstitious.","Another bottle of wine? Hey, it's the holidays."],
     sprite: s_bg_nightstand,
     portrait: noone,
     hasOption: true,

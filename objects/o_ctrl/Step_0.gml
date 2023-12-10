@@ -207,13 +207,14 @@ case gamestates.chaseBegins:
   break;
   
   case gamestates.thirdPresentAppears:
-  instance_deactivate_object(cutscene_door1);
+  
   var present3 = instance_create_layer(702,792,"Instances",o_item_present)
   with (present3){
 	  name_ = "present3";
 	  // the mysterious final present...
 	  sprite_index = s_item_present3;
   }
+  instance_deactivate_object(cutscene_door1);
   
   break;
   
