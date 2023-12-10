@@ -87,13 +87,11 @@ function resetGameOnKeyPress() {
   if keyboard_check_pressed(vk_space) {
 	  
     //santa room set,
-    santaGoToRoom(rm_cellar, 160, 224);
     santaStates = santa.idle;
     santaPath = path.notstarted;
     //player room set
     
     playerGoToRoom(rm1, 259, 127);
-    damienGoToRoom(rm1, 160, 232);
     room_restart();
     setState(gamestates.everythingsFine);
 	audio_stop_sound(music_suspense);

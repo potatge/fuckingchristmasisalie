@@ -9,14 +9,11 @@ if (global.state == gamestates.talkToDamien && instance_place(x,y,o_player) && !
 switch (damienStates){
 	
 	case states.normal:
-		
-		if (room == rm1){
 			x = 160;
 			y = 232;
 			sprite_index = s_char_damien_idle;
 			maxText = 0;
 			myText = ["I'll go get a new bottle!"]
-		}
 		break;
 	
 	case states.hidden:
@@ -36,7 +33,7 @@ switch (damienStates){
 		sprite_index  = s_chara_damien_collapsed;
 		name_ = "damien3"
 		x = 90;
-		y = 927;
+		y = 1055;
 		break;
 	
 	case states.followher:

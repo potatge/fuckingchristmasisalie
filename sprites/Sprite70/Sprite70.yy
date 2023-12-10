@@ -25,8 +25,8 @@
   "nineSlice": null,
   "origin": 4,
   "parent": {
-    "name": "secretsantajam2023",
-    "path": "secretsantajam2023.yyp",
+    "name": "misc gui etc",
+    "path": "folders/Sprites/misc gui etc.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {
