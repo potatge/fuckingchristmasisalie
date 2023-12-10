@@ -99,12 +99,18 @@ function resetGameOnKeyPress() {
     global.gameMode = mode.playing;
 	global.playerCanMove = true;
 	o_player.playerState = player.alive;
+	
+	var damien2 = o_chara_damien_follow;
+	if instance_exists(damien2){
+		with (damien2){
+			instance_change(o_chara_damien,true)
+		}
+	}
 	o_chara_damien.damienStates = states.normal;
 	
     lightsOut = false;
 	curSong = music_holidays;
-
-    
+ 
   }
 }
 

@@ -37,10 +37,12 @@ switch (damienStates){
 		break;
 	
 	case states.followher:
-		sprite_index = s_char_damien_idle;
-		name_ = "damien4"
-		x = o_player.x-32-3;
-		y = o_player.y
+		instance_change(o_chara_damien_follow,true)
+	    //x += sign(o_player.x - x);
+	    //y += sign(o_player.y - y);
+		//previous code.
+		//x = o_player.x-32-3;
+		//y = o_player.y
 		break;
 		
 		case states.dead:

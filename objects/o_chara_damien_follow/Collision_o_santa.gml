@@ -1,0 +1,4 @@
+
+
+
+damienStates = states.dead;

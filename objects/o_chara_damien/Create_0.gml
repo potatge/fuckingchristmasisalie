@@ -15,7 +15,6 @@ enum states{
 
 global.damienXcoord = x;
 global.damienYcoord = y;
-
 damienStates = states.normal
 /*
 switch (damienStates){
