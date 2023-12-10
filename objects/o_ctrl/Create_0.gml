@@ -244,7 +244,7 @@ global.interactables = [
   },
      {
     name_: "letter",
-    myText: [ "Its a letter. It reads: HO HO HOw about playing a game with me?"],
+    myText: [ "It's a letter. It reads...","HO-HO-HO-W about playing a game with me?"],
     sprite: s_item_letter
     portrait: noone,
     hasOption: false,
