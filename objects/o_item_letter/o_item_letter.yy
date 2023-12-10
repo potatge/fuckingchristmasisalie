@@ -1,15 +1,20 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "o_bg_letter",
-  "eventList": [],
+  "name": "o_item_letter",
+  "eventList": [
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,},
+  ],
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "bg",
-    "path": "folders/Objects/bg.yy",
+    "name": "items",
+    "path": "folders/Objects/items.yy",
   },
-  "parentObjectId": null,
+  "parentObjectId": {
+    "name": "o_interactable",
+    "path": "objects/o_interactable/o_interactable.yy",
+  },
   "persistent": false,
   "physicsAngularDamping": 0.1,
   "physicsDensity": 0.5,
@@ -26,8 +31,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "s_bg_letter",
-    "path": "sprites/s_bg_letter/s_bg_letter.yy",
+    "name": "s_item_letter",
+    "path": "sprites/s_item_letter/s_item_letter.yy",
   },
   "spriteMaskId": {
     "name": "s_item_present3",

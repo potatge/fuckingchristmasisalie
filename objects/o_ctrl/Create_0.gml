@@ -242,6 +242,15 @@ global.interactables = [
 	endAction: false,
 	isSpeaker: false,
   },
+     {
+    name_: "letter",
+    myText: [ "Its a letter. It reads: HO HO HOw about playing a game with me?"],
+    sprite: s_item_letter
+    portrait: noone,
+    hasOption: false,
+	endAction: false,
+	isSpeaker: false,
+  },
 
   {
     name_: "present for damien",
@@ -386,7 +395,7 @@ global.interactables = [
   {
     name_: "nightstand",
     hasOption: false,
-    myText: ["It's where I put my keys."],
+    myText: ["It's just a nightstand."],
     sprite: s_bg_nightstand,
     portrait: noone,
 	endAction: false,
