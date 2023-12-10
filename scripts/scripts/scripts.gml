@@ -107,6 +107,10 @@ function doorEndaction(door) {
 
 }
 
+function letterEndaction(letter){
+	
+	instance_activate_object(cutscene_lightsout);
+}
 function resetGameOnKeyPress() {
   global.playerCanMove = false;
   if keyboard_check_pressed(vk_space) {
@@ -157,4 +161,10 @@ function playerGoToRoom(rooom, xx, yy) {
 	room_goto(rooom);
   }
  
+}
+
+function collide(){
+	
+
+	
 }

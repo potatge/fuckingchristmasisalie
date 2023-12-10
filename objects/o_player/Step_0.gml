@@ -76,7 +76,8 @@ if (global.playerCanMove){
 clamp(x, 0, room_width);
 clamp(y, 0, room_height);
 
-// Collisions
+//collisions all in this script.
+	// Collisions
 var cam_id = view_camera[0];
 
 // Get player position
@@ -117,7 +118,7 @@ if (collision_at_next_position || obstacle_at_next_position) {
   y += vspd;
 }
 
-//dialogue system. needs to be at bottom rn.
+	
 //cutscene 
 var cut = instance_place(x, y, cutscene)
 
@@ -128,8 +129,7 @@ if (item == noone && cut == noone) {
   return;
 }
 
-//if in playing mode. Not selecting.
-
+//dialogue system. needs to be at bottom rn.
 if (keyboard_check_pressed(vk_space) && item != noone) {
 
 var cur = o_ctrl.curText

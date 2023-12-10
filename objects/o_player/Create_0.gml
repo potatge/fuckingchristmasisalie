@@ -12,3 +12,5 @@ playerState = player.alive;
 
 global.playerXcoord = x;
 global.playerYcoord = y;
+vspd = 0;
+hspd = 0;

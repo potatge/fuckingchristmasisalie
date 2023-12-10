@@ -248,7 +248,7 @@ global.interactables = [
     sprite: s_item_letter,
     portrait: noone,
     hasOption: false,
-	endAction: false,
+	endAction: letterEndaction,
 	isSpeaker: false,
   },
 

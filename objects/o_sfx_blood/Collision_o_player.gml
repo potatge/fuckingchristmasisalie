@@ -1,1 +1,0 @@
-instance_activate_object(cutscene_lightsout);
