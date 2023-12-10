@@ -1,3 +1,4 @@
 if (global.state = gamestates.chaseBegins){
-	setState(gamestates.endDoor1);
+	//TODO find another way out.
+	//setState(gamestates.endDoor1);
 }

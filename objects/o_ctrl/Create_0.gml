@@ -55,6 +55,8 @@ enum gamestates {
   santaThere,
   santaActivated,
   chaseBegins,
+  thirdPresentAppears,
+  keyObtained,
   endDoor1
 
 };
@@ -78,6 +80,8 @@ gamestatesStrings = [
   "santaThere",
   "santaActivated",
   "chaseBegins",
+  "thirdPresentAppears",
+  "keyObtained",
   "endDoor1"
   
 
@@ -214,6 +218,26 @@ global.interactables = [
     portrait: noone,
     hasOption: false,
 	endAction: present2EndAction,
+	isSpeaker: false,
+  },
+  
+   {
+    name_: "present3",
+    myText: [ "Open it?","My keys are inside it!"],
+    sprite: s_item_present3,
+    portrait: noone,
+    hasOption: true,
+	endAction: present3EndAction,
+	isSpeaker: false,
+  },
+  
+    {
+    name_: "keys",
+    myText: [ "They are the keys to the house. Nuff said."],
+    sprite: s_item_keys,
+    portrait: noone,
+    hasOption: false,
+	endAction: false,
 	isSpeaker: false,
   },
 

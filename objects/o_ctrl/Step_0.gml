@@ -161,10 +161,11 @@ case gamestates.talkToDamien:
   break;
 
 case gamestates.secondPresentAppears:
+instance_destroy(o_item_keys);
 instance_deactivate_object(cutscene_screamindistance);
-  instance_activate_object(cutscene_secondpresent);
-  var present2 = instance_create_layer(970, 136, "Instances", o_item_present)
-  with(present2) {
+instance_activate_object(cutscene_secondpresent);
+var present2 = instance_create_layer(970, 136, "Instances", o_item_present)
+with(present2) {
     name_ = "present2";
   }
   break;
@@ -204,7 +205,19 @@ case gamestates.chaseBegins:
   instance_deactivate_object(cutscene_boxpile2)
   //instance_deactivate_object(cutscene_santareveal);
   break;
+  
+  case gamestates.thirdPresentAppears:
+  var present3 = instance_create_layer(545,798,"Instances",o_item_present)
+  with (present3){
+	  name_ = "present3";
+	  // the black present...
+	  sprite_index = s_item_present3;
+  }
+  
+  break;
+case gamestates.keyObtained:
 
+break;
 case gamestates.endDoor1:
   resetGameOnKeyPress()
   break;
