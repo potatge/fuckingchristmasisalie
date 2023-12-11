@@ -111,8 +111,7 @@ function letterEndaction(letter){
 function resetGameOnKeyPress() {
   global.playerCanMove = false;
   if keyboard_check_pressed(vk_space) {
-	  
-  
+	room_goto(rm1)
     playerGoToRoom(rm1, 259, 127);
     room_restart();
     setState(gamestates.everythingsFine);
@@ -133,9 +132,10 @@ function resetGameOnKeyPress() {
 	if instance_exists(damien2){
 		with (damien2){
 			instance_change(o_chara_damien,true)
+			damien2.damienStates = states.normal;
 		}
 	}
-	o_chara_damien.damienStates = states.normal;
+	
 	
     lightsOut = false;
 	curSong = music_holidays;

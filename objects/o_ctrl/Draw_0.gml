@@ -13,50 +13,48 @@ var xx = x1 + camera_get_view_width(cam) / 2 - width / 2;
 var yy = y1 + camera_get_view_height(cam) / 2 + height;
 var c_ = c_white;
 
+switch (global.gameMode) {
 
-	switch (global.gameMode){
-		
-	case mode.options:
-		var txt = "CHOOSE:\n"+string(Opt[0])+"\n"+string(Opt[1])
-		var wdth = string_width(txt)+ 20;
-		//var option = 16;
-		draw_sprite_stretched_ext(s_textbox_black, 0, xx, yy - 50, wdth + pad, 45, c_, 0.7);
-	    draw_set_alpha(1);
-		draw_set_color(c_white)
-	    draw_text_ext(xx + pad , yy - 50 + pad, txt, sep, wdth - pad);
-		for (var i = 0; i< maxOption; i++){
-			draw_sprite_ext(s_arrow_right,0,xx + wdth - 8, yy  - 30 + i + 12 * curOption ,1,1,1,c_white,1)
-		}
-		break;
-		
-		case mode.gameOver:
-		var b  = c_black
-		draw_set_alpha(0.4);
-		draw_rectangle_color(0,0,xx_,yy_,b,b,b,b,false)
-		draw_set_alpha(1);
-		draw_text(xx,yy,"GAME OVER! Press space to try again.")
-		break;
-	
-	}
+case mode.options:
+  var txt = "CHOOSE:\n" + string(Opt[0]) + "\n" + string(Opt[1])
+  var wdth = string_width(txt) + 20;
+  //var option = 16;
+  draw_sprite_stretched_ext(s_textbox_black, 0, xx, yy - 50, wdth + pad, 45, c_, 0.7);
+  draw_set_alpha(1);
+  draw_set_color(c_white)
+  draw_text_ext(xx + pad, yy - 50 + pad, txt, sep, wdth - pad);
+  for (var i = 0; i < maxOption; i++) {
+    draw_sprite_ext(s_arrow_right, 0, xx + wdth - 8, yy - 30 + i + 12 * curOption, 1, 1, 1, c_white, 1)
+  }
+  break;
 
+case mode.gameOver:
+  var b = c_black
+  draw_set_alpha(0.4);
+  draw_rectangle_color(0, 0, xx_, yy_, b, b, b, b, false)
+  draw_set_alpha(1);
+  draw_text(xx, yy, "You can do better than this! Press space to try again.")
+  break;
+
+}
 
 switch (room) {
-	
-	case rm_cellar:
-		var c = make_colour_rgb(56, 56, 71);
-	    draw_set_alpha(0.8);
-	    gpu_set_blendmode(bm_subtract);
-	    draw_rectangle_color(00, 00, xx_, yy_, c, c, c, c, false);
-	    gpu_set_blendmode(bm_add);
-	    draw_set_alpha(1);
-		gpu_set_blendmode(bm_normal);
-		break;
-	
-case rm_end:
-	draw_sprite_stretched_ext(s_splashscreen_title, 0, 0, 0, camera_get_view_width(view_camera[0]), camera_get_view_height(view_camera[0]), c_, 1);
-	draw_text(xx , yy / 2, "Art, programming + design: Vela Noble @velanoble\nMusic by Peritune.")
 
-	break;
+case rm_cellar:
+  var c = make_colour_rgb(56, 56, 71);
+  draw_set_alpha(0.8);
+  gpu_set_blendmode(bm_subtract);
+  draw_rectangle_color(00, 00, xx_, yy_, c, c, c, c, false);
+  gpu_set_blendmode(bm_add);
+  draw_set_alpha(1);
+  gpu_set_blendmode(bm_normal);
+  break;
+
+case rm_end:
+  draw_sprite_stretched_ext(s_splashscreen_title, 0, 0, 0, camera_get_view_width(view_camera[0]), camera_get_view_height(view_camera[0]), c_, 1);
+  //draw_text(xx , yy / 2, )
+
+  break;
 
 case rm_title:
   draw_set_font(fnt2)
@@ -67,7 +65,7 @@ case rm_title:
 
 case rm1:
 
-draw_set_font(fnt1)
+  draw_set_font(fnt1)
 
   if (lightsOut) {
 
@@ -77,7 +75,7 @@ draw_set_font(fnt1)
     draw_rectangle_color(00, 00, xx_, yy_, c, c, c, c, false);
     gpu_set_blendmode(bm_add);
     draw_set_alpha(1);
-	gpu_set_blendmode(bm_normal);
+    gpu_set_blendmode(bm_normal);
 
   }
 
@@ -93,7 +91,7 @@ draw_set_font(fnt1)
     }
   }
 
- if (portraitDraw) {
+  if (portraitDraw) {
     cam = view_camera[0]
     var xx_ = camera_get_view_x(cam)
     var yy_ = camera_get_view_y(cam)
@@ -101,36 +99,41 @@ draw_set_font(fnt1)
     var hght = 150
     var xx = xx_ + camera_get_view_width(cam)
     var yy = yy_ + camera_get_view_height(cam)
-	var por_right = instance_create_layer(xx - wdth, yy - hght, "portraits", o_char_portraits)
-	var por_left = instance_create_layer(xx - width - wdth * 2, yy - hght,"portraits",o_char_portraits)
-	 por_right.sprite_index = global.curSpeakerRight;
-	 por_left.sprite_index = global.curSpeakerLeft;
-  }else{
-	  if (object_exists(o_char_portraits)){
-		  instance_destroy(o_char_portraits);
-	  }
-  }break;
+    var por_right = instance_create_layer(xx - wdth, yy - hght, "portraits", o_char_portraits)
+    var por_left = instance_create_layer(xx - width - wdth * 2, yy - hght, "portraits", o_char_portraits)
+    por_right.sprite_index = global.curSpeakerRight;
+    por_left.sprite_index = global.curSpeakerLeft;
+  } else {
+    if (object_exists(o_char_portraits)) {
+      instance_destroy(o_char_portraits);
+    }
+  }
+  break;
 }
 
-switch (global.state){
-	
-		case gamestates.endBad:
-			var b  = c_black
-			draw_set_alpha(0.4);
-			draw_rectangle_color(0,0,xx_,yy_,b,b,b,b,false)
-			draw_set_alpha(1);
 
-			draw_text(xx,yy,"Uh. Did you forget your injured partner on purpose? Bad End.")
-			draw_text(xx,yy+32,"Press space to play again.")
-			break;
-			
-			case gamestates.endGood:
-				var b  = c_black
-				draw_set_alpha(0.4);
-				draw_rectangle_color(0,0,xx_,yy_,b,b,b,b,false)
-				draw_set_alpha(1);
-				draw_text(xx,yy,"You both make it to safety. Good End!")
-				draw_text(xx,yy+32,"Press space to play again.")
-				break;
+// global states. 
+switch (global.state) {
+
+case gamestates.endBad:
+  break;
+case gamestates.endGood:
+  break;
+
+case gamestates.allOverRedRover:
+  //var b = c_black
+  draw_set_color(c_black);
+  draw_set_font(fnt1);
+  draw_set_halign(fa_center);
+
+  if (global.goodEnd) {
+	draw_sprite(s_cutscene_goodend,0,0,0)
+    draw_text(xx, yy, "You both make it to safety. Good End!")
+  } else {
+    draw_sprite(s_cutscene_badend, 0, 0, 0)
+    draw_text(xx, yy, "Uh. Did you forget your injured partner on purpose? Bad End.")
+  }
+  draw_text(xx, yy + 32, "Art, story and programming by Vela Noble. @velanoble velanoble.itch.io")
+  draw_text(xx, yy + 45, "Press space to play again.")
+  break;
 }
-

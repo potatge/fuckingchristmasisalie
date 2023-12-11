@@ -57,8 +57,10 @@ enum gamestates {
   chaseBegins,
   thirdPresentAppears,
   keyObtained,
+  youDied,
   endGood,
-  endBad
+  endBad,
+  allOverRedRover
 
 };
 //keep this in sync with above
@@ -83,8 +85,10 @@ gamestatesStrings = [
   "chaseBegins",
   "thirdPresentAppears",
   "keyObtained",
+  "youDied",
   "endGood",
   "endBad",
+  "AllOverRedRover"
   
 
 ]
@@ -206,7 +210,7 @@ global.interactables = [
 
   {
     name_: "present1",
-    myText: ["A present?", "It says 'For Claire' on the tag, but me and Damien said we'd only get each other one gift."],
+    myText: ["A present?", "It says 'For Claire' on the tag, but me and Damien said we'd only get each other one gift.","How sweet is he~."],
     portrait: noone,
     hasOption: false,
 	endAction: present1EndAction,

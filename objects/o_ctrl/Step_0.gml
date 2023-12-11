@@ -58,12 +58,12 @@ case mode.options:
     //TODO make this SWITCH
     if (curOption == 0) {
       show_debug_message("choose milk?")
-      global.goodEnd = true;
+      //TODO MAKE OPTIONs MATTER global.goodEnd = true;
     }
 
     if (curOption == 1) {
       show_debug_message("choose WINE")
-      global.goodEnd = false;
+      //global.goodEnd = false;
     }
     decisionLVL += 1;
     audio_play_sound(snd_blip01, 1, 0)
@@ -218,6 +218,10 @@ case gamestates.chaseBegins:
   }
   
   break;
+ 
+ case gamestates.youDied:
+ resetGameOnKeyPress()
+ break;
   
 case gamestates.keyObtained:
 	instance_deactivate_object(cutscene_door1);
@@ -225,16 +229,24 @@ case gamestates.keyObtained:
 	break;
 
 case gamestates.endGood:
-	audio_pause_all()
-	audio_pause_sound()
 	room_goto(rm_end)
-	resetGameOnKeyPress();
+	setState(gamestates.allOverRedRover)
+	audio_stop_sound(music_suspense)
+	
+	audio_play_sound(snd_goodclear,1,0)
+	setState(gamestates.allOverRedRover)
 	break;
 	
 case gamestates.endBad:
-audio_pause_all()
+  audio_stop_sound(music_suspense)
   room_goto(rm_end)
-  resetGameOnKeyPress()
+  
+  audio_play_sound(snd_badclear,1,0)
+  setState(gamestates.allOverRedRover)
   break;
+  
+ case gamestates.allOverRedRover:
+	 resetGameOnKeyPress()
+	 break;
 
 }
