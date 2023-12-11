@@ -435,7 +435,7 @@ global.interactables = [
     sprite: s_bg_door,
     portrait: noone,
     hasOption: true,
-	endAction: doorEndaction,
+	endAction: false,
 	isSpeaker: false,
   },
   {

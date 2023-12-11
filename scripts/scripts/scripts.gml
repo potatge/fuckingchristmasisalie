@@ -121,6 +121,7 @@ function resetGameOnKeyPress() {
     global.gameMode = mode.playing;
 	global.playerCanMove = true;
 	o_player.playerState = player.alive;
+	o_player.claireMood = mood.happy;
 	
 	  //santa room set,
     o_santa.santaStates = santa.idle;
