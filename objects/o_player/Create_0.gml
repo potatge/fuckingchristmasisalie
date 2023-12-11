@@ -17,3 +17,13 @@ vspd = 0;
 hspd = 0;
 // for left, top, right, bottom.
 facing  = 0;
+
+
+enum mood{
+	happy,
+	worried,
+	determined
+	
+}
+
+claireMood = mood.happy;

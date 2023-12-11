@@ -123,7 +123,20 @@ if (collision_at_next_position || obstacle_at_next_position) {
   y += vspd;
 }
 
-	
+
+// mood portrait.
+
+switch (claireMood){
+	case mood.happy:
+		clairePortrait  = s_char_portraits_claire_happy;
+		break;
+		
+	case mood.worried:
+		clairePortrait = s_char_portraits_claire_worried;
+		break;
+		
+}
+
 //cutscene 
 var cut = instance_place(x, y, cutscene)
 
@@ -156,7 +169,7 @@ var textall = array_length(item.myText)
 	  return;
   }else{
 	o_ctrl.portraitDraw = true;
-	global.curSpeakerLeft = s_char_portraits_claire_happy;
+	global.curSpeakerLeft = clairePortrait;
     global.curSpeakerRight = item.portrait;
   }
 
