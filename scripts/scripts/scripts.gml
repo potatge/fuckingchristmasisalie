@@ -44,7 +44,6 @@ function fridgeEndAction(fridge) {
 function present1EndAction(present1) {
   with(o_item_present) {
     if (name_ == "present1") {
-      instance_deactivate_object(cutscene_checkondamien);
       instance_activate_object(cutscene_screamindistance);
       setState(gamestates.screamInDistance);
       with(cutscene_boxpile) {

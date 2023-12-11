@@ -135,7 +135,6 @@ case gamestates.doneWithFridge:
   global.playerCanMove = true;
   instance_activate_object(cutscene_checkondamien);
   setState(gamestates.damienDisappears);
-  show_debug_message("show text for fridge! check on damien, he's gone.");
   break;
 
 case gamestates.damienDisappears:
@@ -147,7 +146,7 @@ case gamestates.firstPresent:
   break;
 
 case gamestates.screamInDistance:
-
+  instance_deactivate_object(cutscene_checkondamien);
   break;
 
 case gamestates.boxesGone:
