@@ -65,7 +65,7 @@ case mode.options:
       show_debug_message("choose WINE")
       //global.goodEnd = false;
     }
-    decisionLVL += 1;
+    //decisionLVL += 1;
     audio_play_sound(snd_blip01, 1, 0)
     global.gameMode = mode.playing;
     setState(gamestates.doneWithFridge)

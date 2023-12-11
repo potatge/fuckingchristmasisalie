@@ -38,11 +38,6 @@ switch (damienStates){
 	
 	case states.followher:
 		instance_change(o_chara_damien_follow,true)
-	    //x += sign(o_player.x - x);
-	    //y += sign(o_player.y - y);
-		//previous code.
-		//x = o_player.x-32-3;
-		//y = o_player.y
 		break;
 		
 		case states.dead:

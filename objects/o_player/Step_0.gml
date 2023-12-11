@@ -35,6 +35,7 @@ case player.dead2:
 }
 
 if (global.playerCanMove){
+	image_speed = 1;
 	//else, be alive and move.
 	if (left) {
 	  hspd -= spd;

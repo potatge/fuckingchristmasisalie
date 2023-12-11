@@ -107,7 +107,7 @@ case path.notstarted:
 
 case path.livingroomstart:
   path_start(p_santa2_livingroom, spd, path_action_reverse, true)
-  path_position = 0;
+  //TODO. is this causing glitch path_position = 0;
   show_debug_message("now going for living room.")
   santaStates = santa.pathstarted;
   //otherwise restarting too much?
