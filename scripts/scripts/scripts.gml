@@ -108,7 +108,9 @@ function doorEndaction(door) {
 
 function letterEndaction(letter){
 	instance_activate_object(cutscene_lightsout);
-	instance_destroy();
+	with (o_item_letter){
+		instance_destroy();
+	}
 }
 function resetGameOnKeyPress() {
   global.playerCanMove = false;
