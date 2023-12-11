@@ -110,24 +110,25 @@ function letterEndaction(letter){
 }
 function resetGameOnKeyPress() {
   global.playerCanMove = false;
-  if keyboard_check_pressed(vk_space) {
+  if (keyboard_check_pressed(vk_space)) {
 	room_goto(rm1)
-    playerGoToRoom(rm1, 259, 127);
+    //playerGoToRoom(rm1, 259, 127);
     room_restart();
+	
     setState(gamestates.everythingsFine);
 	audio_stop_sound(music_suspense);
 	
     global.gameMode = mode.playing;
 	global.playerCanMove = true;
+	global.goodEnd = false;
 	o_player.playerState = player.alive;
 	o_player.claireMood = mood.happy;
 	
 	  //santa room set,
-    o_santa.santaStates = santa.idle;
-    o_santa.santaPath = path.notstarted;
+   // o_santa.santaStates = santa.idle;
+   // o_santa.santaPath = path.notstarted;
     //player room set
     
-	
 	var damien2 = o_chara_damien_follow;
 	if instance_exists(damien2){
 		with (damien2){
@@ -135,11 +136,8 @@ function resetGameOnKeyPress() {
 			damien2.damienStates = states.normal;
 		}
 	}
-	
-	
     lightsOut = false;
 	curSong = music_holidays;
- 
   }
 }
 

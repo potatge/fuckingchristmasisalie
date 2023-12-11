@@ -1,4 +1,8 @@
 if (global.state = gamestates.keyObtained){
 	// if you have damien, good end. oth
-	setState(gamestates.allOverRedRover)}
+	if (global.goodEnd){
+		setState(gamestates.endGood)
+	}else{
+		setState(gamestates.endBad)
+	}
 }

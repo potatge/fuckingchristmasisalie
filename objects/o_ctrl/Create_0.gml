@@ -1,13 +1,4 @@
-//one off creation.
-switch (room){
-	
-	case rm1:
-		//make player
-		//instance_create_layer(257,126,"Instances",o_player)
-		break;
-	
-	
-}
+
 
 global.drawDepth = -9000
 global.charDepth = -5000;
@@ -58,6 +49,8 @@ enum gamestates {
   thirdPresentAppears,
   keyObtained,
   youDied,
+  endGood,
+  endBad,
   allOverRedRover
 
 };
@@ -84,13 +77,15 @@ gamestatesStrings = [
   "thirdPresentAppears",
   "keyObtained",
   "youDied",
+  "endGood",
+  "endBAd",
   "AllOverRedRover"
   
 
 ]
 global.state = gamestates.everythingsFine;
 //gamestates.lightsOut; 
-global.debugMode = false;
+global.debugMode = true;
 sfxPlay = false;
 musicPlay = false;
 //scr_changeSounds();

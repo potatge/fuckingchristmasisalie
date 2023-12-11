@@ -8,7 +8,7 @@ if keyboard_check_pressed(ord("F")) {
 }
 
 if (global.debugMode) {
-  if keyboard_check_pressed(vk_end) {
+  if keyboard_check_pressed(vk_delete) {
     room_restart()
   }
 }
@@ -228,13 +228,19 @@ case gamestates.keyObtained:
 	instance_activate_object(cutscene_door2true);
 	break;
 
+case gamestates.endGood:
+		 audio_play_sound(snd_goodclear,1,0)
+	     setState(gamestates.allOverRedRover)
+	     break;
+
+case gamestates.endBad:
+	 audio_play_sound(snd_badclear,1,0)
+	 setState(gamestates.allOverRedRover)
+	break;
+
  case gamestates.allOverRedRover:
    audio_stop_sound(music_suspense)
-	 if (global.goodEnd){
-		 audio_play_sound(snd_goodclear,1,0)
-	 }else{
-		 audio_play_sound(snd_badclear,1,0)
-	 }
+	 
 	 resetGameOnKeyPress()
 	 break;
 

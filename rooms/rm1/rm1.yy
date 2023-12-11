@@ -86,7 +86,6 @@
     {"name":"inst_9B5E098","path":"rooms/rm1/rm1.yy",},
     {"name":"inst_2E5FDFDF","path":"rooms/rm1/rm1.yy",},
     {"name":"inst_6FC53EFF","path":"rooms/rm1/rm1.yy",},
-    {"name":"inst_54D8BB54","path":"rooms/rm1/rm1.yy",},
     {"name":"inst_7CA2E363","path":"rooms/rm1/rm1.yy",},
     {"name":"inst_367CB210","path":"rooms/rm1/rm1.yy",},
     {"name":"inst_1FCA5387","path":"rooms/rm1/rm1.yy",},
@@ -116,7 +115,6 @@
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_4678E58D","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"o_bg_tree_exterior","path":"objects/o_bg_tree_exterior/o_bg_tree_exterior.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":416.0,"y":1280.0,},
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_7A482078","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"o_bg_tree_exterior","path":"objects/o_bg_tree_exterior/o_bg_tree_exterior.yy",},"properties":[],"rotation":0.0,"scaleX":-1.0,"scaleY":1.0,"x":672.0,"y":1216.0,},
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_252EC9FC","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"o_bg_tree_exterior","path":"objects/o_bg_tree_exterior/o_bg_tree_exterior.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":896.0,"y":1216.0,},
-        {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_54D8BB54","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"o_sfx_overlay_darkness","path":"objects/o_sfx_overlay_darkness/o_sfx_overlay_darkness.yy",},"properties":[],"rotation":0.0,"scaleX":14.0,"scaleY":5.0,"x":48.0,"y":948.0,},
       ],"layers":[],"properties":[],"userdefinedDepth":false,"visible":true,},
     {"resourceType":"GMRTileLayer","resourceVersion":"1.1","name":"decor_anim","depth":300,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"properties":[],"tiles":{"SerialiseHeight":43,"SerialiseWidth":40,"TileCompressedData":[
 -40,-2147483648,12,90,91,90,91,90,91,90,91,90,91,90,91,-6,-2147483648,14,78,90,91,90,91,90,91,90,91,90,91,90,91,90,-25,-2147483648,1,0,-78,-2147483648,1,0,

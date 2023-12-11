@@ -26,7 +26,7 @@
   "origin": 0,
   "parent": {
     "name": "cutscenes",
-    "path": "folders/Sprites/misc gui etc/cutscenes.yy",
+    "path": "folders/Sprites/cutscenes.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {
