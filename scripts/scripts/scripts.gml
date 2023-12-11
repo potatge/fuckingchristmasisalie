@@ -102,10 +102,6 @@ function damienRescueEndAction(damien3) {
   global.goodEnd = true;
 }
 
-function doorEndaction(door) {
-
-}
-
 function letterEndaction(letter){
 	instance_activate_object(cutscene_lightsout);
 	with (o_item_letter){
@@ -162,10 +158,4 @@ function playerGoToRoom(rooom, xx, yy) {
 	room_goto(rooom);
   }
  
-}
-
-function collide(){
-	
-
-	
 }

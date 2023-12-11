@@ -135,6 +135,10 @@ switch (claireMood){
 		clairePortrait = s_char_portraits_claire_worried;
 		break;
 		
+	case mood.determined:
+		clairePortrait = s_char_portraits_claire_determined;
+		break;
+		
 }
 
 //cutscene 

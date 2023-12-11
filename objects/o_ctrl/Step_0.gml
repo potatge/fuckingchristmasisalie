@@ -180,6 +180,7 @@ case gamestates.lightsOut:
     name_ = "damien3";
     damienStates = states.cellar;
   }
+  o_player.claireMood = mood.determined;
   setState(gamestates.santaThere);
   show_debug_message("delete boxes an make damien and santa appears")
 
