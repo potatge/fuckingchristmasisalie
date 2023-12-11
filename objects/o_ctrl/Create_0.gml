@@ -58,8 +58,6 @@ enum gamestates {
   thirdPresentAppears,
   keyObtained,
   youDied,
-  endGood,
-  endBad,
   allOverRedRover
 
 };
@@ -86,8 +84,6 @@ gamestatesStrings = [
   "thirdPresentAppears",
   "keyObtained",
   "youDied",
-  "endGood",
-  "endBad",
   "AllOverRedRover"
   
 
@@ -488,6 +484,7 @@ global.interactables = [
       "You aren't making any sense! Damien, snap out of it!",
       "He appeared out of nowhere with this...and he...",
       "Who did?",
+	  "You need to put out milk and cookies, or else...",
       "*Damien collapses weakly to the floor again*",
       "I think you've had enough to drink. Stay right there!"
     ],

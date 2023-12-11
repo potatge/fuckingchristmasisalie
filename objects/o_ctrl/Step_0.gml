@@ -228,24 +228,13 @@ case gamestates.keyObtained:
 	instance_activate_object(cutscene_door2true);
 	break;
 
-case gamestates.endGood:
-	room_goto(rm_end)
-	setState(gamestates.allOverRedRover)
-	audio_stop_sound(music_suspense)
-	
-	audio_play_sound(snd_goodclear,1,0)
-	setState(gamestates.allOverRedRover)
-	break;
-	
-case gamestates.endBad:
-  audio_stop_sound(music_suspense)
-  room_goto(rm_end)
-  
-  audio_play_sound(snd_badclear,1,0)
-  setState(gamestates.allOverRedRover)
-  break;
-  
  case gamestates.allOverRedRover:
+   audio_stop_sound(music_suspense)
+	 if (global.goodEnd){
+		 audio_play_sound(snd_goodclear,1,0)
+	 }else{
+		 audio_play_sound(snd_badclear,1,0)
+	 }
 	 resetGameOnKeyPress()
 	 break;
 

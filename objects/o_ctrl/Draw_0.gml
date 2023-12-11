@@ -106,25 +106,18 @@ case rm1:
 // global states. 
 switch (global.state) {
 
-case gamestates.endBad:
-  break;
-case gamestates.endGood:
-  break;
-
 case gamestates.allOverRedRover:
   //var b = c_black
   draw_set_color(c_black);
   draw_set_font(fnt1);
-  draw_set_halign(fa_center);
-
   if (global.goodEnd) {
 	draw_sprite(s_cutscene_goodend,0,0,0)
-    draw_text(xx, yy, "You both make it to safety. Good End!")
+    draw_text(x1, y1, "You both make it to safety. Good End!")
   } else {
     draw_sprite(s_cutscene_badend, 0, 0, 0)
-    draw_text(xx, yy, "Uh. Did you forget your injured partner on purpose? Bad End.")
+    draw_text(x1, y1, "Uh. Did you forget your injured partner on purpose? Bad End.")
   }
-  draw_text(xx, yy + 32, "Art, story and programming by Vela Noble. @velanoble velanoble.itch.io")
-  draw_text(xx, yy + 45, "Press space to play again.")
+  draw_text(x1, y1 + 32, "Art, story and programming by Vela Noble. @velanoble velanoble.itch.io")
+  draw_text(x1, y1 + 45, "Press space to play again.")
   break;
 }
