@@ -225,10 +225,15 @@ case gamestates.keyObtained:
 	break;
 
 case gamestates.endGood:
+	audio_pause_all()
+	audio_pause_sound()
+	room_goto(rm_end)
 	resetGameOnKeyPress();
 	break;
 	
 case gamestates.endBad:
+audio_pause_all()
+  room_goto(rm_end)
   resetGameOnKeyPress()
   break;
 

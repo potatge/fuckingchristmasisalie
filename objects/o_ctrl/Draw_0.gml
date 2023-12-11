@@ -120,7 +120,7 @@ switch (global.state){
 			draw_rectangle_color(0,0,xx_,yy_,b,b,b,b,false)
 			draw_set_alpha(1);
 
-			draw_text(xx,yy,"Uh did you forget your injured partner on purpose? End #2.")
+			draw_text(xx,yy,"Uh. Did you forget your injured partner on purpose? Bad End.")
 			draw_text(xx,yy+32,"Press space to play again.")
 			break;
 			
@@ -129,7 +129,7 @@ switch (global.state){
 				draw_set_alpha(0.4);
 				draw_rectangle_color(0,0,xx_,yy_,b,b,b,b,false)
 				draw_set_alpha(1);
-				draw_text(xx,yy,"You both make it to safety. Good end!")
+				draw_text(xx,yy,"You both make it to safety. Good End!")
 				draw_text(xx,yy+32,"Press space to play again.")
 				break;
 }

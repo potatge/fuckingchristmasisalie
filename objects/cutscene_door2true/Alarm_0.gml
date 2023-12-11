@@ -1,5 +1,8 @@
 if (global.state = gamestates.keyObtained){
-	//TODO find another way out.
-	//setState(gamestates.endDoor1);
-	setState(gamestates.endGood);
+	// if you have damien, good end. oth
+	if (!object_exists(o_chara_damien_follow)){
+		setState(gamestates.endBad)
+	}else{
+		setState(gamestates.endGood);
+	}
 }
