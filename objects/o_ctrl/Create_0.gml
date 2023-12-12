@@ -22,7 +22,7 @@ Opt[1]  = "temp1"
 maxOption = 1;
 curOption = 0;
 
-
+endsndPlayed = false;
 decisionLVL = 0;
 enum gamestates {
 

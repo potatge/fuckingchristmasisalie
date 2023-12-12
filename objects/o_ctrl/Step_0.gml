@@ -270,19 +270,14 @@ case gamestates.youDied:
 
 
 case gamestates.allOverRedRover:
- audio_stop_all();
-if (global.goodEnd){
-	setState(gamestates.endGood)
-	 audio_play_sound(snd_goodclear, 1, 0)
-}else{
-	setState(gamestates.endBad)
-	 audio_play_sound(snd_badclear, 1, 0)
-}
-  
-  break;
-
-case gamestates.endGood:
-case gamestates.endBad:
+	audio_stop_all();
+	if (global.goodEnd && !endsndPlayed){
+		audio_play_sound(snd_goodclear, 1, 0);
+		endsndPlayed = true;
+	}else{
+		 audio_play_sound(snd_badclear, 1, 0);
+		 endsndPlayed = true;
+	}
 	resetGameOnKeyPress()
     break;
 
