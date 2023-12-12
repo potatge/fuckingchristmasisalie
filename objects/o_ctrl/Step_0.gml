@@ -259,7 +259,7 @@ case gamestates.hasCarrot:
   break;
 
 case gamestates.givesCarrot:
-  o_reindeer.reindeerStates = reindeer.happy;
+  o_reindeer.reindeerStates = reindeer.eat;
   break;
 
   //death state 

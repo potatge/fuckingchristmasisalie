@@ -1,8 +1,10 @@
 enum reindeer {
 	mad,
+	eat,
 	happy
 }
-animPlay = false;
+anim1Play = false;
+anim2Play = false;
 fade = 0.008;
 name_ = "reindeer";
 reindeerStates = reindeer.mad;
