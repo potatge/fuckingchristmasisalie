@@ -27,8 +27,6 @@ switch (reindeerStates){
 		if (image_alpha <= 0){
 			anim2Play = true;
 			//audio_play_sound(snd_animalcry01,1,0);
-			instance_activate_object(cutscene_door3);
-			setState(gamestates.allOverRedRover)
 			instance_destroy();
 		}
 		
