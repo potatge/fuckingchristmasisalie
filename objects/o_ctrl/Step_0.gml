@@ -95,8 +95,10 @@ switch (room) {
 
 case rm_title:
   // only do this if not in option mode. TODO make nice menu.
-  if global.gameMode != mode.options && keyboard_check_pressed(vk_space) {
-    room_goto(rm1)
+  //global.gameMode != mode.options && 
+  if keyboard_check_pressed(vk_space) {
+	 instance_create_layer(x,y,"Instances",o_black_transition)
+	 // ROOM GOTO
   }
   break;
 
