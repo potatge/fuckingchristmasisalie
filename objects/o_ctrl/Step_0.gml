@@ -255,22 +255,27 @@ case gamestates.kitchenSelected:
   break;
 
 case gamestates.hasCarrot:
+  var deer = findItem("reindeer")
+  deer.myText = ["This should do the trick."]
   // draw sprite of carrot in player obj.
   break;
 
 case gamestates.givesCarrot:
   o_reindeer.reindeerStates = reindeer.eat;
+  setState(gamestates.givenCarrot)
   break;
+ 
+case gamestates.givenCarrot:
+break;
 
   //death state 
 case gamestates.youDied:
   resetGameOnKeyPress()
   break;
+  
+  
   /// endings 
-
-
 case gamestates.allOverRedRover:
-	audio_stop_all();
 	if (global.goodEnd && !endsndPlayed){
 		audio_play_sound(snd_goodclear, 1, 0);
 		endsndPlayed = true;

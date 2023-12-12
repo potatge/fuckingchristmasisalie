@@ -52,6 +52,7 @@ enum gamestates {
   kitchenSelected,
   hasCarrot,
   givesCarrot,
+  givenCarrot,
   //endings 
   youDied,
   endGood,
@@ -86,6 +87,7 @@ gamestatesStrings = [
   "kitchenSelected",
   "hasCarrot",
   "givesCarrot",
+  "givenCarrot",
   "youDied",
   "endGood",
   "endBAd",
