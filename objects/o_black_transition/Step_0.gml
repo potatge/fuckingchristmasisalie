@@ -1,7 +1,4 @@
-//happens every step
-
 image_alpha = alpha;
-
 
 switch (transition){
 	case trans.fadein:
@@ -14,8 +11,13 @@ switch (transition){
 		break;
 	
 	case trans.middleaction:
-		instance_activate_object(cutscene_door3);
-		setState(gamestates.allOverRedRover)
+	
+	    if (room == rm_title){
+			room_goto(rm_1)
+			
+		}
+		//instance_activate_object(cutscene_door3);
+		//setState(gamestates.allOverRedRover)
 		transition = trans.fadeout;
 		break;
 	
@@ -28,7 +30,6 @@ switch (transition){
 		instance_destroy();
 		}
 		break;
-	
 }
 
 
