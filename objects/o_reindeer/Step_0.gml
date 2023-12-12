@@ -1,4 +1,3 @@
-
 switch (reindeerStates){
 	
 	case reindeer.mad:

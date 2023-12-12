@@ -22,7 +22,6 @@ Opt[1]  = "temp1"
 maxOption = 1;
 curOption = 0;
 
-fridgeOpt = ["MILK n COOKIES", "WHITE WINE"]
 
 decisionLVL = 0;
 enum gamestates {
@@ -51,6 +50,7 @@ enum gamestates {
   reindeerAppears,
   reindeerBlocksDoor,
   kitchenSelected,
+  hasCarrot,
   givesCarrot,
   //endings 
   youDied,
@@ -84,6 +84,7 @@ gamestatesStrings = [
   "reindeerAppears",
   "reindeerBlocksDoor",
   "kitchenSelected",
+  "hasCarrot",
   "givesCarrot",
   "youDied",
   "endGood",
@@ -533,7 +534,7 @@ global.interactables = [
     isSpeaker: false,
     hasOption: false,
     portrait: noone,
-	endAction: false
+	endAction: reindeerEndaction
   },
   {
     name_: "kitchenarea2",

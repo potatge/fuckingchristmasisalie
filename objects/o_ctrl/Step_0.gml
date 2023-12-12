@@ -43,7 +43,7 @@ case mode.options:
 
   case 1:
     Opt[0] = "GRAB CARROT";
-    Opt[1] = "DON'T DO ANYTHING, FOR SOME REASON.";
+    Opt[1] = "DON'T DO ANYTHING.";
 
     break;
 
@@ -57,18 +57,22 @@ case mode.options:
   if keyboard_check_pressed(vk_enter) {
     //TODO make this SWITCH
     if (curOption == 0) {
-      show_debug_message("choose milk?")
+		
+		if (global.state == gamestates.kitchenSelected){
+			setState(gamestates.hasCarrot);
+		}
+      show_debug_message("choose CARROT?")
     }
 
     if (curOption == 1) {
-      show_debug_message("choose WINE")
+      show_debug_message("choose NOTHING")
     }
     //decisionLVL += 1;
     audio_play_sound(snd_blip01, 1, 0)
     global.gameMode = mode.playing;
 	
     // TODO WILL BREAK GAME? get it going to next state
-	if global.states = gamestates.fridgeSelected{
+	if global.state = gamestates.fridgeSelected{
 		setState(gamestates.doneWithFridge)
 	}
 
@@ -231,7 +235,7 @@ case gamestates.chaseBegins:
   
 case gamestates.keyObtained:
 	instance_deactivate_object(cutscene_door1);
-	instance_activate_object(cutscene_door2true);
+	instance_activate_object(cutscene_door2);
 	break;
 	
 	case gamestates.reindeerAppears:
@@ -252,13 +256,17 @@ case gamestates.keyObtained:
 		break;
 		
 	case gamestates.kitchenSelected:
+		global.gameMode = mode.options
+		break;
+		
+	case gamestates.hasCarrot:
+		// draw sprite of carrot.
 		break;
 		
 	case gamestates.givesCarrot:
-	    
 		o_reindeer.reindeerStates = reindeer.happy;
+		
 		break;
-	
 	
 	
 /// endings 

@@ -1,21 +1,21 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "o_reindeer",
+  "name": "cutscene_door2",
   "eventList": [
-    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,},
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,},
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,},
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":2,"isDnD":false,},
   ],
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "animals",
-    "path": "folders/Objects/animals.yy",
+    "name": "cutscenes",
+    "path": "folders/Objects/cutscenes.yy",
   },
   "parentObjectId": {
-    "name": "o_interactable",
-    "path": "objects/o_interactable/o_interactable.yy",
+    "name": "cutscene",
+    "path": "objects/cutscene/cutscene.yy",
   },
   "persistent": false,
   "physicsAngularDamping": 0.1,
@@ -33,8 +33,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "s_reindeer_mad_idle",
-    "path": "sprites/s_reindeer_mad_idle/s_reindeer_mad_idle.yy",
+    "name": "s_cutscene_area2",
+    "path": "sprites/s_cutscene_area2/s_cutscene_area2.yy",
   },
   "spriteMaskId": null,
   "visible": true,

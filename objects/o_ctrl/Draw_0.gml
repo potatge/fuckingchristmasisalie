@@ -106,6 +106,13 @@ case rm1:
 // global states. 
 switch (global.state) {
 
+
+case gamestates.hasCarrot:
+	draw_sprite(s_item_carrot,0,o_player.x,o_player.y-8)
+	// draw sprite 
+	break;
+	
+	
 case gamestates.allOverRedRover:
   //var b = c_black
   draw_set_color(c_white);

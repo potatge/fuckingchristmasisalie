@@ -40,17 +40,26 @@ if (global.playerCanMove){
 	if (left) {
 	  hspd -= spd;
 	  facing = 1
+	  if !audio_is_playing(snd_footstep01){
+		audio_play_sound(snd_footstep01,1,0)
+	  }
 	  image_xscale = 1;
 	  sprite_index = left_
 	}
 	
 	if (up) {
+	  if !audio_is_playing(snd_footstep01){
+		audio_play_sound(snd_footstep01,1,0)
+	  }
       facing = 2;
 	  vspd -= spd;
 	  sprite_index = up_mov
 	}
 
 	if (right) {
+	  if !audio_is_playing(snd_footstep01){
+		audio_play_sound(snd_footstep01,1,0)
+	  }
 	  facing = 3;
 	  hspd += spd;
 	  image_xscale = -1;
@@ -59,6 +68,9 @@ if (global.playerCanMove){
 
 
 	if (down) {
+	 if !audio_is_playing(snd_footstep01){
+		audio_play_sound(snd_footstep01,1,0)
+	  }
 	 facing = 4
 	 vspd += spd;
 	  sprite_index = down_mov
