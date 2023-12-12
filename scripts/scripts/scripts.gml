@@ -41,6 +41,17 @@ function fridgeEndAction(fridge) {
 
 }
 
+
+/*function doorEndaction(door){
+	if (global.state = gamestates.keyObtained){
+		setState(gamestates.allOverRedRover)
+	}else{
+		
+		
+	}
+}
+*/
+	
 function present1EndAction(present1) {
   with(o_item_present) {
     if (name_ == "present1") {
@@ -107,6 +118,8 @@ function letterEndaction(letter){
 		instance_destroy();
 	}
 }
+
+
 function resetGameOnKeyPress() {
   global.playerCanMove = false;
   if (keyboard_check_pressed(vk_space)) {

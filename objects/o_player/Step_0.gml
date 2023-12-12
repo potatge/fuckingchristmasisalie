@@ -176,10 +176,7 @@ var textall = array_length(item.myText)
 	o_ctrl.portraitDraw = true;
 	global.curSpeakerLeft = clairePortrait;
     global.curSpeakerRight = item.portrait;
-  }
-
-
-  } else {
+  }} else {
 	  
     //if (item.hasOption) {
     //  global.gameMode = mode.options;

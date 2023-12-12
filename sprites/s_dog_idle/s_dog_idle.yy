@@ -28,7 +28,7 @@
   "origin": 4,
   "parent": {
     "name": "animals",
-    "path": "folders/Sprites/chara/animals.yy",
+    "path": "folders/Sprites/animals.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

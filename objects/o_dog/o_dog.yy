@@ -12,7 +12,7 @@
   "overriddenProperties": [],
   "parent": {
     "name": "animals",
-    "path": "folders/Objects/chara/animals.yy",
+    "path": "folders/Objects/animals.yy",
   },
   "parentObjectId": {
     "name": "o_interactable",

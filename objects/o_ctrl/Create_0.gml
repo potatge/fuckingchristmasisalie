@@ -48,6 +48,10 @@ enum gamestates {
   chaseBegins,
   thirdPresentAppears,
   keyObtained,
+  reindeerAppears,
+  reindeerBlocksDoor,
+  hasCarrot,
+  //endings 
   youDied,
   endGood,
   endBad,
@@ -76,6 +80,9 @@ gamestatesStrings = [
   "chaseBegins",
   "thirdPresentAppears",
   "keyObtained",
+  "reindeerAppears",
+  "reindeerBlocksDoor",
+  "hasCarrot",
   "youDied",
   "endGood",
   "endBAd",
@@ -83,7 +90,7 @@ gamestatesStrings = [
   
 
 ]
-global.state = gamestates.everythingsFine;
+global.state =  gamestates.everythingsFine;//gamestates.lightsOut//
 //gamestates.lightsOut; 
 global.debugMode = true;
 sfxPlay = false;
@@ -426,11 +433,11 @@ global.interactables = [
   },
    {
     name_: "door",
-    myText: ["Are you sure you wanna run away?"],
+    myText: ["You yank on the door with all your might...and?"],
     sprite: s_bg_door,
     portrait: noone,
-    hasOption: true,
-	endAction: false,
+    hasOption: false,
+	endAction: false,// doorEndaction,
 	isSpeaker: false,
   },
   {
@@ -513,6 +520,17 @@ global.interactables = [
     isSpeaker: true,
     hasOption: false,
     portrait: s_char_portraits_damien_worried,
+	endAction: false
+  },
+   {
+    name_: "reindeer",
+    canGrab: false,
+    //TODO maybe trigger him yellow in distance.
+    myText: ["A very angry reindeer blocks the door! Maybe something will calm it down?"],
+    sprite: s_reindeer_mad_idle,
+    isSpeaker: false,
+    hasOption: false,
+    portrait: noone,
 	endAction: false
   }
 

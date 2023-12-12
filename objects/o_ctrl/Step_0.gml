@@ -42,8 +42,8 @@ case mode.options:
     break
 
   case 1:
-    Opt[0] = "PUT UNDER TREE";
-    Opt[1] = "DON'T";
+    Opt[0] = "MILK n COOKIES";
+    Opt[1] = "DON'T DO ANYTHING";
 
     break;
 
@@ -58,12 +58,10 @@ case mode.options:
     //TODO make this SWITCH
     if (curOption == 0) {
       show_debug_message("choose milk?")
-      //TODO MAKE OPTIONs MATTER global.goodEnd = true;
     }
 
     if (curOption == 1) {
       show_debug_message("choose WINE")
-      //global.goodEnd = false;
     }
     //decisionLVL += 1;
     audio_play_sound(snd_blip01, 1, 0)
@@ -108,6 +106,12 @@ case rm1:
 
   break;
 
+}
+
+// don't do this SHIT if not in playing room.
+
+if (room != rm1){
+	return;
 }
 
 switch (global.state) {
@@ -226,6 +230,34 @@ case gamestates.keyObtained:
 	instance_deactivate_object(cutscene_door1);
 	instance_activate_object(cutscene_door2true);
 	break;
+	
+	case gamestates.reindeerAppears:
+		// create reindeer and screen shake once
+		screenshake(20,3,0.3);
+		o_player.y += 32; //push player back;
+		instance_create_layer(o_bg_door.x,o_bg_door.y + 16,"Instances_top",o_reindeer)
+		var sink = findItem("sink")
+		with (sink){
+			myText = ["Take the carrot?"]
+			hasOption = true;
+		}
+		o_ctrl.decisionLVL += 1;
+		setState(gamestates.reindeerBlocksDoor);
+		break;
+
+	case gamestates.reindeerBlocksDoor:
+		// consistent state of it blocking door.
+		
+		break;
+		
+	case gamestates.hasCarrot:
+	    
+		o_reindeer.reindeerStates = reindeer.happy;
+		break;
+	
+	
+	
+/// endings 
 
 case gamestates.endGood:
 		 audio_play_sound(snd_goodclear,1,0)
