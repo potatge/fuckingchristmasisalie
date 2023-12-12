@@ -391,7 +391,7 @@ global.interactables = [
   {
     name_: "fireplace",
     hasOption: false,
-    myText: ["Yes, we're even doing the stockings thing. What age are we, 6?"],
+    myText: ["We're even doing the stockings thing."],
     sprite: noone,
     portrait: noone,
 	endAction: false,
@@ -410,7 +410,7 @@ global.interactables = [
     name_: "fridge",
     myText: ["What should I get from the fridge?"],
     endText: ["An unassuming plate of milk and cookies? Can't help to be superstitious.","Another bottle of wine? Hey, it's the holidays."],
-    sprite: s_bg_nightstand,
+    sprite: s_bg_fridge_closed,
     portrait: noone,
     hasOption: true,
 	endAction: fridgeEndAction,
@@ -539,7 +539,7 @@ global.interactables = [
   {
     name_: "kitchenarea2",
     myText: ["Grab the carrot?"],
-    sprite: s_bg_kitchenarea,
+    sprite: s_bg_kitchenarea2_empty,
     portrait: noone,
     hasOption: true,
 	endAction: kitchenarea2Endaction,

@@ -57,10 +57,10 @@ case mode.options:
   if keyboard_check_pressed(vk_enter) {
     //TODO make this SWITCH
     if (curOption == 0) {
-		
-		if (global.state == gamestates.kitchenSelected){
-			setState(gamestates.hasCarrot);
-		}
+
+      if (global.state == gamestates.kitchenSelected) {
+        setState(gamestates.hasCarrot);
+      }
       show_debug_message("choose CARROT?")
     }
 
@@ -70,11 +70,11 @@ case mode.options:
     //decisionLVL += 1;
     audio_play_sound(snd_blip01, 1, 0)
     global.gameMode = mode.playing;
-	
+
     // TODO WILL BREAK GAME? get it going to next state
-	if global.state = gamestates.fridgeSelected{
-		setState(gamestates.doneWithFridge)
-	}
+    if global.state = gamestates.fridgeSelected {
+      setState(gamestates.doneWithFridge)
+    }
 
   }
 
@@ -118,8 +118,8 @@ case rm1:
 
 // don't do this SHIT if not in playing room.
 
-if (room != rm1){
-	return;
+if (room != rm1) {
+  return;
 }
 
 switch (global.state) {
@@ -138,7 +138,6 @@ case gamestates.fridgeSelection:
   break;
 
 case gamestates.fridgeSelected:
-  show_debug_message("show fridge end text?")
   global.playerCanMove = false;
   break;
 
@@ -167,15 +166,15 @@ case gamestates.boxesGone:
 
 case gamestates.talkToDamien:
 
-//setState(gamestates.secondPresentAppears);
+  //setState(gamestates.secondPresentAppears);
   break;
 
 case gamestates.secondPresentAppears:
-instance_destroy(o_item_keys);
-instance_deactivate_object(cutscene_screamindistance);
-instance_activate_object(cutscene_secondpresent);
-var present2 = instance_create_layer(970, 136, "Instances", o_item_present)
-with(present2) {
+  instance_destroy(o_item_keys);
+  instance_deactivate_object(cutscene_screamindistance);
+  instance_activate_object(cutscene_secondpresent);
+  var present2 = instance_create_layer(970, 136, "Instances", o_item_present)
+  with(present2) {
     name_ = "present2";
   }
   break;
@@ -217,74 +216,73 @@ case gamestates.chaseBegins:
   instance_deactivate_object(cutscene_boxpile2)
   setState(gamestates.thirdPresentAppears)
   break;
-  
-  case gamestates.thirdPresentAppears:
-  
-  var present3 = instance_create_layer(702,792,"Instances",o_item_present)
-  with (present3){
-	  name_ = "present3";
-	  // the mysterious final present...
-	  sprite_index = s_item_present3;
-  }
-  
-  break;
- 
- case gamestates.youDied:
- resetGameOnKeyPress()
- break;
-  
-case gamestates.keyObtained:
-	instance_deactivate_object(cutscene_door1);
-	instance_activate_object(cutscene_door2);
-	break;
-	
-	case gamestates.reindeerAppears:
-		// create reindeer and screen shake once
-		screenshake(20,3,0.3);
-		o_player.y += 32; //push player back;
-		instance_create_layer(o_bg_door.x,o_bg_door.y + 16,"Instances_top",o_reindeer)
-		with (o_bg_kitchenarea){
-			name_ = "kitchenarea2";
-			show_debug_message("swap kitchenarea for 2");
-		}
-		o_ctrl.decisionLVL += 1;
-		setState(gamestates.reindeerBlocksDoor);
-		break;
 
-	case gamestates.reindeerBlocksDoor:
-		// consistent state of it blocking door.
-		break;
-		
-	case gamestates.kitchenSelected:
-		global.gameMode = mode.options
-		break;
-		
-	case gamestates.hasCarrot:
-		// draw sprite of carrot.
-		break;
-		
-	case gamestates.givesCarrot:
-		o_reindeer.reindeerStates = reindeer.happy;
-		
-		break;
-	
-	
-/// endings 
+case gamestates.thirdPresentAppears:
+
+  var present3 = instance_create_layer(702, 792, "Instances", o_item_present)
+  with(present3) {
+    name_ = "present3";
+    // the mysterious final present...
+    sprite_index = s_item_present3;
+  }
+
+  break;
+
+case gamestates.keyObtained:
+  instance_deactivate_object(cutscene_door1);
+  instance_activate_object(cutscene_door2);
+  break;
+
+case gamestates.reindeerAppears:
+  // create reindeer and screen shake once
+  screenshake(20, 3, 0.3);
+  o_player.y += 32; //push player back;
+  instance_create_layer(o_bg_door.x, o_bg_door.y + 16, "Instances_top", o_reindeer)
+  with(o_bg_kitchenarea) {
+    name_ = "kitchenarea2";
+    show_debug_message("swap kitchenarea for 2");
+  }
+  o_ctrl.decisionLVL += 1;
+  setState(gamestates.reindeerBlocksDoor);
+  break;
+
+case gamestates.reindeerBlocksDoor:
+  //consistent state of it blocking door.
+  break;
+
+case gamestates.kitchenSelected:
+  global.gameMode = mode.options
+  break;
+
+case gamestates.hasCarrot:
+  // draw sprite of carrot in player obj.
+  break;
+
+case gamestates.givesCarrot:
+  o_reindeer.reindeerStates = reindeer.happy;
+  break;
+
+  //death state 
+case gamestates.youDied:
+  resetGameOnKeyPress()
+  break;
+  /// endings 
 
 case gamestates.endGood:
-		 audio_play_sound(snd_goodclear,1,0)
-	     setState(gamestates.allOverRedRover)
-	     break;
+  audio_stop_all();
+  audio_play_sound(snd_goodclear, 1, 0)
+  setState(gamestates.allOverRedRover)
+  break;
 
 case gamestates.endBad:
-	 audio_play_sound(snd_badclear,1,0)
-	 setState(gamestates.allOverRedRover)
-	break;
+  audio_stop_all();
+  audio_play_sound(snd_badclear, 1, 0)
+  setState(gamestates.allOverRedRover)
+  break;
 
- case gamestates.allOverRedRover:
-   audio_stop_sound(music_suspense)
-	 
-	 resetGameOnKeyPress()
-	 break;
+case gamestates.allOverRedRover:
+
+  resetGameOnKeyPress()
+  break;
 
 }

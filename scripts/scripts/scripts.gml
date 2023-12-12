@@ -120,7 +120,6 @@ function letterEndaction(letter){
 }
 
 function kitchenarea2Endaction(kitchenarea2){
-	// end action TODO.
 	o_bg_kitchenarea.sprite_index = s_bg_kitchenarea2_empty;
 	setState(gamestates.hasCarrot)
 }
@@ -130,7 +129,9 @@ function reindeerEndaction(){
 	if (global.state == gamestates.hasCarrot){
 		setState(gamestates.givesCarrot)
 	}else{
-		
+		if (!audio_is_playing(snd_animalcry01)){
+			audio_play_sound(snd_animalcry01,1,0)
+		}
 	}
 }
 function resetGameOnKeyPress() {

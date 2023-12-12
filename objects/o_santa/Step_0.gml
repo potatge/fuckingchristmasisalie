@@ -12,7 +12,7 @@ case santa.idle:
 
 case santa.awakened:
   //play anim
-  show_debug_message("play anim. freeze chara! & alarm for 100")
+  //show_debug_message("play anim. freeze chara! & alarm for 100")
   image_xscale = -1;
   sprite_index = s_santa_left_idle;
 
@@ -25,7 +25,7 @@ case santa.awakened:
 
 case santa.pathstarted:
   global.playerCanMove = true;
-  show_debug_message("path started")
+  //show_debug_message("path started")
   santaStates = santa.onpath;
   break;
 
@@ -38,19 +38,19 @@ case santa.onpath:
   var down = 270;
   //directional santa 
   if (direction >= left && direction < up) {
-    show_debug_message("up left")
+   // show_debug_message("up left")
     image_xscale = -1;
     sprite_index = s_santa_left_move;
   }
 
   if (direction >= up && direction < 180) {
-    show_debug_message("up right")
+   // show_debug_message("up right")
     sprite_index = s_santa_up;
     image_xscale = 1;
   }
 
   if (direction >= right && direction < down) {
-    show_debug_message("down right")
+   // show_debug_message("down right")
     sprite_index = s_santa_down;
     image_xscale = 1;
   }
@@ -91,7 +91,7 @@ case santa.attacking:
   sprite_index = s_santa_sackbash;
 
   if (alarm[1] <= 0) {
-    show_debug_message("santa attacking alarm")
+   // show_debug_message("santa attacking alarm")
     alarm[1] = 200;
   }
   break;
@@ -108,7 +108,7 @@ case path.notstarted:
 case path.livingroomstart:
   path_start(p_santa2_livingroom, spd, path_action_reverse, true)
   //TODO. is this causing glitch path_position = 0;
-  show_debug_message("now going for living room.")
+  //show_debug_message("now going for living room.")
   santaStates = santa.pathstarted;
   //otherwise restarting too much?
   santaPath = path.livingroomonpath;
@@ -118,7 +118,7 @@ case path.livingroomonpath:
   //at end of path
   if (path_position = 1) {
     var here = path_position;
-    show_debug_message("reverse livingroom path")
+   // show_debug_message("reverse livingroom path")
     path_reverse(p_santa2_livingroom);
     path_start(p_santa2_livingroom, spd, path_action_reverse, 1);
     path_position = 1 - here;
@@ -129,7 +129,7 @@ case path.livingroomonpath:
 case path.livingroomturnaround:
 
   if (path_position >= 1) {
-    show_debug_message("restart up and down hallway")
+   // show_debug_message("restart up and down hallway")
     path_start(p_santa1_hallway, spd, path_action_reverse, 1);
     santaPath = path.upanddownhallway;
   }
@@ -149,4 +149,4 @@ case path.upanddownhallway:
 
 }
 
-show_debug_message(path_position)
+//show_debug_message(path_position)
