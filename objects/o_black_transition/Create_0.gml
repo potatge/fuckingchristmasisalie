@@ -1,4 +1,4 @@
-fade  = 0.009;
+fade  = 0.02;
 alpha = 0;
 image_alpha = alpha;
 

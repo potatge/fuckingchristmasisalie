@@ -281,13 +281,14 @@ case gamestates.youDied:
   
   /// endings 
 case gamestates.allOverRedRover:
-	if (global.goodEnd && !endsndPlayed){
+	/*if (global.goodEnd && !endsndPlayed){
 		audio_play_sound(snd_goodclear, 1, 0);
 		endsndPlayed = true;
 	}else{
 		 audio_play_sound(snd_badclear, 1, 0);
 		 endsndPlayed = true;
 	}
+	*/
 	resetGameOnKeyPress()
     break;
 
