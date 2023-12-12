@@ -268,21 +268,22 @@ case gamestates.youDied:
   break;
   /// endings 
 
-case gamestates.endGood:
-  audio_stop_all();
-  audio_play_sound(snd_goodclear, 1, 0)
-  setState(gamestates.allOverRedRover)
-  break;
-
-case gamestates.endBad:
-  audio_stop_all();
-  audio_play_sound(snd_badclear, 1, 0)
-  setState(gamestates.allOverRedRover)
-  break;
 
 case gamestates.allOverRedRover:
-
-  resetGameOnKeyPress()
+ audio_stop_all();
+if (global.goodEnd){
+	setState(gamestates.endGood)
+	 audio_play_sound(snd_goodclear, 1, 0)
+}else{
+	setState(gamestates.endBad)
+	 audio_play_sound(snd_badclear, 1, 0)
+}
+  
   break;
+
+case gamestates.endGood:
+case gamestates.endBad:
+	resetGameOnKeyPress()
+    break;
 
 }
