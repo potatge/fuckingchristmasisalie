@@ -42,8 +42,8 @@ case mode.options:
     break
 
   case 1:
-    Opt[0] = "MILK n COOKIES";
-    Opt[1] = "DON'T DO ANYTHING";
+    Opt[0] = "GRAB CARROT";
+    Opt[1] = "DON'T DO ANYTHING, FOR SOME REASON.";
 
     break;
 
@@ -66,7 +66,11 @@ case mode.options:
     //decisionLVL += 1;
     audio_play_sound(snd_blip01, 1, 0)
     global.gameMode = mode.playing;
-    setState(gamestates.doneWithFridge)
+	
+    // TODO WILL BREAK GAME? get it going to next state
+	if global.states = gamestates.fridgeSelected{
+		setState(gamestates.doneWithFridge)
+	}
 
   }
 
@@ -130,7 +134,6 @@ case gamestates.fridgeSelection:
   break;
 
 case gamestates.fridgeSelected:
-
   show_debug_message("show fridge end text?")
   global.playerCanMove = false;
   break;
@@ -236,10 +239,9 @@ case gamestates.keyObtained:
 		screenshake(20,3,0.3);
 		o_player.y += 32; //push player back;
 		instance_create_layer(o_bg_door.x,o_bg_door.y + 16,"Instances_top",o_reindeer)
-		var sink = findItem("sink")
-		with (sink){
-			myText = ["Take the carrot?"]
-			hasOption = true;
+		with (o_bg_kitchenarea){
+			name_ = "kitchenarea2";
+			show_debug_message("swap kitchenarea for 2");
 		}
 		o_ctrl.decisionLVL += 1;
 		setState(gamestates.reindeerBlocksDoor);
@@ -247,10 +249,12 @@ case gamestates.keyObtained:
 
 	case gamestates.reindeerBlocksDoor:
 		// consistent state of it blocking door.
-		
 		break;
 		
-	case gamestates.hasCarrot:
+	case gamestates.kitchenSelected:
+		break;
+		
+	case gamestates.givesCarrot:
 	    
 		o_reindeer.reindeerStates = reindeer.happy;
 		break;

@@ -119,6 +119,11 @@ function letterEndaction(letter){
 	}
 }
 
+function kitchenarea2Endaction(kitchenarea2){
+
+	// end action TODO.
+	o_bg_kitchenarea.sprite_index = s_bg_kitchenarea2_empty;
+}
 
 function resetGameOnKeyPress() {
   global.playerCanMove = false;

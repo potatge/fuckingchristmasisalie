@@ -50,7 +50,8 @@ enum gamestates {
   keyObtained,
   reindeerAppears,
   reindeerBlocksDoor,
-  hasCarrot,
+  kitchenSelected,
+  givesCarrot,
   //endings 
   youDied,
   endGood,
@@ -82,7 +83,8 @@ gamestatesStrings = [
   "keyObtained",
   "reindeerAppears",
   "reindeerBlocksDoor",
-  "hasCarrot",
+  "kitchenSelected",
+  "givesCarrot",
   "youDied",
   "endGood",
   "endBAd",
@@ -532,7 +534,16 @@ global.interactables = [
     hasOption: false,
     portrait: noone,
 	endAction: false
-  }
+  },
+  {
+    name_: "kitchenarea2",
+    myText: ["Grab the carrot?"],
+    sprite: s_bg_kitchenarea,
+    portrait: noone,
+    hasOption: true,
+	endAction: kitchenarea2Endaction,
+	isSpeaker: false,
+  },
 
 
 ]
