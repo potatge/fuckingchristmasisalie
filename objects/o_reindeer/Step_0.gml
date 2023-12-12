@@ -3,6 +3,14 @@ switch (reindeerStates){
 	case reindeer.mad:
 		sprite_index = s_reindeer_mad_idle;
 		break;
+		
+	case reindeer.roar:
+	sprite_index = s_reindeer_roar;
+	if (alarm[1]<= 0){
+		alarm[1]=100;
+		//roar for 100 then back to normal.
+	}
+	break;
 	
 	case reindeer.eat:
 		sprite_index = s_reindeer_eat;

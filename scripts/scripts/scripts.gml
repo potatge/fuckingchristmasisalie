@@ -130,6 +130,7 @@ function reindeerEndaction(){
 		setState(gamestates.givesCarrot)
 	}else{
 		if (!audio_is_playing(snd_animalcry01)){
+			o_reindeer.reindeerStates = reindeer.roar;
 			audio_play_sound(snd_animalcry01,1,0)
 		}
 	}

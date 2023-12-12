@@ -1,5 +1,6 @@
 enum reindeer {
 	mad,
+	roar,
 	eat,
 	happy
 }

@@ -1,7 +1,7 @@
 {
   "resourceType": "GMSprite",
   "resourceVersion": "1.0",
-  "name": "s_reindeer_road",
+  "name": "s_reindeer_roar",
   "bbox_bottom": 63,
   "bbox_left": 1,
   "bbox_right": 61,
@@ -34,7 +34,7 @@
   "sequence": {
     "resourceType": "GMSequence",
     "resourceVersion": "1.4",
-    "name": "s_reindeer_road",
+    "name": "s_reindeer_roar",
     "autoRecord": true,
     "backdropHeight": 768,
     "backdropImageOpacity": 0.5,
@@ -56,9 +56,9 @@
     "timeUnits": 1,
     "tracks": [
       {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"1.0","Keyframes":[
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"836da59f-e9ea-44ba-b6ee-6fb51fc9ca02","path":"sprites/s_reindeer_road/s_reindeer_road.yy",},},},"Disabled":false,"id":"ae81eee5-c89f-4a2d-ab5c-c4930d9d1ab9","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"117d4a74-2b7f-42e6-9e19-ca8febd759d3","path":"sprites/s_reindeer_road/s_reindeer_road.yy",},},},"Disabled":false,"id":"1a76ca22-1b37-4791-a583-32c7da166340","IsCreationKey":false,"Key":1.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"d3580462-c23d-4f38-8efc-281603a2e969","path":"sprites/s_reindeer_road/s_reindeer_road.yy",},},},"Disabled":false,"id":"eca2cb18-19c8-4e9b-bd1d-62ce0bced6eb","IsCreationKey":false,"Key":2.0,"Length":1.0,"Stretch":false,},
+            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"836da59f-e9ea-44ba-b6ee-6fb51fc9ca02","path":"sprites/s_reindeer_roar/s_reindeer_roar.yy",},},},"Disabled":false,"id":"ae81eee5-c89f-4a2d-ab5c-c4930d9d1ab9","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
+            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"117d4a74-2b7f-42e6-9e19-ca8febd759d3","path":"sprites/s_reindeer_roar/s_reindeer_roar.yy",},},},"Disabled":false,"id":"1a76ca22-1b37-4791-a583-32c7da166340","IsCreationKey":false,"Key":1.0,"Length":1.0,"Stretch":false,},
+            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"d3580462-c23d-4f38-8efc-281603a2e969","path":"sprites/s_reindeer_roar/s_reindeer_roar.yy",},},},"Disabled":false,"id":"eca2cb18-19c8-4e9b-bd1d-62ce0bced6eb","IsCreationKey":false,"Key":2.0,"Length":1.0,"Stretch":false,},
           ],},"modifiers":[],"spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange": null,
