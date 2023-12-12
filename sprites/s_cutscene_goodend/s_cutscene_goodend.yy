@@ -2,9 +2,9 @@
   "resourceType": "GMSprite",
   "resourceVersion": "1.0",
   "name": "s_cutscene_goodend",
-  "bbox_bottom": 359,
+  "bbox_bottom": 1079,
   "bbox_left": 0,
-  "bbox_right": 639,
+  "bbox_right": 1919,
   "bbox_top": 0,
   "bboxMode": 0,
   "collisionKind": 1,
@@ -13,14 +13,14 @@
   "edgeFiltering": false,
   "For3D": false,
   "frames": [
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"953b53d8-94cd-4749-acda-42b3d67adfa8",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"ba5d745f-fd06-4d74-8a2c-55619bcca506",},
   ],
   "gridX": 0,
   "gridY": 0,
-  "height": 360,
+  "height": 1080,
   "HTile": false,
   "layers": [
-    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"28be3800-ebb0-46e8-8673-f4bfe8da9ad3","blendMode":0,"displayName":"default","isLocked":false,"opacity":100.0,"visible":true,},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"0d801ed1-e708-4a90-9bec-5472cddefa94","blendMode":0,"displayName":"default","isLocked":false,"opacity":100.0,"visible":true,},
   ],
   "nineSlice": null,
   "origin": 0,
@@ -54,7 +54,7 @@
     "timeUnits": 1,
     "tracks": [
       {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"1.0","Keyframes":[
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"953b53d8-94cd-4749-acda-42b3d67adfa8","path":"sprites/s_cutscene_goodend/s_cutscene_goodend.yy",},},},"Disabled":false,"id":"dc8693b0-181e-4fa7-bce3-70524040b4ed","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
+            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"ba5d745f-fd06-4d74-8a2c-55619bcca506","path":"sprites/s_cutscene_goodend/s_cutscene_goodend.yy",},},},"Disabled":false,"id":"77df9434-d8f6-4431-8716-c470e6f6a1c6","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
           ],},"modifiers":[],"spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange": null,
@@ -70,5 +70,5 @@
   },
   "type": 0,
   "VTile": false,
-  "width": 640,
+  "width": 1920,
 }
