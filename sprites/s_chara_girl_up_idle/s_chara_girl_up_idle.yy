@@ -13,14 +13,15 @@
   "edgeFiltering": false,
   "For3D": false,
   "frames": [
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"0d6cc8ad-9d0a-4672-aa4e-c2af55d30494",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"1a9da25e-1776-452d-a0be-f127b801afa7",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"bc63c8b1-c71e-42d9-935c-3ad5bfb224f5",},
   ],
   "gridX": 0,
   "gridY": 0,
   "height": 32,
   "HTile": false,
   "layers": [
-    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"1f31bae4-e46e-4121-8bba-ebcee22007bf","blendMode":0,"displayName":"default","isLocked":false,"opacity":100.0,"visible":true,},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"17c4094a-1b31-49e3-97f6-43453e847d7e","blendMode":0,"displayName":"default","isLocked":false,"opacity":100.0,"visible":true,},
   ],
   "nineSlice": null,
   "origin": 4,
@@ -43,7 +44,7 @@
     "events": {"resourceType":"KeyframeStore<MessageEventKeyframe>","resourceVersion":"1.0","Keyframes":[],},
     "eventStubScript": null,
     "eventToFunction": {},
-    "length": 1.0,
+    "length": 2.0,
     "lockOrigin": false,
     "moments": {"resourceType":"KeyframeStore<MomentsEventKeyframe>","resourceVersion":"1.0","Keyframes":[],},
     "playback": 1,
@@ -54,7 +55,8 @@
     "timeUnits": 1,
     "tracks": [
       {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"1.0","Keyframes":[
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"0d6cc8ad-9d0a-4672-aa4e-c2af55d30494","path":"sprites/s_chara_girl_up_idle/s_chara_girl_up_idle.yy",},},},"Disabled":false,"id":"6a778aaf-d554-4508-9171-628d6317491c","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
+            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"1a9da25e-1776-452d-a0be-f127b801afa7","path":"sprites/s_chara_girl_up_idle/s_chara_girl_up_idle.yy",},},},"Disabled":false,"id":"c169a4e9-327a-419b-8ad2-27afb5cc6fd7","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
+            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"bc63c8b1-c71e-42d9-935c-3ad5bfb224f5","path":"sprites/s_chara_girl_up_idle/s_chara_girl_up_idle.yy",},},},"Disabled":false,"id":"302b53b5-2039-4ed0-8368-894a6e03f87e","IsCreationKey":false,"Key":1.0,"Length":1.0,"Stretch":false,},
           ],},"modifiers":[],"spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange": null,

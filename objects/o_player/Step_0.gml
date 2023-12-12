@@ -11,11 +11,12 @@ var hspd = 0 // Replace with your actual horizontal speed variable
 var vspd = 0; // Replace with your actual vertical speed variable
 
 //sprites
-var up_idle = s_chara_girl_up_idle
-var up_mov = s_chara_girl_up
-var down_mov = s_chara_girl_down
-var down_idle = s_chara_girl_down_idle
-var left_ = s_chara_girl_left
+var up_idle = s_chara_girl_up_idle;
+var up_mov = s_chara_girl_up;
+var down_mov = s_chara_girl_down;
+var down_idle = s_chara_girl_down_idle;
+var left_ = s_chara_girl_left;
+var left_idle = s_chara_girl_left_idle;
 
 switch (playerState) {
 
@@ -77,12 +78,21 @@ if (global.playerCanMove){
 	}
 
 	// revert back to idle
-	if (keyboard_check_released(vk_left) || keyboard_check_released(vk_right)) {
-	  sprite_index = down_idle
+	if keyboard_check_released(vk_left){
+	  sprite_index = left_idle;
+	  image_xscale = 1;
+	}
+	
+	if keyboard_check_released(vk_right){
+		sprite_index = left_idle;
+		image_xscale = -1;
 	}
 
-	if (keyboard_check_released(vk_down || keyboard_check_released(vk_up))) {
-	  sprite_index = down_idle
+	if keyboard_check_released(vk_down){
+		sprite_index = down_idle
+	}
+	if keyboard_check_released(vk_up) {
+		sprite_index = up_idle
 	}
 
 }else{

@@ -33,8 +33,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "s_chara_girl_temp",
-    "path": "sprites/s_chara_girl_temp/s_chara_girl_temp.yy",
+    "name": "s_chara_girl_down_idle",
+    "path": "sprites/s_chara_girl_down_idle/s_chara_girl_down_idle.yy",
   },
   "spriteMaskId": {
     "name": "s_collision",
