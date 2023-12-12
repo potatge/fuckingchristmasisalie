@@ -240,6 +240,9 @@ case gamestates.reindeerAppears:
   screenshake(20, 3, 0.3);
   o_player.y += 32; //push player back;
   instance_create_layer(o_bg_door.x, o_bg_door.y + 16, "Instances_top", o_reindeer)
+  with (o_bg_door){
+	 sprite_index = s_bg_door_open;
+  }
   with(o_bg_kitchenarea) {
     name_ = "kitchenarea2";
     show_debug_message("swap kitchenarea for 2");
