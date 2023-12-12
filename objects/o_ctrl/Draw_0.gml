@@ -108,11 +108,8 @@ switch (global.state) {
 
 	
 case gamestates.allOverRedRover:
-  //var b = c_black
   draw_set_color(c_white);
   draw_set_font(fnt1);
-  draw_text(x1, y1 + 32, "Art, story and programming by Vela Noble.\n@velanoble velanoble.itch.io")
-  draw_text(x1, y1 + 56, "Press space to play again.")
   var width = camera_get_view_width(view_camera[0])
   var height = camera_get_view_height(view_camera[0])
   if (global.goodEnd) {
@@ -122,6 +119,7 @@ case gamestates.allOverRedRover:
     draw_sprite_stretched(s_cutscene_badend, 0, x1, y1,width,height)
     draw_text(x1, y1, "Uh. Did you forget your injured partner on purpose? Bad End.")
   }
-  
+  draw_text(x1, y1 + 32, "Art, story and programming by Vela Noble.\n@velanoble velanoble.itch.io")
+  draw_text(x1, y1 + 56, "Press space to play again.")
   break;
 }

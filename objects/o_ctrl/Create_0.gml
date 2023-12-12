@@ -124,7 +124,7 @@ global.interactables = [
 
   {
     name_: "moving boxes",
-    myText: ["We haven't finished unpacking everything.", "It's not like I wanted to live in this dump, but...we needed to relocate for the job."],
+    myText: ["We haven't finished unpacking everything.","It's a bit of a dump, but at least we have a roof over our heads."],
     hasOption: false,
 	isSpeaker: false,
     portrait: noone,
@@ -472,7 +472,7 @@ global.interactables = [
 	{
     name_: "damien",
     canGrab: false,
-    myText: ["I'll go and get another bottle."],
+    myText: ["I'll go and get another bottle.","Well, I'll start cooking dinner."],
     sprite: s_chara_damien_collapsed,
     isSpeaker: true,
     hasOption: false,
