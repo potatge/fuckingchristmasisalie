@@ -29,7 +29,6 @@ switch (damienStates){
 		break;
 	
 	case states.cellar:
-		//damienGoToRoom(rm_cellar,160,224);
 		sprite_index  = s_chara_damien_collapsed;
 		name_ = "damien3";
 		x = 90;

@@ -99,6 +99,7 @@ case rm_title:
   break;
 
 case rm1:
+
   if (musicPlay && !audio_is_playing(curSong)) {
     audio_play_sound(curSong, 1, true);
   }
@@ -114,9 +115,9 @@ case rm1:
 
 // don't do this SHIT if not in playing room.
 
-if (room != rm1) {
-  return;
-}
+//if (room != rm1) {
+ // return;
+//}
 
 switch (global.state) {
 

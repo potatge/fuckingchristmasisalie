@@ -41,12 +41,6 @@ case mode.gameOver:
 switch (room) {
 
 
-case rm_end:
-  draw_sprite_stretched_ext(s_splashscreen_title, 0, 0, 0, camera_get_view_width(view_camera[0]), camera_get_view_height(view_camera[0]), c_, 1);
-  //draw_text(xx , yy / 2, )
-
-  break;
-
 case rm_title:
   draw_set_font(fnt2)
   draw_sprite_stretched_ext(s_splashscreen_title, 0, 0, 0, camera_get_view_width(view_camera[0]), camera_get_view_height(view_camera[0]), c_, 1);
