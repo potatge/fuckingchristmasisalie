@@ -1,13 +1,13 @@
 //movement
-var left = keyboard_check_direct(vk_left)
-var right = keyboard_check_direct(vk_right)
-var up = keyboard_check_direct(vk_up)
-var down = keyboard_check_direct(vk_down)
+var left = keyboard_check_direct(vk_left);
+var right = keyboard_check_direct(vk_right);
+var up = keyboard_check_direct(vk_up);
+var down = keyboard_check_direct(vk_down);
 
 // Get player position and speed
 var player_x = x; // Replace with your actual player x-coordinate
 var player_y = y; // Replace with your actual player y-coordinate
-var hspd = 0 // Replace with your actual horizontal speed variable
+var hspd = 0; // Replace with your actual horizontal speed variable
 var vspd = 0; // Replace with your actual vertical speed variable
 
 //sprites
@@ -42,39 +42,39 @@ if (global.playerCanMove){
 	  hspd -= spd;
 	  facing = 1
 	  if !audio_is_playing(snd_footstep01){
-		audio_play_sound(snd_footstep01,1,0)
+		audio_play_sound(snd_footstep01,1,0);
 	  }
 	  image_xscale = 1;
-	  sprite_index = left_
+	  sprite_index = left_;
 	}
 	
 	if (up) {
 	  if !audio_is_playing(snd_footstep01){
-		audio_play_sound(snd_footstep01,1,0)
+		audio_play_sound(snd_footstep01,1,0);
 	  }
       facing = 2;
 	  vspd -= spd;
-	  sprite_index = up_mov
+	  sprite_index = up_mov;
 	}
 
 	if (right) {
 	  if !audio_is_playing(snd_footstep01){
-		audio_play_sound(snd_footstep01,1,0)
+		audio_play_sound(snd_footstep01,1,0);
 	  }
 	  facing = 3;
 	  hspd += spd;
 	  image_xscale = -1;
-	  sprite_index = left_
+	  sprite_index = left_;
 	}
 
 
 	if (down) {
 	 if !audio_is_playing(snd_footstep01){
-		audio_play_sound(snd_footstep01,1,0)
+		audio_play_sound(snd_footstep01,1,0);
 	  }
-	 facing = 4
+	 facing = 4;
 	 vspd += spd;
-	  sprite_index = down_mov
+	  sprite_index = down_mov;
 	}
 
 	// revert back to idle
@@ -89,10 +89,10 @@ if (global.playerCanMove){
 	}
 
 	if keyboard_check_released(vk_down){
-		sprite_index = down_idle
+		sprite_index = down_idle;
 	}
 	if keyboard_check_released(vk_up) {
-		sprite_index = up_idle
+		sprite_index = up_idle;
 	}
 
 }else{
@@ -177,8 +177,8 @@ if (item == noone && cut == noone) {
 //dialogue system. needs to be at bottom rn.
 if (keyboard_check_pressed(vk_space) && item != noone) {
 
-var cur = o_ctrl.curText
-var textall = array_length(item.myText)
+var cur = o_ctrl.curText;
+var textall = array_length(item.myText);
 
   if (cur < textall) {
 	  
@@ -205,15 +205,12 @@ var textall = array_length(item.myText)
    // }
 
     if (item.endAction) {
-		show_debug_message("end action?")
 		item.endAction(item);
-      //handle end action
-
     } else {
 		resetTextToNone();
 	}
   }
-} // cutscene activated 
+} 
 
 if (cut != noone && !cut.frozePlayerForCutscene && cut.freezePlayer){
 	if (cut.alarm[1] <= 0){

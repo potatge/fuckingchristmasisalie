@@ -4,7 +4,7 @@ case states2.follow:
 
 	var spd = 3;
 	var o = o_player;
-	var tile = 32
+	var tile = 32;
 	
 	
 	if (o_player.x < bbox_left){
@@ -14,7 +14,7 @@ case states2.follow:
 	
 	
 	if (o_player.y < bbox_top){
-		sprite_index = s_char_damien_up_move
+		sprite_index = s_char_damien_up_move;
 	}
 	
 	

@@ -30,5 +30,5 @@ enum path{
 	
 }
 
-santaPath = path.notstarted
+santaPath = path.notstarted;
 

@@ -1,7 +1,4 @@
-/// @description Insert description here
-// You can write your code in this editor
-
-name_ = "wine full"
+name_ = "wine full";
 
 
 

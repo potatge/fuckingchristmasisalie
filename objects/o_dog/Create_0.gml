@@ -1,7 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
 playedAnim = false;
-name_ = "dog"
+name_ = "dog";
 
 
 

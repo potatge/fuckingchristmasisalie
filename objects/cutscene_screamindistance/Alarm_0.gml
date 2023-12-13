@@ -1,1 +1,1 @@
-screenshake(30,3,0.3)
+screenshake(30,3,0.3);

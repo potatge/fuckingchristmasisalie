@@ -13,7 +13,7 @@ switch (damienStates){
 			y = 232;
 			sprite_index = s_char_damien_idle;
 			maxText = 0;
-			myText = ["I'll go get a new bottle!"]
+			myText = ["I'll go get a new bottle!"];
 		break;
 	
 	case states.hidden:
@@ -25,19 +25,19 @@ switch (damienStates){
 	     x = 789;
 		 y = 545;
 		sprite_index = s_chara_damien_collapsed;
-		name_ = "damien2"
+		name_ = "damien2";
 		break;
 	
 	case states.cellar:
 		//damienGoToRoom(rm_cellar,160,224);
 		sprite_index  = s_chara_damien_collapsed;
-		name_ = "damien3"
+		name_ = "damien3";
 		x = 90;
 		y = 1055;
 		break;
 	
 	case states.followher:
-		instance_change(o_chara_damien_follow,true)
+		instance_change(o_chara_damien_follow,true);
 		break;
 		
 		case states.dead:

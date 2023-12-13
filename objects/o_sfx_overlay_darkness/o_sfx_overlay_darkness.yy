@@ -9,8 +9,8 @@
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "cutscenes",
-    "path": "folders/Objects/cutscenes.yy",
+    "name": "sfx",
+    "path": "folders/Objects/sfx.yy",
   },
   "parentObjectId": null,
   "persistent": false,

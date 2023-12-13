@@ -1,7 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
-var pad = 150
-var nearplayer = collision_rectangle(bbox_left - pad, bbox_top - pad, bbox_right + pad, bbox_bottom + pad,o_player,false,false)
+var pad = 150;
+var nearplayer = collision_rectangle(bbox_left - pad, bbox_top - pad, bbox_right + pad, bbox_bottom + pad,o_player,false,false);
 	
 if (nearplayer && !animPlayed){
 		if (alarm[0] <= 0){

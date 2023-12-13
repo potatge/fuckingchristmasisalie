@@ -12,7 +12,7 @@ enum trans{
 	
 }
 
-transition = trans.fadein
+transition = trans.fadein;
 
 
 

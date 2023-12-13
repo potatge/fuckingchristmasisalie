@@ -2,5 +2,5 @@ cutsceneHappening = false;
 frozePlayerForCutscene = false;
 freezePlayer = false;
 name_ = "cutscene_lightsout";
-myText = "---!"
-instance_deactivate_object(self);
+myText = "---!";
+instance_deactivate_object(cutscene_lightsout);
