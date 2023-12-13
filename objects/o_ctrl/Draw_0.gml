@@ -42,10 +42,17 @@ switch (room) {
 
 
 case rm_title:
-  draw_set_font(fnt2)
+  draw_set_font(fnt2);
+  draw_set_halign(fa_left);
   draw_sprite_stretched_ext(s_splashscreen_title, 0, 0, 0, camera_get_view_width(view_camera[0]), camera_get_view_height(view_camera[0]), c_, 1);
   var txt = "Arrows to move.\nEnter to Select.\nSpace to interact.\nF to fullscreen."
-  draw_text(xx_ - string_width(txt), yy_ - 80, txt)
+  if (!global.audio){
+	var snd = "TAB to turn ON sound!!"
+  }else{
+	  var snd = "TAB to turn OFF sound!"
+  }
+ draw_text(xx_ - string_width(txt), yy_ - 80, txt)
+ draw_text(xx_ - string_width(snd), yy_ - 100,snd)
   break;
 
 case rm1:

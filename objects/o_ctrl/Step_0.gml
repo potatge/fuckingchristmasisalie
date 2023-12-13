@@ -90,29 +90,41 @@ case mode.gameOver:
 
 }
 
+//global audio boolllllcrappery.
+if keyboard_check_pressed(vk_tab){
+		 global.audio  = !global.audio; 
+		 show_debug_message("global.audio: "+string(global.audio))
+ }
+	 
+if (global.audio){
+		 if (musicPlay && !audio_is_playing(curSong)) {
+			    audio_play_sound(curSong, 1, true);
+			  }
+  
+  
+			  if (!audio_is_playing(snd_stinger01)) {
+
+			    audio_resume_sound(curSong);
+			    o_ctrl.musicPlay = true;
+			  }
+}else{
+	audio_pause_all()
+}
+
+
 switch (room) {
 
 case rm_title:
 
   if keyboard_check_pressed(vk_space) {
-	 instance_create_layer(x,y,"Instances",o_black_transition);
+		 instance_create_layer(x,y,"Instances",o_black_transition);
   }
+	 
   break;
 
 case rm1:
-
-  if (musicPlay && !audio_is_playing(curSong)) {
-    audio_play_sound(curSong, 1, true);
-  }
-  if (!audio_is_playing(snd_stinger01)) {
-
-    audio_resume_sound(curSong);
-    o_ctrl.musicPlay = true;
-  }
-
   break;
   
-
 }
 
 switch (global.state) {

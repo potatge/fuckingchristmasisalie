@@ -95,8 +95,6 @@
     {"name":"inst_53100CE1","path":"rooms/rm1/rm1.yy",},
     {"name":"inst_3F92EBA5","path":"rooms/rm1/rm1.yy",},
     {"name":"inst_6D9ACF6E","path":"rooms/rm1/rm1.yy",},
-    {"name":"inst_767FA85D","path":"rooms/rm1/rm1.yy",},
-    {"name":"inst_F940B42","path":"rooms/rm1/rm1.yy",},
   ],
   "isDnd": false,
   "layers": [
@@ -200,8 +198,6 @@
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_53100CE1","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"o_item_keys","path":"objects/o_item_keys/o_item_keys.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":628.0,"y":74.0,},
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_3F92EBA5","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"cutscene_door2","path":"objects/cutscene_door2/cutscene_door2.yy",},"properties":[],"rotation":0.0,"scaleX":0.65625,"scaleY":0.71875,"x":320.0,"y":32.0,},
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_6D9ACF6E","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"o_item_cookiesforsanta","path":"objects/o_item_cookiesforsanta/o_item_cookiesforsanta.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":96.0,"y":212.0,},
-        {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_767FA85D","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"o_ctrl","path":"objects/o_ctrl/o_ctrl.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":160.0,"y":128.0,},
-        {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_F940B42","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"o_sfx_screenshake","path":"objects/o_sfx_screenshake/o_sfx_screenshake.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":224.0,"y":160.0,},
       ],"layers":[],"properties":[],"userdefinedDepth":false,"visible":true,},
     {"resourceType":"GMRTileLayer","resourceVersion":"1.1","name":"walls2","depth":600,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"properties":[],"tiles":{"SerialiseHeight":43,"SerialiseWidth":40,"TileCompressedData":[
 1,4,-11,5,1,6,-5,-2147483648,1,22,-12,-2147483648,1,0,-8,-2147483648,1,22,-11,-2147483648,7,24,-2147483648,0,0,4,5,96,-12,-2147483648,1,59,-21,-2147483648,-3,0,1,22,-14,-2147483648,

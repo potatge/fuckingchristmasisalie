@@ -96,12 +96,11 @@ gamestatesStrings = [
 
 ]
 global.state =  gamestates.everythingsFine;//gamestates.lightsOut//
-//gamestates.lightsOut; 
+global.audio = false;
 global.debugMode = true;
 curSong = music_holidays;
 sfxPlay = false;
 musicPlay = false;
-//scr_changeSounds();
 
 
 depth = global.drawDepth
