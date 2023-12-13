@@ -1,4 +1,4 @@
-depth = global.charDepth;
+depth = -9000//global.charDepth;
 spd = 3;
 global.playerCanMove = true;
 

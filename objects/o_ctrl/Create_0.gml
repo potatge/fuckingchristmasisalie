@@ -101,7 +101,7 @@ global.debugMode = true;
 sfxPlay = false;
 musicPlay = false;
 //scr_changeSounds();
-curSong = music_holidays;
+//curSong = music_holidays;
 
 depth = global.drawDepth
 myText = "Xmas game gonna be fun."
