@@ -98,10 +98,11 @@ gamestatesStrings = [
 global.state =  gamestates.everythingsFine;//gamestates.lightsOut//
 //gamestates.lightsOut; 
 global.debugMode = true;
+curSong = music_holidays;
 sfxPlay = false;
 musicPlay = false;
 //scr_changeSounds();
-//curSong = music_holidays;
+
 
 depth = global.drawDepth
 myText = "Xmas game gonna be fun."

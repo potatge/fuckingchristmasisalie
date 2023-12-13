@@ -94,15 +94,13 @@ switch (room) {
 
 case rm_title:
 
-
   if keyboard_check_pressed(vk_space) {
 	 instance_create_layer(x,y,"Instances",o_black_transition);
   }
   break;
 
 case rm1:
-break;
-/*
+
   if (musicPlay && !audio_is_playing(curSong)) {
     audio_play_sound(curSong, 1, true);
   }
@@ -113,7 +111,7 @@ break;
   }
 
   break;
-  */
+  
 
 }
 
