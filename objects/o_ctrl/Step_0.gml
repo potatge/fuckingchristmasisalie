@@ -68,7 +68,9 @@ case mode.options:
       show_debug_message("choose NOTHING")
     }
     //decisionLVL += 1;
-    audio_play_sound(snd_blip01, 1, 0)
+	if (global.audio){
+		audio_play_sound(snd_blip01, 1, 0)
+	}
     global.gameMode = mode.playing;
 
     // TODO WILL BREAK GAME? get it going to next state
@@ -90,7 +92,6 @@ case mode.gameOver:
 
 }
 
-//global audio boolllllcrappery.
 if keyboard_check_pressed(vk_tab){
 		 global.audio  = !global.audio; 
 		 show_debug_message("global.audio: "+string(global.audio))

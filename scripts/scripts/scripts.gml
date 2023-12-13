@@ -127,11 +127,11 @@ function kitchenarea2Endaction(kitchenarea2){
 
 function reindeerEndaction(){
 	if (global.state == gamestates.hasCarrot){
-		setState(gamestates.givesCarrot)
+		setState(gamestates.givesCarrot);
 	}else{
-		if (!audio_is_playing(snd_animalcry01)){
-			o_reindeer.reindeerStates = reindeer.roar;
-			audio_play_sound(snd_animalcry01,1,0)
+		o_reindeer.reindeerStates = reindeer.roar;
+		if (global.audio && !audio_is_playing(snd_animalcry01)){
+			audio_play_sound(snd_animalcry01,1,0);
 		}
 	}
 }
