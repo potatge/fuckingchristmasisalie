@@ -2,7 +2,6 @@ image_alpha = alpha;
 
 switch (transition) {
 case trans.fadein:
-  // fades in from nothing
   alpha += fade;
   if (alpha >= 1) {
     transition = trans.middleaction;
@@ -25,10 +24,8 @@ case trans.middleaction:
   break;
 
 case trans.fadeout:
-  //if maximum darkness, start fade out
   alpha -= fade;
   if (alpha <= 0) {
-    // destroy or so something?
     instance_destroy();
   }
   break;
