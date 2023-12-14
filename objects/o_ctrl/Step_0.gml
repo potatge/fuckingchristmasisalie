@@ -98,15 +98,13 @@ if keyboard_check_pressed(vk_tab){
  }
 	 
 if (global.audio){
-		 if (musicPlay && !audio_is_playing(curSong)) {
+		 if (!audio_is_playing(curSong)) {
 			    audio_play_sound(curSong, 1, true);
 			  }
   
-  
 			  if (!audio_is_playing(snd_stinger01)) {
-
 			    audio_resume_sound(curSong);
-			    o_ctrl.musicPlay = true;
+			   // o_ctrl.musicPlay = true;
 			  }
 }else{
 	audio_pause_all()
