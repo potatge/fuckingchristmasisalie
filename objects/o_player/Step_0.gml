@@ -105,10 +105,6 @@ clamp(y, 0, room_height);
 	// Collisions
 var cam_id = view_camera[0];
 
-// Get player position
-var player_x = x;
-var player_y = y;
-
 // Function to check tile collisions
 function check_tile_collision(x, y) {
   var t_ = layer_tilemap_get_id("walls");

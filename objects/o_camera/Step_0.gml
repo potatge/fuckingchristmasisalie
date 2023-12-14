@@ -1,5 +1,10 @@
 var cam_id, current_x, current_y;
 
+bottom = o_player.bbox_bottom;
+top = o_player.bbox_top;
+left = o_player.bbox_left;
+right = o_player.bbox_right;
+
 // Assuming you're using view 0
 cam_id = view_camera[0];
 
@@ -17,23 +22,22 @@ var target_x = current_x;
 
 // Move camera down by snapdist units when player is below the view
 if (o_player.bbox_bottom > current_y + camera_get_view_height(view_camera[0])) {
-    target_y = o_player.bbox_bottom - camera_get_view_height(view_camera[0]) + snapdist_ver;
+  target_y = o_player.bbox_bottom - camera_get_view_height(view_camera[0]) + snapdist_ver;
 }
 
 // Move camera up by snapdist units when player is above the view
 if (o_player.bbox_top < current_y) {
-    target_y = o_player.bbox_top - snapdist_ver;
+  target_y = o_player.bbox_top - snapdist_ver;
 }
-
 // Move camera right by snapdist units when player is to the right of the view
 if (o_player.bbox_right > current_x + camera_get_view_width(view_camera[0])) {
-    target_x = o_player.bbox_right - camera_get_view_width(view_camera[0]) + snapdist_hor;
+  target_x = o_player.bbox_right - camera_get_view_width(view_camera[0]) + snapdist_hor;
 }
 
 // Move camera left by snapdist units when player is to the left of the view
 if (o_player.bbox_left < current_x) {
-    target_x = o_player.bbox_left - snapdist_hor;
-	
+  target_x = o_player.bbox_left - snapdist_hor;
+
 }
 
 // Smoothly interpolate towards the target position
