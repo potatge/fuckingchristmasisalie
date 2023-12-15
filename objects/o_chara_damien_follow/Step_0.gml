@@ -32,7 +32,6 @@ case states2.follow:
 	
 	if (x != o.x && y != o.y) {
 	//if not meeting right on top of player...move towards her.
-
     if (distance_to_point(o.x, o.y) < 6) { 
 		spd = 1;
 	}
@@ -41,7 +40,13 @@ case states2.follow:
 	
 	
 
-	// add colision code.
+	// add collision code.
+	// if player died, Damien dies. 
+	if (o.playerState == player.dead2){
+		damienFollowStates = states2.dead;
+	}
+	
+	
 	break;
 
 	case states2.dead:
