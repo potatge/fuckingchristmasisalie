@@ -186,9 +186,3 @@ function playerGoToRoom(rooom, xx, yy) {
  
 }
 
-
-// Function to check tile collisions
-function check_wall_collision(x, y) {
-  var t_ = layer_tilemap_get_id("walls");
-  return tilemap_get_at_pixel(t_, x, y);
-}

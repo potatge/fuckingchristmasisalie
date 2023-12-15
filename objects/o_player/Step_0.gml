@@ -100,17 +100,18 @@ clamp(y, 0, room_height);
 var cam_id = view_camera[0];
 
 //collisions 
-//var obstacles = instance_place(x, y, [o_interactable, o_chara])
-var collision_at_next_position = check_wall_collision(player_x + hspd, player_y + vspd);
-//var obstacle_at_next_position = instance_place(player_x + hspd, player_y + vspd, obstacles);
-//obstacle_at_next_position != noone ||
-if (collision_at_next_position != -1) {
+var obstacles = instance_place(x, y, [o_interactable, o_chara])
+
+var wall_at_next_position = tilemap_get_at_pixel(layer_tilemap_get_id("walls"), player_x + hspd, player_y + vspd);
+var obstacle_at_next_position = instance_place(player_x + hspd, player_y + vspd, obstacles);
+
+//DOCUMENTATION WEIRD. CHECK FOR WHAT THINGS RETURN.
+if (obstacle_at_next_position != noone || wall_at_next_position != 0) { 
  hspd = 0;
  vspd = 0;
 } else {
-  x += hspd;
-  y += vspd;
-
+ x += hspd;
+ y += vspd;
 }
 
 // mood portraits
