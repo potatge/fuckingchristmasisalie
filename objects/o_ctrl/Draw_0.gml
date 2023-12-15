@@ -105,12 +105,14 @@ case rm1:
 }
 
 //draw toggle sound....
+/*
 	if (global.audio){
 		draw_sprite(s_gui_soundon,0,xx_ - 16,y1+ 16)
 	}else{
 		draw_sprite(s_gui_soundoff,0,xx_ - 16 ,y1+ 16)
 	}
 	  draw_set_font(fnt1)
+	  */
 
 
 // global states. 

@@ -80,7 +80,7 @@ function present2EndAction(present2) {
 	}
 	instance_create_layer(o_sfx_blood.x - 32,o_sfx_blood.y,"Instances",o_item_letter)
 	instance_deactivate_object(cutscene_boxpile1gone);
-	//instance_deactivate_object(cutscene_boxpile);
+	instance_deactivate_object(cutscene_secondpresent);
 	instance_destroy();
  
     }

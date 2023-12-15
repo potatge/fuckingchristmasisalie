@@ -68,9 +68,9 @@ case mode.options:
       show_debug_message("choose NOTHING")
     }
     //decisionLVL += 1;
-	if (global.audio){
-		audio_play_sound(snd_blip01, 1, 0)
-	}
+    if (global.audio) {
+      audio_play_sound(snd_blip01, 1, 0)
+    }
     global.gameMode = mode.playing;
 
     // TODO WILL BREAK GAME? get it going to next state
@@ -92,38 +92,37 @@ case mode.gameOver:
 
 }
 
-if keyboard_check_pressed(vk_tab){
-		 global.audio  = !global.audio; 
-		 show_debug_message("global.audio: "+string(global.audio))
- }
-	 
-if (global.audio){
-		 if (!audio_is_playing(curSong)) {
-			    audio_play_sound(curSong, 1, true);
-			  }
-  
-			  if (!audio_is_playing(snd_stinger01)) {
-			    audio_resume_sound(curSong);
-			   // o_ctrl.musicPlay = true;
-			  }
-}else{
-	audio_pause_all()
-}
+if (global.audio) {
+  if (!audio_is_playing(curSong)) {
+    audio_play_sound(curSong, 1, true);
+  }
 
+  if (!audio_is_playing(snd_stinger01)) {
+    audio_resume_sound(curSong);
+    // o_ctrl.musicPlay = true;
+  }
+} else {
+  audio_pause_all()
+}
 
 switch (room) {
 
 case rm_title:
 
-  if keyboard_check_pressed(vk_space) {
-		 instance_create_layer(x,y,"Instances",o_black_transition);
+  if keyboard_check_pressed(vk_tab) {
+    global.audio = !global.audio;
+    show_debug_message("global.audio: " + string(global.audio))
   }
-	 
+
+  if keyboard_check_pressed(vk_space) {
+    instance_create_layer(x, y, "Instances", o_black_transition);
+  }
+
   break;
 
 case rm1:
   break;
-  
+
 }
 
 switch (global.state) {
@@ -237,8 +236,8 @@ case gamestates.reindeerAppears:
   screenshake(20, 3, 0.3);
   o_player.y += 32;
   instance_create_layer(o_bg_door.x, o_bg_door.y + 16, "Instances_top", o_reindeer);
-  with (o_bg_door){
-	 sprite_index = s_bg_door_open;
+  with(o_bg_door) {
+    sprite_index = s_bg_door_open;
   }
   with(o_bg_kitchenarea) {
     name_ = "kitchenarea2";
@@ -265,19 +264,18 @@ case gamestates.givesCarrot:
   o_reindeer.reindeerStates = reindeer.eat;
   setState(gamestates.givenCarrot)
   break;
- 
+
 case gamestates.givenCarrot:
-break;
+  break;
 
   //death state 
 case gamestates.youDied:
   resetGameOnKeyPress();
   break;
-  
-  
+
   /// endings 
 case gamestates.allOverRedRover:
-	resetGameOnKeyPress();
-    break;
+  resetGameOnKeyPress();
+  break;
 
 }
