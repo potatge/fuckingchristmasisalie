@@ -1,22 +1,9 @@
-//movement
-var left = keyboard_check_direct(vk_left);
-var right = keyboard_check_direct(vk_right);
-var up = keyboard_check_direct(vk_up);
-var down = keyboard_check_direct(vk_down);
-
 // Get player position and speed
 var player_x = x; // Replace with your actual player x-coordinate
 var player_y = y; // Replace with your actual player y-coordinate
 var hspd = 0; // Replace with your actual horizontal speed variable
 var vspd = 0; // Replace with your actual vertical speed variable
 
-//sprites
-var up_idle = s_chara_girl_up_idle;
-var up_mov = s_chara_girl_up;
-var down_mov = s_chara_girl_down;
-var down_idle = s_chara_girl_down_idle;
-var left_ = s_chara_girl_left;
-var left_idle = s_chara_girl_left_idle;
 
 switch (playerState) {
 
@@ -35,14 +22,32 @@ case player.dead2:
 	break;
 }
 
-if (left || right || up || down){
+
+if (global.playerCanMove){
+	
+//movement
+var left = keyboard_check_direct(vk_left);
+var right = keyboard_check_direct(vk_right);
+var up = keyboard_check_direct(vk_up);
+var down = keyboard_check_direct(vk_down);
+
+	if (left || right || up || down){
 	if (global.audio){
 	  if !audio_is_playing(snd_footstep01){
 		audio_play_sound(snd_footstep01,1,0);
 	  }
 	}
 }
-if (global.playerCanMove){
+
+
+//sprites
+var up_idle = s_chara_girl_up_idle;
+var up_mov = s_chara_girl_up;
+var down_mov = s_chara_girl_down;
+var down_idle = s_chara_girl_down_idle;
+var left_ = s_chara_girl_left;
+var left_idle = s_chara_girl_left_idle;
+
 	image_speed = 1;
 	//else, be alive and move.
 	if (left) {
@@ -97,12 +102,12 @@ if (global.playerCanMove){
 		sprite_index = s_chara_girl_thinking;
 	}
 }
-// keep in room? not working best. 
+//// keep in room? not working best. 
 clamp(x, 0, room_width);
 clamp(y, 0, room_height);
 
-//collisions all in this script.
-	// Collisions
+//collisions 
+	
 var cam_id = view_camera[0];
 
 // Function to check tile collisions
@@ -140,6 +145,7 @@ if (collision_at_next_position || obstacle_at_next_position) {
 }
 
 
+
 // mood portrait.
 
 switch (claireMood){
@@ -156,6 +162,8 @@ switch (claireMood){
 		break;
 		
 }
+
+
 
 //cutscene 
 var cut = instance_place(x, y, cutscene)
