@@ -162,10 +162,12 @@ case gamestates.firstPresent:
   break;
 
 case gamestates.screamInDistance:
+
   break;
 
 case gamestates.boxesGone:
 //TODO FUCKIG CUTSCENE NOT DEACTIVATE
+setState(gamestates.talkToDamien);
  instance_deactivate_object(cutscene_checkondamien);
   //cutscene_boxpile.name_ = "cutscene_boxesgone";
   o_chara_damien.damienStates = states.hurt;
@@ -267,6 +269,7 @@ case gamestates.kitchenSelected:
 case gamestates.hasCarrot:
   var deer = findItem("reindeer")
   deer.myText = ["This should do the trick."]
+  instance_deactivate_object(cutscene_door3)
   // draw sprite of carrot in player obj.
   break;
 
