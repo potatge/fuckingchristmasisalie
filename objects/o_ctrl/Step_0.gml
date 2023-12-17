@@ -137,13 +137,13 @@ case gamestates.goToFridge:
   break;
 
 case gamestates.fridgeSelection:
-  global.gameMode = mode.options;
-  setState(gamestates.fridgeSelected);
+  //global.gameMode = mode.options;
+  setState(gamestates.doneWithFridge);
 
   break;
 
 case gamestates.fridgeSelected:
-  global.playerCanMove = false;
+  //global.playerCanMove = false;
   break;
 
 case gamestates.doneWithFridge:
@@ -154,6 +154,7 @@ case gamestates.doneWithFridge:
 
 case gamestates.damienDisappears:
   o_chara_damien.damienStates = states.hidden;
+  show_debug_message("where is he?:"+string(o_chara_damien.x));
   break;
 
 case gamestates.firstPresent:
@@ -161,10 +162,11 @@ case gamestates.firstPresent:
   break;
 
 case gamestates.screamInDistance:
-  instance_deactivate_object(cutscene_checkondamien);
   break;
 
 case gamestates.boxesGone:
+//TODO FUCKIG CUTSCENE NOT DEACTIVATE
+ instance_deactivate_object(cutscene_checkondamien);
   //cutscene_boxpile.name_ = "cutscene_boxesgone";
   o_chara_damien.damienStates = states.hurt;
   break;
@@ -176,7 +178,7 @@ case gamestates.talkToDamien:
 case gamestates.secondPresentAppears:
   instance_destroy(o_item_keys);
   instance_deactivate_object(cutscene_screamindistance);
-  instance_activate_object(cutscene_secondpresent);
+  //instance_activate_object(cutscene_secondpresent);
   var present2 = instance_create_layer(970, 136, "Instances", o_item_present);
   with(present2) {
     name_ = "present2";

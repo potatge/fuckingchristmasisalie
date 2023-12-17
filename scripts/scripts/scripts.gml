@@ -29,14 +29,16 @@ function resetTextToNone() {
 }
 
 function fridgeEndAction(fridge) {
-
-  if (global.goodEnd) {
+setState(gamestates.doneWithFridge)
+fridge.sprite_index = s_bg_fridge_closed;
+  /*if (global.goodEnd) {
     o_ctrl.myText = fridge.endText[0];
   } else {
     o_ctrl.myText = fridge.endText[1];
   }
   o_ctrl.moreTextAvailible = true;
   o_ctrl.showText = true;
+  */
 
 }
 
@@ -193,8 +195,6 @@ function showItemDialogue(item) {
 
   var cur = o_ctrl.curText;
   var numText = array_length(item.myText);
-  show_debug_message("cur: " + string(cur) + ", numText: " + string(numText));
-
   // Is there more text?
   if (cur < numText) {
     // Is there more text?
@@ -223,9 +223,10 @@ function showItemDialogue(item) {
   }
 
   // Is there an option or end action?
-  if (item.hasOption) {
+  /*if (item.hasOption) {
     global.gameMode = mode.options;
   }
+  */
   if (item.endAction) {
     item.endAction(item);
   }
@@ -238,7 +239,6 @@ function showCutDialogue(cut) {
     show_debug_message("WARNING: showCutDialogue passed noone")
     return;
   }
-  show_debug_message("in show cut dialogue")
       global.playerCanMove = false;
       o_ctrl.myText = cut.myText;
       o_ctrl.showText = true;

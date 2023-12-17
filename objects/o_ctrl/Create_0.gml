@@ -412,7 +412,7 @@ global.interactables = [
   },
   {
     name_: "fridge",
-    myText: ["What should I get from the fridge?"],
+    myText: ["Hmmm, I guess I should start to make dinner."],
     endText: ["An unassuming plate of milk and cookies? Can't help to be superstitious.","Another bottle of wine? Hey, it's the holidays."],
     sprite: s_bg_fridge_closed,
     portrait: noone,
@@ -524,7 +524,7 @@ global.interactables = [
     //TODO maybe trigger him yellow in distance.
     myText: ["*He appears too shaken to say anything*"],
     sprite: s_chara_damien_collapsed,
-    isSpeaker: true,
+    isSpeaker: false,
     hasOption: false,
     portrait: s_char_portraits_damien_worried,
 	endAction: false
