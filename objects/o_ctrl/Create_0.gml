@@ -97,9 +97,9 @@ gamestatesStrings = [
   
 
 ]
-global.state = gamestates.everythingsFine;//gamestates.lightsOut//
+global.state = gamestates.lightsOut//
 global.audio = false;
-global.debugMode = true;
+global.debugMode = false;//true;
 curSong = music_holidays;
 sfxPlay = false;
 musicPlay = false;
@@ -440,7 +440,7 @@ global.interactables = [
   },
    {
     name_: "door",
-    myText: ["You yank on the door with all your might...and?"],
+    myText: ["This is the door out."],
     sprite: s_bg_door,
     portrait: noone,
     hasOption: false,

@@ -38,19 +38,19 @@ case santa.onpath:
   var down = 270;
   //directional santa 
   if (direction >= left && direction < up) {
-   // show_debug_message("up left")
+    // show_debug_message("up left")
     image_xscale = -1;
     sprite_index = s_santa_left_move;
   }
 
   if (direction >= up && direction < 180) {
-   // show_debug_message("up right")
+    // show_debug_message("up right")
     sprite_index = s_santa_up;
     image_xscale = 1;
   }
 
   if (direction >= right && direction < down) {
-   // show_debug_message("down right")
+    // show_debug_message("down right")
     sprite_index = s_santa_down;
     image_xscale = 1;
   }
@@ -69,7 +69,7 @@ case santa.onpath:
     o_player.playerState = player.dead;
   }
 
-// only do stop and turn if down hallway path.
+  // only do stop and turn if down hallway path.
   if (path_index == p_santa1_hallway) {
     if (alarm[2] <= 0) {
       alarm[2] = irandom_range(150, 550);
@@ -101,8 +101,8 @@ case santa.attacking:
 switch (santaPath) {
 
 case path.notstarted:
-	path_position = 0;
-	break;
+  path_position = 0;
+  break;
 
 case path.livingroomstart:
   path_start(p_santa2_livingroom, spd, path_action_reverse, true);
@@ -111,19 +111,17 @@ case path.livingroomstart:
   break;
 
 case path.livingroomonpath:
-  if (path_position = 1) {
-    var here = path_position;
+  if (path_position >= 1) {
     path_reverse(p_santa2_livingroom);
     path_start(p_santa2_livingroom, spd, path_action_reverse, 1);
-    path_position = 1 - here;
+    show_debug_message("santa living room")
     santaPath = path.livingroomturnaround;
   }
   break;
 
 case path.livingroomturnaround:
-
   if (path_position >= 1) {
-   // show_debug_message("restart up and down hallway")
+    show_debug_message("restart up and go down hallway")
     path_start(p_santa1_hallway, spd, path_action_reverse, 1);
     santaPath = path.upanddownhallway;
   }
@@ -131,15 +129,14 @@ case path.livingroomturnaround:
 
 case path.upanddownhallway:
   if (path_position >= 1) {
-    var here = path_position;
     path_reverse(p_santa1_hallway);
     path_start(p_santa1_hallway, spd, path_action_reverse, 1);
-    path_position = 1 - here;
   }
   break;
-
+  
+default:
+  show_debug_message("unexpected santa path")
   break;
-
 }
 
-//show_debug_message(path_position)
+show_debug_message("santa: " + string(path_position))
