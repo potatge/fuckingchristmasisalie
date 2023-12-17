@@ -101,8 +101,8 @@ case santa.attacking:
 switch (santaPath) {
 
 case path.notstarted:
-
-  break;
+	path_position = 0;
+	break;
 
 case path.livingroomstart:
   path_start(p_santa2_livingroom, spd, path_action_reverse, true);

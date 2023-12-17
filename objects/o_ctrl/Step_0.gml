@@ -16,10 +16,11 @@ if (global.debugMode) {
 switch (global.gameMode) {
 
 case mode.playing:
-  //global.playerCanMove = true;
+  global.playerCanMove = true;
   break;
 
 case mode.options:
+  sprite_index = s_chara_girl_thinking;
   global.playerCanMove = false;
   if keyboard_check_pressed(vk_down) {
     curOption++
@@ -43,7 +44,7 @@ case mode.options:
 
   case 1:
     Opt[0] = "GRAB CARROT";
-    Opt[1] = "DON'T DO ANYTHING.";
+    Opt[1] = "BE SILLY AND DON'T DO ANYTHING.";
 
     break;
 
@@ -57,27 +58,28 @@ case mode.options:
   if keyboard_check_pressed(vk_enter) {
     //TODO make this SWITCH
     if (curOption == 0) {
+		if (global.state == gamestates.kitchenSelecting){
+			setState(gamestates.kitchenSelected);
+		}
 
-      if (global.state == gamestates.kitchenSelected) {
-        setState(gamestates.hasCarrot);
-      }
-      show_debug_message("choose CARROT?")
     }
 
     if (curOption == 1) {
-      show_debug_message("choose NOTHING")
     }
     //decisionLVL += 1;
     if (global.audio) {
       audio_play_sound(snd_blip01, 1, 0)
     }
-    global.gameMode = mode.playing;
-
-    // TODO WILL BREAK GAME? get it going to next state
-    if global.state = gamestates.fridgeSelected {
+ 
+ // TODO WILL BREAK GAME? get it going to next state
+    if (global.state == gamestates.fridgeSelected) {
       setState(gamestates.doneWithFridge);
     }
+   
+	
+	
 
+   global.gameMode = mode.playing;
   }
 
   break;
@@ -163,12 +165,11 @@ case gamestates.screamInDistance:
   break;
 
 case gamestates.boxesGone:
-  // cutscene_boxpile.name_ = "cutscene_boxesgone";
+  //cutscene_boxpile.name_ = "cutscene_boxesgone";
   o_chara_damien.damienStates = states.hurt;
   break;
 
 case gamestates.talkToDamien:
-
   //setState(gamestates.secondPresentAppears);
   break;
 
@@ -250,8 +251,15 @@ case gamestates.reindeerBlocksDoor:
   //consistent state of it blocking door.
   break;
 
+case gamestates.kitchenSelecting:
+  show_debug_message("should get OPTIONS");
+    
+	//global.gameMode = mode.options;
+	break;
+
 case gamestates.kitchenSelected:
-  global.gameMode = mode.options;
+	setState(gamestates.hasCarrot);
+  //global.gameMode = mode.optionsSelected;
   break;
 
 case gamestates.hasCarrot:

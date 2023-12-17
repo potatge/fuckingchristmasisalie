@@ -1,6 +1,9 @@
 depth = global.charDepth;
 spd = 3;
 global.playerCanMove = true;
+resetOnSpace = false;
+inCutscene = false;
+
 
 enum player{
 	alive,
@@ -26,3 +29,13 @@ enum mood{
 }
 
 claireMood = mood.happy;
+
+Facing = facing.down;
+enum facing {
+	
+	up,
+	left,
+	down,
+	right
+	
+}

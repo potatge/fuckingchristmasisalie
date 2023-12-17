@@ -49,6 +49,7 @@ enum gamestates {
   keyObtained,
   reindeerAppears,
   reindeerBlocksDoor,
+  kitchenSelecting,
   kitchenSelected,
   hasCarrot,
   givesCarrot,
@@ -84,6 +85,7 @@ gamestatesStrings = [
   "keyObtained",
   "reindeerAppears",
   "reindeerBlocksDoor",
+  "Kitchenselecting",
   "kitchenSelected",
   "hasCarrot",
   "givesCarrot",
@@ -95,7 +97,7 @@ gamestatesStrings = [
   
 
 ]
-global.state =  gamestates.everythingsFine;//gamestates.lightsOut//
+global.state = gamestates.everythingsFine;//gamestates.lightsOut//
 global.audio = false;
 global.debugMode = true;
 curSong = music_holidays;
@@ -235,7 +237,7 @@ global.interactables = [
     myText: ["Oh no, it's another present...","Open it?","My keys are inside!"],
     sprite: s_item_present3,
     portrait: noone,
-    hasOption: true,
+    hasOption: false,
 	endAction: present3EndAction,
 	isSpeaker: false,
   },
@@ -543,7 +545,7 @@ global.interactables = [
     myText: ["Grab the carrot?"],
     sprite: s_bg_kitchenarea2_empty,
     portrait: noone,
-    hasOption: true,
+    hasOption: false,
 	endAction: kitchenarea2Endaction,
 	isSpeaker: false,
   },

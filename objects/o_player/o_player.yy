@@ -36,9 +36,6 @@
     "name": "s_chara_girl_down_idle",
     "path": "sprites/s_chara_girl_down_idle/s_chara_girl_down_idle.yy",
   },
-  "spriteMaskId": {
-    "name": "s_collision",
-    "path": "sprites/s_collision/s_collision.yy",
-  },
+  "spriteMaskId": null,
   "visible": true,
 }
