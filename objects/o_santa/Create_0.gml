@@ -19,14 +19,8 @@ finishedPath = false;
 enum path{
 	
 	notstarted,
-	cellarstart,
-	cellaronpath,
-	cellarend,
-	livingroomstart,
-	livingroomonpath,
-	livingroomturnaround,
-	turnback,
-	upanddownhallway
+	longpathstarted,
+	longpath
 	
 }
 

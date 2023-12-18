@@ -69,19 +69,17 @@ case santa.onpath:
     o_player.playerState = player.dead;
   }
 
-  // only do stop and turn if down hallway path.
-  if (path_index == p_santa1_hallway) {
+  // do stop and turn
     if (alarm[2] <= 0) {
       alarm[2] = irandom_range(150, 550);
     }
-  }
 
   break;
 
 case santa.stopandturn:
   path_speed = 0;
   //path_endaction = path_action_reverse;
-  sprite_index = s_santa_left_idle;
+  sprite_index = s_santa_turn;
   if (alarm[1] <= 0) {
     alarm[1] = irandom_range(110, 350);
   }
@@ -101,42 +99,19 @@ case santa.attacking:
 switch (santaPath) {
 
 case path.notstarted:
-  path_position = 0;
-  break;
-
-case path.livingroomstart:
-  path_start(p_santa2_livingroom, spd, path_action_reverse, true);
-  santaStates = santa.pathstarted;
-  santaPath = path.livingroomonpath;
-  break;
-
-case path.livingroomonpath:
-  if (path_position >= 1) {
-    path_reverse(p_santa2_livingroom);
-    path_start(p_santa2_livingroom, spd, path_action_reverse, 1);
-    show_debug_message("santa living room")
-    santaPath = path.livingroomturnaround;
-  }
-  break;
-
-case path.livingroomturnaround:
-  if (path_position >= 1) {
-    show_debug_message("restart up and go down hallway")
-    path_start(p_santa1_hallway, spd, path_action_reverse, 1);
-    santaPath = path.upanddownhallway;
-  }
-  break;
-
-case path.upanddownhallway:
-  if (path_position >= 1) {
-    path_reverse(p_santa1_hallway);
-    path_start(p_santa1_hallway, spd, path_action_reverse, 1);
-  }
-  break;
+	  path_position = 0;
+	  break;
   
-default:
-  show_debug_message("unexpected santa path")
-  break;
+  case path.longpathstarted:
+	  path_start(p_santa_fullhouse, spd, path_action_reverse, true);
+	  show_debug_message("long path started")
+	  santaPath = path.longpath;
+	  break;
+  
+  case path.longpath:
+	  show_debug_message("on long path")
+	  break;
+  
 }
 
-show_debug_message("santa: " + string(path_position))
+//show_debug_message("santa: " + string(path_position))
