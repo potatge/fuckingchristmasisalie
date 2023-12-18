@@ -81,13 +81,12 @@ case santa.stopandturn:
   //path_endaction = path_action_reverse;
   sprite_index = s_santa_turn;
   if (alarm[1] <= 0) {
-    alarm[1] = irandom_range(110, 350);
+    alarm[1] = irandom_range(60, 120);
   }
   break;
 
 case santa.attacking:
   sprite_index = s_santa_sackbash;
-
   if (alarm[1] <= 0) {
     alarm[1] = 200;
   }
@@ -103,7 +102,7 @@ case path.notstarted:
 	  break;
   
   case path.longpathstarted:
-	  path_start(p_santa_fullhouse, spd, path_action_reverse, true);
+	  path_start(p_santa_fullhouse, spd, path_action_continue, true);
 	  show_debug_message("long path started")
 	  santaPath = path.longpath;
 	  break;
