@@ -131,7 +131,7 @@ if (space && item != noone) {
   if (!showItemDialogue(item)) {
     resetOnSpace = true;
   }
-  return;
+//  return;
 }
 
 // Show dialog for cut scene if we're in a cut scence,

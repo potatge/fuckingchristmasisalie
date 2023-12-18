@@ -198,7 +198,7 @@ global.interactables = [
 
   {
     name_: "table",
-    myText: ["Looking a bit barren...", "Better cook something before the rellies get here."],
+    myText: ["Looking a bit empty..", "Better cook something before the rellies get here."],
     portrait: noone,
     hasOption: false,
 	endAction: false,
