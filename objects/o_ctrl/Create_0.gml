@@ -97,7 +97,7 @@ gamestatesStrings = [
   
 
 ]
-global.state = gamestates.lightsOut//
+global.state = gamestates.everythingsFine// gamestates.lightsOut////
 global.audio = false;
 global.debugMode = false;//true;
 curSong = music_holidays;

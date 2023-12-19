@@ -11,8 +11,6 @@ case santa.idle:
   break;
 
 case santa.awakened:
-  //play anim
-  //show_debug_message("play anim. freeze chara! & alarm for 100")
   image_xscale = -1;
   sprite_index = s_santa_left_idle;
 
@@ -103,12 +101,10 @@ case path.notstarted:
   
   case path.longpathstarted:
 	  path_start(p_santa_fullhouse, spd, path_action_continue, true);
-	  show_debug_message("long path started")
 	  santaPath = path.longpath;
 	  break;
   
   case path.longpath:
-	  show_debug_message("on long path")
 	  break;
   
 }

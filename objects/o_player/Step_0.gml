@@ -3,7 +3,13 @@ var player_x = x;
 var player_y = y;
 var hspd = 0;
 var vspd = 0;
-var interacting = false;
+
+// have we hit something?
+var cut = instance_place(x, y, cutscene);
+var item = findInteractable(x, y, [o_interactable, o_chara]);
+// tilemap_get_at_pixel returns a real number. 0 means no collision.
+var wall_at_next_position = tilemap_get_at_pixel(layer_tilemap_get_id("walls"), x, y);
+var collision = (item != noone || wall_at_next_position != 0);
 
 switch (claireMood) {
 case mood.happy:
@@ -44,32 +50,33 @@ case player.alive:
   image_speed = 1;
 
   //else, be alive and move.
-  if (keyboard_check_direct(vk_left)) {
-    hspd -= spd;
-    Facing = facing.left;
-    image_xscale = 1;
-    sprite_index = s_chara_girl_left;
-  }
 
-  if (keyboard_check_direct(vk_up)) {
-    Facing = facing.up;
-    vspd -= spd;
-    sprite_index = s_chara_girl_up;
-  }
+    if (keyboard_check_direct(vk_left)) {
+      hspd -= spd;
+      Facing = facing.left;
+      image_xscale = 1;
+      sprite_index = s_chara_girl_left;
+    }
 
-  if (keyboard_check_direct(vk_right)) {
-    Facing = facing.right;
-    hspd += spd;
-    image_xscale = -1;
-    sprite_index = s_chara_girl_left;
-  }
+    if (keyboard_check_direct(vk_up)) {
+      Facing = facing.up;
+      vspd -= spd;
+      sprite_index = s_chara_girl_up;
+    }
 
-  if (keyboard_check_direct(vk_down)) {
-    Facing = facing.down;
-    vspd += spd;
-    sprite_index = s_chara_girl_down;
-  }
+    if (keyboard_check_direct(vk_right)) {
+      Facing = facing.right;
+      hspd += spd;
+      image_xscale = -1;
+      sprite_index = s_chara_girl_left;
+    }
 
+    if (keyboard_check_direct(vk_down)) {
+      Facing = facing.down;
+      vspd += spd;
+      sprite_index = s_chara_girl_down;
+    }
+ 
   // revert back to idle
   if (keyboard_check_released(vk_left)) {
     sprite_index = s_chara_girl_left_idle;
@@ -115,9 +122,7 @@ clamp(y, 0, room_height);
 //collisions 
 var cam_id = view_camera[0];
 
-// have we hit something?
-var cut = instance_place(x, y, cutscene);
-var item = findInteractable(x, y, [o_interactable, o_chara]);
+
 
 var space = keyboard_check_pressed(vk_space);
 if (space && resetOnSpace) {
@@ -131,7 +136,7 @@ if (space && item != noone) {
   if (!showItemDialogue(item)) {
     resetOnSpace = true;
   }
-//  return;
+  //  return;
 }
 
 // Show dialog for cut scene if we're in a cut scence,
@@ -145,11 +150,6 @@ if (cut != noone) {
     inCutscene = false
   }
 }
-
-// var nearCollision = (obstacle_at_next_position != noone || chara_at_next_position != noone || wall_at_next_position != 0);
-// tilemap_get_at_pixel returns a real number. 0 means no collision.
-var wall_at_next_position = tilemap_get_at_pixel(layer_tilemap_get_id("walls"), x, y);
-var collision = (item != noone || wall_at_next_position != 0);
 
 if (!collision) {
   x += hspd;

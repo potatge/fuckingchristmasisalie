@@ -249,7 +249,6 @@ function showCutDialogue(cut) {
 
 // bounce back given distance
 function bounceBack(d) {
-  show_debug_message("Facing = " + string(Facing))
   switch (Facing) {
   case facing.left:
     x += d;
