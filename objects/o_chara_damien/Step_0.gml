@@ -24,12 +24,12 @@ switch (damienStates){
 	case states.hurt:
 	     x = 789;
 		 y = 545;
-		sprite_index = s_chara_damien_collapsed;
+		sprite_index = s_char_damien_collapsed;
 		name_ = "damien2";
 		break;
 	
 	case states.cellar:
-		sprite_index  = s_chara_damien_collapsed;
+		sprite_index  = s_char_damien_collapsed;
 		name_ = "damien3";
 		x = 90;
 		y = 1055;
@@ -40,7 +40,7 @@ switch (damienStates){
 		break;
 		
 		case states.dead:
-		sprite_index = s_chara_damien_collapsed;
+		sprite_index = s_char_damien_collapsed;
 
 		break;
 }

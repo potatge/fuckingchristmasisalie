@@ -50,7 +50,7 @@ case states2.follow:
 	break;
 
 	case states2.dead:
-	sprite_index = s_chara_damien_collapsed;
+	sprite_index = s_char_damien_collapsed;
 	break;
 
 
